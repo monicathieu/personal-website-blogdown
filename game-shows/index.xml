@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Game-shows on Monica Thieu</title>
+    <link>/game-shows/</link>
+    <description>Recent content in Game-shows on Monica Thieu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/game-shows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Game shows</title>
+      <link>/game-shows/game-shows/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/game-shows/game-shows/</guid>
+      <description>(2012) Jeopardy! College Championship (2013) Jeopardy! Tournament of Champions (2016) 500 Questions, season 2 (2019) Jeopardy! All-Star Games   When I was little, instead of doing normal kid things, I would read piles upon piles of nonfiction books about history and science. Somehow, a lot of this academic detritus has collected and stuck in my head over the years (hopefully useful for a PhD student?), and when combined with embarrassing volumes of angsty mid-2000s pop-punk lyrics, it turns out I know a lot of random stuff.</description>
+    </item>
+    
+  </channel>
+</rss>

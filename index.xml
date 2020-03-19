@@ -12,16 +12,6 @@
     
     
     <item>
-      <title>Hello Friend</title>
-      <link>/posts/hello/</link>
-      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/hello/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec interdum metus. Aenean rutrum ligula sodales ex auctor, sed tempus dui mollis. Curabitur ipsum dui, aliquet nec commodo at, tristique eget ante. Donec quis dolor nec nunc mollis interdum vel in purus. Sed vitae leo scelerisque, sollicitudin elit sed, congue ante. In augue nisl, vestibulum commodo est a, tristique porttitor est. Proin laoreet iaculis ornare. Nullam ut neque quam.
- Fusce pharetra suscipit orci nec tempor.</description>
-    </item>
-    
-    <item>
       <title>Showcase</title>
       <link>/showcase/</link>
       <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
@@ -56,7 +46,9 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/game-shows/</guid>
-      <description>(2012) Jeopardy! College Championship (2013) Jeopardy! Tournament of Champions (2016) 500 Questions, season 2 (2019) Jeopardy! All-Star Games   When I was little, instead of doing normal kid things, I would read piles upon piles of nonfiction books about history and science. Somehow, a lot of this academic detritus has collected and stuck in my head over the years (hopefully useful for a PhD student?), and when combined with embarrassing volumes of angsty mid-2000s pop-punk lyrics, it turns out I know a lot of random stuff.</description>
+      <description>(2012) Jeopardy! College Championship (2013) Jeopardy! Tournament of Champions (2016) 500 Questions, season 2 (2019) Jeopardy! All-Star Games Photos (poorly organized, sorry!)   First things first…
+Buy a Team Ken shirt or other swag here to represent/embarrass Ken Jennings, the GOAT. All profits donated to the Pancreatic Cancer Action Network in honor of Alex Trebek.
+When I was little, instead of doing normal kid things, I would read piles upon piles of nonfiction books about history and science.</description>
     </item>
     
     <item>
