@@ -3,6 +3,81 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/</loc>
+    <lastmod>2020-03-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020-03-23-covid19-data/</loc>
+    <lastmod>2020-03-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/blogdown/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/hacks/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/html/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/hugo/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/pandoc/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/r/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020-03-20-setting-up-this-website/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/bootstrapping/</loc>
+    <lastmod>2020-03-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020-03-19-bootstrapping/</loc>
+    <lastmod>2020-03-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/simulation/</loc>
+    <lastmod>2020-03-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/tidyverse/</loc>
+    <lastmod>2020-03-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/</loc>
     <lastmod>2018-07-18T00:00:00+00:00</lastmod>
   </url>
@@ -10,16 +85,6 @@
   <url>
     <loc>/showcase/</loc>
     <lastmod>2018-07-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
@@ -33,22 +98,12 @@
   </url>
   
   <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/r-markdown/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/regression/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   

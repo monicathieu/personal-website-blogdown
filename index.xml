@@ -12,6 +12,34 @@
     
     
     <item>
+      <title>CoVID19: soothing anxiety with data, sort of</title>
+      <link>/posts/2020-03-23-covid19-data/</link>
+      <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020-03-23-covid19-data/</guid>
+      <description>US-specific stuff Re-centering by date of first confirmed positive test   US-specific stuff corona %&amp;gt;% filter(type == &amp;quot;confirmed&amp;quot;, Country.Region == &amp;quot;US&amp;quot;, !is.na(State.Abb)) %&amp;gt;% ggplot(aes(x = date, y = cases, color = State.Abb)) + geom_line() + # scale_y_log10() + theme_bw()  Re-centering by date of first confirmed positive test corona %&amp;gt;% filter(type == &amp;quot;confirmed&amp;quot;) %&amp;gt;% mutate(Sub.Region = if_else(!is.na(Province.State), paste(Country.Region, Province.State), Country.Region)) %&amp;gt;% arrange(date) %&amp;gt;% group_by(Sub.Region) %&amp;gt;% mutate(cumul_cases = cumsum(cases)) %&amp;gt;% filter(cumul_cases &amp;gt; 0) %&amp;gt;% mutate(days_since_first_case = 0:(n()-1)) %&amp;gt;% nest(days = -Sub.</description>
+    </item>
+    
+    <item>
+      <title>Setting up this website</title>
+      <link>/posts/2020-03-20-setting-up-this-website/</link>
+      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020-03-20-setting-up-this-website/</guid>
+      <description>1 Setting up a blogdown repository 2 Blogdown-ing with a different Hugo theme 3 Making a new homepage template  3.1 Understanding Hugo’s expected structure  4 Hooking it into the interwebs  4.1 Syncing public files to GitHub Pages 4.2 Re-pointing my old Squarespace domain name  5 Adding a photo gallery into the theme 6 Fixing code syntax highlighting  6.1 Updating RStudio’s pandoc installation 6.</description>
+    </item>
+    
+    <item>
+      <title>Hierarchical bootstrapping</title>
+      <link>/posts/2020-03-19-bootstrapping/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020-03-19-bootstrapping/</guid>
+      <description>What’s bootstrapping again? Basic tidy bootstrapping Multilevel data: a real cluster-f Honoring the structure of the data: it matters!   There’s a lot of things to be anxious about lately. One of the more harmless questions I worry about is–am I estimating the standard error of my statistics incorrectly? Bootstrapping my standard errors is a great way to tackle that anxiety.
+However, bootstrapping can get a bit more complex as data take on a more complex structure (for example, multilevel structure), and the way that we resample our data can have big impacts on the variance of the resulting distributions.</description>
+    </item>
+    
+    <item>
       <title>Showcase</title>
       <link>/showcase/</link>
       <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
