@@ -6,20 +6,18 @@
     <description>Recent content in R on Monica Thieu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 08 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Hello R Markdown</title>
-      <link>/posts/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <title>Wrangling multilevel data in the tidyverse</title>
+      <link>/posts/2020-04-08-tidy-multilevel/</link>
+      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2015-07-23-r-rmarkdown/</guid>
-      <description>R Markdown Including Plots   R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.</description>
+      <guid>/posts/2020-04-08-tidy-multilevel/</guid>
+      <description>1 Learning goals 2 Notes for instructors 3 Lesson body  3.1 A brief intro to multilevel structure: It’s everywhere! 3.2 Introducing the data 3.3 Reading in the data 3.4 Inspecting the data  3.4.1 Quick graphs 3.4.2 Basic summary statistics  3.5 Nesting the data  3.5.1 Intro to nest(), unnest(), and tibble list-columns  3.6 Going vectorize crazy  3.6.1 Vectorizing: it’s like a for loop, but not 3.</description>
     </item>
     
   </channel>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html on Monica Thieu</title>
+    <link>/categories/html/</link>
+    <description>Recent content in html on Monica Thieu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setting up this website</title>
+      <link>/posts/2020-03-20-setting-up-this-website/</link>
+      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020-03-20-setting-up-this-website/</guid>
+      <description>1 Setting up a blogdown repository 2 Blogdown-ing with a different Hugo theme 3 Making a new homepage template  3.1 Understanding Hugo’s expected structure  4 Hooking it into the interwebs  4.1 Syncing public files to GitHub Pages 4.2 Re-pointing my old Squarespace domain name  5 Adding a photo gallery into the theme 6 Fixing code syntax highlighting  6.1 Updating RStudio’s pandoc installation 6.</description>
+    </item>
+    
+  </channel>
+</rss>

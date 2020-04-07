@@ -12,31 +12,12 @@
     
     
     <item>
-      <title>CoVID19: soothing anxiety with data, sort of</title>
-      <link>/posts/2020-03-23-covid19-data/</link>
-      <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
+      <title>Wrangling multilevel data in the tidyverse</title>
+      <link>/posts/2020-04-08-tidy-multilevel/</link>
+      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2020-03-23-covid19-data/</guid>
-      <description>US-specific stuff Re-centering by date of first confirmed positive test   US-specific stuff corona %&amp;gt;% filter(type == &amp;quot;confirmed&amp;quot;, Country.Region == &amp;quot;US&amp;quot;, !is.na(State.Abb)) %&amp;gt;% ggplot(aes(x = date, y = cases, color = State.Abb)) + geom_line() + # scale_y_log10() + theme_bw()  Re-centering by date of first confirmed positive test corona %&amp;gt;% filter(type == &amp;quot;confirmed&amp;quot;) %&amp;gt;% mutate(Sub.Region = if_else(!is.na(Province.State), paste(Country.Region, Province.State), Country.Region)) %&amp;gt;% arrange(date) %&amp;gt;% group_by(Sub.Region) %&amp;gt;% mutate(cumul_cases = cumsum(cases)) %&amp;gt;% filter(cumul_cases &amp;gt; 0) %&amp;gt;% mutate(days_since_first_case = 0:(n()-1)) %&amp;gt;% nest(days = -Sub.</description>
-    </item>
-    
-    <item>
-      <title>Setting up this website</title>
-      <link>/posts/2020-03-20-setting-up-this-website/</link>
-      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/2020-03-20-setting-up-this-website/</guid>
-      <description>1 Setting up a blogdown repository 2 Blogdown-ing with a different Hugo theme 3 Making a new homepage template  3.1 Understanding Hugo’s expected structure  4 Hooking it into the interwebs  4.1 Syncing public files to GitHub Pages 4.2 Re-pointing my old Squarespace domain name  5 Adding a photo gallery into the theme 6 Fixing code syntax highlighting  6.1 Updating RStudio’s pandoc installation 6.</description>
-    </item>
-    
-    <item>
-      <title>Hierarchical bootstrapping</title>
-      <link>/posts/2020-03-19-bootstrapping/</link>
-      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/2020-03-19-bootstrapping/</guid>
-      <description>What’s bootstrapping again? Basic tidy bootstrapping Multilevel data: a real cluster-f Honoring the structure of the data: it matters!   There’s a lot of things to be anxious about lately. One of the more harmless questions I worry about is–am I estimating the standard error of my statistics incorrectly? Bootstrapping my standard errors is a great way to tackle that anxiety.
-However, bootstrapping can get a bit more complex as data take on a more complex structure (for example, multilevel structure), and the way that we resample our data can have big impacts on the variance of the resulting distributions.</description>
+      <guid>/posts/2020-04-08-tidy-multilevel/</guid>
+      <description>1 Learning goals 2 Notes for instructors 3 Lesson body  3.1 A brief intro to multilevel structure: It’s everywhere! 3.2 Introducing the data 3.3 Reading in the data 3.4 Inspecting the data  3.4.1 Quick graphs 3.4.2 Basic summary statistics  3.5 Nesting the data  3.5.1 Intro to nest(), unnest(), and tibble list-columns  3.6 Going vectorize crazy  3.6.1 Vectorizing: it’s like a for loop, but not 3.</description>
     </item>
     
     <item>
@@ -46,17 +27,6 @@ However, bootstrapping can get a bit more complex as data take on a more complex
       
       <guid>/showcase/</guid>
       <description>Header 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec interdum metus. Aenean rutrum ligula sodales ex auctor, sed tempus dui mollis. Curabitur ipsum dui, aliquet nec commodo at, tristique eget ante. Donec quis dolor nec nunc mollis interdum vel in purus. Sed vitae leo scelerisque, sollicitudin elit sed, congue ante. In augue nisl, vestibulum commodo est a, tristique porttitor est. Proin laoreet iaculis ornare. Nullam ut neque quam.</description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>/posts/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/posts/2015-07-23-r-rmarkdown/</guid>
-      <description>R Markdown Including Plots   R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.</description>
     </item>
     
     <item>

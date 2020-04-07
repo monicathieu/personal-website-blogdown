@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>simulation on Monica Thieu</title>
+    <link>/tags/simulation/</link>
+    <description>Recent content in simulation on Monica Thieu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/simulation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hierarchical bootstrapping</title>
+      <link>/posts/2020-03-19-bootstrapping/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020-03-19-bootstrapping/</guid>
+      <description>What’s bootstrapping again? Basic tidy bootstrapping Multilevel data: a real cluster-f Honoring the structure of the data: it matters!   There’s a lot of things to be anxious about lately. One of the more harmless questions I worry about is–am I estimating the standard error of my statistics incorrectly? Bootstrapping my standard errors is a great way to tackle that anxiety.
+However, bootstrapping can get a bit more complex as data take on a more complex structure (for example, multilevel structure), and the way that we resample our data can have big impacts on the variance of the resulting distributions.</description>
+    </item>
+    
+  </channel>
+</rss>
