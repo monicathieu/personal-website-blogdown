@@ -467,7 +467,9 @@ avocado %&lt;&gt;%
 <pre class="language-r"><code class="language-r">avocado %&gt;%
   # Here, selecting the id_cols and the ONE values_from column I want to pivot out
   select(year, date, region, type, total_volume_log10) %&gt;%
-  pivot_wider(names_from = type, values_from = total_volume_log10, names_prefix = &quot;total_volume_&quot;)</code></pre>
+  pivot_wider(names_from = type,
+              values_from = total_volume_log10,
+              names_prefix = &quot;total_volume_&quot;)</code></pre>
 <pre><code>## # A tibble: 7,774 x 5
 ##     year date       region total_volume_conventional total_volume_organic
 ##    &lt;int&gt; &lt;date&gt;     &lt;chr&gt;                      &lt;dbl&gt;                &lt;dbl&gt;
@@ -844,9 +846,6 @@ avocado %&lt;&gt;%
 <p>If you, the coder, know <em>exactly</em> the data type you expect in your output vector, you can use a specialized version of <code>map()</code> that will return an atomic output vector of your desired data type, or else throw an error (at which point you would go and fix the offending code). These are all called <code>map_*()</code>, where the suffix indicates the expected data type of your output.</p>
 <p>For example, in the code chunk we used earlier where we used <code>map()</code> to calculate <code>nrow()</code> for every sub-dataframe of the <code>sales</code> column of <code>avo_by_region()</code>, every single value of <code>nrow()</code> was a number. More specifically, each one was an integer (makes sense, you can only have a integer number of rows in a dataframe), so if we use <code>map_int()</code> in place of <code>map()</code>, R will automatically unwrap our output into an atomic integer vector.</p>
 <pre class="language-r"><code class="language-r">avo_by_region %&gt;%
-  # Here, I&#39;m using slice() to get only the first 10 rows of the tibble
-  # to shorten the eventual output. Otherwise it would output the nrows
-  # for every single region in the avocado data
   slice(1:10) %&gt;%
   pull(sales) %&gt;%
   map_int(~nrow(.x))</code></pre>
@@ -1023,10 +1022,14 @@ avo_by_region %&lt;&gt;%
                        # so the &quot;baseline&quot;, or 0 point, is set at $1.00/avocado
                        # we already calculate total_volume_log10 earlier
                        # so we should be good there
-                       mutate(avg_price_shift1 = avg_price - 1)),
-         # Now that we&#39;ve preprocesed our columns, we can fit our multiple regression
+                       mutate(avg_price_shift1 = avg_price - 1)
+                     ),
+         # Now that we&#39;ve preprocesed our columns
+         # we can fit our multiple regression
          # using lm() inside of map()
-         model = map(sales, ~lm(total_volume_log10 ~ type + avg_price_shift1, data = .x))
+         model = map(sales,
+                     ~lm(total_volume_log10 ~ type + avg_price_shift1, data = .x)
+                     )
          )</code></pre>
 <blockquote>
 <p><strong>Instructor’s note:</strong> You might be tempted to mean-center and perhaps z-score the <code>avg_price</code> column, so that it’s in units of standard deviations of avocado prices. However, you need to be careful <em>how your data is grouped/nested</em> when you center or z-score data, to know whether you’re centering your data <em>within</em> grouping unit or <em>across</em> grouping units. That is, are you centering/scaling by a mean/SD calculated separately for each grouping unit, or for all observations across units? In some cases, centering/scaling data within unit can be dangerous, because you might accidentally be scaling away the effect of interest. Scaling data across units retains between-unit differences of interest, so it’s fine in this case. You would need to unnest your observation-level data to make sure your operations are not implicitly grouped before doing any mean-centering/SD-scaling operations.</p>
@@ -1210,22 +1213,22 @@ avo_coefs</code></pre>
 ## # A tibble: 200 x 2
 ##    splits            id          
 ##    &lt;list&gt;            &lt;chr&gt;       
-##  1 &lt;split [338/122]&gt; Bootstrap001
-##  2 &lt;split [338/125]&gt; Bootstrap002
-##  3 &lt;split [338/127]&gt; Bootstrap003
-##  4 &lt;split [338/123]&gt; Bootstrap004
-##  5 &lt;split [338/123]&gt; Bootstrap005
-##  6 &lt;split [338/123]&gt; Bootstrap006
-##  7 &lt;split [338/126]&gt; Bootstrap007
+##  1 &lt;split [338/123]&gt; Bootstrap001
+##  2 &lt;split [338/127]&gt; Bootstrap002
+##  3 &lt;split [338/123]&gt; Bootstrap003
+##  4 &lt;split [338/128]&gt; Bootstrap004
+##  5 &lt;split [338/111]&gt; Bootstrap005
+##  6 &lt;split [338/133]&gt; Bootstrap006
+##  7 &lt;split [338/118]&gt; Bootstrap007
 ##  8 &lt;split [338/124]&gt; Bootstrap008
-##  9 &lt;split [338/124]&gt; Bootstrap009
-## 10 &lt;split [338/118]&gt; Bootstrap010
+##  9 &lt;split [338/119]&gt; Bootstrap009
+## 10 &lt;split [338/131]&gt; Bootstrap010
 ## # … with 190 more rows</code></pre>
 <p><code>bootstraps()</code> returns a dataframe with a character column called <code>id</code> which labels each iteration, and a list column called <code>splits</code> where each element houses metadata for a resampled dataset. I say metadata because part of the trick that <code>bootstraps()</code> uses is that the native <code>split</code> object type doesn’t actually contain any data on its own:</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
   pull(splits) %&gt;%
   pluck(1)</code></pre>
-<pre><code>## &lt;338/122/338&gt;</code></pre>
+<pre><code>## &lt;338/123/338&gt;</code></pre>
 <p>These numbers aren’t really designed for human consumption on their own. The real magic happens when you call <code>as.data.frame()</code> on a <code>split</code> object, which triggers it to actually do the resampling and give you a tibble of data.</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
   pull(splits) %&gt;%
@@ -1234,16 +1237,16 @@ avo_coefs</code></pre>
 <pre><code>## # A tibble: 338 x 8
 ##    region date       avg_price total_volume type   year total_volume_lo…
 ##    &lt;chr&gt;  &lt;date&gt;         &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt; &lt;int&gt;            &lt;dbl&gt;
-##  1 NewYo… 2016-05-22      2.01       44794. orga…  2016             4.65
-##  2 NewYo… 2015-02-08      1.11     1658709. conv…  2015             6.22
-##  3 NewYo… 2015-12-13      1.12     1254805. conv…  2015             6.10
-##  4 NewYo… 2016-01-31      1.02     1615465. conv…  2016             6.21
-##  5 NewYo… 2017-12-17      1.84       75462. orga…  2017             4.88
-##  6 NewYo… 2015-03-15      1.45     1097738. conv…  2015             6.04
-##  7 NewYo… 2017-05-28      2.38       76002. orga…  2017             4.88
-##  8 NewYo… 2016-02-07      0.95     2202128. conv…  2016             6.34
-##  9 NewYo… 2018-01-14      1.91       86632. orga…  2018             4.94
-## 10 NewYo… 2016-12-18      1.99       51330. orga…  2016             4.71
+##  1 NewYo… 2016-10-02      2.41       35543. orga…  2016             4.55
+##  2 NewYo… 2015-08-30      2.24       16542. orga…  2015             4.22
+##  3 NewYo… 2017-01-22      2.05       49056. orga…  2017             4.69
+##  4 NewYo… 2017-09-17      2.08       70931. orga…  2017             4.85
+##  5 NewYo… 2015-08-30      1.22     1251081. conv…  2015             6.10
+##  6 NewYo… 2017-05-28      1.75     1451147. conv…  2017             6.16
+##  7 NewYo… 2016-07-24      2.32       29301. orga…  2016             4.47
+##  8 NewYo… 2016-02-14      2.11       28290. orga…  2016             4.45
+##  9 NewYo… 2017-12-17      1.41     1181560. conv…  2017             6.07
+## 10 NewYo… 2015-03-29      2.08       16567. orga…  2015             4.22
 ## # … with 328 more rows, and 1 more variable: avg_price_shift1 &lt;dbl&gt;</code></pre>
 <p>To double-check that the data were actually resampled with replacement, we can look in this first resampled tibble to make sure that at least some of the rows appear multiple times in the data.</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
@@ -1252,20 +1255,20 @@ avo_coefs</code></pre>
   as.data.frame() %&gt;%
   count(date) %&gt;%
   arrange(desc(n))</code></pre>
-<pre><code>## # A tibble: 143 x 2
+<pre><code>## # A tibble: 140 x 2
 ##    date           n
 ##    &lt;date&gt;     &lt;int&gt;
-##  1 2015-10-11     6
-##  2 2016-01-03     6
-##  3 2015-03-29     5
-##  4 2016-01-17     5
-##  5 2016-03-13     5
-##  6 2016-04-03     5
-##  7 2016-05-15     5
-##  8 2016-11-06     5
-##  9 2016-12-18     5
-## 10 2017-10-15     5
-## # … with 133 more rows</code></pre>
+##  1 2016-07-17     7
+##  2 2015-03-29     6
+##  3 2015-05-17     6
+##  4 2016-01-31     5
+##  5 2017-04-23     5
+##  6 2017-06-11     5
+##  7 2018-02-25     5
+##  8 2018-03-25     5
+##  9 2015-03-08     4
+## 10 2015-06-14     4
+## # … with 130 more rows</code></pre>
 <p>Looks resampled to me! Now, we can use the same strategy we used before, but instead of operating on the raw data for each <code>region</code> contained in the <code>sales</code> column of <code>avo_by_region</code>, we’ll operate on the resampled data for each bootstrap <code>id</code> contained in the <code>splits</code> column of <code>avo_nyc_boot</code>.</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&lt;&gt;%
   # Note that here, I&#39;m not saving the models into their own column
@@ -1290,16 +1293,16 @@ avo_coefs</code></pre>
 <pre><code>## # A tibble: 600 x 6
 ##    id           term             estimate std.error statistic   p.value
 ##    &lt;chr&gt;        &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-##  1 Bootstrap001 (Intercept)         6.19     0.0251    247.   0.       
-##  2 Bootstrap001 typeorganic        -1.42     0.0421    -33.7  1.41e-109
-##  3 Bootstrap001 avg_price_shift1   -0.184    0.0509     -3.61 3.54e-  4
-##  4 Bootstrap002 (Intercept)         6.21     0.0289    215.   0.       
-##  5 Bootstrap002 typeorganic        -1.40     0.0437    -32.1  3.34e-104
-##  6 Bootstrap002 avg_price_shift1   -0.219    0.0549     -3.99 8.20e-  5
-##  7 Bootstrap003 (Intercept)         6.28     0.0299    210.   0.       
-##  8 Bootstrap003 typeorganic        -1.26     0.0463    -27.3  4.38e- 87
-##  9 Bootstrap003 avg_price_shift1   -0.397    0.0556     -7.15 5.56e- 12
-## 10 Bootstrap004 (Intercept)         6.26     0.0294    213.   0.       
+##  1 Bootstrap001 (Intercept)         6.28     0.0291    216.   0.       
+##  2 Bootstrap001 typeorganic        -1.29     0.0423    -30.4  2.51e- 98
+##  3 Bootstrap001 avg_price_shift1   -0.365    0.0539     -6.77 5.63e- 11
+##  4 Bootstrap002 (Intercept)         6.19     0.0270    229.   0.       
+##  5 Bootstrap002 typeorganic        -1.44     0.0443    -32.6  5.16e-106
+##  6 Bootstrap002 avg_price_shift1   -0.154    0.0531     -2.90 3.99e-  3
+##  7 Bootstrap003 (Intercept)         6.21     0.0281    221.   0.       
+##  8 Bootstrap003 typeorganic        -1.39     0.0449    -31.0  2.33e-100
+##  9 Bootstrap003 avg_price_shift1   -0.209    0.0552     -3.79 1.76e-  4
+## 10 Bootstrap004 (Intercept)         6.28     0.0309    203.   0.       
 ## # … with 590 more rows</code></pre>
 <p>These coefficients are now ready to feed into a <code>ggplot2</code> histogram. I’ll just inspect the bootstrapped error distribution for <code>typeorganic</code>, the coefficient for the weekly difference in (log-10) volume of organic avocados sold relative to conventional avocados.</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
