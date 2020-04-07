@@ -406,19 +406,19 @@ plot_hist_avo_total_volume &lt;- avocado %&gt;%
   theme_bw()
 
 plot_hist_avo_total_volume</code></pre>
-<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-vol-hist-1.png" width="672" /></p>
 <p>Ooh, yikes, the weekly total avocados sold looks super gamma-skewed. Most weeks it’s maybe a few tens of thousands of avocados sold, but in some weeks and some regions it gets into the millions of avocados sold (that’s a lot of avocados in a week!), so we would probably do well to log-transform the data to try to get it to take a more normal-ish distribution.</p>
 <p>Right now, we can use one of <code>ggplot2</code>’s scale helper functions to set the scale to be on log-10 units.</p>
 <pre class="language-r"><code class="language-r">plot_hist_avo_total_volume +
   scale_x_log10()</code></pre>
-<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-vol-hist-scaled-1.png" width="672" /></p>
 <p>That looks much better! Now we can proceed.</p>
 <p>Next, let’s break up the graph by region, so we can see the sub-histograms of total avocados sold for each metropolitan area. A super-fast way to break up your graph by each grouping unit is to <em>facet</em> your ggplot, or to break it up into small multiples. I like to use <code>facet_wrap(~ grouping_unit)</code> to break a single plot up, so that the data for each metro area is displayed on its own sub-plot, or facet. The “wrap” part of <code>facet_wrap()</code> tries to arrange the facets in “reading” order, from left-to-right and then top-to-bottom to fill the plot area as efficiently as possible.</p>
 <pre class="language-r"><code class="language-r">plot_hist_avo_total_volume +
   # let&#39;s not forget to log-scale the x-axis!
   scale_x_log10() +
   facet_wrap(~ region)</code></pre>
-<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-vol-hist-faceted-1.png" width="672" /></p>
 <p>Incidentally, graphing data at first can be a great way of identifying important variables in the data that need to be considered. For example, what if I had forgotten to break up the sales data by conventional vs. organic avocado type?</p>
 <pre class="language-r"><code class="language-r">avocado %&gt;%
   # Notice that I&#39;ve removed the fill aesthetic
@@ -427,7 +427,7 @@ plot_hist_avo_total_volume</code></pre>
   geom_histogram(position = &quot;identity&quot;, bins = 25, alpha = 0.5) +
   scale_x_log10() +
   theme_bw()</code></pre>
-<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-vol-hist-bad-1.png" width="672" /></p>
 <p>I might see a bimodal histogram and say “huh, that’s funny.” If I weren’t so careful, I might continue my business without accounting for this bimodality. But optimally I’d stop and think “what additional variable might be driving this bimodality?” and after some exploration, realize that I need to consider conventional vs. organic avocado type when looking at avocado sales in order to properly characterize the data. Always keep an eye out!</p>
 </div>
 <div id="basic-summary-statistics" class="section level3" number="3.4.2">
@@ -999,7 +999,7 @@ avocado %&lt;&gt;%
   labs(y = &quot;Average price (dollars per avocado)&quot;,
        title = &quot;Weekly prices per avocado, by organic vs. conventional&quot;) +
   theme_bw()</code></pre>
-<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-price-timeseries-1.png" width="672" /></p>
 <p>Grocery shoppers might be less likely to buy as many conventional avocados at all just because of the price. How can we take into account that organic avocados are more expensive when estimating the difference in volume of avocados purchased, to make our analysis more robust?</p>
 <p>If we can adjust for the usual premium price on organic avocados, we can estimate the difference in total volume of avocados purchased, over and above that which you would expect when one type of avocado is cheaper. That might be able to tell us something like the following: <strong>if conventional and organic avocados were the same price, what is the estimated difference in volume of avocados purchased?</strong></p>
 <p>This sounds like a job for <strong>linear regression!</strong></p>
@@ -1152,7 +1152,7 @@ avo_coefs</code></pre>
 <h3><span class="header-section-number">3.7.3</span> Visualizing many statistics</h3>
 <p>Now that we have our model coefficients in a long form dataframe, with a chunk of rows for each metropolitan area, let’s plot the model estimates for each region!</p>
 <p>Here, we’ll focus on plotting the values of the <code>typeorganic</code> term, as this will index each region’s relative buying preference (or anti-preference?) for organic relative to conventional avocados. This estimate will conveniently also be adjusted for average avocado price across regions, so it should <em>not</em> be affected by general differences in avocado prices (and cost of living) from region to region.</p>
-<pre class="language-r"><code class="language-r">avo_coefs %&gt;%
+<pre class="language-r"><code class="language-r">avo_coefplot &lt;- avo_coefs %&gt;%
   filter(term == &quot;typeorganic&quot;) %&gt;%
   # Here, using fct_reorder() from the forcats pkg of the tidyverse
   # which provides a bunch of nice factor manipulating functions
@@ -1164,6 +1164,14 @@ avo_coefs</code></pre>
                     ymax = estimate + std.error),
                 width = 0) +
   geom_point() +
+  # let&#39;s annotate
+  # to add guides to remind us how to interpret the log-10 scale
+  # that stuff is brain-bendy!
+  geom_hline(yintercept = c(-1, -2), linetype = 3) +
+  annotate(&quot;text&quot;, x = 8, y = -1.05, hjust = 0,
+           label = &quot;-1 on log10 = 10% as many&quot;, color = &quot;black&quot;) +
+  annotate(&quot;text&quot;, x = 8, y = -1.95, hjust = 0,
+           label = &quot;-2 on log10 = 1% as many&quot;, color = &quot;black&quot;) +
   labs(x = &quot;Metro area&quot;,
        y = &quot;Log-10 diff in volume of organic avos sold&quot;,
        title = &quot;People really do not buy organic avocados&quot;,
@@ -1172,8 +1180,56 @@ avo_coefs</code></pre>
   # since the region names are long and would otherwise overlap on the plot,
   # right-justifying each of them and tilting them to 45 degrees
   # will make them all stick off the plot on an angle
-  theme(axis.text.x = element_text(hjust = 1, angle = 45))</code></pre>
-<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+  theme(axis.text.x = element_text(hjust = 1, angle = 45))
+
+avo_coefplot</code></pre>
+<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-raw-coefplot-1-1.png" width="672" /></p>
+<p>On this plot, metro areas on the <em>left</em> of the plot are areas that buy a <em>greater</em> percentage of organic avocados relative to conventional, and metro areas on the <em>right</em> of the plot are areas that buy a <em>lower</em> percentage of avocados relative to conventional.</p>
+<p>Be mindful of the log scale when reading these numbers off the plot–thinking on the log scale can be tricky! Since we’re using log-10 scaling here, a log-10 difference of -1 corresponds to a real difference of 10<sup>-1</sup>, or a 10% reduction in number. Similarly, a log-10 difference of -2 corresponds to a real difference of 10<sup>-2</sup>, or a 1% reduction in number. (A log-10 difference of -1.5 is not as intuitive, we’re all better off just calculating 10<sup->1.5</sup>)</p>
+<p>So in Seattle, we estimate that when the price premium for organic avocados is taken into account, people buy approximately 10% as many organic avocados as they do conventional avocados. Meanwhile, in Miami &amp; Fort Lauderdale, we estimate that people buy less than 1% as many organic avocados as they do conventional avocados. A log-10 difference of 1 is a whole order of magnitude different in raw avocado units!</p>
+<blockquote>
+<p><strong>Instructor’s note:</strong> The following plot takes a bit of fiddling to set up, and requires chaining together many pieces of data wrangling logic. If learners have never made a model-estimate-plus-raw-data plot like this before, this may be a bit beyond scope to live-code. In that case, I recommend taking a couple minutes for learners to brainstorm possible strategies for extending the basic coefficient plot shown above, and then showing a fully rendered copy of the plot below as an example extension plot, qualitatively describing the added layers and annotations.</p>
+</blockquote>
+<pre class="language-r"><code class="language-r">avo_raw_diffs &lt;- avocado %&gt;%
+  # first, prepare to calculate the raw difference in weekly volume
+  # of organic - conventional avocados bought
+  # (must be that direction bc conventional is baseline in the regression)
+  select(region, date, type, total_volume_log10) %&gt;%
+  pivot_wider(names_from = type,
+              values_from = total_volume_log10) %&gt;%
+  mutate(diff_raw = organic - conventional) %&gt;%
+  # WestTextNewMexico has some weeks with no organic avocado sales
+  # so we need to filter out some NA rows of diff_raw
+  filter(!is.na(diff_raw)) %&gt;%
+  # for each region, calculate the mean and SE of the mean
+  # of this difference
+  group_by(region) %&gt;%
+  summarize(diff_mean = mean(diff_raw),
+            diff_se = sd(diff_raw)/sqrt(length(diff_raw))) %&gt;% 
+  # in order for the plot to work
+  # (for the regions to be ordered by the model estimate)
+  # the model estimates need to be bound on to the raw diffs
+  left_join(avo_coefs %&gt;% filter(term == &quot;typeorganic&quot;),
+            by = &quot;region&quot;)
+
+avo_coefplot +
+  # error bars and points for the raw data
+  # notice that we use the data argument to feed in different data
+  geom_errorbar(aes(y = diff_mean,
+                    ymin = diff_mean - diff_se,
+                    ymax = diff_mean + diff_se),
+                data = avo_raw_diffs,
+                color = &quot;olivedrab4&quot;,
+                width = 0) +
+  geom_point(aes(y = diff_mean),
+             data = avo_raw_diffs,
+             color = &quot;olivedrab4&quot;) +
+  # hand-adding a legend
+  annotate(&quot;text&quot;, x = 45, y = -1.2, hjust = 1,
+           label = &quot;black = model-estimated&quot;, color = &quot;black&quot;) +
+  annotate(&quot;text&quot;, x = 45, y = -1.3, hjust = 1,
+           label = &quot;green = raw&quot;, color = &quot;olivedrab4&quot;)</code></pre>
+<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-raw-coefplot-2-1.png" width="672" /></p>
 <p>I think we’ve gotten pretty close to an answer (not THE answer, but AN answer) to our earlier research question: <strong>Do avocado buyers prefer buying conventional or organic avocados? By how much? How do these patterns differ from region to region?</strong></p>
 <p>Avocado buyers across the US appear to prefer buying conventional avocados over organic avocados; that is, they buy many more conventional avocados than organic avocados in a given week. This holds even when you adjust for the fact that organic avocados are usually more expensive. The magnitude of this buying preference against organic avocados varies across the country–the Pacific Northwest appears to avoid organic avocados much less than the rest of the country, and Florida appears to avoid organic avocados much more than the rest of the country.</p>
 <p>That concludes the core analysis of this tutorial! If you like, continue following along for a rapid-fire demonstration of another use case of <code>map()</code> inside <code>mutate()</code> with nested dataframes to repeat analysis across many datasets containing similarly structured data.</p>
@@ -1213,22 +1269,22 @@ avo_coefs</code></pre>
 ## # A tibble: 200 x 2
 ##    splits            id          
 ##    &lt;list&gt;            &lt;chr&gt;       
-##  1 &lt;split [338/123]&gt; Bootstrap001
-##  2 &lt;split [338/127]&gt; Bootstrap002
-##  3 &lt;split [338/123]&gt; Bootstrap003
-##  4 &lt;split [338/128]&gt; Bootstrap004
-##  5 &lt;split [338/111]&gt; Bootstrap005
-##  6 &lt;split [338/133]&gt; Bootstrap006
-##  7 &lt;split [338/118]&gt; Bootstrap007
-##  8 &lt;split [338/124]&gt; Bootstrap008
-##  9 &lt;split [338/119]&gt; Bootstrap009
-## 10 &lt;split [338/131]&gt; Bootstrap010
+##  1 &lt;split [338/126]&gt; Bootstrap001
+##  2 &lt;split [338/134]&gt; Bootstrap002
+##  3 &lt;split [338/133]&gt; Bootstrap003
+##  4 &lt;split [338/121]&gt; Bootstrap004
+##  5 &lt;split [338/121]&gt; Bootstrap005
+##  6 &lt;split [338/119]&gt; Bootstrap006
+##  7 &lt;split [338/121]&gt; Bootstrap007
+##  8 &lt;split [338/123]&gt; Bootstrap008
+##  9 &lt;split [338/124]&gt; Bootstrap009
+## 10 &lt;split [338/130]&gt; Bootstrap010
 ## # … with 190 more rows</code></pre>
 <p><code>bootstraps()</code> returns a dataframe with a character column called <code>id</code> which labels each iteration, and a list column called <code>splits</code> where each element houses metadata for a resampled dataset. I say metadata because part of the trick that <code>bootstraps()</code> uses is that the native <code>split</code> object type doesn’t actually contain any data on its own:</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
   pull(splits) %&gt;%
   pluck(1)</code></pre>
-<pre><code>## &lt;338/123/338&gt;</code></pre>
+<pre><code>## &lt;338/126/338&gt;</code></pre>
 <p>These numbers aren’t really designed for human consumption on their own. The real magic happens when you call <code>as.data.frame()</code> on a <code>split</code> object, which triggers it to actually do the resampling and give you a tibble of data.</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
   pull(splits) %&gt;%
@@ -1238,15 +1294,15 @@ avo_coefs</code></pre>
 ##    region date       avg_price total_volume type   year total_volume_lo…
 ##    &lt;chr&gt;  &lt;date&gt;         &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt; &lt;int&gt;            &lt;dbl&gt;
 ##  1 NewYo… 2016-10-02      2.41       35543. orga…  2016             4.55
-##  2 NewYo… 2015-08-30      2.24       16542. orga…  2015             4.22
-##  3 NewYo… 2017-01-22      2.05       49056. orga…  2017             4.69
-##  4 NewYo… 2017-09-17      2.08       70931. orga…  2017             4.85
-##  5 NewYo… 2015-08-30      1.22     1251081. conv…  2015             6.10
-##  6 NewYo… 2017-05-28      1.75     1451147. conv…  2017             6.16
-##  7 NewYo… 2016-07-24      2.32       29301. orga…  2016             4.47
-##  8 NewYo… 2016-02-14      2.11       28290. orga…  2016             4.45
-##  9 NewYo… 2017-12-17      1.41     1181560. conv…  2017             6.07
-## 10 NewYo… 2015-03-29      2.08       16567. orga…  2015             4.22
+##  2 NewYo… 2018-02-25      1.3      1615325. conv…  2018             6.21
+##  3 NewYo… 2016-10-23      1.95      807565. conv…  2016             5.91
+##  4 NewYo… 2016-07-24      2.32       29301. orga…  2016             4.47
+##  5 NewYo… 2016-06-26      2.23       38646. orga…  2016             4.59
+##  6 NewYo… 2018-01-14      1.67     1294150. conv…  2018             6.11
+##  7 NewYo… 2017-06-11      1.74     1374186. conv…  2017             6.14
+##  8 NewYo… 2015-12-06      1.65       18494. orga…  2015             4.27
+##  9 NewYo… 2016-12-11      1.32     1163696. conv…  2016             6.07
+## 10 NewYo… 2017-04-30      1.84     1228100. conv…  2017             6.09
 ## # … with 328 more rows, and 1 more variable: avg_price_shift1 &lt;dbl&gt;</code></pre>
 <p>To double-check that the data were actually resampled with replacement, we can look in this first resampled tibble to make sure that at least some of the rows appear multiple times in the data.</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
@@ -1255,20 +1311,20 @@ avo_coefs</code></pre>
   as.data.frame() %&gt;%
   count(date) %&gt;%
   arrange(desc(n))</code></pre>
-<pre><code>## # A tibble: 140 x 2
+<pre><code>## # A tibble: 145 x 2
 ##    date           n
 ##    &lt;date&gt;     &lt;int&gt;
-##  1 2016-07-17     7
-##  2 2015-03-29     6
-##  3 2015-05-17     6
-##  4 2016-01-31     5
-##  5 2017-04-23     5
-##  6 2017-06-11     5
-##  7 2018-02-25     5
-##  8 2018-03-25     5
-##  9 2015-03-08     4
-## 10 2015-06-14     4
-## # … with 130 more rows</code></pre>
+##  1 2016-09-25     9
+##  2 2016-04-17     6
+##  3 2015-02-15     5
+##  4 2015-05-24     5
+##  5 2015-06-28     5
+##  6 2015-07-19     5
+##  7 2015-11-01     5
+##  8 2016-06-26     5
+##  9 2017-05-14     5
+## 10 2018-01-07     5
+## # … with 135 more rows</code></pre>
 <p>Looks resampled to me! Now, we can use the same strategy we used before, but instead of operating on the raw data for each <code>region</code> contained in the <code>sales</code> column of <code>avo_by_region</code>, we’ll operate on the resampled data for each bootstrap <code>id</code> contained in the <code>splits</code> column of <code>avo_nyc_boot</code>.</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&lt;&gt;%
   # Note that here, I&#39;m not saving the models into their own column
@@ -1293,24 +1349,26 @@ avo_coefs</code></pre>
 <pre><code>## # A tibble: 600 x 6
 ##    id           term             estimate std.error statistic   p.value
 ##    &lt;chr&gt;        &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-##  1 Bootstrap001 (Intercept)         6.28     0.0291    216.   0.       
-##  2 Bootstrap001 typeorganic        -1.29     0.0423    -30.4  2.51e- 98
-##  3 Bootstrap001 avg_price_shift1   -0.365    0.0539     -6.77 5.63e- 11
-##  4 Bootstrap002 (Intercept)         6.19     0.0270    229.   0.       
-##  5 Bootstrap002 typeorganic        -1.44     0.0443    -32.6  5.16e-106
-##  6 Bootstrap002 avg_price_shift1   -0.154    0.0531     -2.90 3.99e-  3
-##  7 Bootstrap003 (Intercept)         6.21     0.0281    221.   0.       
-##  8 Bootstrap003 typeorganic        -1.39     0.0449    -31.0  2.33e-100
-##  9 Bootstrap003 avg_price_shift1   -0.209    0.0552     -3.79 1.76e-  4
-## 10 Bootstrap004 (Intercept)         6.28     0.0309    203.   0.       
+##  1 Bootstrap001 (Intercept)         6.23     0.0300    208.   0.       
+##  2 Bootstrap001 typeorganic        -1.40     0.0454    -30.8  8.68e-100
+##  3 Bootstrap001 avg_price_shift1   -0.266    0.0561     -4.74 3.17e-  6
+##  4 Bootstrap002 (Intercept)         6.29     0.0335    188.   0.       
+##  5 Bootstrap002 typeorganic        -1.29     0.0485    -26.7  6.79e- 85
+##  6 Bootstrap002 avg_price_shift1   -0.397    0.0619     -6.41 4.92e- 10
+##  7 Bootstrap003 (Intercept)         6.25     0.0303    206.   0.       
+##  8 Bootstrap003 typeorganic        -1.36     0.0470    -28.8  1.06e- 92
+##  9 Bootstrap003 avg_price_shift1   -0.295    0.0586     -5.03 8.05e-  7
+## 10 Bootstrap004 (Intercept)         6.22     0.0290    214.   0.       
 ## # … with 590 more rows</code></pre>
 <p>These coefficients are now ready to feed into a <code>ggplot2</code> histogram. I’ll just inspect the bootstrapped error distribution for <code>typeorganic</code>, the coefficient for the weekly difference in (log-10) volume of organic avocados sold relative to conventional avocados.</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
   filter(term == &quot;typeorganic&quot;) %&gt;%
   ggplot(aes(x = estimate)) +
-  geom_histogram()</code></pre>
+  geom_histogram() +
+  theme_bw()</code></pre>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/unnamed-chunk-49-1.png" width="672" /></p>
+<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-boot-hist-1.png" width="672" /></p>
+<p>We can see that this error distribution shows high kurtosis; that is, that the tails are short and the center of distribution is thick. This means we probably don’t want to use the standard deviation of this distribution as the standard error of the estimate, since the error distribution isn’t normal. Instead, we can use percentiles to report error intervals non-parametrically.</p>
 <p>For the last plot I’ll show in this demo, I’ll do a bit more data manipulation to join the bootstrapped standard error data and the “raw” <code>lm()</code>-estimated standard error data for the original New York avocado sales model, to produce a plot comparing the standard errors from the model estimate and from bootstrapping. This way we can see how much more conservative (how much larger) the bootstrapped standard error is relative to the <code>lm()</code>-estimated error.</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
   # for each term in the model, over all bootstrap iterations,
@@ -1353,7 +1411,7 @@ avo_coefs</code></pre>
        title = &quot;Bootstrap vs. &#39;raw&#39; errors for the New York avocado sale volume regression&quot;,
        subtitle = &quot;The bootstrapped error is more conservative&quot;) +
   theme_bw()</code></pre>
-<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
+<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-boot-coefplot-1.png" width="672" /></p>
 <p>Yep, it looks like the error bounds on the bootstrapped data are wider than the equivalent standard error from the <code>lm</code> fit to the raw data. This will usually be the case! Perhaps a good argument to use bootstrapped standard errors more often, to be conservative with our statistics.</p>
 </div>
 </div>
