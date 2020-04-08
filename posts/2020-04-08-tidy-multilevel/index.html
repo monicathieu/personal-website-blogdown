@@ -262,7 +262,7 @@
 <p>In this tutorial, we’ll be exploring grocery store sales data of millenials’ favorite fruit: avocados!</p>
 
   <figure class="center" >
-    <img src="https://lh3.googleusercontent.com/proxy/mpb5XEyV0ZrT61hVmDf6r6xoQag2E9WMYHi7SSznFvYCIgNEdDdCIgcrBEWgp_zp9Nwqww0KK4xNrAwQM--Qk8qDVao6PcRb-TC1du8"   />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Avocado_open_side_by_side.jpg/640px-Avocado_open_side_by_side.jpg"   />
     
       <figcaption class="center" >The fruit that launched a thousand guacamoles?</figcaption>
     
@@ -434,8 +434,10 @@ plot_hist_avo_total_volume</code></pre>
 <h3><span class="header-section-number">3.4.2</span> Basic summary statistics</h3>
 <p>In addition to graphs, we can generate simple one-shot summary statistics using <code>group_by()</code> and <code>summarize()</code> from the <code>dplyr</code> package.</p>
 <p>As a companion to the exploratory graphs of <code>total_volume</code> we just generated, we can calculate numerical summaries of the weekly number of avocados sold as a quick metric of the difference in buying patterns for conventional and organic avocados. Before we calculate these summaries, though, we should create a new column for log-10-transformed <code>total_volume</code>, as we saw earlier in our graphs that it’s massively right-tailed and needs to be log-transformed to look more normal.</p>
-<pre class="language-r"><code class="language-r"># The double-sided pipe %&lt;&gt;%, from magrittr
-# does the same thing as:
+<pre class="language-r"><code class="language-r"># The double-sided assignment pipe %&lt;&gt;%, from magrittr
+# you can use this by library()-ing magrittr
+# in addition to library(tidyverse)
+# avocado %&lt;&gt;% ... does the same thing as:
 # avocado &lt;- avocado %&gt;% ...
 # so it gives us a shortcut to pipe an object into some calls,
 # and then re-save the new result back into the old variable name
@@ -1269,22 +1271,22 @@ avo_coefplot +
 ## # A tibble: 200 x 2
 ##    splits            id          
 ##    &lt;list&gt;            &lt;chr&gt;       
-##  1 &lt;split [338/112]&gt; Bootstrap001
-##  2 &lt;split [338/122]&gt; Bootstrap002
-##  3 &lt;split [338/119]&gt; Bootstrap003
-##  4 &lt;split [338/120]&gt; Bootstrap004
-##  5 &lt;split [338/131]&gt; Bootstrap005
-##  6 &lt;split [338/121]&gt; Bootstrap006
-##  7 &lt;split [338/123]&gt; Bootstrap007
-##  8 &lt;split [338/118]&gt; Bootstrap008
-##  9 &lt;split [338/118]&gt; Bootstrap009
-## 10 &lt;split [338/118]&gt; Bootstrap010
+##  1 &lt;split [338/122]&gt; Bootstrap001
+##  2 &lt;split [338/118]&gt; Bootstrap002
+##  3 &lt;split [338/122]&gt; Bootstrap003
+##  4 &lt;split [338/124]&gt; Bootstrap004
+##  5 &lt;split [338/137]&gt; Bootstrap005
+##  6 &lt;split [338/126]&gt; Bootstrap006
+##  7 &lt;split [338/126]&gt; Bootstrap007
+##  8 &lt;split [338/138]&gt; Bootstrap008
+##  9 &lt;split [338/119]&gt; Bootstrap009
+## 10 &lt;split [338/125]&gt; Bootstrap010
 ## # … with 190 more rows</code></pre>
 <p><code>bootstraps()</code> returns a dataframe with a character column called <code>id</code> which labels each iteration, and a list column called <code>splits</code> where each element houses metadata for a resampled dataset. I say metadata because part of the trick that <code>bootstraps()</code> uses is that the native <code>split</code> object type doesn’t actually contain any data on its own:</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
   pull(splits) %&gt;%
   pluck(1)</code></pre>
-<pre><code>## &lt;338/112/338&gt;</code></pre>
+<pre><code>## &lt;338/122/338&gt;</code></pre>
 <p>These numbers aren’t really designed for human consumption on their own. The real magic happens when you call <code>as.data.frame()</code> on a <code>split</code> object, which triggers it to actually do the resampling and give you a tibble of data.</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
   pull(splits) %&gt;%
@@ -1293,16 +1295,16 @@ avo_coefplot +
 <pre><code>## # A tibble: 338 x 8
 ##    region date       avg_price total_volume type   year total_volume_lo…
 ##    &lt;chr&gt;  &lt;date&gt;         &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt; &lt;int&gt;            &lt;dbl&gt;
-##  1 NewYo… 2017-01-01      1.44      940983. conv…  2017             5.97
-##  2 NewYo… 2017-08-27      1.81     1100988. conv…  2017             6.04
-##  3 NewYo… 2016-06-12      1.44     1485642. conv…  2016             6.17
-##  4 NewYo… 2016-06-12      1.44     1485642. conv…  2016             6.17
-##  5 NewYo… 2015-01-18      2.08        9205. orga…  2015             3.96
-##  6 NewYo… 2015-04-05      2.14       14908. orga…  2015             4.17
-##  7 NewYo… 2017-08-20      1.75     1057189. conv…  2017             6.02
-##  8 NewYo… 2018-01-07      1.67     1287480. conv…  2018             6.11
-##  9 NewYo… 2017-11-12      1.52     1122350  conv…  2017             6.05
-## 10 NewYo… 2016-09-18      2.36       45702. orga…  2016             4.66
+##  1 NewYo… 2017-08-20      1.75     1057189. conv…  2017             6.02
+##  2 NewYo… 2018-03-18      1.7       189434. orga…  2018             5.28
+##  3 NewYo… 2017-05-28      2.38       76002. orga…  2017             4.88
+##  4 NewYo… 2015-08-02      2.12       13852. orga…  2015             4.14
+##  5 NewYo… 2016-08-21      2.16       30583. orga…  2016             4.49
+##  6 NewYo… 2016-09-04      1.47     1278749. conv…  2016             6.11
+##  7 NewYo… 2017-08-20      1.85      107275. orga…  2017             5.03
+##  8 NewYo… 2016-12-11      2.22       32659. orga…  2016             4.51
+##  9 NewYo… 2015-02-01      1.36     1433763. conv…  2015             6.16
+## 10 NewYo… 2016-07-31      2.41       24048. orga…  2016             4.38
 ## # … with 328 more rows, and 1 more variable: avg_price_shift1 &lt;dbl&gt;</code></pre>
 <p>To double-check that the data were actually resampled with replacement, we can look in this first resampled tibble to make sure that at least some of the rows appear multiple times in the data.</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
@@ -1311,20 +1313,20 @@ avo_coefplot +
   as.data.frame() %&gt;%
   count(date) %&gt;%
   arrange(desc(n))</code></pre>
-<pre><code>## # A tibble: 147 x 2
+<pre><code>## # A tibble: 144 x 2
 ##    date           n
 ##    &lt;date&gt;     &lt;int&gt;
-##  1 2015-07-26     5
-##  2 2015-09-13     5
-##  3 2016-07-03     5
-##  4 2017-05-28     5
-##  5 2017-06-25     5
-##  6 2018-01-28     5
-##  7 2015-01-18     4
-##  8 2015-04-19     4
-##  9 2015-05-03     4
-## 10 2015-05-10     4
-## # … with 137 more rows</code></pre>
+##  1 2016-12-18     6
+##  2 2015-05-24     5
+##  3 2015-12-27     5
+##  4 2016-06-19     5
+##  5 2016-09-18     5
+##  6 2016-12-11     5
+##  7 2017-05-14     5
+##  8 2017-05-28     5
+##  9 2015-02-22     4
+## 10 2015-04-19     4
+## # … with 134 more rows</code></pre>
 <p>Looks resampled to me! Now, we can use the same strategy we used before, but instead of operating on the raw data for each <code>region</code> contained in the <code>sales</code> column of <code>avo_by_region</code>, we’ll operate on the resampled data for each bootstrap <code>id</code> contained in the <code>splits</code> column of <code>avo_nyc_boot</code>.</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&lt;&gt;%
   # Note that here, I&#39;m not saving the models into their own column
@@ -1347,18 +1349,18 @@ avo_coefplot +
 <p>If we inspect the long-form unnested content of <code>avo_nyc_boot</code> after we’ve pulled out the bootstrapped coefficients, it looks pretty similar to the unnested coefficients in <code>avo_coefs</code>, but this time instead of coefficients by <code>region</code>, we’ve got coefficients by bootstrap <code>id</code>.</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot</code></pre>
 <pre><code>## # A tibble: 600 x 6
-##    id           term             estimate std.error statistic  p.value
-##    &lt;chr&gt;        &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
-##  1 Bootstrap001 (Intercept)         6.28     0.0287    219.   0.      
-##  2 Bootstrap001 typeorganic        -1.26     0.0464    -27.2  7.12e-87
-##  3 Bootstrap001 avg_price_shift1   -0.383    0.0577     -6.64 1.24e-10
-##  4 Bootstrap002 (Intercept)         6.26     0.0294    213.   0.      
-##  5 Bootstrap002 typeorganic        -1.33     0.0454    -29.2  4.41e-94
-##  6 Bootstrap002 avg_price_shift1   -0.344    0.0566     -6.07 3.39e- 9
-##  7 Bootstrap003 (Intercept)         6.34     0.0309    205.   0.      
-##  8 Bootstrap003 typeorganic        -1.23     0.0484    -25.5  2.30e-80
-##  9 Bootstrap003 avg_price_shift1   -0.530    0.0617     -8.58 3.52e-16
-## 10 Bootstrap004 (Intercept)         6.24     0.0274    227.   0.      
+##    id           term             estimate std.error statistic   p.value
+##    &lt;chr&gt;        &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+##  1 Bootstrap001 (Intercept)         6.23     0.0285    218.   0.       
+##  2 Bootstrap001 typeorganic        -1.41     0.0450    -31.3  2.03e-101
+##  3 Bootstrap001 avg_price_shift1   -0.255    0.0562     -4.54 7.99e-  6
+##  4 Bootstrap002 (Intercept)         6.28     0.0283    222.   0.       
+##  5 Bootstrap002 typeorganic        -1.31     0.0441    -29.7  7.27e- 96
+##  6 Bootstrap002 avg_price_shift1   -0.383    0.0564     -6.78 5.51e- 11
+##  7 Bootstrap003 (Intercept)         6.29     0.0289    217.   0.       
+##  8 Bootstrap003 typeorganic        -1.28     0.0409    -31.4  1.13e-101
+##  9 Bootstrap003 avg_price_shift1   -0.397    0.0539     -7.37 1.35e- 12
+## 10 Bootstrap004 (Intercept)         6.24     0.0279    223.   0.       
 ## # … with 590 more rows</code></pre>
 <p>These coefficients are now ready to feed into a <code>ggplot2</code> histogram. I’ll just inspect the bootstrapped error distribution for <code>typeorganic</code>, the coefficient for the weekly difference in (log-10) volume of organic avocados sold relative to conventional avocados.</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
