@@ -1,0 +1,62 @@
+---
+title: "CoVID19: soothing anxiety with data, sort of"
+date: 2020-03-23
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# Need 2 do this every time
+devtools::install_github("RamiKrispin/coronavirus",
+                         force = TRUE,
+                         dependencies = FALSE,
+                         upgrade = "never")
+
+library(tidyverse)
+library(magrittr)
+
+corona <- coronavirus::coronavirus %>%
+  as_tibble() %>%
+  left_join(tibble(State.Name = state.name, State.Abb = state.abb),
+            by = c("Province.State" = "State.Name")) %>%
+  mutate(Province.State = if_else(Country.Region == Province.State, "", Province.State),
+         Province.State = na_if(Province.State, ""),
+         State.Abb = case_when(Province.State %in% c("Washington, D.C.", "District of Columbia") ~ "DC",
+                               Province.State == "Puerto Rico" ~ "PR",
+                               TRUE ~ State.Abb))
+```
+
+# US-specific stuff
+
+```{r}
+corona %>%
+  filter(type == "confirmed", Country.Region == "US", !is.na(State.Abb)) %>%
+  ggplot(aes(x = date, y = cases, color = State.Abb)) +
+  geom_line() +
+  # scale_y_log10() +
+  theme_bw()
+```
+
+# Re-centering by date of first confirmed positive test
+
+```{r}
+corona %>%
+  filter(type == "confirmed") %>%
+  mutate(Sub.Region = if_else(!is.na(Province.State),
+                              paste(Country.Region, Province.State),
+                              Country.Region)) %>%
+  arrange(date) %>%
+  group_by(Sub.Region) %>%
+  mutate(cumul_cases = cumsum(cases)) %>%
+  filter(cumul_cases > 0) %>%
+  mutate(days_since_first_case = 0:(n()-1)) %>%
+  nest(days = -Sub.Region) %>%
+  mutate(total_cases = map_int(days, ~sum(.x$cases))) %>%
+  filter(total_cases > 2000) %>%
+  unnest(days) %>%
+  ggplot(aes(x = days_since_first_case, y = cases, color = Sub.Region, fill = Sub.Region)) +
+  geom_point() +
+  geom_smooth(alpha = 0.1) +
+  # guides(color = FALSE) +
+  theme_bw()
+```
+

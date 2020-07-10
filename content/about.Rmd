@@ -1,0 +1,69 @@
+---
+cover: img/headshot_may2019.jpg
+title: About me
+author: " "
+---
+
+# Where I'm at.
+
+I'm currently a PhD student in Dr. Kevin Ochsner's [Social Cognitive & Affective Neuroscience Lab](http://www.ochsnerscanlab.org) at Columbia University, where I began in fall 2017. While I'm not working on research (and often while I am), I'm probably drinking from a very large cup of tea. I also co-manage an informal R users club in the department, and help to organize a semesterly coding bootcamp and bi-weekly meetings/workshops to enrich our collective R experience.
+
+**Previously:**
+
+In 2013 I started working as a research assistant on a media multitasking & cognition project with Dr. Melina Uncapher, then a research associate in Dr. Anthony Wagner's [Memory Lab](https://memorylab.stanford.edu), during my freshman year at Stanford University. She couldn't get rid of me, and I continued working with her in the lab throughout undergrad, earning two undergraduate summer fellowships through Stanford (PsychSummer and Bio-X) so I would literally never have to leave. I completed my bachelor's degree in three years, serving as an undergraduate Teaching Fellow for [Psych One](http://psych-one.weebly.com), Stanford's introductory psychology course, during my third year, while also completing an honors thesis under Drs. Uncapher and Wagner.
+
+After graduation in 2015, I transitioned into a full-time lab manager + research assistant position in the Memory Lab. As lab manager/RA, I served as a jack-of-most-trades, handling various arms of data collection and analysis for our healthy aging study, maintaining lab needs both tangible (office supplies, copies, uncomfortable amounts of coffee) and intangible (IRB protocols, software licenses, moral support), and defusing tense meetings with horrible jokes. I also spent some time assisting Dr. Uncapher with data processing and statistics for her [educational neuroscience projects](https://neuroscape.ucsf.edu/education/) with the Neuroscape group at UC San Francisco.
+
+# Some of my code.
+
+[The Columbia Psychology coding tutorial collection](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/), which I co-maintain.
+
+[cuPsychRTools](https://github.com/cu-psych-r-users/cuPsychRTools), a petite R package of [`tidyverse`](https://www.tidyverse.org/)-safe helper functions I've assembled.
+
+# Talk to me.
+
+Email me: [monica.thieu -at- columbia -dot- edu](mailto:monica.thieu@columbia.edu)
+
+Tweet at me: [monica_too_](https://twitter.com/monica_too_)
+
+# A snapshot of my CV.
+
+## Awards and honors
+
+[Curricular Innovation Fellow](https://rcfoundations.research.columbia.edu/content/foundations-curriculum-innovation-grant-program), Foundations for Research Computing, Columbia University, spring 2020
+
+Fellow, [Kavli Summer Institute in Cognitive Neuroscience](https://sicn.cmb.ucdavis.edu/), 2019
+
+Honorable Mention, NSF Graduate Research Fellowship Program, 2019
+
+Firestone Medal for Excellence in Undergraduate Research, Stanford University, 2015
+
+Zimbardo Teaching Prize, Psych One, Stanford University, 2015
+
+## Teaching experience
+
+[Carpentries](https://carpentries.org/)-certified coding instructor, [Foundations for Research Computing](https://rcfoundations.research.columbia.edu/), Columbia University, fall 2019 -
+
+Teaching assistant & guest lecturer, Intro to Programming in R, Columbia Business School, spring 2019 + spring 2020
+
+Section leader, Experimental Methods in Psychology, Columbia University, fall 2018 + fall 2019
+
+Instructor & curriculum developer, [Intro to Programming for Social Scientists](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/workshop/), Columbia University, spring 2018 -
+
+Teaching assistant & guest lecturer, Science of Psychology, Columbia University, fall 2017
+
+Teaching fellow & section leader, Psych One, Stanford University, fall 2014 - spring 2015
+
+## Publications and presentations
+
+Psychometric estimation of emotion reporting thresholds. Thieu, M; Ochsner, KN (2019). Poster presented at Society for Affective Science Meeting (Boston, MA), 2019. [link](https://osf.io/ubxtm/)
+
+Uncapher, M. R., Thieu, M. K., & Wagner, A. D. (2016). Media multitasking and memory: Differences in working memory and long-term memory. _Psychonomic Bulletin and Review,_ 1-8. [link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4733435/)
+
+Chronic media multitasking and distraction: Neural substrates and mnemonic consequences. Thieu, M; Uncapher, MR; Wagner, AD (2015). Talk presented at UCLA Psychology Undergraduate Research Conference (Los Angeles, CA), 2015.
+
+Chronic media multitasking and distraction: Neural substrates and mnemonic consequences. Uncapher, MR; Thieu, M; Wagner, AD (2015). Poster presented at Cognitive Neuroscience Society Meeting (San Francisco, CA), 2015.
+
+Reduced working memory predicts impaired long-term memory in chronic media multitaskers. Thieu, M; Uncapher, MR; Wagner, AD (2014). Poster presented at Bay Area Memory Meeting (Stanford, CA) and Bio-X Interdisciplinary Initiatives Symposium (Stanford, CA), 2014.
+
+Effects of media multitasking on working and long-term memory. Thieu, M; Uncapher, MR; Wagner, AD (2013). Poster presented at Psych-Summer Poster Session (Stanford, CA), 2013.

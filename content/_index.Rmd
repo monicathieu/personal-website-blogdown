@@ -1,0 +1,12 @@
+---
+title: "A gentlewoman and a scholar?"
+cover: img/top_of_the_rock_hipstamatic.jpg
+---
+
+I am a PhD student in psychology at **Columbia University,** studying how we perceive and categorize social and emotional phenomena.
+
+I use primarily **R** for my own data analysis and teach R so others might use it as well.
+
+Welcome to my [`blogdown`](https://github.com/rstudio/blogdown)-powered website! Please take a look around.
+
+![](img/name_handwritten_small_white.png)

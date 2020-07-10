@@ -1,0 +1,67 @@
+---
+title: Setting up this website
+date: 2020-03-20
+tags: ["R", "Hugo", "html", "pandoc", "hacks", "blogdown"]
+output:
+  blogdown::html_page:
+    number_sections: true
+---
+
+It's approximately two weeks into CoVID-19 starting to shut down the world as I know it, and social distancing brain has me going through waves of fluctuating productivity. A couple days ago, I decided the most useful thing I could handle doing with my day inside was scratching a (hopefully) fun technical to-do off of my list would be moving my personal website over to `blogdown`.
+
+My previous personal website was through [Squarespace](https://www.squarespace.com/). Squarespace is incredibly powerful if you want more sophisticated site features (floating navbars, clicking and dragging to set up complex text box layouts, etc), but I always felt that it was a bit overkill feature-wise (and subscription-wise) for an aesthetically pleasing, yet ultimately information-light website. Further, I hadn't integrated my Squarespace site with any blogging tools, so I wasn't able to have much regularly updated content beyond adding things onto the CV section of my About Me page.
+
+I'd been thinking of moving to a self-maintained static site for a while, especially one that would easily let me post R Markdown blog posts to the internet. I'm happy to trade in a less impressive theme for blog post compatibility with R Markdown. In case others might want to read my R Markdown ramblings, I want to put them online!
+
+After a couple days of not insignificant headache, here we are! I will describe tidbits I learned (and am still learning) in the process of setting this site up that might help you if you find yourself plumbing the `blogdown` waters in the future.
+
+# Setting up a blogdown repository
+
+Yihui Xie et al.'s guide to `blogdown` is **indispensable** for setting up a site.
+
+# Blogdown-ing with a different Hugo theme
+
+`blogdown` 
+
+# Making a new homepage template
+
+## Understanding Hugo's expected structure
+
+# Hooking it into the interwebs
+
+## Syncing `public` files to GitHub Pages
+
+## Re-pointing my old Squarespace domain name
+
+To hook a GitHub Pages site to a custom domain name, you have to set up two steps:
+
+1. Tell your domain name system (DNS) provider to point your domain name to your GitHub Pages URL
+1. Tell your GitHub Pages site to use a custom domain
+
+### Pointing Squarespace DNS to GitHub Pages URL
+
+The Squarespace website management feature that I opted to keep was **domain name management.** Squarespace allows you to buy an available domain name directly through their own site editor, so I'd previously bought monicathieu.com for my old website. I followed the instructions on Squarespace's help pages to [point my existing domain to a non-Squarespace site](https://support.squarespace.com/hc/en-us/articles/215744668-Pointing-a-Squarespace-Domain), so that when you go to monicathieu.com, it shows you whatever's hosted at monicathieu.github.io instead. Then for step 2, below:
+
+### Get GitHub Pages URL to use new domain
+
+In order to complete the connection, I followed [GitHub's instructions](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site) to set www.monicathieu.com as the "custom domain" option in the GitHub Pages GUI settings for my repository, and then initialized the CNAME helper file in the public files of my repo.
+
+# Adding a photo gallery into the theme
+
+The photo gallery I added doesn't 100% work,
+
+# Fixing code syntax highlighting
+
+## Updating RStudio's pandoc installation
+
+https://github.com/rstudio/bookdown/issues/617
+
+## Prism.js, and the mysterious case of pre vs code classes
+
+The hugo-theme-lithium default theme that blogdown sets up with comes with highlight.js for code syntax highlighting. Many Hugo websites don't involve people posting code they've written, so Hugo themes don't _all_ come with syntax highlighting Javascript plugins. Terminal, the theme I selected, uses Prism.js for syntax highlighting. 
+
+https://github.com/ukgovdatascience/govdown/commit/c294943bdae3428ec6f82a0210cefb0ad7c55778
+
+## Lua filters for pandoc
+
+https://github.com/a-vrma/pandoc-filters/
