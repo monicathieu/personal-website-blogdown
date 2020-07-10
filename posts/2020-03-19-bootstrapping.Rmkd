@@ -1,0 +1,87 @@
+---
+title: "Hierarchical bootstrapping"
+date: 2020-03-19
+categories: ["R"]
+tags: ["tidyverse", "bootstrapping", "simulation"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(magrittr)
+```
+
+There's a lot of things to be anxious about lately. One of the more harmless questions I worry about is--_am I estimating the standard error of my statistics incorrectly?_ Bootstrapping my standard errors is a great way to tackle that anxiety.
+
+However, bootstrapping can get a bit more complex as data take on a more complex structure (for example, multilevel structure), and the way that we resample our data can have big impacts on the variance of the resulting distributions. Let's explore some fancy boostrapping together! 
+
+# What's bootstrapping again?
+
+Per our hero, [Wikipedia](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)):
+
+> In statistics, bootstrapping is any test or metric that relies on random sampling with replacement. Bootstrapping allows assigning measures of accuracy (defined in terms of bias, variance, confidence intervals, prediction error or some other such measure) to sample estimates. This technique allows estimation of the sampling distribution of almost any statistic using random sampling methods.
+
+Awesome, so we're going to follow the following formula:
+
+1. resample our data _with replacement_
+1. apply our desired statistical analysis on to each resampled dataset
+1. extract a test statistic of interest from each resampled dataset
+1. assemble a distribution of that test statistic from many resampled datasets
+1. (if absolutely necessary) conduct hypothesis testing on that distribution
+
+That first point is the one we're going to dig more into later. It's not so straightforward, I suspect...
+
+# Basic tidy bootstrapping
+
+This is ultimately a matter of personal taste, but _I generally avoid full-service bootstrapping R packages._ When it comes to packages that do all the stats start-to-finish for you, you need to know and feel comfortable with the algorithms these packages use and the assumptions they make to deliver you the final statistics. For me, the primary pitfall with full-service bootstrapping packages is that they're not always super transparent about what exactly is getting resampled to generate the bootstrapped distributions of interest.
+
+As we'll see below, the variance of a resampling distribution can change meaningfully depending on what's resampled. You need to know what you're resampling, and whether that's the most appropriate feature to be resampling for your needs. I find that slightly more DIY bootstrapping strikes the best balance between using packages to streamline what you can, and then constructing the core parts by hand for transparency.
+
+I'll set the hyperparameters up top first.
+
+```{r}
+n_observations <- 50
+slope_true <- 1
+intercept_true <- 0
+sigma_true <- 1
+```
+
+Then, I'll simulate data with a noisy linear relationship between `x` and `y`.
+
+```{r}
+master_data <- tibble(id = 1:n_observations) %>%
+  mutate(x = rnorm(n(), mean = 0, sd = 1),
+         y = intercept_true + slope_true * x + rnorm(n(), mean = 0, sd = sigma_true))
+```
+
+```{r}
+master_data %>%
+  ggplot(aes(x = x, y = y)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(title = "A quick peek at the 'true' data",
+       subtitle = glue::glue("cor(x, y) = {master_data %$% cor(x, y) %>% round(3)}")) +
+  theme_bw()
+```
+
+Here, we'll use `rsample::bootstraps()` from the extended `tidyverse` to generate resamples. Importantly, `rsample::bootstraps()` resamples _data points_ themselves, not residuals. Under the hood, `rsample` is storing a pointer to the original data, not actually repeating the resampled data, so in its own class it takes up less than n times the memory, where n is the number of resample iterations.
+
+```{r}
+boots_simple <- master_data %>%
+  rsample::bootstraps(times = 100)
+
+boots_simple
+```
+
+Now, we can use `purrr::map()` to calculate the same correlation within each resampled dataset. Note that we'll need to coerce each `split` object to `tibble` in order to operate on it, which will expand memory size temporarily, but not as much as if we were keeping all the resamples as full-on datasets.
+
+```{r}
+boots_simple %<>%
+  mutate(correlation = map(splits, ~.x %>%
+                                 as.data.frame()))
+```
+
+
+# Multilevel data: a real cluster-f
+
+# Honoring the structure of the data: it matters!

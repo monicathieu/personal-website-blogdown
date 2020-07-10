@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Wrangling multilevel data in the tidyverse :: Monica Thieu — Research &amp; goodies</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="1 Learning goals 2 Notes for instructors 3 Lesson body  3.1 A brief intro to multilevel structure: It’s everywhere! 3.2 Introducing the data 3.3 Reading in the data 3.4 Inspecting the data  3.4.1 Quick graphs 3.4.2 Basic summary statistics  3.5 Nesting the data  3.5.1 Intro to nest(), unnest(), and tibble list-columns  3.6 Going vectorize crazy  3.6.1 Vectorizing: it’s like a for loop, but not 3."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/2020-04-08-tidy-multilevel/" />
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+  <link rel="stylesheet" href="/assets/red.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="/img/favicon/red.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Wrangling multilevel data in the tidyverse :: Monica Thieu — Research &amp; goodies" />
+<meta name="twitter:description" content="1 Learning goals 2 Notes for instructors 3 Lesson body  3.1 A brief intro to multilevel structure: It’s everywhere! 3.2 Introducing the data 3.3 Reading in the data 3.4 Inspecting the data  3.4.1 Quick graphs 3.4.2 Basic summary statistics  3.5 Nesting the data  3.5.1 Intro to nest(), unnest(), and tibble list-columns  3.6 Going vectorize crazy  3.6.1 Vectorizing: it’s like a for loop, but not 3." />
+<meta name="twitter:site" content="/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Wrangling multilevel data in the tidyverse :: Monica Thieu — Research &amp; goodies">
+<meta property="og:description" content="1 Learning goals 2 Notes for instructors 3 Lesson body  3.1 A brief intro to multilevel structure: It’s everywhere! 3.2 Introducing the data 3.3 Reading in the data 3.4 Inspecting the data  3.4.1 Quick graphs 3.4.2 Basic summary statistics  3.5 Nesting the data  3.5.1 Intro to nest(), unnest(), and tibble list-columns  3.6 Going vectorize crazy  3.6.1 Vectorizing: it’s like a for loop, but not 3." />
+<meta property="og:url" content="/posts/2020-04-08-tidy-multilevel/" />
+<meta property="og:site_name" content="Wrangling multilevel data in the tidyverse" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="50%">
+<meta property="og:image:height" content="25%">
+<meta property="article:section" content="R" />
+<meta property="article:published_time" content="2020-04-08 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Monica Thieu
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About me</a></li>
+        
+      
+        
+          <li><a href="/posts">Blog posts</a></li>
+        
+      
+        
+          <li><a href="/game-shows">Game shows</a></li>
+        
+      
+        
+          <li><a href="/research">Research</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About me</a></li>
+      
+    
+      
+        <li><a href="/posts">Blog posts</a></li>
+      
+    
+      
+        <li><a href="/game-shows">Game shows</a></li>
+      
+    
+      
+        <li><a href="/research">Research</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="/posts/2020-04-08-tidy-multilevel/">Wrangling multilevel data in the tidyverse</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2020-04-08
+    </span>
+    
+    
+    <span class="post-author">::
+      Monica Thieu
+    </span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="/tags/tidyverse/">tidyverse</a>&nbsp;
+    
+    #<a href="/tags/tutorial/">tutorial</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  <div class="post-content"><div>
+        
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#learning-goals"><span class="toc-section-number">1</span> Learning goals</a></li>
+<li><a href="#notes-for-instructors"><span class="toc-section-number">2</span> Notes for instructors</a></li>
+<li><a href="#lesson-body"><span class="toc-section-number">3</span> Lesson body</a>
+<ul>
+<li><a href="#a-brief-intro-to-multilevel-structure-its-everywhere"><span class="toc-section-number">3.1</span> A brief intro to multilevel structure: It’s everywhere!</a></li>
+<li><a href="#introducing-the-data"><span class="toc-section-number">3.2</span> Introducing the data</a></li>
+<li><a href="#reading-in-the-data"><span class="toc-section-number">3.3</span> Reading in the data</a></li>
+<li><a href="#inspecting-the-data"><span class="toc-section-number">3.4</span> Inspecting the data</a>
+<ul>
+<li><a href="#quick-graphs"><span class="toc-section-number">3.4.1</span> Quick graphs</a></li>
+<li><a href="#basic-summary-statistics"><span class="toc-section-number">3.4.2</span> Basic summary statistics</a></li>
+</ul></li>
+<li><a href="#nesting-the-data"><span class="toc-section-number">3.5</span> Nesting the data</a>
+<ul>
+<li><a href="#intro-to-nest-unnest-and-tibble-list-columns"><span class="toc-section-number">3.5.1</span> Intro to nest(), unnest(), and tibble list-columns</a></li>
+</ul></li>
+<li><a href="#going-vectorize-crazy"><span class="toc-section-number">3.6</span> Going vectorize crazy</a>
+<ul>
+<li><a href="#vectorizing-its-like-a-for-loop-but-not"><span class="toc-section-number">3.6.1</span> Vectorizing: it’s like a for loop, but not</a></li>
+<li><a href="#tidy-vectorizing"><span class="toc-section-number">3.6.2</span> Tidy vectorizing</a></li>
+<li><a href="#a-caveat-when-not-to-vectorize"><span class="toc-section-number">3.6.3</span> A caveat: When not to vectorize</a></li>
+</ul></li>
+<li><a href="#hella-models"><span class="toc-section-number">3.7</span> Hella models</a>
+<ul>
+<li><a href="#fitting-many-models"><span class="toc-section-number">3.7.1</span> Fitting many models</a></li>
+<li><a href="#extracting-statistics-from-models"><span class="toc-section-number">3.7.2</span> Extracting statistics from models</a></li>
+<li><a href="#visualizing-many-statistics"><span class="toc-section-number">3.7.3</span> Visualizing many statistics</a></li>
+</ul></li>
+<li><a href="#bonus-example-bootstrapping"><span class="toc-section-number">3.8</span> Bonus example: bootstrapping</a></li>
+</ul></li>
+<li><a href="#in-closing"><span class="toc-section-number">4</span> In closing</a></li>
+</ul>
+</div>
+
+<p>This is the narrative lesson plan for my 2-hour R workshop, <strong>Wrangling Multilevel Data in the R Tidyverse.</strong></p>
+<div id="learning-goals" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Learning goals</h1>
+<p>By the end of this lesson, learners will be able to:</p>
+<ul>
+<li>“fold” and “unfold” tibble list-columns with <code>tidyr::nest()</code>/<code>unnest()</code></li>
+<li>use <code>purrr::map()</code> to flexibly perform vectorized operations on nested data</li>
+<li>more specifically, fit a single model to each subset of a multilevel dataset</li>
+<li>visualize subset-model summary statistics all together with <code>ggplot2</code></li>
+</ul>
+<p>Learners will also review the following skills:</p>
+<ul>
+<li>reading in tabular data with <code>readr</code></li>
+<li>using the pipe <code>%&gt;%</code> to construct human-readable chains of functions</li>
+<li>inspecting data and diagnosing any necessary data cleaning</li>
+<li>calculating summary statistics on observation-level data with <code>group_by()</code> and <code>summarize()</code></li>
+<li>Fit a multiple regression using <code>lm()</code> and interpret coefficient values</li>
+<li>generalizing statistical techniques to data collected on different topics</li>
+</ul>
+<p>This tutorial is not written as an exhaustive walkthrough of <em>all</em> of the use cases and capabilities of these functions/packages. Rather, it is written as a bite-size tour of an example data analysis from start to finish*.</p>
+<p>For more exhaustive documentation, you can visit the online reference pages for your package of interest. For more in-depth self-teaching, please refer to the <a href="http://r4ds.had.co.nz/">R for Data Science online textbook</a> by Garrett Grolemund and Hadley Wickham.</p>
+<p>*The analyses demonstrated here are by no means the final analyses you might do with these data! There is just only so much that can be covered within the scope of this tutorial.</p>
+</div>
+<div id="notes-for-instructors" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Notes for instructors</h1>
+<p>This lesson is written to be usable as a standalone, follow-along-at-home tutorial. For those wishing to use this as a lesson plan for live instruction, please refer to the following.</p>
+<ul>
+<li><strong>Do not copy and paste code from the lesson document into console/your live-coding document.</strong> Please feel free to follow the code line by line with the lesson. However, I consider it critical for you to <em>live-code every piece of code you can;</em> that is, type <em>everything</em> out by hand and narrate, piece by piece, out loud as you do so. This has two main benefits:
+<ul>
+<li>Requires you, the instructor, to digest and explain each piece of code you type</li>
+<li>Paces your typing so that learners can keep up as they type along with you</li>
+</ul></li>
+<li><strong>Do ad-lib on the plain-text lecture notes.</strong> What I have is not exhaustive. If you want to spend more or less time explaining something than I’ve allotted, it’s your call.</li>
+</ul>
+<p>I have some useful asides written throughout the tutorial marked as <strong>instructor’s notes.</strong> If you’re following along with this tutorial at home, you may find these notes useful as supplementary information. Usually, these notes will occur in locations where I have deliberately <em>omitted</em> teaching a particular concept or technique. I’ve tried to summarize what I’m omitting from the primary lesson plan and why I’m doing so, with links for additional exploration for those at home who do want to jump further in.</p>
+<p>And now, the feature presentation:</p>
+</div>
+<div id="lesson-body" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Lesson body</h1>
+<div id="a-brief-intro-to-multilevel-structure-its-everywhere" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> A brief intro to multilevel structure: It’s everywhere!</h2>
+<p>Chances are, you’ve dealt with multilevel data before.</p>
+<p>In the more micro-scale experimental sciences, data take multilevel structure every time you take multiple measurements per research unit, repeated for multiple research units. In psychology research like mine, this means multiple measurements per participant, repeated for multiple participants. This holds true for any set of multiple measurements out of multiple lab setups (petri dishes, vacuum chambers, whatever you use). Observations can be <em>grouped</em> in all of these cases, by whichever participant/lab apparatus/otherwise that they were collected from.</p>
+<p>In the macro-scale observational (and more often social) sciences, you might have multiple measurements per city, state, or country, repeated for multiple cities/states/countries. Again, this yields data that can be grouped by the locale from which they were collected.</p>
+<p>And in any research, if you have a collaborative project across multiple labs where each lab is collecting the same data at their home location, the data now have multilevel structure because they can be grouped by the lab at which they were collected.</p>
+<p>When you have multiple measurements per group, across many grouping units, you have <strong>multilevel data!</strong> It’s important when you do have multilevel data to characterize patterns in the data both <em>within</em> and <em>between units.</em> This is important to do for deep statistical reasons, but for today, these reasons can be summarized by the following:</p>
+<p><em>In general, any two observations from the same units are more likely to have something in common with one another than any two observations from different units.</em> We thus benefit from accounting for the fact that variance within a unit is not equivalent to variance between units.</p>
+<p>Here’s an extreme example of cases where the within-unit and between-unit patterns are actively at odds with one another:</p>
+<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/example-multilevel-data-plot-1.png" width="672" /></p>
+<p>If you had data that took this structure, where the slope within units was positive, but the overall values between units are scattered in such a way that the slope across units was negative, failing to examine the unit-level relationships before jumping into the overall data analysis might lead you to draw erroneous conclusions!</p>
+<p>More generally, a particular relationship that holds within the observations of a single unit might look different in another unit, and eyeballing the possible similarities/differences in these relationships is the first step to accounting for them statistically in the future. <strong>In this tutorial, we’ll be practicing using tidyverse techniques to do this eyeballing cleanly and efficiently.</strong></p>
+<p>The content of this tutorial is technically not statistical in nature, but the motivation behind it is inherently statistical, so that’s why I want to take the time to introduce the statistical reasoning, at least conceptually, before we jump into the R.</p>
+<p>And importantly, the techniques we practice today are useful for <em>any</em> data analysis you want to repeat over many identically-structured sub-datasets. I’ll demonstrate another one of these applications, bootstrap resampling analysis, at <a href="#bonus-example-bootstrapping">the end of this tutorial</a>.</p>
+<blockquote>
+<p><strong>Instructor’s note:</strong> A full exploration of the motivations behind multilevel data analysis is beyond the scope of this tutorial. Today, we will be focusing on data wrangling tools you can use to explore the multilevel-ness of your data, which can lend useful insights no matter how you ultimately decide to analyze your data.</p>
+</blockquote>
+</div>
+<div id="introducing-the-data" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Introducing the data</h2>
+<p>In this tutorial, we’ll be exploring grocery store sales data of millenials’ favorite fruit: avocados!</p>
+
+  <figure class="center" >
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Avocado_open_side_by_side.jpg/640px-Avocado_open_side_by_side.jpg"   />
+    
+      <figcaption class="center" >The fruit that launched a thousand guacamoles?</figcaption>
+    
+  </figure>
+
+
+<p><a href="https://www.kaggle.com/neuromusic/avocado-prices/data">These data</a> originally come from the Hass Avocado board, via Justin Kiggins on Kaggle. (I downloaded the local copy of these data on 2020-03-25.)</p>
+<p>The data come from many weekly measures of avocado sales over a few years, collected in many metropolitan areas of the United States. Intuitively, we might expect that avocado sale data might differ based on which region the avocados were sold in. For example, all regions of the US might show similar patterns of avocado sales, but at different levels depending on the average cost of living in that region. Avocados probably sell for cheaper in Dallas, TX, where I grew up, than in New York City, where I live currently, and I’d like to group avocado sales by region so that region-specific avocado prices don’t influence the patterns I see in the data.</p>
+<hr />
+<p>A brief note:</p>
+<p>Unless you specifically do research on grocery store avocado prices, it’s unlikely that these data map directly onto the data you deal with in your own research, and <em>that’s okay.</em> It’s important to practice abstracting data cleaning/manipulation and statistical techniques <em>away from the specific data you’re practicing them on,</em> so that you can learn from techniques demonstrated in other disciplines, figure out how they might help you with your own data, and then apply those techniques. Psychologists can learn from economists can learn from biologists, and vice versa. :)</p>
+<hr />
+</div>
+<div id="reading-in-the-data" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Reading in the data</h2>
+<p>This blog post’s local copy of the avocado sales CSV can be found in the static website files <a href="avocado.csv">here</a>. You should be able to download the CSV from that link by right-clicking and downloading a copy to your computer, or if your computer is actively connected to the internet, you can use the URL as the path to data in a <code>readr::read_csv()</code> call.</p>
+<p>In this post, I can use a relative path because the .Rmd this web page is generated from is saved in the same folder as the avocado data. You will need to use the appropriate URL or path to a local copy of the data when you <code>read_csv()</code> on your own machine, so be aware that copying and pasting the code out of this chunk will probably not work out of the box.</p>
+<pre class="language-r"><code class="language-r">avocado_raw &lt;- read_csv(&quot;avocado.csv&quot;) %&gt;%
+  # When I want to rename columns, I try to leave the raw data UNTOUCHED
+  # to improve reproducibility in case someone else were to download the data
+  # directly from the source I did
+  # as such, all renaming is done on the tibble after I&#39;ve read it into R
+  rename(row_num = &quot;X1&quot;,
+         date = &quot;Date&quot;,
+         avg_price = &quot;AveragePrice&quot;,
+         total_volume = &quot;Total Volume&quot;,
+         PLU4046_sold = &quot;4046&quot;,
+         PLU4225_sold = &quot;4225&quot;,
+         PLU4770_sold = &quot;4770&quot;,
+         total_bags = &quot;Total Bags&quot;,
+         small_bags = &quot;Small Bags&quot;,
+         large_bags = &quot;Large Bags&quot;,
+         xlarge_bags = &quot;XLarge Bags&quot;) %&gt;%
+  # There&#39;s a row numbers column written out in the raw csv.
+  # I don&#39;t think we need this so I&#39;ll select that column out
+  select(-row_num) %&gt;%
+  # For efficiency, I&#39;ll store the year as integer
+  mutate(year = lubridate::year(date) %&gt;% as.integer())</code></pre>
+<p>Let’s take a peek at the first few rows of the data.</p>
+<pre class="language-r"><code class="language-r">avocado_raw</code></pre>
+<pre><code>## # A tibble: 18,249 x 13
+##    date       avg_price total_volume PLU4046_sold PLU4225_sold PLU4770_sold
+##    &lt;date&gt;         &lt;dbl&gt;        &lt;dbl&gt;        &lt;dbl&gt;        &lt;dbl&gt;        &lt;dbl&gt;
+##  1 2015-12-27      1.33       64237.        1037.       54455.         48.2
+##  2 2015-12-20      1.35       54877.         674.       44639.         58.3
+##  3 2015-12-13      0.93      118220.         795.      109150.        130. 
+##  4 2015-12-06      1.08       78992.        1132        71976.         72.6
+##  5 2015-11-29      1.28       51040.         941.       43838.         75.8
+##  6 2015-11-22      1.26       55980.        1184.       48068.         43.6
+##  7 2015-11-15      0.99       83454.        1369.       73673.         93.3
+##  8 2015-11-08      0.98      109428.         704.      101815.         80  
+##  9 2015-11-01      1.02       99811.        1022.       87316.         85.3
+## 10 2015-10-25      1.07       74339.         842.       64757.        113  
+## # … with 18,239 more rows, and 7 more variables: total_bags &lt;dbl&gt;,
+## #   small_bags &lt;dbl&gt;, large_bags &lt;dbl&gt;, xlarge_bags &lt;dbl&gt;, type &lt;chr&gt;,
+## #   year &lt;int&gt;, region &lt;chr&gt;</code></pre>
+<p>We can get a partial codebook of what data these columns contain from Justin Kiggins, the uploader of the original Kaggle dataset:</p>
+<blockquote>
+<p>Some relevant columns in the dataset:</p>
+<ul>
+<li><code>date</code> - The date of the observation</li>
+<li><code>avg_price</code> - the average price of a single avocado</li>
+<li><code>type</code> - conventional or organic</li>
+<li><code>year</code> - the year</li>
+<li><code>region</code> - the city or region of the observation</li>
+<li><code>total_volume</code> - Total number of avocados sold</li>
+<li><code>PLUXXXX_sold</code> - Total number of avocados with PLU XXXX sold</li>
+</ul>
+</blockquote>
+<p>Finally, we can assume that the <code>*_bags</code> columns measure the total number of variously sized bags of avocados in a given week.</p>
+<p>Going forward, we’ll treat <code>region</code> as the unit grouping variable. What all regions are there?</p>
+<pre class="language-r"><code class="language-r">unique(avocado_raw$region)</code></pre>
+<pre><code>##  [1] &quot;Albany&quot;              &quot;Atlanta&quot;             &quot;BaltimoreWashington&quot;
+##  [4] &quot;Boise&quot;               &quot;Boston&quot;              &quot;BuffaloRochester&quot;   
+##  [7] &quot;California&quot;          &quot;Charlotte&quot;           &quot;Chicago&quot;            
+## [10] &quot;CincinnatiDayton&quot;    &quot;Columbus&quot;            &quot;DallasFtWorth&quot;      
+## [13] &quot;Denver&quot;              &quot;Detroit&quot;             &quot;GrandRapids&quot;        
+## [16] &quot;GreatLakes&quot;          &quot;HarrisburgScranton&quot;  &quot;HartfordSpringfield&quot;
+## [19] &quot;Houston&quot;             &quot;Indianapolis&quot;        &quot;Jacksonville&quot;       
+## [22] &quot;LasVegas&quot;            &quot;LosAngeles&quot;          &quot;Louisville&quot;         
+## [25] &quot;MiamiFtLauderdale&quot;   &quot;Midsouth&quot;            &quot;Nashville&quot;          
+## [28] &quot;NewOrleansMobile&quot;    &quot;NewYork&quot;             &quot;Northeast&quot;          
+## [31] &quot;NorthernNewEngland&quot;  &quot;Orlando&quot;             &quot;Philadelphia&quot;       
+## [34] &quot;PhoenixTucson&quot;       &quot;Pittsburgh&quot;          &quot;Plains&quot;             
+## [37] &quot;Portland&quot;            &quot;RaleighGreensboro&quot;   &quot;RichmondNorfolk&quot;    
+## [40] &quot;Roanoke&quot;             &quot;Sacramento&quot;          &quot;SanDiego&quot;           
+## [43] &quot;SanFrancisco&quot;        &quot;Seattle&quot;             &quot;SouthCarolina&quot;      
+## [46] &quot;SouthCentral&quot;        &quot;Southeast&quot;           &quot;Spokane&quot;            
+## [49] &quot;StLouis&quot;             &quot;Syracuse&quot;            &quot;Tampa&quot;              
+## [52] &quot;TotalUS&quot;             &quot;West&quot;                &quot;WestTexNewMexico&quot;</code></pre>
+<p>Most of these regions appear to correspond to specific metropolitan areas. However, I do see some regions in this data that look like supersets of other regions. <code>"TotalUS"</code> ought to be a superset of all of the individual metropolitan regions, and, for example, <code>"California"</code> should encompass <code>c("LosAngeles", "Sacramento", "SanDiego", "SanFrancisco")</code>. I’m going to go ahead and <code>filter()</code> out all the data that are for multi-metropolitan regions so we can do our best to avoid double-counting.</p>
+<p>I’m also going to <code>select()</code> out the <code>*_bags</code> columns and the <code>PLU*_sold</code> columns, as I don’t plan to be doing any stats on the numbers of variously sized avocado bags sold per week, or avocado sales by avocado size (the different PLU values correspond to small, large, and extra large avocados). I think we can get most of the useful information in this data from the remaining columns.</p>
+<pre class="language-r"><code class="language-r"># Note that I&#39;m not removing GreatLakes, NorthernNewEngland, or WestTexNewMexico
+# because I think those are counting large regions that don&#39;t have a big city
+# so they&#39;re not double-counting the other cities
+avocado &lt;- avocado_raw %&gt;%
+  filter(!(region %in% c(&quot;California&quot;,
+                         &quot;Midsouth&quot;,
+                         &quot;Northeast&quot;,
+                         &quot;Plains&quot;,
+                         &quot;SouthCentral&quot;,
+                         &quot;Southeast&quot;,
+                         &quot;TotalUS&quot;,
+                         &quot;West&quot;))) %&gt;%
+  select(-ends_with(&quot;bags&quot;), -starts_with(&quot;PLU&quot;))</code></pre>
+<p>A latent benefit of removing unwanted columns in the data is that when we print the tibble to console to inspect the first several rows, we can see more columns that were originally pushed off to the side.</p>
+<pre class="language-r"><code class="language-r">avocado</code></pre>
+<pre><code>## # A tibble: 15,545 x 6
+##    date       avg_price total_volume type          year region
+##    &lt;date&gt;         &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt;        &lt;int&gt; &lt;chr&gt; 
+##  1 2015-12-27      1.33       64237. conventional  2015 Albany
+##  2 2015-12-20      1.35       54877. conventional  2015 Albany
+##  3 2015-12-13      0.93      118220. conventional  2015 Albany
+##  4 2015-12-06      1.08       78992. conventional  2015 Albany
+##  5 2015-11-29      1.28       51040. conventional  2015 Albany
+##  6 2015-11-22      1.26       55980. conventional  2015 Albany
+##  7 2015-11-15      0.99       83454. conventional  2015 Albany
+##  8 2015-11-08      0.98      109428. conventional  2015 Albany
+##  9 2015-11-01      1.02       99811. conventional  2015 Albany
+## 10 2015-10-25      1.07       74339. conventional  2015 Albany
+## # … with 15,535 more rows</code></pre>
+<blockquote>
+<p><strong>Instructor’s note:</strong> If you wish, you can set tibble printing options to print preview values for all columns of a tibble, irrespective of whether those additional columns spill over to the next row of print output. You can do it temporarily by explicitly calling <code>print(my_tibble, width = Inf)</code> to override the default console-width-detecting behavior, or by setting your R instance’s global options with <code>options(tibble.width = Inf)</code> to print all columns for all tibbles. However, I personally like the width-restricting behavior of default tibble printing. I’ll take the clean console output.</p>
+</blockquote>
+</div>
+<div id="inspecting-the-data" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Inspecting the data</h2>
+<p>Today’s explorations will focus around the following diffuse research question: <strong>Do avocado buyers prefer buying conventional or organic avocados? By how much? How do these patterns differ from region to region?</strong> For a variety of reasons (pick your favorite), it might be interesting to try to quantify grocery shoppers’ relative preference for conventional vs. organic avocados, as it probably tracks with regional variations in supply chain access, and/or psychological attitudes about health and environmentalism.</p>
+<p>(We won’t be able to get into those more complex variables because they aren’t present in the avocado data we have, but just an inspiration!)</p>
+<p>Even before we get into looking for more complex statistics within each region, we can use simpler tidyverse tools to generate and inspect single-value summary statistics, both visually and numerically, for each metropolitan area present in the data.</p>
+<div id="quick-graphs" class="section level3" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> Quick graphs</h3>
+<p>We can use built-in grouping features of <code>ggplot2</code> to inspect the data visually without having to pre-manipulate it much.</p>
+<p>First, let’s look at a histogram of weekly avocado sales, across all weeks, and all metropolitan areas. How many avocados are people buying in a given week? I’m also going to split this histogram to get two different filled histograms for conventional and organic avocado sales so we can see those sales separately. I’ll set the colors to… ah, avocado-themed.</p>
+<pre class="language-r"><code class="language-r">avo_colors = c(&quot;sienna4&quot;, &quot;olivedrab2&quot;)
+
+plot_hist_avo_total_volume &lt;- avocado %&gt;%
+  ggplot(aes(x = total_volume, fill = type)) +
+  geom_histogram(position = &quot;identity&quot;, bins = 25, alpha = 0.5) +
+  scale_fill_manual(values = avo_colors) +
+  theme_bw()
+
+plot_hist_avo_total_volume</code></pre>
+<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-vol-hist-1.png" width="672" /></p>
+<p>Ooh, yikes, the weekly total avocados sold looks super gamma-skewed. Most weeks it’s maybe a few tens of thousands of avocados sold, but in some weeks and some regions it gets into the millions of avocados sold (that’s a lot of avocados in a week!), so we would probably do well to log-transform the data to try to get it to take a more normal-ish distribution.</p>
+<p>Right now, we can use one of <code>ggplot2</code>’s scale helper functions to set the scale to be on log-10 units.</p>
+<pre class="language-r"><code class="language-r">plot_hist_avo_total_volume +
+  scale_x_log10()</code></pre>
+<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-vol-hist-scaled-1.png" width="672" /></p>
+<p>That looks much better! Now we can proceed.</p>
+<p>Next, let’s break up the graph by region, so we can see the sub-histograms of total avocados sold for each metropolitan area. A super-fast way to break up your graph by each grouping unit is to <em>facet</em> your ggplot, or to break it up into small multiples. I like to use <code>facet_wrap(~ grouping_unit)</code> to break a single plot up, so that the data for each metro area is displayed on its own sub-plot, or facet. The “wrap” part of <code>facet_wrap()</code> tries to arrange the facets in “reading” order, from left-to-right and then top-to-bottom to fill the plot area as efficiently as possible.</p>
+<pre class="language-r"><code class="language-r">plot_hist_avo_total_volume +
+  # let&#39;s not forget to log-scale the x-axis!
+  scale_x_log10() +
+  facet_wrap(~ region)</code></pre>
+<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-vol-hist-faceted-1.png" width="672" /></p>
+<p>Incidentally, graphing data at first can be a great way of identifying important variables in the data that need to be considered. For example, what if I had forgotten to break up the sales data by conventional vs. organic avocado type?</p>
+<pre class="language-r"><code class="language-r">avocado %&gt;%
+  # Notice that I&#39;ve removed the fill aesthetic
+  # so now it&#39;s not splitting by avo type
+  ggplot(aes(x = total_volume)) +
+  geom_histogram(position = &quot;identity&quot;, bins = 25, alpha = 0.5) +
+  scale_x_log10() +
+  theme_bw()</code></pre>
+<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-vol-hist-bad-1.png" width="672" /></p>
+<p>I might see a bimodal histogram and say “huh, that’s funny.” If I weren’t so careful, I might continue my business without accounting for this bimodality. But optimally I’d stop and think “what additional variable might be driving this bimodality?” and after some exploration, realize that I need to consider conventional vs. organic avocado type when looking at avocado sales in order to properly characterize the data. Always keep an eye out!</p>
+</div>
+<div id="basic-summary-statistics" class="section level3" number="3.4.2">
+<h3><span class="header-section-number">3.4.2</span> Basic summary statistics</h3>
+<p>In addition to graphs, we can generate simple one-shot summary statistics using <code>group_by()</code> and <code>summarize()</code> from the <code>dplyr</code> package.</p>
+<p>As a companion to the exploratory graphs of <code>total_volume</code> we just generated, we can calculate numerical summaries of the weekly number of avocados sold as a quick metric of the difference in buying patterns for conventional and organic avocados. Before we calculate these summaries, though, we should create a new column for log-10-transformed <code>total_volume</code>, as we saw earlier in our graphs that it’s massively right-tailed and needs to be log-transformed to look more normal.</p>
+<pre class="language-r"><code class="language-r"># The double-sided assignment pipe %&lt;&gt;%, from magrittr
+# you can use this by library()-ing magrittr
+# in addition to library(tidyverse)
+# avocado %&lt;&gt;% ... does the same thing as:
+# avocado &lt;- avocado %&gt;% ...
+# so it gives us a shortcut to pipe an object into some calls,
+# and then re-save the new result back into the old variable name
+# let&#39;s save total_volume_log10 into avocado because we&#39;ll need it
+# many times in the future
+avocado %&lt;&gt;%
+  mutate(total_volume_log10 = log10(total_volume))</code></pre>
+<pre class="language-r"><code class="language-r">avocado %&gt;%
+  group_by(region, type) %&gt;%
+  summarize(mean_total_volume = mean(total_volume_log10),
+            sd_total_volume = sd(total_volume_log10))</code></pre>
+<pre><code>## # A tibble: 92 x 4
+## # Groups:   region [46]
+##    region              type         mean_total_volume sd_total_volume
+##    &lt;chr&gt;               &lt;chr&gt;                    &lt;dbl&gt;           &lt;dbl&gt;
+##  1 Albany              conventional              4.95          0.140 
+##  2 Albany              organic                   3.29          0.205 
+##  3 Atlanta             conventional              5.70          0.0899
+##  4 Atlanta             organic                   4.00          0.236 
+##  5 BaltimoreWashington conventional              5.88          0.0722
+##  6 BaltimoreWashington organic                   4.31          0.225 
+##  7 Boise               conventional              4.91          0.0987
+##  8 Boise               organic                   3.34          0.209 
+##  9 Boston              conventional              5.74          0.0811
+## 10 Boston              organic                   4.03          0.359 
+## # … with 82 more rows</code></pre>
+<p>Above, we <code>group_by()</code> both <code>region</code> and <code>type</code> to get two separate means and SDs of weekly avocados sold in each region, one value each for conventional and organic avocados.</p>
+<p>We can <code>pivot_wider()</code> our observation-level data, to get <code>total_volume</code> into two columns, one for the conventional avocados and one for the organic avocados, for each week. Thus, instead of two rows per week per metro region, one for each avocado type, we’ll have one row per week per metro region, with the relevant values for each avocado type in their own columns.</p>
+<pre class="language-r"><code class="language-r">avocado %&gt;%
+  # Here, selecting the id_cols and the ONE values_from column I want to pivot out
+  select(year, date, region, type, total_volume_log10) %&gt;%
+  pivot_wider(names_from = type,
+              values_from = total_volume_log10,
+              names_prefix = &quot;total_volume_&quot;)</code></pre>
+<pre><code>## # A tibble: 7,774 x 5
+##     year date       region total_volume_conventional total_volume_organic
+##    &lt;int&gt; &lt;date&gt;     &lt;chr&gt;                      &lt;dbl&gt;                &lt;dbl&gt;
+##  1  2015 2015-12-27 Albany                      4.81                 3.00
+##  2  2015 2015-12-20 Albany                      4.74                 3.07
+##  3  2015 2015-12-13 Albany                      5.07                 3.00
+##  4  2015 2015-12-06 Albany                      4.90                 3.06
+##  5  2015 2015-11-29 Albany                      4.71                 2.92
+##  6  2015 2015-11-22 Albany                      4.75                 2.93
+##  7  2015 2015-11-15 Albany                      4.92                 3.08
+##  8  2015 2015-11-08 Albany                      5.04                 3.12
+##  9  2015 2015-11-01 Albany                      5.00                 3.01
+## 10  2015 2015-10-25 Albany                      4.87                 3.07
+## # … with 7,764 more rows</code></pre>
+<blockquote>
+<p><strong>Instructor’s note:</strong> Above, I’ve <code>select()</code>-ed to remove all the other outcome columns other than <code>total_volume</code> before pivoting my dataframe. If you wanted to pivot <em>all</em> outcome columns in the data by <code>type</code>, you could, as of <code>tidyr &gt;=1.0.0</code>. The least verbose way to do this would be to feed a negative column name vector into the <code>values_from</code> argument to exclude ID columns from the set of columns to pivot, like so:</p>
+</blockquote>
+<pre class="language-r"><code class="language-r">avocado %&gt;%
+  pivot_wider(names_from = type, values_from = -c(year, date, region))</code></pre>
+<pre><code>## # A tibble: 7,774 x 11
+##    date        year region avg_price_conve… avg_price_organ… total_volume_co…
+##    &lt;date&gt;     &lt;int&gt; &lt;chr&gt;             &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
+##  1 2015-12-27  2015 Albany             1.33             1.83           64237.
+##  2 2015-12-20  2015 Albany             1.35             1.89           54877.
+##  3 2015-12-13  2015 Albany             0.93             1.85          118220.
+##  4 2015-12-06  2015 Albany             1.08             1.84           78992.
+##  5 2015-11-29  2015 Albany             1.28             1.94           51040.
+##  6 2015-11-22  2015 Albany             1.26             1.94           55980.
+##  7 2015-11-15  2015 Albany             0.99             1.89           83454.
+##  8 2015-11-08  2015 Albany             0.98             1.88          109428.
+##  9 2015-11-01  2015 Albany             1.02             1.88           99811.
+## 10 2015-10-25  2015 Albany             1.07             1.83           74339.
+## # … with 7,764 more rows, and 5 more variables: total_volume_organic &lt;dbl&gt;,
+## #   type_conventional &lt;chr&gt;, type_organic &lt;chr&gt;,
+## #   total_volume_log10_conventional &lt;dbl&gt;, total_volume_log10_organic &lt;dbl&gt;</code></pre>
+<blockquote>
+<p>Then, by default, since there are multiple <code>values_from</code> columns, each of them has the relevant level of <code>names_from</code> (here, avocado <code>type</code>) appended to the end of the column name with the <code>names_sep</code> separator.</p>
+</blockquote>
+<p>Once the data is pivoted, we can now use <code>mutate()</code> to subtract the organic total dollars spent from the conventional total dollars spent. Then, we can generate similar mean/SD summaries as we did before. Finally, we can make the little tibble print preview a bit more informative by using <code>arrange()</code> to sort the data such that the metro areas with highest conventional - organic sales volume differences get sorted to the top of the tibble.</p>
+<pre class="language-r"><code class="language-r">avocado %&gt;%
+  select(year, date, region, type, total_volume_log10) %&gt;%
+  pivot_wider(names_from = type,
+              values_from = total_volume_log10,
+              names_prefix = &quot;total_volume_&quot;) %&gt;%
+  mutate(total_volume_diff = total_volume_conventional - total_volume_organic) %&gt;%
+  group_by(region) %&gt;%
+  summarize(mean_volume_diff = mean(total_volume_diff),
+            sd_volume_diff = sd(total_volume_diff)) %&gt;%
+  arrange(desc(mean_volume_diff))</code></pre>
+<pre><code>## # A tibble: 46 x 3
+##    region            mean_volume_diff sd_volume_diff
+##    &lt;chr&gt;                        &lt;dbl&gt;          &lt;dbl&gt;
+##  1 MiamiFtLauderdale             2.25          0.285
+##  2 Tampa                         2.01          0.228
+##  3 PhoenixTucson                 1.99          0.134
+##  4 NewOrleansMobile              1.91          0.247
+##  5 GrandRapids                   1.84          0.390
+##  6 Orlando                       1.84          0.170
+##  7 DallasFtWorth                 1.80          0.177
+##  8 Houston                       1.76          0.235
+##  9 Sacramento                    1.76          0.149
+## 10 Jacksonville                  1.74          0.171
+## # … with 36 more rows</code></pre>
+<p>Huh, cities in Florida appear to be over-represented in the top several metro areas in buying more conventional than organic avocados. I wonder what’s going on there? We can’t rule out that this is driven by Florida having waaaay cheaper conventional avocados, and relatively more expensive organic avocados, which could be driving Floridian shoppers to choose conventional. We probably want to take this into account in later analyses, so that any effects of conventional vs. organic we see on the volume of avocados sold aren’t driven by a huge price premium for organic avocados. <a href="#hella-models">(Stay tuned!)</a></p>
+<p>We can get a fair amount of mileage out of these initial visualizations and summaries, and there’s nothing wrong with using these summaries as a first pass. I do so all the time! However, when you <em>want</em> (or need) to be able to calculate more complex statistics on the weekly data for each metro area, you’ll need more complex tools.</p>
+</div>
+</div>
+<div id="nesting-the-data" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Nesting the data</h2>
+<p>Nearly all of the tidyverse features we’ll be working through in the rest of this tutorial rely on two key features of R to make their magic happen: <strong>list-columns</strong> and <strong>flexible vectorizing functions.</strong></p>
+<div id="intro-to-nest-unnest-and-tibble-list-columns" class="section level3" number="3.5.1">
+<h3><span class="header-section-number">3.5.1</span> Intro to nest(), unnest(), and tibble list-columns</h3>
+<p>A df is composed of columns, each of which is a vector of identical length. But nobody ever said the columns of a df all have to be atomic vectors! <strong>A df column can be a list vector,</strong> where each element of said list-column can contain objects of different data types and lengths. While each element of list-column <em>can</em> contain objects of various and sundry types/lengths, list-columns gain a lot of power when they contain objects of <em>consistent</em> type. (When this is true, you can apply a single function to every row of a list-column, and get a single column of consistent output–this is where we’re headed.)</p>
+<p>In this way, a list-column allows you to store multiple observations per unit wrapped up in such a way that the main df still has one row per unit, but you retain the observation-level data because you haven’t actually collapsed across any variables.</p>
+<p>First, we’ll create a new variable by folding our observation-level data into a new shape, using <code>nest()</code> from the <code>tidyr</code> package. This is going to package the long-form avocado data into <em>nested</em> form, which is somewhere between long data (one row per observation) and wide data (one row per grouping unit).</p>
+<pre class="language-r"><code class="language-r">avo_by_region &lt;- avocado %&gt;%
+  nest(sales = -region)</code></pre>
+<p>A nested dataframe like the one we just created has two main column types: key columns and list-columns of sub-dataframes.</p>
+<p>Key columns are the columns you might <code>group_by()</code> before, say, generating summary statistics with <code>summarize()</code>. They act as a label for the data contained in that row’s list-columns. List-columns do not contain a single atomic element in each row, but instead _a whole sub-data frame containing all the observation-level data corresponding to that key level.</p>
+<blockquote>
+<p><strong>Instructor’s note:</strong> A deeper exploration of the uses for and behaviors of list-columns is beyond the scope of the current tutorial. This tutorial assumes learners have never intentionally worked with non-dataframe list objects, and demonstrates only the case of list-columns containing data nested from an original “normal” dataframe. <a href="https://r4ds.had.co.nz/many-models.html#list-columns-1">R for Data Science’s section on dataframe list-columns</a> is a useful reference for more information on list-columns.</p>
+</blockquote>
+<p>Now, for list-columns, instead of actually printing the content of the vector, tibble output gives us a blurb about the object contained inside of each list element.</p>
+<pre class="language-r"><code class="language-r">avo_by_region</code></pre>
+<pre><code>## # A tibble: 46 x 2
+##    region              sales             
+##    &lt;chr&gt;               &lt;list&gt;            
+##  1 Albany              &lt;tibble [338 × 6]&gt;
+##  2 Atlanta             &lt;tibble [338 × 6]&gt;
+##  3 BaltimoreWashington &lt;tibble [338 × 6]&gt;
+##  4 Boise               &lt;tibble [338 × 6]&gt;
+##  5 Boston              &lt;tibble [338 × 6]&gt;
+##  6 BuffaloRochester    &lt;tibble [338 × 6]&gt;
+##  7 Charlotte           &lt;tibble [338 × 6]&gt;
+##  8 Chicago             &lt;tibble [338 × 6]&gt;
+##  9 CincinnatiDayton    &lt;tibble [338 × 6]&gt;
+## 10 Columbus            &lt;tibble [338 × 6]&gt;
+## # … with 36 more rows</code></pre>
+<p>We can see here that each row of <code>sales</code>, the list-column generated by nesting the data, contains a sub-tibble with 338 rows of the other 6 columns of data corresponding to each level of <code>region</code>. The data is still there, safe and sound!</p>
+<p><code>nest()</code> creates list-columns with the general argument format <code>list_col = cols_to_put_into_list_col</code>. Importantly, the columns you wish to put into the list-column can be specified using <code>select()</code> syntax. We can harness this to use the <code>-</code> to <em>exclude</em> specific key columns, and put <em>all other non-key columns into the list-column.</em> For example, if you wanted to hold out multiple key columns, for example, both <code>region</code> and <code>type</code> to split up the sub-data by conventional and organic:</p>
+<pre class="language-r"><code class="language-r">avocado %&gt;%
+  nest(sales = -c(region, type))</code></pre>
+<pre><code>## # A tibble: 92 x 3
+##    type         region              sales             
+##    &lt;chr&gt;        &lt;chr&gt;               &lt;list&gt;            
+##  1 conventional Albany              &lt;tibble [169 × 5]&gt;
+##  2 conventional Atlanta             &lt;tibble [169 × 5]&gt;
+##  3 conventional BaltimoreWashington &lt;tibble [169 × 5]&gt;
+##  4 conventional Boise               &lt;tibble [169 × 5]&gt;
+##  5 conventional Boston              &lt;tibble [169 × 5]&gt;
+##  6 conventional BuffaloRochester    &lt;tibble [169 × 5]&gt;
+##  7 conventional Charlotte           &lt;tibble [169 × 5]&gt;
+##  8 conventional Chicago             &lt;tibble [169 × 5]&gt;
+##  9 conventional CincinnatiDayton    &lt;tibble [169 × 5]&gt;
+## 10 conventional Columbus            &lt;tibble [169 × 5]&gt;
+## # … with 82 more rows</code></pre>
+<p>In this way, you can flexibly choose which columns of data to fold into your list-column, and which key-columns you want to fold by.</p>
+<p>When you want to unnest the data and go back to original long form, you might not be surprised to hear that the function we’ll need is <code>unnest()</code>.</p>
+<pre class="language-r"><code class="language-r">avo_by_region %&gt;%
+  unnest(sales)</code></pre>
+<pre><code>## # A tibble: 15,545 x 7
+##    region date       avg_price total_volume type          year total_volume_log…
+##    &lt;chr&gt;  &lt;date&gt;         &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt;        &lt;int&gt;             &lt;dbl&gt;
+##  1 Albany 2015-12-27      1.33       64237. conventional  2015              4.81
+##  2 Albany 2015-12-20      1.35       54877. conventional  2015              4.74
+##  3 Albany 2015-12-13      0.93      118220. conventional  2015              5.07
+##  4 Albany 2015-12-06      1.08       78992. conventional  2015              4.90
+##  5 Albany 2015-11-29      1.28       51040. conventional  2015              4.71
+##  6 Albany 2015-11-22      1.26       55980. conventional  2015              4.75
+##  7 Albany 2015-11-15      0.99       83454. conventional  2015              4.92
+##  8 Albany 2015-11-08      0.98      109428. conventional  2015              5.04
+##  9 Albany 2015-11-01      1.02       99811. conventional  2015              5.00
+## 10 Albany 2015-10-25      1.07       74339. conventional  2015              4.87
+## # … with 15,535 more rows</code></pre>
+<p><code>unnest()</code> takes as its argument the list-column you wish to unnest, and then thy will be done, it takes the data back into long form for you. Notice that the key column, in this case <code>region</code>, is now once again repeated for every row in the data belonging to that key level.</p>
+<p>To inspect the contents of a single element of a list-column, we have to index <em>into</em> the list-column. The tidyverse function to index single columns, equivalent to dollar-sign <code>$</code> indexing dataframe columns in base R, is <code>pull()</code>. <code>pull()</code> is pipe-safe, meaning it takes a tibble/dataframe as its first argument, so we can pipe said dataframe into the function. Then, the second argument that we specify inside of the parentheses is the column name we want to index, “naked”, without quotation marks, as with other tidyverse functions.</p>
+<pre class="language-r"><code class="language-r">avo_by_region %&gt;%
+  pull(region)</code></pre>
+<pre><code>##  [1] &quot;Albany&quot;              &quot;Atlanta&quot;             &quot;BaltimoreWashington&quot;
+##  [4] &quot;Boise&quot;               &quot;Boston&quot;              &quot;BuffaloRochester&quot;   
+##  [7] &quot;Charlotte&quot;           &quot;Chicago&quot;             &quot;CincinnatiDayton&quot;   
+## [10] &quot;Columbus&quot;            &quot;DallasFtWorth&quot;       &quot;Denver&quot;             
+## [13] &quot;Detroit&quot;             &quot;GrandRapids&quot;         &quot;GreatLakes&quot;         
+## [16] &quot;HarrisburgScranton&quot;  &quot;HartfordSpringfield&quot; &quot;Houston&quot;            
+## [19] &quot;Indianapolis&quot;        &quot;Jacksonville&quot;        &quot;LasVegas&quot;           
+## [22] &quot;LosAngeles&quot;          &quot;Louisville&quot;          &quot;MiamiFtLauderdale&quot;  
+## [25] &quot;Nashville&quot;           &quot;NewOrleansMobile&quot;    &quot;NewYork&quot;            
+## [28] &quot;NorthernNewEngland&quot;  &quot;Orlando&quot;             &quot;Philadelphia&quot;       
+## [31] &quot;PhoenixTucson&quot;       &quot;Pittsburgh&quot;          &quot;Portland&quot;           
+## [34] &quot;RaleighGreensboro&quot;   &quot;RichmondNorfolk&quot;     &quot;Roanoke&quot;            
+## [37] &quot;Sacramento&quot;          &quot;SanDiego&quot;            &quot;SanFrancisco&quot;       
+## [40] &quot;Seattle&quot;             &quot;SouthCarolina&quot;       &quot;Spokane&quot;            
+## [43] &quot;StLouis&quot;             &quot;Syracuse&quot;            &quot;Tampa&quot;              
+## [46] &quot;WestTexNewMexico&quot;</code></pre>
+<p>We can see below that base R <code>$</code> indexing yields the same result:</p>
+<pre class="language-r"><code class="language-r">avo_by_region$region</code></pre>
+<pre><code>##  [1] &quot;Albany&quot;              &quot;Atlanta&quot;             &quot;BaltimoreWashington&quot;
+##  [4] &quot;Boise&quot;               &quot;Boston&quot;              &quot;BuffaloRochester&quot;   
+##  [7] &quot;Charlotte&quot;           &quot;Chicago&quot;             &quot;CincinnatiDayton&quot;   
+## [10] &quot;Columbus&quot;            &quot;DallasFtWorth&quot;       &quot;Denver&quot;             
+## [13] &quot;Detroit&quot;             &quot;GrandRapids&quot;         &quot;GreatLakes&quot;         
+## [16] &quot;HarrisburgScranton&quot;  &quot;HartfordSpringfield&quot; &quot;Houston&quot;            
+## [19] &quot;Indianapolis&quot;        &quot;Jacksonville&quot;        &quot;LasVegas&quot;           
+## [22] &quot;LosAngeles&quot;          &quot;Louisville&quot;          &quot;MiamiFtLauderdale&quot;  
+## [25] &quot;Nashville&quot;           &quot;NewOrleansMobile&quot;    &quot;NewYork&quot;            
+## [28] &quot;NorthernNewEngland&quot;  &quot;Orlando&quot;             &quot;Philadelphia&quot;       
+## [31] &quot;PhoenixTucson&quot;       &quot;Pittsburgh&quot;          &quot;Portland&quot;           
+## [34] &quot;RaleighGreensboro&quot;   &quot;RichmondNorfolk&quot;     &quot;Roanoke&quot;            
+## [37] &quot;Sacramento&quot;          &quot;SanDiego&quot;            &quot;SanFrancisco&quot;       
+## [40] &quot;Seattle&quot;             &quot;SouthCarolina&quot;       &quot;Spokane&quot;            
+## [43] &quot;StLouis&quot;             &quot;Syracuse&quot;            &quot;Tampa&quot;              
+## [46] &quot;WestTexNewMexico&quot;</code></pre>
+<p>There are definitely still instances where <code>$</code> indexing columns is the cleanest way to index. However, in this tutorial we’ll be using pipe-safe tidyverse indexing functions moving forward so that we can stick with the <code>%&gt;%</code> pipe for consistency.</p>
+<p>Once we’ve used <code>pull()</code> to index a single column, we can use another tidyverse pipe-safe helper function, <code>pluck()</code>, this time for indexing elements of a vector. As a rule of thumb, <code>pull()</code> does what <code>$</code> indexing does, and <code>pluck()</code> does what <code>[]</code> indexing does. Thus, the below code indexes the <code>sales</code> column, and then specifically the first element in that column vector.</p>
+<pre class="language-r"><code class="language-r">avo_by_region %&gt;%
+  pull(sales) %&gt;%
+  pluck(1)</code></pre>
+<pre><code>## # A tibble: 338 x 6
+##    date       avg_price total_volume type          year total_volume_log10
+##    &lt;date&gt;         &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt;        &lt;int&gt;              &lt;dbl&gt;
+##  1 2015-12-27      1.33       64237. conventional  2015               4.81
+##  2 2015-12-20      1.35       54877. conventional  2015               4.74
+##  3 2015-12-13      0.93      118220. conventional  2015               5.07
+##  4 2015-12-06      1.08       78992. conventional  2015               4.90
+##  5 2015-11-29      1.28       51040. conventional  2015               4.71
+##  6 2015-11-22      1.26       55980. conventional  2015               4.75
+##  7 2015-11-15      0.99       83454. conventional  2015               4.92
+##  8 2015-11-08      0.98      109428. conventional  2015               5.04
+##  9 2015-11-01      1.02       99811. conventional  2015               5.00
+## 10 2015-10-25      1.07       74339. conventional  2015               4.87
+## # … with 328 more rows</code></pre>
+<p>We can also use the <code>dplyr</code> tools we already know to subset <code>avo_by_region()</code> to <code>pluck()</code> the data belonging to a particular region.</p>
+<pre class="language-r"><code class="language-r">avo_by_region %&gt;%
+  # This should give us a one-row dataframe
+  # so we know the first element is the one we want
+  filter(region == &quot;NewYork&quot;) %&gt;%
+  pull(sales) %&gt;%
+  pluck(1)</code></pre>
+<pre><code>## # A tibble: 338 x 6
+##    date       avg_price total_volume type          year total_volume_log10
+##    &lt;date&gt;         &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt;        &lt;int&gt;              &lt;dbl&gt;
+##  1 2015-12-27      1.17     1129876. conventional  2015               6.05
+##  2 2015-12-20      1.23     1139348. conventional  2015               6.06
+##  3 2015-12-13      1.12     1254805. conventional  2015               6.10
+##  4 2015-12-06      1.2      1068972. conventional  2015               6.03
+##  5 2015-11-29      1.16      999170. conventional  2015               6.00
+##  6 2015-11-22      1.14     1111803. conventional  2015               6.05
+##  7 2015-11-15      1.04     1357393. conventional  2015               6.13
+##  8 2015-11-08      1.13     1406262. conventional  2015               6.15
+##  9 2015-11-01      1.06     2180520. conventional  2015               6.34
+## 10 2015-10-25      1.23     1048046. conventional  2015               6.02
+## # … with 328 more rows</code></pre>
+<p>Notice that once you’ve got only one row in a nested dataframe, <code>pluck()</code>-ing to unlist the data in the list-column is equivalent to using <code>unnest()</code> to unfold all rows of the list-column.</p>
+<pre class="language-r"><code class="language-r">avo_by_region %&gt;%
+  filter(region == &quot;NewYork&quot;) %&gt;%
+  unnest(sales)</code></pre>
+<pre><code>## # A tibble: 338 x 7
+##    region  date       avg_price total_volume type         year total_volume_log…
+##    &lt;chr&gt;   &lt;date&gt;         &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt;       &lt;int&gt;             &lt;dbl&gt;
+##  1 NewYork 2015-12-27      1.17     1129876. convention…  2015              6.05
+##  2 NewYork 2015-12-20      1.23     1139348. convention…  2015              6.06
+##  3 NewYork 2015-12-13      1.12     1254805. convention…  2015              6.10
+##  4 NewYork 2015-12-06      1.2      1068972. convention…  2015              6.03
+##  5 NewYork 2015-11-29      1.16      999170. convention…  2015              6.00
+##  6 NewYork 2015-11-22      1.14     1111803. convention…  2015              6.05
+##  7 NewYork 2015-11-15      1.04     1357393. convention…  2015              6.13
+##  8 NewYork 2015-11-08      1.13     1406262. convention…  2015              6.15
+##  9 NewYork 2015-11-01      1.06     2180520. convention…  2015              6.34
+## 10 NewYork 2015-10-25      1.23     1048046. convention…  2015              6.02
+## # … with 328 more rows</code></pre>
+<blockquote>
+<p><strong>Instructor’s note:</strong> To use exclusively base R to index into list-columns, you have to be careful when you want to use single-bracket indexing (e.g. to conditional-index based in values in another column of the df) versus double-bracket indexing (to actually expose the value of the list-column for printing to console or otherwise manipulation). For a more in-depth exploration of base R indexing into lists, please visit the <a href="https://r4ds.had.co.nz/vectors.html#lists">relevant R for Data Science chapter</a>.</p>
+</blockquote>
+</div>
+</div>
+<div id="going-vectorize-crazy" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> Going vectorize crazy</h2>
+<p>Next, we’ll review vectorizing: this is a feature of R that you probably use all the time and don’t even know it! We’ll learn a little more about what vectorized functions do and how you can vectorize any function you wish.</p>
+<p>To read more in-depth about vectorized functions in R, check out Noam Ross’s handy <a href="http://www.noamross.net/blog/2014/4/16/vectorization-in-r--why.html">blog post</a>. We won’t be getting deep into the nuts and bolts of how vectorization works in R today. We’ll just be discussing it at a high level that should orient you enough to be able to make quick use of vectorizing helper functions.</p>
+<div id="vectorizing-its-like-a-for-loop-but-not" class="section level3" number="3.6.1">
+<h3><span class="header-section-number">3.6.1</span> Vectorizing: it’s like a for loop, but not</h3>
+<p>As you’ve likely experienced, much data processing requires writing code to perform a particular action, and then wrapping it in other code to repeat that action many times over many objects. In R, this usually means doing the same operation to every element in a vector or every row in a df column.</p>
+<p>In most computing languages, the most sensible way to do one thing a bunch of times is to use a for loop, which (I know you know this but I’ll spell it out just to be extra) repeats the code inside the loop once for every element of a vector that’s specified at the beginning of the loop code.</p>
+<p>To use a for loop to apply some function to every element of a df column, you might write something like:</p>
+<pre class="language-r"><code class="language-r">for (i in 1:nrow(df)) {
+  df$new_col[i] = my_function(df$old_col[i])
+}</code></pre>
+<p>and that would do the trick. In this case, the vector you iterate along contains the row indices of your df, which means that on every iteration of your loop you’re calling <code>my_function()</code> on the next row of data until you get to the end of your df.</p>
+<p>This is a perfectly functional way to write code! Today, I’ll argue that it’s prone to typos that might cause you big headaches. Specifically, these typos may cause your code to <strong>fail silently</strong> (ominous organ riff), or do something unintended without throwing an error. This means you wouldn’t find out that something was wrong unless you visually inspected the output, which you can’t always do after every command (I getcha). Thus, there’s a risk of inducing mistakes in the data that you don’t catch until it’s too late.</p>
+<p>For example, once I wrote a for loop just like the above, to perform some functions on every row of a df column, but I wrote <code>df$old_col[1]</code> instead of <code>df$old_col[i]</code>. I accidentally produced the same value in every element of <code>df$new_col</code>, because even though the for loop was iterating as usual, on every iteration of the loop it was calling the same value. I didn’t discover my typo until weeks later. No bueno!</p>
+<p>Enter… vectorizing.</p>
+<p>It turns out that R has built-in optimized functionality for repeating functions along every element of a vector, just waiting for you to harness!</p>
+<p>Generally, any vectorized function:</p>
+<ul>
+<li>takes a vector as input</li>
+<li>does the <em>same</em> thing to <em>every</em> element of that vector</li>
+<li>returns a vector of the <em>same</em> length as output</li>
+</ul>
+<p>Plenty of functions are already vectorized, and you likely already use them as such, including:</p>
+<ul>
+<li>math operators (R assumes element-wise math as the default, and element-wise == vectorized here)
+<ul>
+<li>arithmetic operators: <code>+</code>, <code>-</code>, and the like</li>
+<li><code>round()</code>, for example</li>
+</ul></li>
+<li>string manipulation functions
+<ul>
+<li><code>paste()</code> always returns a vector equal to the longest input vector</li>
+<li>pattern matching functions like <code>grep()</code>, <code>grepl()</code>, and such</li>
+</ul></li>
+<li>statistical distribution functions
+<ul>
+<li>the <code>d*()</code>, <code>p*()</code>, and <code>q*()</code> statistical distribution functions (e.g. <code>qnorm()</code>) are all vectorized along their main input arguments</li>
+</ul></li>
+<li>other stuff too!
+<ul>
+<li><code>base::ifelse()</code> is vectorized, as it determines true/false for each pair of elements in the two vector arguments element-wise</li>
+<li>and MANY more</li>
+</ul></li>
+</ul>
+<p>In general, it’s worth always checking to see if the function you plan to call on a vector is vectorized, and then you can use it on your vector or dataframe column without needing any additional looping.</p>
+</div>
+<div id="tidy-vectorizing" class="section level3" number="3.6.2">
+<h3><span class="header-section-number">3.6.2</span> Tidy vectorizing</h3>
+<p>If you use <code>mutate()</code> for your everyday column-wise data manipulation needs, using vectorized functions is smooth. In fact, <code>mutate()</code> is built to encourage you to use vectorized functions for column manipulation.</p>
+<p>If we go back to the Hass avocado sale data, we can see this at work. For example, let’s take another look at the code we used earlier to create a new column for the weekly total number of avocados sold, but log-10 transformed. Earlier, we saw order-of-magnitude differences in avocado sales between different regions, so we log-transformed the data to get it to be more normally distributed.</p>
+<pre class="language-r"><code class="language-r">avocado %&gt;%
+  mutate(total_volume_log10 = log10(total_volume)) %&gt;%
+  select(region, date, total_volume, total_volume_log10)</code></pre>
+<pre><code>## # A tibble: 15,545 x 4
+##    region date       total_volume total_volume_log10
+##    &lt;chr&gt;  &lt;date&gt;            &lt;dbl&gt;              &lt;dbl&gt;
+##  1 Albany 2015-12-27       64237.               4.81
+##  2 Albany 2015-12-20       54877.               4.74
+##  3 Albany 2015-12-13      118220.               5.07
+##  4 Albany 2015-12-06       78992.               4.90
+##  5 Albany 2015-11-29       51040.               4.71
+##  6 Albany 2015-11-22       55980.               4.75
+##  7 Albany 2015-11-15       83454.               4.92
+##  8 Albany 2015-11-08      109428.               5.04
+##  9 Albany 2015-11-01       99811.               5.00
+## 10 Albany 2015-10-25       74339.               4.87
+## # … with 15,535 more rows</code></pre>
+<p>We can write this in one call, without needing to wrap it in a loop, because <code>log10()</code> is vectorized, and returns a vector the same length as the input vector. Neat! You can use any vectorized functions “naked” (without any extra looping code) to create new dataframe columns inside of <code>mutate()</code> with no problem.</p>
+<p>But what about functions that aren’t already vectorized? Can we use R magic to make them vectorized, if we so wish? Why yes, we can!</p>
+<div id="intro-to-map-anything-is-vectorized-if-you-want" class="section level4" number="3.6.2.1">
+<h4><span class="header-section-number">3.6.2.1</span> Intro to <code>map()</code>: Anything is vectorized if you want</h4>
+<p>At their root, vectorizing helper functions do <em>very nearly what a for loop does,</em> but with a little more specificity in their syntax that can help protect you from tricky typos. With a vectorizing function, you still specify the two main code components that you’d specify in a for loop:</p>
+<ol style="list-style-type: decimal">
+<li>The vector you want to iterate along</li>
+<li>The code you want to run on every element of that vector</li>
+</ol>
+<p>The nice thing about using a vectorizer function is that it’s <em>designed to return a vector of the same length as the input vector,</em> so it’s perfect for data manipulation on columns in a dataframe. For loops are more flexible in that they can run any code a bunch of times, and don’t necessarily need to return a vector. If your goal is to return an output vector of the same length as your input vector, then vectorizer functions can do the trick with less work!</p>
+<p>The basic tidyverse vectorizer function is <code>purrr::map()</code>. (The <code>purrr</code> package is so named because its helper functions can make your code purr with contentment, hah.) It takes the two arguments you’d expect: an input vector, and the code to run on each element of the input vector.</p>
+<p>The main situation where vectorizer functions come in really handy is to vectorize functions to run along every element of a non-atomic list vector. R’s default vectorized functions are all intended for atomic vectors, and not necessarily list vectors. To vectorize arguments along a list, we need a little help.</p>
+<p>To illustrate this briefly, we’ll use <code>map()</code> to vectorize an operation that isn’t vectorized by default and run it on every element of a list. We can use <code>pull()</code> to index the <code>sales</code> list-column of our nested avocado data. Indexing this list-column gives us …just… a list, where each element is a dataframe. We can then use <code>map()</code> to compute a single operation for every value in the list. Here, since every element in the list is a dataframe, we can use <code>nrow()</code> to count the number of rows of every list element.</p>
+<pre class="language-r"><code class="language-r">avo_by_region %&gt;%
+  # Here, I&#39;m using slice() to get only the first 10 rows of the tibble
+  # to shorten the eventual output. Otherwise it would output the nrows
+  # for every single region in the avocado data
+  slice(1:10) %&gt;%
+  pull(sales) %&gt;%
+  map(~nrow(.x))</code></pre>
+<pre><code>## [[1]]
+## [1] 338
+## 
+## [[2]]
+## [1] 338
+## 
+## [[3]]
+## [1] 338
+## 
+## [[4]]
+## [1] 338
+## 
+## [[5]]
+## [1] 338
+## 
+## [[6]]
+## [1] 338
+## 
+## [[7]]
+## [1] 338
+## 
+## [[8]]
+## [1] 338
+## 
+## [[9]]
+## [1] 338
+## 
+## [[10]]
+## [1] 338</code></pre>
+<p>Aha! We see the same numbers of rows per sub-dataframe that we saw earlier in R’s automatic tibble output. (Notice that this output looks a little different than a normal atomic vector, what with the <code>[[]]</code> double bracket indices and all… we’ll address this very soon.)</p>
+<p><code>map()</code>, like the vast majority of tidyverse functions, is pipe-safe, so the first argument is the vector to be iterated along. (Notice that the first argument is expected to be a <em>vector,</em> not an <em>entire dataframe,</em> but otherwise pipe-safe.)</p>
+<p>The second argument clearly looks like the code that you want run on each element of that vector, but the syntax is a little different than if you were to just call <code>nrow(avocado$sales[[1]])</code> or something. This particular syntax is how tidyverse functions allow you to specify functions inside other functions without confusing R about what code to run where. Let’s unpack this a little bit:</p>
+<p>The code you put in the second argument is preceded with a tilde <code>~</code>, which you may recognize from model formula syntax, or other functions like <code>dplyr::case_when()</code>. The tilde essentially tells R not to try to evaluate that code immediately, because it’s wrapped in a vectorizer. <em>Don’t forget this tilde!</em></p>
+<p>The special variable <code>.x</code> that you see inside of <code>nrow(.x)</code> is a placeholder that tells <code>map()</code> how to feed your input vector into your looping code. Whenever you see <code>.x</code> (sometimes abbreviated further as just a period <code>.</code>) inside of tidyverse code, you can refer it as “the element I’m currently working with” in your mental pseudo-code. In this case, you can interpret the <code>map()</code> call as doing the following:</p>
+<ul>
+<li>Take the list <code>sales</code>, which is a column in <code>avo_by_region</code></li>
+<li>With every element in that list:
+<ul>
+<li>Calculate the number of rows of the dataframe held inside that list element</li>
+</ul></li>
+<li>Return another list where the nth element contains the nrows of the nth element of <code>sales</code></li>
+</ul>
+<p>In this way, you can see how similar the pseudo-code of <code>map()</code> is to the pseudo-code of a for loop. Not so intimidating, hopefully!</p>
+<blockquote>
+<p><strong>Instructor’s note:</strong> Please note that this is not the only valid syntax for feeding functions into <code>map()</code>. There are subtle reasons to prefer tilde <code>~</code> formula-style anonymous functions in some cases, and bare function names as objects in others, and full <code>function (x) {...}</code> anonymous functions in other cases still. As long as you’re consistent about it, <em>for non-advanced learners, pick one syntax and teach that one only.</em> Avoiding confusion is more important than a comprehensive explanation at this level.</p>
+</blockquote>
+</div>
+<div id="special-versions-of-map" class="section level4" number="3.6.2.2">
+<h4><span class="header-section-number">3.6.2.2</span> Special versions of <code>map()</code></h4>
+<p>It’s important to remember this: <strong><code>map()</code> <em>always</em> returns a list.</strong> Even if each element of the output list contains an element of the same atomic type, and length 1, <code>map()</code> is not going to try to guess anything and turn your output into an atomic vector. The philosophy of the tidyverse is to be conservative, and avoid guessing data types of output, lest it be wrong.</p>
+<p>If you, the coder, know <em>exactly</em> the data type you expect in your output vector, you can use a specialized version of <code>map()</code> that will return an atomic output vector of your desired data type, or else throw an error (at which point you would go and fix the offending code). These are all called <code>map_*()</code>, where the suffix indicates the expected data type of your output.</p>
+<p>For example, in the code chunk we used earlier where we used <code>map()</code> to calculate <code>nrow()</code> for every sub-dataframe of the <code>sales</code> column of <code>avo_by_region()</code>, every single value of <code>nrow()</code> was a number. More specifically, each one was an integer (makes sense, you can only have a integer number of rows in a dataframe), so if we use <code>map_int()</code> in place of <code>map()</code>, R will automatically unwrap our output into an atomic integer vector.</p>
+<pre class="language-r"><code class="language-r">avo_by_region %&gt;%
+  slice(1:10) %&gt;%
+  pull(sales) %&gt;%
+  map_int(~nrow(.x))</code></pre>
+<pre><code>##  [1] 338 338 338 338 338 338 338 338 338 338</code></pre>
+<p>There’s a version of <code>map_*()</code> for every possible atomic vector data type.</p>
+<p>Added benefit: these functions will also will not coerce any output data types without your knowledge. If you pick the wrong <code>map_*()</code> function for your output data type, or the code inside <code>map_*()</code> doesn’t actually return the data type you thought it would, you’ll get an R error that should remind you to go back and fix the offending code.</p>
+</div>
+<div id="using-map-on-list-columns-inside-a-df" class="section level4" number="3.6.2.3">
+<h4><span class="header-section-number">3.6.2.3</span> Using <code>map()</code> on list-columns inside a df</h4>
+<p>Remember from before when we learned about creating nested dataframes, that nesting creates a <strong>list-column</strong> where each list element contains another, smaller dataframe pertaining to just the data from that row’s record. What if we wanted to manipulate the data contained inside each sub-dataframe? Since the column of nested data is a list, we should be able to use <code>map()</code> to operate on it.</p>
+<p>Here, we’ll see how we can use <code>map()</code> to calculate subject-level summary statistics without discarding observation-level data from the dataframe.</p>
+<p>First, let’s re-nest our observation-level avocado data, but this time, we’ll do it by region and by avocado type (conventional vs organic).</p>
+<pre class="language-r"><code class="language-r">avo_by_region_type &lt;- avocado %&gt;%
+  # Notice the -c() select() syntax to exclude TWO key columns
+  # from the list-column
+  nest(sales = -c(region, type))</code></pre>
+<p>Now, to see what the new, nested df looks like:</p>
+<pre class="language-r"><code class="language-r">avo_by_region_type</code></pre>
+<pre><code>## # A tibble: 92 x 3
+##    type         region              sales             
+##    &lt;chr&gt;        &lt;chr&gt;               &lt;list&gt;            
+##  1 conventional Albany              &lt;tibble [169 × 5]&gt;
+##  2 conventional Atlanta             &lt;tibble [169 × 5]&gt;
+##  3 conventional BaltimoreWashington &lt;tibble [169 × 5]&gt;
+##  4 conventional Boise               &lt;tibble [169 × 5]&gt;
+##  5 conventional Boston              &lt;tibble [169 × 5]&gt;
+##  6 conventional BuffaloRochester    &lt;tibble [169 × 5]&gt;
+##  7 conventional Charlotte           &lt;tibble [169 × 5]&gt;
+##  8 conventional Chicago             &lt;tibble [169 × 5]&gt;
+##  9 conventional CincinnatiDayton    &lt;tibble [169 × 5]&gt;
+## 10 conventional Columbus            &lt;tibble [169 × 5]&gt;
+## # … with 82 more rows</code></pre>
+<p>And to verify that the observation-level sales data for the first region and avocado type is safe and sound in the first row of the list-column <code>sales</code>:</p>
+<pre class="language-r"><code class="language-r">avo_by_region_type %&gt;%
+  pull(sales) %&gt;%
+  pluck(1)</code></pre>
+<pre><code>## # A tibble: 169 x 5
+##    date       avg_price total_volume  year total_volume_log10
+##    &lt;date&gt;         &lt;dbl&gt;        &lt;dbl&gt; &lt;int&gt;              &lt;dbl&gt;
+##  1 2015-12-27      1.33       64237.  2015               4.81
+##  2 2015-12-20      1.35       54877.  2015               4.74
+##  3 2015-12-13      0.93      118220.  2015               5.07
+##  4 2015-12-06      1.08       78992.  2015               4.90
+##  5 2015-11-29      1.28       51040.  2015               4.71
+##  6 2015-11-22      1.26       55980.  2015               4.75
+##  7 2015-11-15      0.99       83454.  2015               4.92
+##  8 2015-11-08      0.98      109428.  2015               5.04
+##  9 2015-11-01      1.02       99811.  2015               5.00
+## 10 2015-10-25      1.07       74339.  2015               4.87
+## # … with 159 more rows</code></pre>
+<p>Now, because our nested df has one row per region x type, it’s perfectly set up to contain some additional columns with summary statistics in them. We just need to be able to access the observation-level data inside of the <code>sales</code> column in order to compute these summary stats.</p>
+<p>We can use <code>mutate()</code> to create a new column in our dataframe as per usual. However, this time, we’ll call <code>map()</code> <em>inside of</em> <code>mutate()</code> to create our own vectorized function that can operate on a list-column.</p>
+<p>For our first summary statistic, let’s calculate the average avocado price across all weeks for each metropolitan area, separately for the two avocado types. We’ll do this by using <code>map()</code> to create a function that will call <code>mean()</code> on every element in the <code>sales</code> list-column, and we’ll wrap all of this inside <code>mutate()</code> so we can work inside of our main nested dataframe.</p>
+<p>Below is the full function call, so you can see the output first:</p>
+<pre class="language-r"><code class="language-r">avo_by_region_type %&gt;%
+  mutate(overall_avg_price = map_dbl(sales, ~.x %&gt;%
+                                       pull(avg_price) %&gt;%
+                                       mean()
+                                     )
+         )</code></pre>
+<pre><code>## # A tibble: 92 x 4
+##    type         region              sales              overall_avg_price
+##    &lt;chr&gt;        &lt;chr&gt;               &lt;list&gt;                         &lt;dbl&gt;
+##  1 conventional Albany              &lt;tibble [169 × 5]&gt;              1.35
+##  2 conventional Atlanta             &lt;tibble [169 × 5]&gt;              1.07
+##  3 conventional BaltimoreWashington &lt;tibble [169 × 5]&gt;              1.34
+##  4 conventional Boise               &lt;tibble [169 × 5]&gt;              1.08
+##  5 conventional Boston              &lt;tibble [169 × 5]&gt;              1.30
+##  6 conventional BuffaloRochester    &lt;tibble [169 × 5]&gt;              1.38
+##  7 conventional Charlotte           &lt;tibble [169 × 5]&gt;              1.28
+##  8 conventional Chicago             &lt;tibble [169 × 5]&gt;              1.37
+##  9 conventional CincinnatiDayton    &lt;tibble [169 × 5]&gt;              1.02
+## 10 conventional Columbus            &lt;tibble [169 × 5]&gt;              1.07
+## # … with 82 more rows</code></pre>
+<p>Now to unpack the pieces of this function call:</p>
+<ol style="list-style-type: decimal">
+<li>Inside of <code>mutate()</code>, we follow the same usual syntax of <code>new_col = function(old_col)</code>, but this time the function we call is <code>map()</code></li>
+<li>The first argument of <code>map()</code> is the column whose elements we wish to iterate over, in this case <code>sales</code></li>
+<li>The second argument of <code>map()</code> is what we wish to do to each element of <code>sales</code>
+<ul>
+<li>the function call is preceded by a tilde <code>~</code> per <code>map()</code>’s expected syntax</li>
+<li>we first call <code>.x</code>, which refers to whatever’s contained in each element of <code>sales</code>. In this case, <code>.x</code> refers to a dataframe</li>
+<li>we then use <code>%&gt;%</code> to pipe <code>.x</code> into the next operation we wish to use on it, <em>as you would use the pipe in normal usage outside of <code>map()</code></em></li>
+<li>we pipe into <code>pull()</code> to choose only the column <code>avg_price</code> that’s <em>contained inside</em> each sub-dataframe of the <code>sales</code> list-column</li>
+<li>we pipe the <code>avg_price</code> column into <code>mean()</code> to take the mean of that column</li>
+</ul></li>
+<li>We actually call <code>map_dbl()</code> instead of just <code>map()</code> because we expect each vector element to be a double with length 1, and so we use <code>map_dbl()</code> to safely unwrap the output vector into an atomic double vector</li>
+</ol>
+<p>You can use the same general strategy to calculate additional summary statistics, each with their own column created by using <code>map()</code> or one of its atomic output cousins on a list-column of dataframes.</p>
+<pre class="language-r"><code class="language-r">avo_by_region_type %&gt;%
+  # I&#39;m indenting the close parentheses and such this way
+  # to use the indentation levels to visually cue
+  # which chunk of code lives in which level
+  # because we are pretty deep here!
+  mutate(overall_avg_price = map_dbl(sales,
+                                     ~.x %&gt;%
+                                       pull(avg_price) %&gt;%
+                                       mean()
+                                     ),
+         avg_total_volume = map_dbl(sales,
+                                    ~.x %&gt;%
+                                      pull(total_volume) %&gt;%
+                                      mean()
+                                    )
+         )</code></pre>
+<pre><code>## # A tibble: 92 x 5
+##    type        region           sales          overall_avg_pri… avg_total_volume
+##    &lt;chr&gt;       &lt;chr&gt;            &lt;list&gt;                    &lt;dbl&gt;            &lt;dbl&gt;
+##  1 convention… Albany           &lt;tibble [169 …             1.35           92903.
+##  2 convention… Atlanta          &lt;tibble [169 …             1.07          512789.
+##  3 convention… BaltimoreWashin… &lt;tibble [169 …             1.34          773642.
+##  4 convention… Boise            &lt;tibble [169 …             1.08           82843.
+##  5 convention… Boston           &lt;tibble [169 …             1.30          561541.
+##  6 convention… BuffaloRochester &lt;tibble [169 …             1.38          130410.
+##  7 convention… Charlotte        &lt;tibble [169 …             1.28          203331.
+##  8 convention… Chicago          &lt;tibble [169 …             1.37          759816.
+##  9 convention… CincinnatiDayton &lt;tibble [169 …             1.02          247835.
+## 10 convention… Columbus         &lt;tibble [169 …             1.07          169268.
+## # … with 82 more rows</code></pre>
+<p>This will get you to roughly the same place as using <code>group_by()</code> and <code>summarize()</code> to calculate summary statistics on an unnested dataframe, and saving those summary stats into a second dataframe. The reason I like the list-column-plus-summaries setup is that I can keep all of my information in a single master dataframe and avoid proliferation of objects across my workspace. Keeping the data organized in a master dataframe also helps you avoid pitfalls like accidentally changing the order of rows in one of your dataframes with <code>arrange()</code>, then breaking an assumption in later code that’s based on the row index of a particular piece of data (that’s now pulling from different data than you thought!). If you keep your data yoked together as columns in a single dataframe, it saves you from misaligning your data with wayward row sorting.</p>
+<p>Ultimately, it’s a matter of personal taste, but if you find that you like managing your observation-level data and your unit-level summary data in this way, then you can use these techniques as you like!</p>
+</div>
+</div>
+<div id="a-caveat-when-not-to-vectorize" class="section level3" number="3.6.3">
+<h3><span class="header-section-number">3.6.3</span> A caveat: When not to vectorize</h3>
+<p>Ultimately, I love vectorizing functions like <code>map()</code>–they’ve helped me keep a lot more of my data processing inside of tidyverse functions, and often saved me from copying and pasting code. There are, of course, cases when writing your code to work inside of vectorizing helpers isn’t necessarily optimal. Here are a couple that I’ve run into:</p>
+<ul>
+<li>If you need to recursively reference earlier vector elements while looping
+<ul>
+<li>Vectorizer functions run every iteration of your vectorizing loop <em>independently,</em> which means that the nth iteration cannot access the output of the (n-1)th iteration or any previous ones. If you need to be able to access previous loop content in later iterations, a for loop is the way to go.</li>
+</ul></li>
+<li>If you <em>really</em> need a progress bar to print to console, for iterating over <em>looooong</em> vectors
+<ul>
+<li>True console-based progress bars with must recursively access the console to create a progress bar that stays on one line from 0% to 100%, so they work best inside for loops</li>
+<li>The good folks at RStudio who maintain <code>purrr</code> are still <a href="https://github.com/tidyverse/purrr/issues/149">working on building automatic progress bars</a> for <code>map()</code>, but as of publishing they’re not implemented</li>
+<li>Check out the <a href="https://github.com/r-lib/progress"><code>progress</code></a> package, which contains helper functions that work inside for loops to make your own progress bars</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="hella-models" class="section level2" number="3.7">
+<h2><span class="header-section-number">3.7</span> Hella models</h2>
+<p>Now that we’ve demonstrated its functionality through a simpler example, we can get into the the real star of using <code>map()</code> inside <code>mutate()</code> to work with list-columns in a dataframe. If each element of a list can contain <em>any</em> R object that could otherwise be stored in its own variable, then a list should be able to hold model objects in it. And we can create each model object in that list-column of models by using <code>map()</code> to fit a model to every sub-dataframe in a list-column of dataframes. Then, if we produce a list-column where each element is a model object with the same values in it, because it’s the same model fit to different data, we can use <code>map()</code> again to extract model coefficients from each model in the list into their own list-column. In this way, we can generate more complex (and hopefully more informative) statistics about each of the grouping units in our multilevel data.</p>
+<p>Let’s get back to the question driving our earlier data exploration, before we did a dive into list-columns and <code>map()</code>: <strong>Do avocado buyers prefer buying conventional or organic avocados? By how much? How do these patterns differ from region to region?</strong></p>
+<p>The most obvious number that might be informative is the difference in <code>total_volume</code>, the total number of avocados sold in any given week, for <code>type == "organic"</code> vs <code>type == "conventional"</code>. If people buy more conventional avocados than organic avocados, we can assume they prefer the conventional avocados. But we know that the organic avocados are generally more expensive than conventional avocados in any given week. We can look at a plot of weekly prices, with the prices split for the two avocado types, to see that the price line for organic avocados is almost always more expensive.</p>
+<pre class="language-r"><code class="language-r">avocado %&gt;%
+  ggplot(aes(x = date, y = avg_price, color = type)) +
+  geom_line() +
+  scale_color_manual(values = avo_colors) +
+  facet_wrap(~ region) +
+  labs(y = &quot;Average price (dollars per avocado)&quot;,
+       title = &quot;Weekly prices per avocado, by organic vs. conventional&quot;) +
+  theme_bw()</code></pre>
+<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-price-timeseries-1.png" width="672" /></p>
+<p>Grocery shoppers might be less likely to buy as many conventional avocados at all just because of the price. How can we take into account that organic avocados are more expensive when estimating the difference in volume of avocados purchased, to make our analysis more robust?</p>
+<p>If we can adjust for the usual premium price on organic avocados, we can estimate the difference in total volume of avocados purchased, over and above that which you would expect when one type of avocado is cheaper. That might be able to tell us something like the following: <strong>if conventional and organic avocados were the same price, what is the estimated difference in volume of avocados purchased?</strong></p>
+<p>This sounds like a job for <strong>linear regression!</strong></p>
+<p>In the most basic case, we might consider doing a paired t-test between the weekly volume of conventional vs. organic avocados sold, and that could tell us whether those weekly volumes are “different”, but this t-test would be less informative than an equivalent linear regression (which estimates the same difference). Further, the linear regression allows us to create a multiple regression that lets us estimate that difference in volume of avocados sold, but adjusted for another variable–in this case, the average avocado price.</p>
+<p>The model formula would look something like this:</p>
+<p><code>total_volume ~ type + avg_price</code></p>
+<p>We’ll want to use <code>lm()</code> to fit this model to each <code>region</code> separately, so that we can see the variation in avocado buying preference across each metropolitan area. An incidental benefit of running a multiple regression that adjusts for <code>avg_price</code> is that it helps adjust for differences in avocado prices across regions that are likely due to differences in cost of living from place to place.</p>
+<div id="fitting-many-models" class="section level3" number="3.7.1">
+<h3><span class="header-section-number">3.7.1</span> Fitting many models</h3>
+<p>We can use dataframe list-columns, manipulated with <code>map()</code> inside <code>mutate()</code>, to fit this particular model to the avocado sales data from every metropolitan area. Since <code>mutate()</code> is amenable to defining a flexible number of columns, we can first do some light data preprocessing on the observation-level data contained in the <code>sales</code> column, and then in the next command, within <code>mutate()</code>, create a new list-column using <code>map()</code> to fit an <code>lm()</code> model to each row’s data in <code>sales</code>.</p>
+<pre class="language-r"><code class="language-r"># Again, the double-sided pipe in magrittr
+# to overwrite the old value of avo_by_region with the new value
+# with all the new columns in it
+avo_by_region %&lt;&gt;%
+  mutate(sales = map(sales,
+                     # Yes that&#39;s right folks, we are about to use
+                     # mutate() inside map() inside mutate()
+                     ~.x %&gt;%
+                       # Here, let&#39;s roughly re-center avg_price
+                       # so the &quot;baseline&quot;, or 0 point, is set at $1.00/avocado
+                       # we already calculate total_volume_log10 earlier
+                       # so we should be good there
+                       mutate(avg_price_shift1 = avg_price - 1)
+                     ),
+         # Now that we&#39;ve preprocesed our columns
+         # we can fit our multiple regression
+         # using lm() inside of map()
+         model = map(sales,
+                     ~lm(total_volume_log10 ~ type + avg_price_shift1, data = .x)
+                     )
+         )</code></pre>
+<blockquote>
+<p><strong>Instructor’s note:</strong> You might be tempted to mean-center and perhaps z-score the <code>avg_price</code> column, so that it’s in units of standard deviations of avocado prices. However, you need to be careful <em>how your data is grouped/nested</em> when you center or z-score data, to know whether you’re centering your data <em>within</em> grouping unit or <em>across</em> grouping units. That is, are you centering/scaling by a mean/SD calculated separately for each grouping unit, or for all observations across units? In some cases, centering/scaling data within unit can be dangerous, because you might accidentally be scaling away the effect of interest. Scaling data across units retains between-unit differences of interest, so it’s fine in this case. You would need to unnest your observation-level data to make sure your operations are not implicitly grouped before doing any mean-centering/SD-scaling operations.</p>
+</blockquote>
+<p>Now that we’ve created the <code>model</code> column to hold each of our <code>lm</code> objects, let’s quickly see what the whole dataframe looks like:</p>
+<pre class="language-r"><code class="language-r">avo_by_region</code></pre>
+<pre><code>## # A tibble: 46 x 3
+##    region              sales              model 
+##    &lt;chr&gt;               &lt;list&gt;             &lt;list&gt;
+##  1 Albany              &lt;tibble [338 × 7]&gt; &lt;lm&gt;  
+##  2 Atlanta             &lt;tibble [338 × 7]&gt; &lt;lm&gt;  
+##  3 BaltimoreWashington &lt;tibble [338 × 7]&gt; &lt;lm&gt;  
+##  4 Boise               &lt;tibble [338 × 7]&gt; &lt;lm&gt;  
+##  5 Boston              &lt;tibble [338 × 7]&gt; &lt;lm&gt;  
+##  6 BuffaloRochester    &lt;tibble [338 × 7]&gt; &lt;lm&gt;  
+##  7 Charlotte           &lt;tibble [338 × 7]&gt; &lt;lm&gt;  
+##  8 Chicago             &lt;tibble [338 × 7]&gt; &lt;lm&gt;  
+##  9 CincinnatiDayton    &lt;tibble [338 × 7]&gt; &lt;lm&gt;  
+## 10 Columbus            &lt;tibble [338 × 7]&gt; &lt;lm&gt;  
+## # … with 36 more rows</code></pre>
+<p>Aha! We see that in the list-column <code>model</code>, each of the top rows contains an <code>lm</code> object. Each of these <code>lm</code> objects individually can be operated on like any linear regression object stored in its own variable.</p>
+<pre class="language-r"><code class="language-r">avo_by_region %&gt;%
+  pull(model) %&gt;%
+  pluck(1)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = total_volume_log10 ~ type + avg_price_shift1, data = .x)
+## 
+## Coefficients:
+##      (Intercept)       typeorganic  avg_price_shift1  
+##           5.0298           -1.5590           -0.2388</code></pre>
+<p>We can even <code>%&gt;%</code> this further into <code>summary()</code> to generate the whole regression output table:</p>
+<pre class="language-r"><code class="language-r">avo_by_region %&gt;%
+  pull(model) %&gt;%
+  pluck(1) %&gt;%
+  summary()</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = total_volume_log10 ~ type + avg_price_shift1, data = .x)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.42005 -0.10962  0.00827  0.10662  0.51076 
+## 
+## Coefficients:
+##                  Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)       5.02979    0.02068 243.168  &lt; 2e-16 ***
+## typeorganic      -1.55898    0.02687 -58.023  &lt; 2e-16 ***
+## avg_price_shift1 -0.23883    0.04608  -5.183 3.78e-07 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.1693 on 335 degrees of freedom
+## Multiple R-squared:  0.9605, Adjusted R-squared:  0.9603 
+## F-statistic:  4077 on 2 and 335 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>While this is not in spirit a multiple regression tutorial, we are doing a multiple regression, so now’s a handy time to review interpreting multiple regression coefficients:</p>
+<ul>
+<li><strong><code>Intercept</code></strong>: This tells us the estimated log-10-transformed volume of <em>conventional</em> avocados sold in a hypothetical week where conventional avocados cost $1.00 each
+<ul>
+<li>By default the <code>type</code> is dummy-coded so the baseline level is the first alphabetical level, and C comes before O, so the intercept assumes the baseline level is conventional avocados. Fine by me!</li>
+<li>This is why we created <code>avg_price_shift1</code> earlier. If we hadn’t shifted the 0 point of <code>avg_price</code>, the intercept would be estimated for a week where conventional avocados cost $0.00 each. I’m assuming avocados are never free (otherwise we millenials would be able to afford mortgages), so shifting the baseline can make the regression coefficient estimates easier to interpret.</li>
+</ul></li>
+<li><strong><code>typeorganic</code></strong>: This tells us the estimated log-10-transformed difference in volume of avocados sold, between conventional and organic avocados, in a hypothetical week where <em>both</em> avocado types cost $1.00 each</li>
+<li><strong><code>avg_price_shift1</code></strong>: This tells us the expected difference in volume of avocados sold between a week where avocados cost $1.00 each and a week where avocados are one price unit, or one dollar, more expensive ($2.00 each)</li>
+</ul>
+<p>Importantly, because this is a multiple regression, the <code>typeorganic</code> term tells us the estimate difference in volume of avocados sold with price “held constant”, or <em>if both conventional and organic avocados cost the same in a hypothetical week.</em> If we can estimate the difference volume sold when the two avocado types cost the same, and people are STILL buying more conventional avocados, there must be an extenuating reason why people don’t buy organic avocados even if they’re not more expensive.</p>
+<p>The console output that you get from calling <code>summary()</code> on a single <code>lm</code> object is great for visual inspection, but there’s a whole lot of output here that is not the most efficient to parse programmatically with code. As such, we won’t be using <code>map()</code> inside <code>mutate()</code> to call <code>summary()</code> on every single model object in the <code>model</code> column. There are other functions we can use to give us cleaner, more ready-to-use output, that we’ll explore next.</p>
+</div>
+<div id="extracting-statistics-from-models" class="section level3" number="3.7.2">
+<h3><span class="header-section-number">3.7.2</span> Extracting statistics from models</h3>
+<p>In order to programmatically extract coefficients, standard errors, and other statistics of interest from each model object in the <code>model</code> column of <code>avo_by_region</code>, our nested avocado sale data, we are going to use the <code>tidy()</code> helper function in the <code>broom</code> R package. <code>broom</code> is designed for generating tidyverse-safe versions of statistical analysis objects to get you from models to plots &amp; interpretation with as little hacking as possible.</p>
+<p>First, to demonstrate the output of <code>broom::tidy()</code>, we can call it just on the first model element of the <code>model</code> column of <code>avo_by_region</code> just as we called <code>summary()</code> on it above.</p>
+<pre class="language-r"><code class="language-r">avo_by_region %&gt;%
+  pull(model) %&gt;%
+  pluck(1) %&gt;%
+  # The only thing that&#39;s different is here,
+  # the last command we call after we&#39;ve plucked a single lm object:
+  broom::tidy()</code></pre>
+<pre><code>## # A tibble: 3 x 5
+##   term             estimate std.error statistic   p.value
+##   &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+## 1 (Intercept)         5.03     0.0207    243.   0.       
+## 2 typeorganic        -1.56     0.0269    -58.0  7.89e-177
+## 3 avg_price_shift1   -0.239    0.0461     -5.18 3.78e-  7</code></pre>
+<p>Note that I am using the <code>::</code> to call <code>tidy()</code> directly out of the <code>broom</code> package namespace without <code>library()</code>-ing the package. I prefer to use this syntax when I’m only using a single function from a package in a particular analysis document, to avoid loading too many function names into my session. (sometimes functions in different packages have overlapping names so you want to be careful!)</p>
+<p>Calling <code>tidy()</code> on a single <code>lm</code> object gives us a tibble, with a column for each statistic of interest in the regression table, and a row for each term from the multiple regression. This has the same numbers as the core table output we got from calling <code>summary()</code> on the same object, but now with all the added benefits of a tibble. We can use <code>select()</code> to choose specific columns of statistics, <code>filter()</code> to choose specific rows corresponding to particular coefficients, <code>mutate()</code> to calculate new statistics from the ones we already have, and all that good stuff!</p>
+<p>Another huge benefit of <code>tidy()</code> returning a tibble of model output for each model is that if we use <code>tidy()</code> inside <code>map()</code> inside <code>mutate()</code> to create a list-column of coefficients tibbles, we can create a list-column of tibble dataframes, which has specific tidyverse abilities.</p>
+<pre class="language-r"><code class="language-r">avo_by_region %&lt;&gt;%
+  mutate(coefs = map(model, ~broom::tidy(.x)))</code></pre>
+<p>The biggest tidyverse ability is that the resulting <code>coefs</code> list-column of coefficients dataframes can then be pulled out into long form with <code>unnest()</code>.</p>
+<pre class="language-r"><code class="language-r"># Storing this long dataframe into its own object
+# so we can feed it into ggplot2 calls more quickly later!
+avo_coefs &lt;- avo_by_region %&gt;%
+  # See the note below for why we&#39;re using select()
+  # to retain only these two columns
+  select(region, coefs) %&gt;%
+  unnest(coefs)
+
+avo_coefs</code></pre>
+<pre><code>## # A tibble: 138 x 6
+##    region              term             estimate std.error statistic   p.value
+##    &lt;chr&gt;               &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+##  1 Albany              (Intercept)         5.03     0.0207    243.   0.       
+##  2 Albany              typeorganic        -1.56     0.0269    -58.0  7.89e-177
+##  3 Albany              avg_price_shift1   -0.239    0.0461     -5.18 3.78e-  7
+##  4 Atlanta             (Intercept)         5.72     0.0128    446.   0.       
+##  5 Atlanta             typeorganic        -1.57     0.0243    -64.8  1.67e-191
+##  6 Atlanta             avg_price_shift1   -0.240    0.0305     -7.88 4.64e- 14
+##  7 BaltimoreWashington (Intercept)         5.94     0.0182    327.   0.       
+##  8 BaltimoreWashington typeorganic        -1.51     0.0229    -65.9  6.99e-194
+##  9 BaltimoreWashington avg_price_shift1   -0.165    0.0383     -4.31 2.14e-  5
+## 10 Boise               (Intercept)         4.93     0.0107    460.   0.       
+## # … with 128 more rows</code></pre>
+<p>And here we are, a long dataframe with a row for each coefficient from the multiple regression, and a chunk of rows for the coefficients from the model fit to a particular metro area. Usefully, this long dataframe can then be fed into a <code>ggplot2</code> plotting call, to visualize all the model outputs from each region together. That’s what we’ll get to next!</p>
+<hr />
+<p>Notice that as of <code>tidyr &gt;=1.0.0</code>, <code>unnest()</code>’s default behavior is to retain any other list-columns present in the df that aren’t getting unnested. If you unnested a list-column of dataframes that each had multiple rows, e.g. the <code>coefs</code> column, where each sub-dataframe has a row for each coefficient, the other list-column(s) getting retained would have their values <em>repeated</em> for each of the new rows created by unnesting the other column. Sometimes you might want that, but sometimes you might not want to increase your df’s memory footprint so much. In those cases, you should use <code>select()</code> to remove list-columns that you don’t want repeated before unnesting.</p>
+<hr />
+</div>
+<div id="visualizing-many-statistics" class="section level3" number="3.7.3">
+<h3><span class="header-section-number">3.7.3</span> Visualizing many statistics</h3>
+<p>Now that we have our model coefficients in a long form dataframe, with a chunk of rows for each metropolitan area, let’s plot the model estimates for each region!</p>
+<p>Here, we’ll focus on plotting the values of the <code>typeorganic</code> term, as this will index each region’s relative buying preference (or anti-preference?) for organic relative to conventional avocados. This estimate will conveniently also be adjusted for average avocado price across regions, so it should <em>not</em> be affected by general differences in avocado prices (and cost of living) from region to region.</p>
+<pre class="language-r"><code class="language-r">avo_coefplot &lt;- avo_coefs %&gt;%
+  filter(term == &quot;typeorganic&quot;) %&gt;%
+  # Here, using fct_reorder() from the forcats pkg of the tidyverse
+  # which provides a bunch of nice factor manipulating functions
+  # super DUPER handy for reordering factor levels on a plot
+  # this reorders the regions in order from highest to lowest estimate
+  ggplot(aes(x = fct_reorder(region, desc(estimate)), y = estimate)) +
+  # I like to put error bars before, aka UNDERNEATH, the points
+  geom_errorbar(aes(ymin = estimate - std.error,
+                    ymax = estimate + std.error),
+                width = 0) +
+  geom_point() +
+  # let&#39;s annotate
+  # to add guides to remind us how to interpret the log-10 scale
+  # that stuff is brain-bendy!
+  geom_hline(yintercept = c(-1, -2), linetype = 3) +
+  annotate(&quot;text&quot;, x = 8, y = -1.05, hjust = 0,
+           label = &quot;-1 on log10 = 10% as many&quot;, color = &quot;black&quot;) +
+  annotate(&quot;text&quot;, x = 8, y = -1.95, hjust = 0,
+           label = &quot;-2 on log10 = 1% as many&quot;, color = &quot;black&quot;) +
+  labs(x = &quot;Metro area&quot;,
+       y = &quot;Log-10 diff in volume of organic avos sold&quot;,
+       title = &quot;People really do not buy organic avocados&quot;,
+       subtitle = &quot;especially not people in Florida&quot;) +
+  theme_bw() +
+  # since the region names are long and would otherwise overlap on the plot,
+  # right-justifying each of them and tilting them to 45 degrees
+  # will make them all stick off the plot on an angle
+  theme(axis.text.x = element_text(hjust = 1, angle = 45))
+
+avo_coefplot</code></pre>
+<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-raw-coefplot-1-1.png" width="672" /></p>
+<p>On this plot, metro areas on the <em>left</em> of the plot are areas that buy a <em>greater</em> percentage of organic avocados relative to conventional, and metro areas on the <em>right</em> of the plot are areas that buy a <em>lower</em> percentage of avocados relative to conventional.</p>
+<p>Be mindful of the log scale when reading these numbers off the plot–thinking on the log scale can be tricky! Since we’re using log-10 scaling here, a log-10 difference of -1 corresponds to a real difference of 10<sup>-1</sup>, or a 10% reduction in number. Similarly, a log-10 difference of -2 corresponds to a real difference of 10<sup>-2</sup>, or a 1% reduction in number. (A log-10 difference of -1.5 is not as intuitive, we’re all better off just calculating 10<sup>1.5</sup>)</p>
+<p>So in Seattle, we estimate that when the price premium for organic avocados is taken into account, people buy approximately 10% as many organic avocados as they do conventional avocados. Meanwhile, in Miami &amp; Fort Lauderdale, we estimate that people buy less than 1% as many organic avocados as they do conventional avocados. A log-10 difference of 1 is a whole order of magnitude different in raw avocado units!</p>
+<blockquote>
+<p><strong>Instructor’s note:</strong> The following plot takes a bit of fiddling to set up, and requires chaining together many pieces of data wrangling logic. If learners have never made a model-estimate-plus-raw-data plot like this before, this may be a bit beyond scope to live-code. In that case, I recommend taking a couple minutes for learners to brainstorm possible strategies for extending the basic coefficient plot shown above, and then showing a fully rendered copy of the plot below as an example extension plot, qualitatively describing the added layers and annotations.</p>
+</blockquote>
+<pre class="language-r"><code class="language-r">avo_raw_diffs &lt;- avocado %&gt;%
+  # first, prepare to calculate the raw difference in weekly volume
+  # of organic - conventional avocados bought
+  # (must be that direction bc conventional is baseline in the regression)
+  select(region, date, type, total_volume_log10) %&gt;%
+  pivot_wider(names_from = type,
+              values_from = total_volume_log10) %&gt;%
+  mutate(diff_raw = organic - conventional) %&gt;%
+  # WestTextNewMexico has some weeks with no organic avocado sales
+  # so we need to filter out some NA rows of diff_raw
+  filter(!is.na(diff_raw)) %&gt;%
+  # for each region, calculate the mean and SE of the mean
+  # of this difference
+  group_by(region) %&gt;%
+  summarize(diff_mean = mean(diff_raw),
+            diff_se = sd(diff_raw)/sqrt(length(diff_raw))) %&gt;% 
+  # in order for the plot to work
+  # (for the regions to be ordered by the model estimate)
+  # the model estimates need to be bound on to the raw diffs
+  left_join(avo_coefs %&gt;% filter(term == &quot;typeorganic&quot;),
+            by = &quot;region&quot;)
+
+avo_coefplot +
+  # error bars and points for the raw data
+  # notice that we use the data argument to feed in different data
+  geom_errorbar(aes(y = diff_mean,
+                    ymin = diff_mean - diff_se,
+                    ymax = diff_mean + diff_se),
+                data = avo_raw_diffs,
+                color = &quot;olivedrab4&quot;,
+                width = 0) +
+  geom_point(aes(y = diff_mean),
+             data = avo_raw_diffs,
+             color = &quot;olivedrab4&quot;) +
+  # hand-adding a legend
+  annotate(&quot;text&quot;, x = 45, y = -1.2, hjust = 1,
+           label = &quot;black = model-estimated&quot;, color = &quot;black&quot;) +
+  annotate(&quot;text&quot;, x = 45, y = -1.3, hjust = 1,
+           label = &quot;green = raw&quot;, color = &quot;olivedrab4&quot;)</code></pre>
+<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-raw-coefplot-2-1.png" width="672" /></p>
+<p>I think we’ve gotten pretty close to an answer (not THE answer, but AN answer) to our earlier research question: <strong>Do avocado buyers prefer buying conventional or organic avocados? By how much? How do these patterns differ from region to region?</strong></p>
+<p>Avocado buyers across the US appear to prefer buying conventional avocados over organic avocados; that is, they buy many more conventional avocados than organic avocados in a given week. This holds even when you adjust for the fact that organic avocados are usually more expensive. The magnitude of this buying preference against organic avocados varies across the country–the Pacific Northwest appears to avoid organic avocados much less than the rest of the country, and Florida appears to avoid organic avocados much more than the rest of the country.</p>
+<p>That concludes the core analysis of this tutorial! If you like, continue following along for a rapid-fire demonstration of another use case of <code>map()</code> inside <code>mutate()</code> with nested dataframes to repeat analysis across many datasets containing similarly structured data.</p>
+</div>
+</div>
+<div id="bonus-example-bootstrapping" class="section level2" number="3.8">
+<h2><span class="header-section-number">3.8</span> Bonus example: bootstrapping</h2>
+<blockquote>
+<p><strong>Instructor’s note:</strong> This section is designed as a demonstration of features rather than a live how-to. The main body of the code-along lesson concludes after generating a summary graph of model statistics for each <code>region</code>. The lesson teaches one example case of using <code>map()</code> inside <code>mutate()</code> to fit a model to a bunch of sub-dataframes in a nested master dataframe, but there are other analysis contexts where this strategy comes in handy.</p>
+</blockquote>
+<p>Another situation where you might fit the same model to a bunch of different datasets is <strong>bootstrapping.</strong> When bootstrapping a statistic, you would:</p>
+<ol style="list-style-type: decimal">
+<li>resample your observations <em>with replacement</em> to yield a resampled dataset with the same N as your original dataset</li>
+<li>do that resampling for many iterations to yield many resampled datasets</li>
+<li>do your original analysis on every resampled dataset</li>
+<li>extract the statistic of interest</li>
+<li>use the distribution of that statistic across your bootstrapping iterations as the error distribution around the original value of the statistic calculated on the raw data</li>
+</ol>
+<p>Fitting many models and extracting key statistics using <code>map()</code> inside <code>mutate()</code> lends itself well to bootstrapping, which requires repeating the modeling operation of interest over many resampled datasets. If you had a nested dataframe, with a list-column of resampled datasets, you could absolutely use <code>map()</code> inside <code>mutate()</code> to fit a model to each resampled dataset, extract statistics, and get those statistics back into a long-form dataframe with a row for each bootstrap iteration, which you could then visualize with, say, a histogram or density plot to examine the distribution.</p>
+<p>The one new technique I’ll demonstrate here is the <code>bootstraps</code> function from the <a href="https://tidymodels.github.io/rsample/"><code>rsample</code> package</a> in the extended tidyverse. <code>rsample</code> contains functions for sampling data for things like cross-validation and holding out testing data to test model predictions. In our case, we’ll be using a single function, <code>bootstraps()</code>, which as you might guess generates bootstrap resamples of a dataset. <code>bootstraps()</code> and other sampling functions in <code>rsample</code> have the added benefit of using special tools under the hood to reduce the size of resampled datasets in memory, which helps reduce stress on your R session.</p>
+<p>In this demonstration, I’ll bootstrap the error distribution on New York’s model estimate for the avocado <code>volume ~ type + price</code> multiple regression we ran earlier. First, I’ll pull out New York’s raw data, and then feed it into <code>bootstraps()</code> to create a dataframe with a row for every bootstrap iteration, and a list-column containing that iteration’s resampled dataset.</p>
+<pre class="language-r"><code class="language-r">avo_nyc_boot &lt;- avo_by_region %&gt;%
+  filter(region == &quot;NewYork&quot;) %&gt;%
+  # Mustn&#39;t forget to select() only the group id column
+  # and the list-column we wish to unnest
+  # lest we accidentally replicate all the extra columns
+  # in this case, we want the column containing the RAW data
+  select(region, sales) %&gt;%
+  # unnesting will give us a long dataframe with just New York&#39;s weekly data
+  unnest(sales) %&gt;%
+  # this WHOLE dataframe get fed in as the first argument of bootstraps
+  # the times argument sets the # of bootstrap iterations
+  rsample::bootstraps(times = 200)</code></pre>
+<p>Let’s see what the dataframe output of <code>bootstraps()</code> looks like:</p>
+<pre class="language-r"><code class="language-r">avo_nyc_boot</code></pre>
+<pre><code>## # Bootstrap sampling 
+## # A tibble: 200 x 2
+##    splits            id          
+##    &lt;list&gt;            &lt;chr&gt;       
+##  1 &lt;split [338/122]&gt; Bootstrap001
+##  2 &lt;split [338/118]&gt; Bootstrap002
+##  3 &lt;split [338/122]&gt; Bootstrap003
+##  4 &lt;split [338/124]&gt; Bootstrap004
+##  5 &lt;split [338/137]&gt; Bootstrap005
+##  6 &lt;split [338/126]&gt; Bootstrap006
+##  7 &lt;split [338/126]&gt; Bootstrap007
+##  8 &lt;split [338/138]&gt; Bootstrap008
+##  9 &lt;split [338/119]&gt; Bootstrap009
+## 10 &lt;split [338/125]&gt; Bootstrap010
+## # … with 190 more rows</code></pre>
+<p><code>bootstraps()</code> returns a dataframe with a character column called <code>id</code> which labels each iteration, and a list column called <code>splits</code> where each element houses metadata for a resampled dataset. I say metadata because part of the trick that <code>bootstraps()</code> uses is that the native <code>split</code> object type doesn’t actually contain any data on its own:</p>
+<pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
+  pull(splits) %&gt;%
+  pluck(1)</code></pre>
+<pre><code>## &lt;338/122/338&gt;</code></pre>
+<p>These numbers aren’t really designed for human consumption on their own. The real magic happens when you call <code>as.data.frame()</code> on a <code>split</code> object, which triggers it to actually do the resampling and give you a tibble of data.</p>
+<pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
+  pull(splits) %&gt;%
+  pluck(1) %&gt;%
+  as.data.frame()</code></pre>
+<pre><code>## # A tibble: 338 x 8
+##    region date       avg_price total_volume type   year total_volume_lo…
+##    &lt;chr&gt;  &lt;date&gt;         &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt; &lt;int&gt;            &lt;dbl&gt;
+##  1 NewYo… 2017-08-20      1.75     1057189. conv…  2017             6.02
+##  2 NewYo… 2018-03-18      1.7       189434. orga…  2018             5.28
+##  3 NewYo… 2017-05-28      2.38       76002. orga…  2017             4.88
+##  4 NewYo… 2015-08-02      2.12       13852. orga…  2015             4.14
+##  5 NewYo… 2016-08-21      2.16       30583. orga…  2016             4.49
+##  6 NewYo… 2016-09-04      1.47     1278749. conv…  2016             6.11
+##  7 NewYo… 2017-08-20      1.85      107275. orga…  2017             5.03
+##  8 NewYo… 2016-12-11      2.22       32659. orga…  2016             4.51
+##  9 NewYo… 2015-02-01      1.36     1433763. conv…  2015             6.16
+## 10 NewYo… 2016-07-31      2.41       24048. orga…  2016             4.38
+## # … with 328 more rows, and 1 more variable: avg_price_shift1 &lt;dbl&gt;</code></pre>
+<p>To double-check that the data were actually resampled with replacement, we can look in this first resampled tibble to make sure that at least some of the rows appear multiple times in the data.</p>
+<pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
+  pull(splits) %&gt;%
+  pluck(1) %&gt;%
+  as.data.frame() %&gt;%
+  count(date) %&gt;%
+  arrange(desc(n))</code></pre>
+<pre><code>## # A tibble: 144 x 2
+##    date           n
+##    &lt;date&gt;     &lt;int&gt;
+##  1 2016-12-18     6
+##  2 2015-05-24     5
+##  3 2015-12-27     5
+##  4 2016-06-19     5
+##  5 2016-09-18     5
+##  6 2016-12-11     5
+##  7 2017-05-14     5
+##  8 2017-05-28     5
+##  9 2015-02-22     4
+## 10 2015-04-19     4
+## # … with 134 more rows</code></pre>
+<p>Looks resampled to me! Now, we can use the same strategy we used before, but instead of operating on the raw data for each <code>region</code> contained in the <code>sales</code> column of <code>avo_by_region</code>, we’ll operate on the resampled data for each bootstrap <code>id</code> contained in the <code>splits</code> column of <code>avo_nyc_boot</code>.</p>
+<pre class="language-r"><code class="language-r">avo_nyc_boot %&lt;&gt;%
+  # Note that here, I&#39;m not saving the models into their own column
+  # but instead piping the model result of lm()
+  # DIRECTLY into broom::tidy() to go directly to the coefficients tibble
+  mutate(coefs_boot = map(splits,
+                          ~.x %&gt;%
+                            # we need to call this first
+                            # to turn the splits object into data 
+                            as.data.frame() %&gt;%
+                            # now we may proceed as usual
+                            lm(total_volume_log10 ~ type + avg_price_shift1, data = .) %&gt;%
+                            broom::tidy()
+                          )
+         ) %&gt;%
+  # again, use select to remove any columns we don&#39;t want repeated
+  # when unnesting
+  select(-splits) %&gt;%
+  unnest(coefs_boot)</code></pre>
+<p>If we inspect the long-form unnested content of <code>avo_nyc_boot</code> after we’ve pulled out the bootstrapped coefficients, it looks pretty similar to the unnested coefficients in <code>avo_coefs</code>, but this time instead of coefficients by <code>region</code>, we’ve got coefficients by bootstrap <code>id</code>.</p>
+<pre class="language-r"><code class="language-r">avo_nyc_boot</code></pre>
+<pre><code>## # A tibble: 600 x 6
+##    id           term             estimate std.error statistic   p.value
+##    &lt;chr&gt;        &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+##  1 Bootstrap001 (Intercept)         6.23     0.0285    218.   0.       
+##  2 Bootstrap001 typeorganic        -1.41     0.0450    -31.3  2.03e-101
+##  3 Bootstrap001 avg_price_shift1   -0.255    0.0562     -4.54 7.99e-  6
+##  4 Bootstrap002 (Intercept)         6.28     0.0283    222.   0.       
+##  5 Bootstrap002 typeorganic        -1.31     0.0441    -29.7  7.27e- 96
+##  6 Bootstrap002 avg_price_shift1   -0.383    0.0564     -6.78 5.51e- 11
+##  7 Bootstrap003 (Intercept)         6.29     0.0289    217.   0.       
+##  8 Bootstrap003 typeorganic        -1.28     0.0409    -31.4  1.13e-101
+##  9 Bootstrap003 avg_price_shift1   -0.397    0.0539     -7.37 1.35e- 12
+## 10 Bootstrap004 (Intercept)         6.24     0.0279    223.   0.       
+## # … with 590 more rows</code></pre>
+<p>These coefficients are now ready to feed into a <code>ggplot2</code> histogram. I’ll just inspect the bootstrapped error distribution for <code>typeorganic</code>, the coefficient for the weekly difference in (log-10) volume of organic avocados sold relative to conventional avocados.</p>
+<pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
+  filter(term == &quot;typeorganic&quot;) %&gt;%
+  ggplot(aes(x = estimate)) +
+  geom_histogram() +
+  theme_bw()</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-boot-hist-1.png" width="672" /></p>
+<p>We can see that this error distribution shows high kurtosis; that is, that the tails are short and the center of distribution is thick. This means we probably don’t want to use the standard deviation of this distribution as the standard error of the estimate, since the error distribution isn’t normal. Instead, we can use percentiles to report error intervals non-parametrically.</p>
+<p>For the last plot I’ll show in this demo, I’ll do a bit more data manipulation to join the bootstrapped standard error data and the “raw” <code>lm()</code>-estimated standard error data for the original New York avocado sales model, to produce a plot comparing the standard errors from the model estimate and from bootstrapping. This way we can see how much more conservative (how much larger) the bootstrapped standard error is relative to the <code>lm()</code>-estimated error.</p>
+<pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
+  # for each term in the model, over all bootstrap iterations,
+  group_by(term) %&gt;%
+  # calculate its mean, SD,
+  # and the 16th and 84th percentiles
+  # to correspond with estimate +- 1 SE
+  # bc percentiles are non-parametric
+  # so, safe for non-normal distribution
+  summarize(estimate_boot = mean(estimate),
+            se_boot = sd(estimate),
+            q16_boot = quantile(estimate, .16),
+            q84_boot = quantile(estimate, .84)) %&gt;%
+  # now, horizontally join on the coefs from the raw data
+  left_join(avo_coefs %&gt;%
+              filter(region == &quot;NewYork&quot;) %&gt;%
+              select(term, estimate_raw = estimate, se_raw = std.error) %&gt;%
+              # assuming a normal distribution,
+              # rough-calculate the expected 16th and 84th percentiles
+              # to go along with the values in the bootstrapped coefs
+              mutate(q16_raw = estimate_raw - se_raw,
+                     q84_raw = estimate_raw + se_raw),
+            by = &quot;term&quot;) %&gt;%
+  # use pivot_longer to get all the cols other than term,
+  # which are duplicated for the boot and raw coefs,
+  # into long form with a column indicating boot vs. raw
+  pivot_longer(cols = -term,
+               names_to = c(&quot;.value&quot;, &quot;model_type&quot;),
+               # see the pivot_longer docs for more info on this argument!
+               names_pattern = &quot;(.*)_(.*)&quot;) %&gt;%
+  # again, just plotting the coefs for typeorganic
+  filter(term == &quot;typeorganic&quot;) %&gt;%
+  ggplot(aes(x = estimate, y = model_type)) +
+  geom_errorbarh(aes(xmin = q16,
+                     xmax = q84),
+                 height = 0) +
+  geom_point() +
+  labs(x = &quot;Estimate +- 1 &#39;standard error&#39;&quot;,
+       y = &quot;error type&quot;,
+       title = &quot;Bootstrap vs. &#39;raw&#39; errors for the New York avocado sale volume regression&quot;,
+       subtitle = &quot;The bootstrapped error is more conservative&quot;) +
+  theme_bw()</code></pre>
+<p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-boot-coefplot-1.png" width="672" /></p>
+<p>Yep, it looks like the error bounds on the bootstrapped data are wider than the equivalent standard error from the <code>lm</code> fit to the raw data. This will usually be the case! Perhaps a good argument to use bootstrapped standard errors more often, to be conservative with our statistics.</p>
+</div>
+</div>
+<div id="in-closing" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> In closing</h1>
+<p>I hope from this tutorial you’ve become comfortable exploring multilevel data by using <code>nest()</code> and <code>unnest()</code> to work with list-columns of sub-dataframes, and by using <code>map()</code> inside <code>mutate()</code> to calculate all manner of summary statistics for each grouping unit in your data. The tools and techniques we’ve practiced here may prove useful to you for all sorts of other data wrangling and sense-making tasks, so keep an eye out for contexts with similarly structured data where you might be able to use these tools.</p>
+<p>Happy analyzing!</p>
+</div>
+
+      </div></div>
+
+  
+
+</div>
+
+  </div>
+
+  
+    
+
+  
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2020 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

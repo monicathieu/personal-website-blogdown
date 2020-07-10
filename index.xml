@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>A gentlewoman and a scholar? on Monica Thieu</title>
+    <link>/</link>
+    <description>Recent content in A gentlewoman and a scholar? on Monica Thieu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Jul 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Wrangling multilevel data in the tidyverse</title>
+      <link>/posts/2020-04-08-tidy-multilevel/</link>
+      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020-04-08-tidy-multilevel/</guid>
+      <description>1 Learning goals 2 Notes for instructors 3 Lesson body  3.1 A brief intro to multilevel structure: It’s everywhere! 3.2 Introducing the data 3.3 Reading in the data 3.4 Inspecting the data  3.4.1 Quick graphs 3.4.2 Basic summary statistics  3.5 Nesting the data  3.5.1 Intro to nest(), unnest(), and tibble list-columns  3.6 Going vectorize crazy  3.6.1 Vectorizing: it’s like a for loop, but not 3.</description>
+    </item>
+    
+    <item>
+      <title>Showcase</title>
+      <link>/showcase/</link>
+      <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/showcase/</guid>
+      <description>Header 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec interdum metus. Aenean rutrum ligula sodales ex auctor, sed tempus dui mollis. Curabitur ipsum dui, aliquet nec commodo at, tristique eget ante. Donec quis dolor nec nunc mollis interdum vel in purus. Sed vitae leo scelerisque, sollicitudin elit sed, congue ante. In augue nisl, vestibulum commodo est a, tristique porttitor est. Proin laoreet iaculis ornare. Nullam ut neque quam.</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Where I’m at. Some of my code. Talk to me. A snapshot of my CV. Awards and honors Teaching experience Publications and presentations    Where I’m at. I’m currently a PhD student in Dr. Kevin Ochsner’s Social Cognitive &amp;amp; Affective Neuroscience Lab at Columbia University, where I began in fall 2017. While I’m not working on research (and often while I am), I’m probably drinking from a very large cup of tea.</description>
+    </item>
+    
+    <item>
+      <title>Game shows</title>
+      <link>/game-shows/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/game-shows/</guid>
+      <description>(2012) Jeopardy! College Championship (2013) Jeopardy! Tournament of Champions (2016) 500 Questions, season 2 (2019) Jeopardy! All-Star Games Photos (poorly organized, sorry!)   First things first…
+Buy a Team Ken shirt or other swag here to represent/embarrass Ken Jennings, the GOAT. All profits donated to the Pancreatic Cancer Action Network in honor of Alex Trebek.
+When I was little, instead of doing normal kid things, I would read piles upon piles of nonfiction books about history and science.</description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/research/</guid>
+      <description>Research tools Recruiting online participants Running behavioral tasks online  Active projects Individual differences in age perception Measurement of emotion self-reporting  Previous projects Attention, memory, and media multitasking Healthy aging and associative memory    Research tools Recruiting online participants I recently started using prolific.co, a researcher-friendly website for online behavioral study recruitment that’s kind both to researchers and to participants. All my contacts with participants have been pleasant, and the Prolific support staff are so responsive and helpful.</description>
+    </item>
+    
+  </channel>
+</rss>
