@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>How to prepare and teach an R lesson</title>
+      <link>/posts/2020-08-15-prepare-teach-r-lesson/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020-08-15-prepare-teach-r-lesson/</guid>
+      <description>1 Notes for readers 2 Why this talk? 3 Objectives 4 Lesson construction using backward design  4.1 What is backward design? 4.2 Define outcomes 4.3 Define evidence of learning  4.3.1 Formative assessment: more smaller tests 4.3.2 Tidy formative assessments 4.3.3 Multiple choice check-ins scale pretty well  4.4 Build lesson  5 Deliver the lesson 6 In summary   1 Notes for readers This blog post contains a written version of my speaker notes for my 20-minute 2020 NYC R conference talk.</description>
+    </item>
+    
+    <item>
       <title>Wrangling multilevel data in the tidyverse</title>
       <link>/posts/2020-04-08-tidy-multilevel/</link>
       <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>

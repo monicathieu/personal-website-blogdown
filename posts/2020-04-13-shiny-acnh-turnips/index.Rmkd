@@ -1,0 +1,138 @@
+---
+title: "A Bayesian stats nut plays Animal Crossing"
+description: "You didn't ask for it but here it is: numerically estimating the posterior distribution of the week's turnip buying prices at Nook's Cranny."
+date: "2020-04-16"
+tags: ["R", "shiny", "bayes"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(tidyverse)
+```
+
+# The setup: Animal Crossing
+
+I have been playing, ahem, far too much of Animal Crossing: New Horizons. In middle school, I bummed my little brother's Nintendo DS to play the old Wild World edition of Animal Crossing, so when I bought my Switch last year I made plans a year in advance to buy the new Animal Crossing game, whenever it might come out.
+
+Of the many dynamics in the game, one that lends itself particularly well to obsessing over is Sow Joan's Stalk Market. On Sunday morning, you buy turnips at a pseudo-random price from Daisy Mae, a piglet carrying turnips in a basket on her head (her grandmother, Joan, was the turnip seller in previous editions of Animal Crossing). Then, for the next Monday-Saturday, you can sell the turnips back to Timmy and Tommy Nook at Nook's Cranny, the local shop, for a price that varies twice daily, once in the morning and once after noon. Supposedly, the turnip prices vary randomly, so it's up to chance whether you get a chance to sell your turnips at a massive profit.
+
+_However,_ it seems there is a not-so-random algorithm determining each week's turnip prices. Of course, where there's a will, enterprising Animal Crossing players will find a way, so some folks have done some digging to crack and exploit the predictive powers of the turnip pricing algorithm.
+
+[Ninji]() originally reverse-engineered the algorithm out of New Horizon's code to find four semi-fixed weekly turnip price patterns. [Mike Bryant](), [Christian Ceciliano](), and their many contributors then rendered this code into JavaScript web apps to back out which turnip pattern you might be in for the whole week based on observed turnip prices for the beginning of the week, so you can figure out if turnip prices are likely to rise later in the week, or whether you should cut your losses and sell early because turnip prices are just going down from Monday to Saturday. When I used the web apps to divine my own turnip price patterns in my Animal Crossing town, I realized... this is a Bayesian inference problem!
+
+# Bayesian inference: it's everywhere!
+
+Ahh yes, Bayesian inference. Having a pre-existing idea of how the world works, and then adjusting one's idea based on what one observes in the world. More formally, an application of Bayes' theorem:
+
+$$P(\theta|data)=\frac{P(data|\theta)*P(\theta)}{P(data)}$$
+
+In Bayesian statistical inference, we can think of $\theta$ as the _parameter_ modulating a distribution from which observed data are generated, and $data$ as the data that we actually observe. As such, the posterior probability that an unobservable parameter has a particular value given observed data, $P(\theta|data)$, is equal to the likelihood probability that such data would be observed if the parameter _were_ that particular value, $P(data|\theta)$, times the prior probability that the parameter were indeed that value, independent of any data, $P(\theta)$, divided by the evidence probability that the current data would be observed across all possible parameter values, $P(data)$.
+
+[This Beyond Data Science post](https://towardsdatascience.com/probability-concepts-explained-bayesian-inference-for-parameter-estimation-90e8930e5348) has a nice explainer on Bayesian inference if you want to get more into the basics.
+
+In this case, in Animal Crossing terms:
+
+$$P(pattern | price) = \frac{P(price | pattern) * P(pattern)}{P(price)}$$
+
+If we consider observed turnip prices as the data, and the unobservable turnip price generation pattern as the parameter:
+
+The posterior probability that this week's turnip prices are being drawn from a particular turnip pattern given the prices we have seen at the Nook's Cranny shop, $P(pattern|price)$, is equal to the likelihood that we might observe such prices if the parameter were what we think it is, $P(price|pattern)$, times the prior probability that the turnip pattern is what we think it is, absent any data, $P(pattern)$, divided by the evidence probability we might observe such a turnip price, across all possible turnip patterns, $P(price)$.
+
+This means that if we have some observed turnip prices for, say, Monday morning and Monday afternoon, and we know the generating distribution of turnip price patterns, we should be able to back out the posterior probability that a particular week's turnip prices are being drawn from a certain pattern. If we can use this to guess the pattern early in the week, we can decide whether to try to wait for turnip prices to increase (if the pattern is one where the turnip prices will go up on, say, Thursday morning), or whether we ought to give up and sell turnips at a loss (or travel online to a friend's Animal Crossing island where the turnip price pattern is more favorable).
+
+Let's do some turnip statistics!
+
+# The generating distribution of turnip price patterns
+
+In order to generate the posterior probability of a particular turnip price pattern given some observed turnip prices, we have to know the generating distribution of what turnip price patterns there are, and how likely each one is to occur in the game any given week. Based on Ninji's reverse engineering, the turnip prices are generated in the following manner:
+
+1. On Sunday morning, a buying price is set to buy turnips from the piglet Daisy Mae
+1. After the buying price is set, one of four turnip selling price patterns is drawn randomly-ish (more details later):
+    1. A **fluctuating** pattern, where the price to sell turnips at Nook's Cranny oscillates every couple days from low-ish (80% the buying price per turnip) to high-ish (125% the buying price)
+    1. A **large spike** pattern, where the prices are low at the beginning and end of the week, but in the middle of the week might rise up to five or six times the original buying price
+    1. A **small spike pattern**, similar to the large spike pattern, but... just, a lower spike (selling prices about two times the original buying price)
+    1. A **decreasing** pattern, where the turnip selling price starts low (90% the buying price) on Monday morning and just keeps getting lower (this is the least desirable one!)
+1. Each half-day (e.g. Tuesday afternoon or Friday morning), the actual turnip selling price is drawn randomly from a uniform distribution of prices determined by that week's overall pattern
+
+Thus, the posterior probability that your turnip prices are following a particular one of the four patterns comes in quite handy. If on Tuesday morning you believe with high probability that your turnip prices are drawn from a large spike pattern, it benefits you financially to wait for Wednesday or Thursday to come around because the prices will go way up. However, if by Wednesday afternoon you believe with high probability that your turnip prices are drawn from a decreasing pattern, you should probably cut your losses and sell as soon as you can, because if you wait until Friday or Saturday your turnip prices will be in the gutter.
+
+If we can estimate, either analytically or numerically, how this multi-step process bears out in distributions of turnip prices, generated over many potential "weeks", we can use this distribution to estimate those posterior distirbutions, given a series of observed turnip prices, to give players a handle on when to sell early vs. when to wait.
+
+# Estimating the posterior probability of turnip prices
+
+In order to calculate the posterior probability, we need _parameters,_ aka turnip price patterns, and _data,_ aka observed turnip prices. Then, we have to calculate each of the component probabilities: the prior, the likelihood, and the evidence.
+
+## Estimating the prior probability
+
+The prior probability, $P(pattern)$, can be considered as the probability, on Monday morning _before_ you've gone to Nook's Cranny, _before_ you know anything about the turnip prices, that your prices for that week will be drawn from one of the four turnip price patterns. For this, we need to know the underlying probabilities that each pattern might be selected.
+
+It turns out, based on the internal Animal Crossing code, that each week's turnip pattern _depends on the prior week's price._ It looks like the Animal Crossing developers wanted to put in a little equalizer, such that if you're coming out of a nice large spike week, you're much less likely to get another large spike the week after, but you're also less likely to get a lousy decreasing pattern two weeks in a row.
+
+Another way we can say this is that the current week's pattern and the previous week's pattern are _not independent_ of one another. In other words, $P(\theta_{n} \& \theta_{n-1}) \!= P(\theta_{n}) * P(\theta_{n} | \theta_{n-1})$. For example, the conditional probability that the nth week's pattern is a large spike pattern, _given that the n-1th week's pattern was also a large spike pattern,_ is not the same as the probability that the nth week's pattern is a large spike pattern, _if you had no knowledge of what the n-1th week's pattern was._ The conditional probabilities appear to be, based on the extracted code:
+
+```{r, eval = FALSE}
+get_pattern_probs <- function (pattern) {
+  if (pattern == "fluct") {
+    probs = c(fluct = .2,
+              spikelg = .3,
+              spikesm = .35,
+              dec = .15)
+  } else if (pattern == "spikelg") {
+    probs = c(fluct = .5,
+              spikelg = .05,
+              spikesm = .25,
+              dec = .2)
+  } else if (pattern == "spikesm") {
+    probs = c(fluct = .45,
+              spikelg = .25,
+              spikesm = .15,
+              dec = .15)
+  } else if (pattern == "dec") {
+    probs = c(fluct = .25,
+              spikelg = .45,
+              spikesm = .25,
+              dec = .05)
+  } else {
+    # the markov probability matrix appears to be, just from simulating:
+    probs = c(fluct = .35,
+              spikelg = .25,
+              spikesm = .25,
+              dec = .15)
+  }
+}
+```
+
+If you know the previous week's turnip pattern, that gives you more specific information about what the current week's turnip pattern might be. But if you don't know the previous week's turnip pattern, what is the overall probability of the current week's pattern?
+
+We can estimate this by sampling from the week generation process. We can generate a bunch of turnip pattern "weeks" one after the other, each with the appropriate set of pattern-specific transition probabilities. Then, over all of those patterns, we can look at the overall percentage of samples with each pattern. That should tell us the _overall_ probability of a given turnip pattern, _averaging over all possible values of the previous week's pattern._
+
+```{r}
+get_turnip_patterns <- function (start_pattern, n_out = 1000L) {
+  patterns <- start_pattern
+  for (i in 2:n_out) {
+    these_probs <- get_pattern_probs(patterns[i-1])
+    patterns <- c(patterns, sample(names(these_probs),
+                                   size = 1,
+                                   prob = these_probs))
+  }
+  
+  return (patterns)
+}
+
+# It shouldn't matter which one I start with. You'll see
+get_turnip_patterns("fluct", n_out = 5000L) %>%
+  {table(.) / length(.)}
+```
+
+```{r}
+get_turnip_patterns("spikelg") %>%
+  {table(.) / length(.)}
+```
+
+## Estimating the likelihood probability
+
+## Estimating the evidence probability
+
+## Putting it all together
+
+# Plotting the posterior distribution of turnip prices

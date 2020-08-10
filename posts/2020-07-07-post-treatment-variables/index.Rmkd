@@ -1,0 +1,474 @@
+---
+title: 'Post-treatment variables: what are they good for?'
+date: 2020-07-07
+tags: ["R", "stats"]
+output:
+  blogdown::html_page:
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(magrittr)
+cor_default <- function (data) {
+  data %>% 
+  select(iv, covar, dv) %>% 
+  cor()
+}
+plot_default <- function (data) {
+  data %>% 
+    ggplot(aes(x = iv, y = dv, color = covar_bin, fill = covar_bin)) +
+    geom_point() +
+    geom_smooth(method = "lm", formula = y ~ x) +
+    geom_smooth(method = "lm", formula = y ~ x, color = "black", fill = "black")
+}
+plot_multi_hist <- function (data) {
+  data %<>% 
+    mutate(id = 1:n())
+  
+  if (all(data$iv %in% 0:1)) {
+    data %<>%
+      mutate(iv_bin = as.character(iv))
+  } else {
+    data %<>%
+      mutate(iv_bin = if_else(iv > median(iv), "above", "below"))
+  }
+  data %>%         
+    select(-covar_bin) %>% 
+    pivot_longer(cols = c(covar, latent, dv),
+                 names_to = "variable",
+                 values_to = "value") %>% 
+    mutate(variable = fct_relevel(variable, "latent", "covar", "dv")) %>% 
+    ggplot(aes(x = value, fill = iv_bin)) +
+    geom_histogram(position = "identity", alpha = 0.3) +
+    geom_vline(aes(xintercept = value,
+                   color = iv_bin),
+               data = data %>%
+                 select(-id, -iv) %>% 
+                 group_by(iv_bin) %>% 
+                 summarize_if(is.numeric,
+                              mean) %>% 
+                 pivot_longer(cols = -iv_bin,
+                              names_to = "variable",
+                              values_to = "value"),
+               linetype = 2, size = 1) +
+    facet_grid(~ variable)
+}
+plot_multi_hist_x2b <- function (data) {
+  
+    data %<>% 
+    mutate(id = 1:n())
+  
+  if (all(data$iv %in% 0:1)) {
+    data %<>%
+      mutate(iv_bin = as.character(iv))
+  } else {
+    data %<>%
+      mutate(iv_bin = if_else(iv > median(iv), "above", "below"))
+  }
+  data %>%
+    select(-covar) %>% 
+    pivot_longer(cols = c(latent, dv),
+                 names_to = "variable",
+                 values_to = "value") %>% 
+    mutate(variable = fct_relevel(variable, "latent", "covar", "dv")) %>% 
+    ggplot(aes(x = value, fill = iv_bin)) +
+    geom_histogram(position = "identity", alpha = 0.5) +
+    geom_vline(aes(xintercept = value,
+                   color = iv_bin),
+               data = data %>% 
+                 group_by(iv_bin, covar_bin) %>% 
+                 summarize(latent = mean(latent),
+                           dv = mean(dv)) %>% 
+                 pivot_longer(cols = c(latent, dv),
+                              names_to = "variable",
+                              values_to = "value"),
+               linetype = 2, size = 1) +
+    facet_grid(covar_bin ~ variable)
+}
+plot_jitter_lm <- function (data) {
+  data %>% 
+    ggplot(aes(x = iv, y = dv)) +
+    geom_jitter(aes(color = covar_bin), alpha = 0.3, width = 0.1) +
+    geom_smooth(aes(color = covar_bin, fill = covar_bin),
+                method = "lm", formula = y ~ x,
+                size = 1) +
+    geom_smooth(method = "lm", formula = y ~ x,
+                size = 1,
+                color = "black")
+}
+plot_point_lm <- function (data) {
+  data %>% 
+    ggplot(aes(x = iv, y = dv)) +
+    geom_point(aes(color = covar_bin), alpha = 0.3) +
+    geom_smooth(aes(color = covar_bin, fill = covar_bin),
+                method = "lm", formula = y ~ x,
+                size = 1) +
+    geom_smooth(method = "lm", formula = y ~ x,
+                size = 1,
+                color = "black")
+}
+n_draws <- 1000L
+
+load("~/Repos/senpai_git/ignore/data_gdrive/emo/online/preplots_pcs_age.rda")
+rm(preplots_fixef_pcs_age, preplots_fixef_pses_pcs_age, preplots_fixef_ribbons_pcs_age)
+
+senpai_pses <- preplots_by_subj_pcs_age %>%
+  # stim_level will now contain the PSE-ish
+  mutate(predicted = map(predicted, ~.x %>%
+                      select(subj_num, age_cat, PC1, PC2, stim_level, resp_pred) %>%
+                      group_by(subj_num) %>%
+                        filter(stim_level == min(stim_level) | stim_level == max(stim_level)) %>%
+                        ungroup() %>%
+                        mutate(stim_level = if_else(stim_level == min(stim_level),
+                                                    "min",
+                                                    "max")) %>% 
+                        pivot_wider(names_from = stim_level,
+                                    values_from = resp_pred,
+                                    names_prefix = "resp_") %>%
+                        group_by(subj_num, age_cat, PC1, PC2) %>%
+                        summarize(dprime = qnorm(resp_max) - (resp_min),
+                                  c = (qnorm(resp_max) + qnorm(resp_min)) / -2)
+                      )) %>%
+  unnest(predicted) %>%
+  mutate(emo_block = recode(emo_block,
+                            `0 to +` = "pos",
+                            `0 to -` = "neg",
+                            `+ to -` = "bipolar"))
+```
+
+Given the sorts of topics that [my home lab at Columbia](https://ochsnerscanlab.org) studies, we can create an example "study" to follow along. Perhaps we wish to investigate if describing our emotions in a particular way has any influence on the magnitude of the emotions we feel. If I showed people a video of something quite negative happening, say, a pedestrian being struck by a car, would people report feeling more negative after watching the video if I made them choose between feeling "neutral" and "bad", versus giving them a sliding scale between "neutral" and "bad" where I let them pick any point in the middle?
+
+Independent variable: labeling method (binary, continuous)
+Dependent variable: emotion response rating
+
+In this example, I hypothesize that putting people in a binary mindset, by only giving them binary options, will lead them to be more emotionally reactive, perhaps because they see fewer "shades of grey" in their emotional state. So I expect a _positive_ relationship between my independent variable (continuous response: control; binary response: manipulation) and my dependent variable (negative emotion rating; suppose this is measured once per participant by taking the mean emotion response across several videos).
+
+Now, perhaps I want to adjust for a possible covariate. Perhaps I'm concerned that participants' response times will have an effect on their emotion responses. For trials where they take longer to respond, they might receive more exposure to negative emotional content, and thus rate a higher negative emotional response. It could then be that longer response times in one condition than the other might drive any effects of response type manipulation on emotion ratings.
+
+This sounds reasonable, right? Adjusting for this covariate in my analysis should allow me to assess the effect of my response type manipulation _with response time held constant._
+
+**Not so fast!!!** It turns out that sometimes, including covariates in your analysis can _bias your estimated effect of interest._ More specifically, there are many cases where this might produce an _overestimate of your effect of interest._ False positives! Bad!
+
+# Randomly assigned between subjects
+
+## The best case scenario
+
+When it comes to covariates, the best case scenario is where _including a covariate in your analysis has no effect._ Including the covariate won't help, but more importantly it won't hurt.
+
+Ideally, any covariates measured before the manipulation is applied should be equally distributed between the manipulation and control groups. That's the whole point of random assignment, to make sure that the only difference between the groups is the presence of the manipulation!
+
+Suppose that people in the population vary in "emotional engagement". Some people are more likely to spend time thinking about emotional experiences, and some people less so. These people will vary in how long it takes them to make an emotion judgment, and we will be able to pick up on this by measuring each person's average response time to all emotion judgments.
+
+If the response type manipulation has a true effect on emotion ratings, and the manipulation is _unrelated_ to average response time, then including average response time as a covariate should not change the estimated manipulation effect.
+
+```{r}
+safe <- tibble(iv = rep(0:1, length.out = n_draws)) %>% 
+  mutate(latent = rnorm(n()),
+         covar = c(scale(rnorm(n(), latent, 1))),
+         dv = c(scale(rnorm(n(), iv, 1))),
+         covar_bin = if_else(covar > median(covar), "above", "below"))
+```
+
+```{r}
+safe %>% 
+  plot_multi_hist()
+```
+
+Thus, we can recover the true manipulation effect when ignoring response time covariate (black) and when estimating the effect every level of the covariate (colors). In this case, including the response time covariate doesn't hurt (but it doesn't help either, really).
+
+```{r}
+safe %>% 
+  plot_jitter_lm()
+```
+
+Again, this holds when the response time covariate is _uncorrelated with the response type manipulation._ 
+It might be possible that average response time also correlates with emotion ratings. It could be the case that participants with higher average response times for emotion judgments are also more likely to rate more negative emotion, perhaps if spending more time on an emotion judgment allows participants to be more "exposed" to the negative event, and thus experience a greater evoked response. Again, if average response time is balanced between the binary and continuous response groups, conditioning on the covariate will not appreciably bias the estimated manipulation effect.
+
+We can model "emotional stimulus exposure" as a latent variable that influences average response time and emotion rating outcomes. 
+
+```{r}
+safe2 <- tibble(iv = rep(0:1, length.out = n_draws)) %>% 
+  mutate(latent = rnorm(n()),
+         covar = c(scale(rnorm(n(), latent, 1))),
+         dv = c(scale(rnorm(n(), iv + latent, 1))),
+         covar_bin = if_else(covar > median(covar), "above", "below"))
+```
+
+```{r}
+safe2 %>% 
+  plot_jitter_lm()
+```
+
+```{r}
+safe2 %>% 
+  lm(dv ~ iv, data = .) %>% 
+  broom::tidy() %>% 
+  mutate_if(is.numeric, round, digits = 3)
+```
+
+```{r}
+safe2 %>% 
+  lm(dv ~ iv + covar, data = .) %>% 
+  broom::tidy() %>% 
+  mutate_if(is.numeric, round, digits = 3)
+```
+
+Again, we see that the manipulation effect does not differ much when the regression is estimating the manipulation effect alone, vs. when the regression is estimating the manipulation effect with the effect of the response time covariate.
+
+Even if the covariate is correlated to the dependent variable, _as long as the covariate is not correlated with the independent variable, including the covariate will not meaningfully bias the estimate of the manipulation effect._
+
+
+## Post-treatment variables: risky business
+
+But what if the covariate _is_ correlated with the independent variable?
+
+In social science statistical methods, this is brought up in the context of "post-treatment" variables. Causality must proceed forward in time (something happening in the future cannot cause something happening in the present). Thus, the intuition is that if a manipulation is truly randomly assigned, any covariate variables measured before participants receive the manipulation should be balanced between groups.
+
+This doesn't mean that covariates measured after the manipulation ("treatment") is applied are banned outright. It's entirely possible that 
+
+However, if the manipulation also affects the mental process indexed by the covariate, then any covariate variables measured after the study has already begun risk picking up on .
+
+### Inducing a relationship when there isn't one
+
+Now, the covariate is influenced by the manipulation, and by a confounding variable that also influences the outcome. In this situation, the manipulation has no actual effect on the outcome.
+
+```{r}
+tau <- 0
+gamma <- 1
+beta <- 0
+kappa_covar <- 0.7
+kappa_dv <- 2
+
+collided_expt <- tibble(iv = rep(0:1, length.out = n_draws)) %>% 
+  mutate(latent = rnorm(n()),
+         covar = c(scale(rnorm(n(), kappa_covar*latent + gamma*iv, 1), center = F)),
+         dv = c(scale(rnorm(n(), kappa_dv*latent + beta*covar + tau*iv, 1), center = F)),
+         covar_bin = if_else(covar > median(covar), "above", "below"))
+```
+
+When we split up the distributions of other variables into manipulation and control groups, we see that the covariate `x2` is unbalanced with respect to the independent variable. In this case, we know it's because the independent variable influences the covariate (because again, random assignment lets you infer causality when done properly). Currently, the confounding latent variable (which influences `x2` and `y`) is balanced with respect to the independent variable, so it is "blocked" from being able to confound the observed result.
+
+```{r}
+collided_expt %>%
+  plot_multi_hist()
+```
+
+
+
+```{r}
+collided_expt %>% 
+  plot_jitter_lm()
+```
+
+However, because `x2` is correlated with `x1` (because the manipulation influences the covariate) and `y` (because the latent variable influences the covariate and the outcome), splitting the data up by `x2` induces a correlation between `x1` and the latent variable at every level of `x2`.
+
+```{r}
+collided_expt %>% 
+  group_by(iv) %>% 
+  summarize(dv = mean(dv),
+            latent = mean(latent),
+            count = n())
+```
+
+In this case, you can kind of see that splitting the data by `x2` tends to unbalance the distribution of the latent variable between the manipulation and control groups of `x1`.
+
+Now, within each level of `x2`, the observations that received the manipulation tend to have lower values of the outcome variable, and of the latent variable, than the observations that received the control. We have now effectively _un-randomized_ the groups. Within each level of the covariate, observations with lower values of the latent variable are more likely to have received the manipulation, introducing a confound between the latent variable and the independent (or should we say... "independent"?) variable.
+
+```{r}
+collided_expt %>% 
+  group_by(x2b, x1) %>% 
+  summarize(y = mean(y),
+            latent = mean(latent),
+            count = n())
+```
+
+You can kind of think about this scenario in the following way: If the covariate is positively correlated with the treatment, and also positively correlated with a confounding latent variable that itself influences the outcome, then...
+
+- being in the manipulation group OR high value on the latent variable = higher observed values of the covariate
+- being in the control group OR low value on the latent variable = lower observed values of the covariate
+- because the independent variable is initially uncorrelated with the latent variable (random assignment), those who have higher observed values of the covariate, may fall into one of three causal bins:
+    - be in the manipulation group and low value on the latent variable
+    - be in the manipulation group and high value on the latent variable
+    - be in the control group and high value on the latent variable
+- This causes people who are in the control group and _low_ on the latent variable to be missing from this comparison (because they got binned into the low-covariate group). Thus, because of biased binning, the section of the control group in the high-covariate condition tends to be a little higher on the latent variable than the section of the manipulation group in the high-covariate condition.
+
+In this way, binning by the covariate has now subsampled the independent variable to be confounded with the latent variable. Uh oh! The confound has now been "unblocked" and is allowed to pollute the estimated effect of the manipulation.
+
+Below, we can see that in both rows (stratified by median-split on the covariate), we've induced a small gap between the control and manipulation means on the latent variable _and_ the dependent variable. You can also see that the gap comes from clearly unbalanced splits (in the long-response-time group on top, there's fewer observations from the control group, and vice versa with the short-response-time group on the bottom).
+
+```{r}
+collided_expt %>% 
+  plot_multi_hist_x2b()
+```
+
+Explicitly, we can see this by inspecting the linear regression outputs of modeling the independent variable as the sole predictor, versus adjusting it by the covariate.
+
+```{r}
+collided_expt %>% 
+  lm(dv ~ iv, data = .) %>% 
+  broom::tidy() %>% 
+  mutate_if(is.numeric, round, digits = 3)
+```
+
+```{r}
+collided_expt %>% 
+  lm(dv ~ iv + covar, data = .) %>% 
+  broom::tidy() %>% 
+  mutate_if(is.numeric, round, digits = 3)
+```
+
+The estimated manipulation effect is inflated (in this case, more negative) when we include the covariate as a regressor. In this case, **we have now found a false positive effect.** Agh!
+
+### Selection/attrition bias is also dangerous
+
+As shown above, any analysis strategy that forcibly unbalances the manipulation and control groups with respect to a covariate will run the risk of introducing a confound if the covariate is related to the manipulation and the dependent variable in the right (wrong?) ways.
+
+The most obvious version of this is explicitly unbalancing the independent variable groups by including the offending covariate as an additional term in a regression. However, there are other means by which you might accidentally unbalance your independent variable. The other common pathway is by data restriction. If regression with a suspect covariate is dangerous because it forcibly stratifies the data along the covariate, then _losing or removing data according to a suspect covariate may also bias estimated manipulation effects._
+
+In our simulated experiment, we might opt to exclude certain participants' data based on their average response time. It could be the case that people who are responding too quickly on average are speeding through the task and not doing it in good faith. To guard against including bad data, we might remove all subjects whose reaction times are more than 2 standard deviations faster (lower) than the mean. If we look at the resultant distributions of our other variables, again split between the control and manipulation groups, we see that we have lost more subjects out of the control group than the manipulation group (because the manipulation group were more likely to have longer average response times).
+
+```{r}
+collided_expt %>% 
+  filter(covar >= -2) %>% 
+  group_by(iv) %>% 
+  summarize(covar = mean(covar),
+            dv = mean(dv),
+            latent = mean(latent),
+            count = n())
+```
+
+Because of the correlations between average response time and the manipulation, and between average response time and the emotional exposure latent variable, subsetting data based on average response time is more likely to remove people in the control condition than the manipulation condition, AND is more likely to remove people with lower latent emotion exposure tendencies. This will tend to make the control group have slightly higher values on the latent variable than the manipulation group. At severe enough levels, this subsampling bias will produce a big enough confound to drive false positive effects.
+
+```{r}
+collided_expt %>% 
+  filter(covar >= -1.5) %>% 
+  plot_multi_hist()
+```
+
+```{r}
+tibble(cutoff = seq(-3, 1, 0.1)) %>% 
+  mutate(data = map(cutoff, ~collided_expt %>% 
+           filter(covar >= .x)),
+         coefs = map(data, ~.x %>% 
+                       lm(dv ~ iv, data = .) %>% 
+  broom::tidy())) %>% 
+  select(cutoff, coefs) %>% 
+  unnest(coefs) %>%
+  filter(term == "iv") %>% 
+  ggplot(aes(x = cutoff, y = estimate)) +
+  geom_hline(yintercept = 0, linetype = 3) +
+  geom_errorbar(aes(ymin = estimate - 2*std.error,
+                    ymax = estimate + 2*std.error),
+                width = 0) +
+  geom_point()
+```
+
+Attrition/selection bias are a little less risky re: false positives, mainly because standard errors get bigger when you lose data points. That helps to guard against concluding a false positive when significance testing.
+
+# Continuous observational data
+
+When we consider the problem of dangerously correlated covariates in observational data, we lose the power of random assignment. In a properly designed experimental study, the causal arrows cannot point toward the independent variable, because it's been randomly assigned! However, in correlational studies, any latent variables floating could be the source of observed correlations between a predictor and outcome variable.
+
+Traditionally confounded data, where the latent variable influences the predictor and the outcome, is a known issue. But is there a situation similar to the one described above for experimental designs, where including a particular covariate inflates the effect of interest?
+
+```{r}
+tau <- 0
+gamma <- 1
+beta <- 0
+kappa_covar <- 0.7
+kappa_dv <- 0.7
+
+collided <- tibble(iv = rnorm(n_draws)) %>% 
+  mutate(latent = rnorm(n()),
+         covar = c(scale(rnorm(n(), kappa_covar*latent + gamma*iv, 1))),
+         dv = c(scale(rnorm(n(), kappa_dv*latent + beta*covar + tau*iv, 1))),
+         covar_bin = if_else(covar > median(covar), "above", "below"))
+
+collided %>% 
+  select(iv, covar, dv, latent) %>% 
+  cor()
+```
+
+In this similarly collided situation, stratifying the data by the covariate induces, or "unblocks", a confounding negative correlation between the predictor variable and the latent variable. Now, it's possible for the correlation between the latent variable and the predictor variable to drive an observed correlation between the predictor variable and the outcome variable.
+
+```{r}
+collided %>%
+  group_by(covar_bin) %>% 
+  summarize(cor(iv, latent), cor(iv, dv))
+```
+
+Similar to the problematic experimental scenario, the introduced confound is driven by uneven sampling of the latent variable when stratifying by the covariate.
+
+```{r}
+collided %>%
+  plot_multi_hist()
+```
+
+
+```{r}
+collided %>% 
+  plot_point_lm()
+```
+
+```{r}
+collided %>% 
+  lm(dv ~ iv, data = .) %>% 
+  summary()
+```
+
+```{r}
+collided %>% 
+  lm(dv ~ iv + covar, data = .) %>% 
+  summary()
+```
+
+Any arrangement of latent variables might produce any particular pattern of observed correlations.
+
+## But what about suppression?
+
+Sure, it could be a suppression effect. But a suppression effect and a collided null effect are statistically indistinguishable from one another. 
+
+## Mediation, or something?
+
+The primary concern with mediation is that it can be difficult, and sometimes impossible, to rule out alternate null-effect explanations for the results.
+
+
+
+# So how do I avoid the worst case scenario?
+
+## Make sure the IV is unrelated to the covariate
+
+## Make sure confounds aren't messing your shit up
+
+This is much more difficult. If the whole point is that 
+
+If you want to test for mediation, that the apparent tau path is actually the gamma-beta path, you must do everything you can to minimize confound-related kappa. If the kappa effects are not zero, they will tend to inflate the observed strength of beta path (because you're essentially juicing up the correlation), leading you most of the time to _overestimate the strength of your mediation effect._
+
+## Within-subjects designs
+
+# Within-subjects designs
+
+By their nature, within-subjects designs can protect against the greatest concern with dangerous covariates: that stratifying by a covariate will unevenly bin observations from the manipulation vs. control conditions. Stratifying by a covariate will not split up a single participant's observations from the two conditions, so 
+
+```{r}
+collided_within <- tibble(id = 1:n_draws) %>% 
+  mutate(latent = rnorm(n()),
+         x2 = c(scale(rnorm(n(), 0.7*latent, 1))),
+         effect = rnorm(n(), 1 + x2, 1),
+         y0 = rnorm(n(), 0, 1),
+         y1 = rnorm(n(), y0 + effect, 1),
+         ydiff = y1 - y0,
+         x2b = if_else(x2 > median(x2), "above", "below"))
+```
+
+```{r}
+collided_within %>% 
+  ggplot(aes(x = y0, y = y1)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x)
+```
+
+However, once you start to get into between-subjects analyses on this data, for example, looking for individual differences in the magnitude of the within-subjects effect, then you're back in risky territory. If you look at the within-subjects difference score as a dependent variable, and then want to look at how it changes with respect to a between-subjects independent variable, you must be careful of the between-subjects pitfalls described earlier.
+
