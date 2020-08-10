@@ -6,18 +6,18 @@
     <description>Recent content in hacks on Monica Thieu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/hacks/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Setting up this website</title>
-      <link>/posts/2020-03-20-setting-up-this-website/</link>
-      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
+      <link>/posts/2020-08-10-setting-up-this-website/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2020-03-20-setting-up-this-website/</guid>
-      <description>1 Setting up a blogdown repository 2 Blogdown-ing with a different Hugo theme 3 Making a new homepage template  3.1 Understanding Hugo’s expected structure  4 Hooking it into the interwebs  4.1 Syncing public files to GitHub Pages 4.2 Re-pointing my old Squarespace domain name  5 Adding a photo gallery into the theme 6 Fixing code syntax highlighting  6.1 Updating RStudio’s pandoc installation 6.</description>
+      <guid>/posts/2020-08-10-setting-up-this-website/</guid>
+      <description>Setting up a blogdown repository Blogdown-ing with a different Hugo theme  Making a new homepage template  Understanding Hugo’s expected structure  Adding pages to the menu bar  Hooking it into the interwebs  Setting public as the GitHub Pages root directory Re-pointing my old Squarespace domain name  Pointing Squarespace DNS to GitHub Pages URL Get GitHub Pages URL to use new domain   Adding a photo gallery into the theme Fixing code syntax highlighting  Prism.</description>
     </item>
     
   </channel>

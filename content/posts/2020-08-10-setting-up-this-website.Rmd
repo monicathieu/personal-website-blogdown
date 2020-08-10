@@ -1,0 +1,148 @@
+---
+title: Setting up this website
+date: 2020-08-10
+tags: ["R", "Hugo", "html", "pandoc", "hacks", "blogdown"]
+---
+
+About two weeks into (the first) CoVID-19 lockdown, my social distancing brain was starting to feel quite out of sorts. I decided the most useful thing I could handle doing with my day inside was scratching a (hopefully) fun technical to-do off of my list would be moving my personal website over to `blogdown`.
+
+My previous personal website was through [Squarespace](https://www.squarespace.com/). Squarespace is incredibly powerful if you want more sophisticated site features (floating navbars, clicking and dragging to set up complex text box layouts, etc), but I always felt that it was a bit overkill feature-wise (and subscription-wise) for an aesthetically pleasing, yet ultimately information-light website. Further, I hadn't integrated my Squarespace site with any blogging tools, so I wasn't able to have much regularly updated content beyond adding things onto the CV section of my About Me page.
+
+I'd been thinking of moving to a self-maintained static site for a while, especially one that would easily let me post R Markdown blog posts to the internet. I'm happy to trade in a less impressive theme for blog post compatibility with R Markdown. In case others might want to read my R Markdown ramblings, I want to put them online!
+
+After a couple days of not insignificant headache, I got the website up and (mostly) running! At the time, while it was fresh in my mind, I meant to immediately publish a summary of all of the website setup headaches. That way, anyone else setting up a `blogdown` site running into similar problems might be able to refer to my experience and save themselves some trouble. Predictably, I never finished writing up this post until months later.
+
+Anyway, here it is! I will describe tidbits I learned (and am still learning) in the process of setting this site up that might help you if you find yourself plumbing the `blogdown` waters in the future.
+
+# Setting up a blogdown repository
+
+Yihui Xie et al.'s guide to `blogdown` is **indispensable** for setting up a site. I pretty much followed Yihui's instructions. The details I provide below are for features that I set up outside of the scope of the example site.
+
+# Blogdown-ing with a different Hugo theme
+
+`blogdown` tends to play best with Hugo themes that are structured very similarly to Yihui's pre-formatted [`hugo-lithium`](https://github.com/yihui/hugo-lithium) theme. I ended up pulling [Radek Koziel's Terminal theme](https://themes.gohugo.io/hugo-theme-terminal/) from the Hugo theme gallery. Aside from the minimalist look, I liked that it came with support for code highlighting, as I knew I'd be posting blogs with R code chunks. Getting the code highlighting to work ended up taking [a bit more finagling](#fixing-code-syntax-highlighting) than I anticipated at first, though.
+
+## Making a new homepage template
+
+Radek's Terminal theme by default sets the homepage to be a list of blog posts. I knew that for this site, I wanted a simple splash landing page. Additionally, I still wanted to use the blog posts list layout, but as a page accessible through the menu bar.
+
+### Understanding Hugo's expected structure
+
+With little experience in HTML and related front-end coding, it took me a while to wrap my head around the division between webpage _layouts_ and _content._
+
+At first blush it sounds reasonable--you want to be able to specify _what's_ on your webpage separately from _where_ things go on your webpage, to centralize design decisions. Hard-coding the layout of, say, a blog post page would be troublesome if you had add page features by editing the layout of every single page individually. But what about a home page, where the layout would only be used once over the whole website? It would be so straightforward to hard-code layout information directly in my homepage file. Not so fast, though!
+
+To change the layout of the homepage, I had to understand enough Hugo to construct my own homepage _layout_ file separately from my homepage _content_ file, and then save the layout file in the right place for Hugo to know it was the layout guide for my homepage.
+
+The homepage layout file should live at `themes/your-theme/layouts/_index.html`. Depending on your theme, either this file will already exist and you can edit it, or a dedicated homepage layout will not already exist and you will need to create a file at this path. I created this file, and copied and pasted enough Hugo code from existing layout files to get the `_index.html` homepage to show a "cover image", and underneath the cover image, whatever text lives in the homepage content file. The cover image functionality was included with Radek's theme, so I didn't have to set that up myself.
+
+The homepage content file should live at `content/_index.Rmd`. Again, I set up the homepage content file to render the R Markdown content on this page and show it beneath the cover image on the home page. I didn't do anything fancy here--just a couple sentences introducing myself and the website. Not enough to reveal that the homepage theme is actually super crappy!
+
+You can find a bunch more details in [section 2.5.1](https://bookdown.org/yihui/blogdown/templates.html#a-minimal-example) of the `blogdown` manual and the [homepage template section](https://gohugo.io/templates/homepage/) of the Hugo manual.
+
+## Adding pages to the menu bar
+
+The `config.toml` file, as indicated by the name, handles site-wide configuration settings. I think this may differ from Hugo theme to theme, but in the theme I selected, this file also determines which pages are linked in the main navbar. To change the organization of the menu bar, and add pages like my research and game show summaries, I copied and pasted existing menu bar subsections and changed the identifier, name, and URL arguments to match the new page files I'd created (`research` and `game-shows` respectively, in this case).
+
+# Hooking it into the interwebs
+
+I followed the [GitHub Pages section](https://bookdown.org/yihui/blogdown/github-pages.html) of the `blogdown` manual as a starting point to get the repo served at monicathieu.github.io . Then, I did a little extra finagling to get my old URL, monicathieu.com , to redirect to my new website.
+
+## Setting `public` as the GitHub Pages root directory
+
+I followed the instructions [Coby Chapple's GitHub Gist post](https://gist.github.com/cobyism/4730490) to create the `gh-pages` branch of my repository with a subfolder as the root directory of the other branch. This way, I could git-track the whole directory on the `master` branch, editing and rendering as usual, while treating the `public` subfolder as the root folder of my website so everything shows up properly when someone visits in a browser.
+
+## Re-pointing my old Squarespace domain name
+
+To hook a GitHub Pages site to a custom domain name, you have to set up two steps:
+
+1. Tell your domain name system (DNS) provider to point your domain name to your GitHub Pages URL
+1. Tell your GitHub Pages site to use a custom domain
+
+### Pointing Squarespace DNS to GitHub Pages URL
+
+The Squarespace website management feature that I opted to keep was **domain name management.** Squarespace allows you to buy an available domain name directly through their own site editor, so I'd previously bought monicathieu.com for my old website. I followed the instructions on Squarespace's help pages to [point my existing domain to a non-Squarespace site](https://support.squarespace.com/hc/en-us/articles/215744668-Pointing-a-Squarespace-Domain), so that when you go to monicathieu.com, it shows you whatever's hosted at monicathieu.github.io instead. This takes care of the first half of the domain connection.
+
+### Get GitHub Pages URL to use new domain
+
+In order to complete the connection, I followed [GitHub's instructions](https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site) to set www.monicathieu.com as the "custom domain" option in the GitHub Pages GUI settings for my repository, and then initialized the CNAME helper file in the `public` folder (so that to GitHub Pages, it looks like it's in the root directory).
+
+# Adding a photo gallery into the theme
+
+[Bruno Amaral's post](https://brunoamaral.eu/post/creating-a-gallery-component-for-the-hugo-static-site-generator/) for Digital Insanity magazine shows example code for adding a fancy tiled photo gallery to a webpage in a Hugo-rendered site. Perfect for showing photos from my various game show experiences, I thought!
+
+Bruno's code uses a combination of pure CSS to organize photos into a tiled arrangement, and the [PhotoSwipe JavaScript plugin](https://photoswipe.com/documentation/getting-started.html) to render a nice browsable gallery when you click on any of the individual photos in the tiled layout.
+
+I attempted reproduce Bruno's gallery by copying his the code examples into files at the following paths in my own repo:
+
+1. **Front matter:** In the YAML header of the `game-shows` index Rmd file
+1. **Gallery shortcode:** Into a new file at `themes/hugo-theme-terminal/layouts/shortcodes/gallery.html`
+1. **Photoswipe calling code:** In the footer of `themes/hugo-theme-terminal/layouts/_default/single.html`. This I put into a `{{if .HasShortcode }}` block per Bruno's instructions, so that it would only trigger in the footer of pages that had a gallery specified for them. (It was a little hacky to put it in `single.html` such that the code was included for ANY basic web page, but it seemed to work.)
+1. ***Photoswipe source code** (not directly shown in Bruno's post, but linked:) Downloaded the contents of the [Photoswipe distribution folder](https://github.com/dimsemenov/PhotoSwipe/tree/master/dist) into `static/plugins/photoswipe`. Any files in this path, thanks to the behavior of the `static` folder, are "seen" by web pages as being at `plugins/photoswipe`, for example.
+1. **Photo tiling CSS:** At the end of `static/plugins/photoswipe/photoswipe.css`
+
+Saving the Photoswipe plugin code into `static/plugins` should allow the links included in Bruno Amaral's example to work, but...
+
+I currently can only get the tiling CSS to work, not the actual Photoswipe JavaScript code. So you can click through the photos, just not nicely. If I figure out how to set up Photoswipe properly in the future, I'll update this post, but for now it works enough for me to leave it alone.
+
+# Fixing code syntax highlighting
+
+In order to get my R Markdown code chunks to show nice syntax highlighting in my blog post HTMLs, I had to do the following:
+
+1. Manually update the version of pandoc included with RStudio
+1. Download a special Lua filter script file to my `blogdown` repo
+1. Update `_output.yml` to add `pandoc_args` to the default R Markdown YAML header for all pages
+
+I've outlined the saga that led me to this solution below.
+
+## Prism.js, and the mysterious case of pre vs code classes
+
+The `hugo-theme-lithium` default theme that `blogdown` sets up with comes with [highlight.js](https://highlightjs.org/) for code syntax highlighting. Many Hugo websites don't involve people posting code they've written, so Hugo themes don't _all_ come with syntax highlighting Javascript plugins. When they do, though, they don't all use the same plugin to color the code. Terminal, the theme I selected, uses [Prism.js](https://prismjs.com/) for syntax highlighting.
+
+What these plugins do, somewhere under the hood, is look for HTML content with a specific tag. All content tagged to identify it as code gets passed through the coloring plugin, which formats the text with the right colors for function names, arguments, and such.
+
+When `blogdown` knits R Markdown files to raw Markdown, and then knits those files to HTML, it detects the location of code chunks and adds the tags `<pre class=r>` and `<code>` so that the syntax highlighting plugin knows which sections are R code, and should be pre-formatted and highlighted. To embed chunks of another language, the preformatting tag can take a different class, e.g. `<pre class=python>`. Ideally, your code gets seamlessly colored in HTML, with the colors adapting to whatever language you'd written in. However, clearly that's not what happened for me, because you're reading this now.
+
+What I discovered, after knitting my website several times and seeing that code chunks did _not_ have highlighted text, was that **`blogdown` was formatting the HTML tags using an outdated syntax Prism.js did not understand.** `blogdown` was labeling knitted code chunks with the tags `<pre class=r><code>`. But Prism.js was expecting the tag to be a little different: `<pre><code class=language-r>`. The `language` class had moved from the `<pre>` tag to the `<code>` tag, and now had the `language-` prefix. (I believe that highlight.js has now updated as well to expect the language tag as `<pre><code class=language-r>`, but it might still be backwards compatible with `blogdown`'s output, thus not requiring the hacking I did. Prism.js is most definitely not backwards compatible.)
+
+Okay, so this seemed fixable with a bit of pattern matching magic. All I had to do was string-replace all of the code chunk tags in my blog post HTMLs with the Prism.js-compatible syntax. Seems easy enough right? Well, not so fast.
+
+## Lua filters for pandoc
+
+I learned that pandoc uses [filters](https://pandoc.org/lua-filters.html) to apply small formatting changes. These changes are made on a special pandoc intermediate file (so, when an Rmd file is knitted, it actually goes Rmd -> md -> pandoc -> HTML). At their core, these filters allow you to apply complex string matching to edit the pandoc intermediate file, in a way such that the search-and-replace always searches in a consistent language (pandoc intermediate syntax) but can modify formatting tags that will go into a variety of languages (HTML, LaTeX, etc). You could use this to, say, replace all HTML tags matching a certain pattern with slightly modified HTML tags. This should solve my HTML code highlighting issue!
+
+Pandoc's filters are written in a scripting language called [Lua](http://www.lua.org/docs.html), which I had never heard of until I started diving into this pandoc debugging issue. Lua seems really handy, but I still am no Lua expert. All I could tell was that pandoc had the ability to run extra Lua scripting files while knitting an Rmd to string-replace whatever formatting tags I wanted to replace. All I needed was a local copy of the script file.
+
+As is usually the case with odd code issues, I wasn't the first one to use Lua filters to fix R Markdown's HTML syntax highlighting tags. I found that [Duncan Garmonsway](https://github.com/ukgovdatascience/govdown/commit/c294943bdae3428ec6f82a0210cefb0ad7c55778) had implemented a local Lua filter to reformat Prism.js-compatible HTML code tags in a blogdown-based website he maintained. He himself had created an R-specific version of [a-vrma's](https://github.com/a-vrma/pandoc-filters/blob/master/src/standard-code.lua) original (pandoc-wide, not just Rmd) Lua filter to fix the same syntax highlighting issue.
+
+I downloaded the `highlight.lua` file from Duncan Garmonsway's `govdown` website repository and saved it into the `resources` folder of my own repo.
+
+Then, to test that the filter file worked at all, I partially knitted a tester Markdown file directly from the terminal. To debug just the pandoc part, and not the R Markdown part, I created a .md file where I wrote some filler Markdown text and included a styled code chunk with a language label like ` ```r ` or ` ```html `. Then, in terminal, I ran a version of following pandoc command to try to knit the Markdown file with the highlighting syntax Lua filter script:
+
+(paths as always are machine-specific)
+
+```shell
+pandoc intermediate-file.md --output output-file.html --lua-filter=PATH/TO/HIGHLIGHT/FILTER.lua --no-highlight
+```
+
+The test worked! The knitted HTML had correctly highlighted chunks! So I went back to R Markdown and edited the `_output.yml` file to add the `highlight.lua` filtering command to the default YAML header that would run for every R Markdown in the directory. [`_output.yml`](https://bookdown.org/yihui/rmarkdown/bookdown-project.html#output.yml) allows you to specify default settings that would get thrown under the `output:` YAML header at the top of your Rmd. In this case, the `pandoc_args:` subheader takes a character vector of flags as they would be specified if you were calling pandoc through the terminal (as in the example code above).
+
+For this repo, the `_output.yml` contains the following YAML headers:
+
+```yaml
+blogdown::html_page:
+  toc: true
+  pandoc_args: ["--lua-filter=$HOME/Repos/personal-website/resources/highlight.lua", "--no-highlight"]
+```
+
+With the R Markdown pandoc settings now configured to call the `highlight.lua` filter script, everything SHOULD work smoothly. I crossed my fingers and ran `blogdown::serve_site()` to render my Rmd web pages and...
+
+An error! "pandoc: unrecognized option"! Aaaghhhhh! Why was it running in terminal, but not through R Markdown?
+
+## Updating RStudio's pandoc installation
+
+[This bookdown GitHub issue from 2018](https://github.com/rstudio/bookdown/issues/617) revealed the solution. Pandoc was too old! But then why was it working when I tried to run the pandoc commands directly from the terminal, and failing when pandoc was run inside of RStudio?
+
+After much digging, I discovered that I had a second, newer copy of pandoc installed with Anaconda. (Yes y'all, I installed Anaconda WAY after I started using R.) When I was calling pandoc through the terminal, it was calling the Anaconda version, which was new enough to work with Lua. However, RStudio was calling the older copy of pandoc inside of the RStudio app folder, which did not have Lua filters installed. Freaking path problems...
+
+I manually downloaded the newest version of pandoc and copied it into the RStudio app folder to overwrite the original bundled version. It worked, and the Lua filters ran! I finally had the delicious, multi-language syntax highlighting I was originally promised.
