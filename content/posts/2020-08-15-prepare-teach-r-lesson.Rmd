@@ -1,0 +1,293 @@
+---
+title: "How to prepare and teach an R lesson"
+date: 2020-08-15
+description: "This is the outline for my 2020 NYC R Conference talk. Come on in!"
+tags: ["R", "tidyverse", "tutorial"]
+output:
+  blogdown::html_page:
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE)
+library(tidyverse)
+```
+
+# Notes for readers
+
+This blog post contains a written version of my speaker notes for my 20-minute 2020 NYC R conference talk. Since the talk time is on the shorter side, I trimmed a few things out of the talk that I would have liked to include with more time. The speaker notes for the unabridged version are included here for your reference.
+
+# Why this talk?
+
+Nobody is born knowing how to code. All programmers must start somewhere, and we're all constantly learning. If you _ever_ find yourself entrusted with the responsibility to train others to program, from informal tutoring all the way up to running a workshop, you and your learners will benefit from you knowing how to teach.
+
+Teaching well promotes equity as well. While we have a long way to go toward equal access and representation in technical professions, any chance you get to teach well is a chance to level one of the many uneven playing fields people may encounter on the way to a career in data science or scientific computing. Teach effectively and lower those barriers.
+
+So let's get into it!
+
+# Objectives
+
+By the end of my talk, you will be able to:
+
+- Compare principles of _backward lesson design_ to principles of good coding
+- Apply backward design to outline objectives, tests, and content of an R lesson
+- Implement formative coding assessments to check learner understanding
+- Describe benefits of narrated live-coding
+
+# Lesson construction using backward design
+
+## What is backward design?
+
+When writing code, be it a helper function, a data processing script, or a whole package, there's a common logical order we follow.
+
+1. Define function output
+1. Write unit test
+1. Write function code
+
+Writing the code itself ideally comes _last._ We can only write the code once we know what it's supposed to do, and how we'll verify that. If you started writing code before you decided what it was supposed to do, the code would go nowhere!
+
+Backward design takes that same logic and applies it to teaching. The "usual" method of planning lessons starting from activities and demonstrations can be referred to as "forward design." If planning lessons starting from activities is "forward design", then **backward design** involves the following steps:
+
+1. Define learning outcomes
+1. Define evidence of learning
+1. Build lesson
+
+This looks a lot like the logical process of coding. Both coding logic and backward lesson design aim to answer the following questions, in order:
+
+1. What should code/learners be able to do?
+1. How will we know code/learners can do that?
+1. How will we equip code/learners with the ability to do that?
+
+You already know this logic! Lesson planning is conceptually similar to writing code. You don't need to acquire a whole new knowledge base from scratch to be able to plan R lessons. You only need to learn how to relate concepts from coding logic to backward lesson design, and that's exactly what we're going to do.
+
+Next, we'll dig more into each of these three steps of backward design as they might manifest in an R coding lesson.
+
+## Define outcomes
+
+Defining the learning outcome, or objective (used interchangeably from here on out), is conceptually similar to defining the output of a function, script, or entire package that one might write. It's the answer to the following question:
+
+**What will learners be able to _do_ when the lesson is finished?**
+
+You have to be _specific_ when spelling out learning goals for them to be most effective. Just like it's harder to write a function when you haven't delineated what you want it to do, it's harder to prepare a lesson when you haven't outlined what you want it to teach.
+
+Less specific (worse):
+
+> Learners will understand how tidyr, dplyr, and ggplot2 help them clean and explore their data
+
+More specific (better):
+
+> Learners will be able to:
+  - use tidyr's pivot_wider() and pivot_longer() to reshape data for easier analysis
+  - use dplyr's group_by(), count(), and summarize() functions to generate summary statistics
+  - use ggplot2 to generate exploratory scatterplots of data
+
+A few tips on making your R lesson objectives more specific and effective:
+
+- Use active verbs. "Learners will be able to use ... to ..." is a good starter
+- If you're focusing on a specific package, name that package
+- If you're focusing on specific functions, name those functions
+- Make it more verbose (but don't go overboard!)
+
+Note: Most learning goals in lessons about R will be to "use" or "implement" certain functions or techniques. However, depending on the topic, the goal may be something lower, like to "recognize" or "recall" which function does what, or something higher, like to "evaluate" or "critique" code for style and speed. If you're interested in reading more about the different types of learning goals one might set for a lesson, and which one best fits the level of learning you want, [Bloom's Revised Taxonomy](https://www.celt.iastate.edu/teaching/effective-teaching-practices/revised-blooms-taxonomy/) is a helpful framework.
+
+## Define evidence of learning
+
+Once you've outlined your desired learning objectives, the next step is to define _acceptable evidence of learning._ How will you determine that learners can indeed accomplish what the learning objective says they can?
+
+Again, in programming and teaching, we must _test_ to confirm that our code (or our learners) have accomplished the objective.
+
+In coding, this can be as simple as running your code multiple times under different conditions to make sure the output looks right, or as elaborate as a full unit testing system (we'll touch on this later!).
+
+In a semester-long programming course, this would be the final assignment or exam. In a 5-minute tutoring session, this might involve watching your colleague write code that solves the problem they came to you for. In every case, the only way we can know that learners have reached the objective is by _testing their ability to demonstrate it._
+
+Note: the final assessment example below was omitted from the talk for time.
+
+For example, the final test for a lesson with the learning objectives shown above might be:
+
+> The Orange dataset in R's datasets package contains data for the ages (in days) and circumferences (in mm) of several orange trees, each measured at different timepoints.
+>
+> 1. Use the appropriate pivot (_wider or _longer) function to pivot the data to have one row for each measurement, one column for the age of each tree, and one column for the circumference of each tree.
+> 1. Using the long form of the data, generate a dataframe showing the number of measurements for each tree.
+> 1. Using the long form of the data, generate a dataframe showing the minimum and maximum age and circumference for each tree.
+> 1. Using appropriate ggplot2 functions, generate a scatterplot of tree circumference by age. Plot lines connecting the observations for each tree. The points and lines for each tree should be different colors. Add an informative title and axis labels.
+
+There doesn't have to be one test question for each objective, but it's a good place to start to make sure you have appropriate coverage. Just like you want high code coverage when testing your own code, you want high objective coverage with your final assessment, to ensure that you're testing learners' ability to execute every objective that you want them to accomplish. No matter how many prompts you include in your assessment, make sure that tests are written specifically enough that a learner who has reached the objective would be able to answer every question acceptably. Vague prompts don't "give away the answer," they give enough information for learners to get to the answer. 
+
+There can (and often should) be a back-and-forth process between defining learning outcomes and defining tests of learning. Sometimes, you might find that your test isn't testing exactly what you think learners should be able to do. You might add more to your test, or change what's already in it, so that it better fits the learning outcome. Other times, you might have a sense that the test itself correctly expresses what you want learners to come away with. In those cases, you might re-write the learning outcome so that it better fits the test. The key is to plan with intention either way.
+
+### Formative assessment: more smaller tests
+
+The final assessment is of course essential to determining whether learners have met your objective. But, by design, it happens at the _end_ of the lesson. What if learners make critical mistakes on the final assessment, showing that they haven't actually reached the objective? At that point, the lesson is over, and you don't have any time remaining to get learners back on track. :(
+
+Enter formative assessment! When teaching, you have many chances to assess learning _before you get to the end of the lesson._ **Formative assessments** are _frequent_ and _specific_ tests of learner understanding _during teaching._
+
+[Formative assessments](cmu.edu/teaching/assessment/basics/formative-summative.html) in teaching are like [unit tests](https://r-pkgs.org/tests.html) in coding:
+
+- both identify bugs in learner understanding/code functionality
+- both are built-in to the teaching/development process
+- both enable in-the-moment remediation/debugging
+- both encourage more effective lesson/code style (more on this later)
+- if learners/code fail, it's on the road to getting it right next time!
+
+How do you implement formative assessments? Consider the example lesson we've started mocking up. In this lesson, to teach toward the second objective, we might calculate means and standard deviations of petal/sepal lengths and widths in the `iris` dataset. We would live-code this chunk and learners would follow along. The final code, and its finished output, might look something like below:
+
+```{r}
+iris %>%
+  rename_with(tolower) %>% 
+  pivot_longer(cols = -species,
+               names_to = c("part", ".value"),
+               names_sep = "\\.") %>% 
+  group_by(species, part) %>% 
+  summarize(across(everything(), list(mean = mean, sd = sd)))
+```
+
+The pipe chain above contains four functions. If a learner makes an error in calling any one of these functions, the entire pipe chain would fail. Thus, when we ask learners to write the whole block of code only once at the end of the module, it's less obvious where an error might come from, both to instructors and learners.
+
+For example, if a learner wrote the following answer:
+
+```{r}
+iris %>%
+  rename_with(tolower) %>% 
+  pivot_longer(cols = -species,
+               names_to = c("part", ".value"),
+               names_sep = "\\.") %>% 
+  group_by(Species, part) %>% 
+  summarize(across(everything(), list(mean = mean, sd = sd)))
+```
+
+An experienced instructor can read the error message and deduce that the error occurs inside of `group_by()`, and is likely to be a misspelling bug (or, perhaps more likely, was carried over from a version of the code where the column names were not coerced to lowercase). However, this error message may be opaque to the learner, and does little to help them identify their mistake themselves.
+
+Further, this test requires the instructor to exert extra effort to trace the error. If multiple learners make unique errors in writing this block of code, the instructor must now take even more time to correct each learner's unique mistake. Learners must also spend time waiting for the instructor, instead of progressing.
+
+### Tidy formative assessments
+
+The function chains encouraged by tidyverse style lend themselves to regular formative assessments. Formative assessment check-ins can built in to the lesson after every function in the pipe chain is introduced.
+
+We can reformat the code chunk above to have a formative assessment check-in for each verb. For example, here's a couple ways we might test learners' understanding of what named functions do inside of `summarize(across())`. We start with the block of code that learners will have already successfully written and run: 
+
+```{r}
+iris_long <- iris %>% 
+  rename_with(tolower) %>% 
+  pivot_longer(cols = -species,
+               names_to = c("part", ".value"),
+               names_sep = "\\.") %>% 
+  group_by(species, part)
+```
+
+Then, we might give specific instructions to write one additional line of code from scratch to summarize `iris_long` in a particular way.
+
+> Using `across()` inside `summarize()`, write a line of code to summarize the mean and SD of all possible measurements (length and width) for each iris species and anatomical part. Your output should have summary columns with "mean" or "sd" appended to them depending on what metric they are.
+
+```{r}
+# CODE GOES HERE
+```
+
+Alternatively, we might provide sample code that learners can modify in a specific way to demonstrate learning of a bite-size concept. While this requires learners to generate less code from scratch, it can be faster during a lesson.
+
+> Change the `summarize()` call on line 104 so the mean outputs have the suffix "_avg" instead of "_mean".
+
+```{r}
+iris_long %>% 
+  summarize(across(everything(), list(mean = mean, sd = sd)))
+```
+
+Checking for understanding after each new verb in the pipe chain has a few benefits:
+
+- Learners get a natural pause after each new concept is introduced, to solidify understanding before adding more info
+- When fewer lines of code are tested at once, learners' misconceptions/mistakes are more likely to overlap, allowing the instructor to address confusions with the whole group, instead of one-on-one
+- Each check-in can be repeated until 100% of learners pass, ensuring that when the next function is introduced, learners will all be caught up
+
+### Multiple choice check-ins scale pretty well
+
+The above check-in is written as a free-response prompt to "write code that does the job". In small learner groups, this is the most flexible way to check for understanding. If they can write working code, then they've met the learning objective! However, this does require that the instructor either trust that everyone's code works, or visually check each learner's work to confirm the code behaves as intended. This can be time-consuming for larger groups.
+
+There are other methods of formative assessment check-in that, while less comprehensive, scale much better to large groups of learners. My favorite of these are multiple choice questions:
+
+> Which of the chunks below will correctly return summarized mean and SD outputs, where the mean columns have the suffix "_avg"?
+
+```{r, eval = FALSE}
+iris_long %>% 
+  summarize(across(everything(), list(mean = avg, sd = sd)))
+```
+
+```{r, eval = FALSE}
+iris_long %>% 
+  summarize(across(everything(), list(avg = mean, sd = sd)))
+```
+
+These can be implemented by copying screenshots or code text into an audience-response system like Poll Everywhere or Socrative (those two I know about because they're geared to educators, but any polling app works!). Then, the instructor can quickly look at poll responses and gauge how many learners are choosing the correct answer.
+
+Further, the [distractor (incorrect) answers](https://validatedlearning.co/the-logic-behind-outstanding-multiple-choice-questions-for-formative-evaluation/) can also reveal specific misconceptions nearly as well as free-response check-ins. Write distractor answers to look _plausible,_ featuring common mistakes. (Perhaps a mistake you once made when you were learning how to use this function!)
+
+In this way, you know that learners are choosing the correct answer because they believe it is the right answer, and not because they believe all the other answers must be wrong. (In the second scenario, a learner might pass a check-in without actually learning the concept at hand!)
+
+Additionally, to the previous point, do not write "trick" distractor answers, particularly those where _you have not yet shown learners why such a mistake is incorrect._ Testing learners on skills/concepts you haven't taught them is a waste of testing time for you, and a waste of effort for learners.
+
+## Build lesson
+
+The beauty of backwards design is that once you've spelled out your learning objectives, and the tests you'll use to verify that learners have reached those objectives, the lesson itself is nearly done. Ideally, once you've laid out your assessments, you will be able to see exactly what you need to demonstrate and explain to equip learners with enough knowledge to complete those assessments.
+
+The core principle I try to rely on when crafting lessons is to **teach what you need to teach: no more and no less.** What does this mean? This encompasses several things, including:
+
+_Calibrate to learners' incoming skill level._ What do you expect learners to be able to do already before they start your lesson? Start where learners currently are (don't re-teach), and teach _everything_ new that learners need to know to reach the objective (think through all the pre-reqs!).
+
+_Allow your formative assessments to break the lesson into manageable chunks._ If you have implemented the right number and scope of checkpoints, each check-in question should serve as the end to a bite-sized (5-10 min) piece of lesson. These bites are a good size for you, because you get to take breaks from speaking and survey learners' progress, and a good size for learners, because they get to take a breather from new information and use the check-in question to practice what they've just learned.
+
+_Teach less than you think you have time for._ An instructor teaching a particular lesson for the first time is likely to find that the lesson simply takes way longer than originally planned. Running out of time before you've finished the lesson guarantees that learners won't reach the objective! Plan for less time than you'll actually have. The first time I teach a new lesson, I plan it for 2/3 of the allotted class time, and it usually comes out right.
+
+_Teach **one** way to do things._ One of the great (and terrible) features of R is that there's often many, many different ways to solve a problem. While some might be less verbose, more generalizable, etc., than others, ultimately sometimes you get to two different techniques that differ only on personal taste. For example, there might be two different ways to teach the `pivot_longer()` technique demonstrated earlier.
+
+Using `names_sep` to break up column names:
+
+```{r}
+iris %>% 
+  rename_with(tolower) %>% 
+  pivot_longer(cols = -species,
+               names_to = c("part", ".value"),
+               names_sep = "\\.")
+```
+
+Using `names_pattern` to break up column names:
+
+```{r}
+iris %>% 
+  rename_with(tolower) %>% 
+  pivot_longer(cols = -species,
+               names_to = c("part", ".value"),
+               names_pattern = "(.*)\\.(.*)")
+```
+
+In practice, there are valid arguments for using either method. Using `names_sep` to split along the period is less verbose, but is theoretically less flexible than spelling out the capture groups with `names_pattern`, in case there are future columns in the data that delimit with periods AND underscores.
+
+What is the learning goal here? If indeed a primary objective of the lesson is to be able to pivot many different arrangements of data, then students do need to learn about the similarities and differences between using `names_sep` and `names_pattern` to break up column names in service of the objective. However, if the objective is solely to be able to pivot data with multiple value columns using the `".value"` placeholder, then being able to compare, contrast, and choose between `names_sep` and `names_pattern` _is not part of the learning goal._ In this case, you as the instructor need to decide which technique you would rather students come away using, and _teach only that technique._
+
+Related to this point: _don't teach first principles unless the learning goal is first principles._ I was guilty of this for a while! For example, when I used to teach vectorized operations like `apply()`, and later `map()`, I would lead with a whole section on for loops and why they were slow and unwieldy. When I learned how to take full advantage of R's vectorized functions, I felt like I had woken up from a fog of for loops. I assumed this experience generalized to other people, and so when I taught those functions I would spend a lot of time making for loops sound like the black-and-white "before" section of an infomercial before the life-changing new product is revealed. However, I eventually received feedback that learners didn't understand why I was spending so much time talking about for loops when I didn't teach them, and some learners didn't even know what for loops were before I mentioned them, so they were getting confused.
+
+While it is true that a first-principles comparison of for loops and vectorized functions is important to a full understanding of when vectorizing is and isn't the best solution to a code problem, _understanding first-principles isn't necessary to be able to correctly use a vectorized function._ Once I realized this, I was able to let go of a lesson module that was more nostalgic to me than instructive to learners.
+
+(I actually heard the above from Hadley Wickham! At Columbia I was lucky to be able to take Dr. Andrew Gelman's Communicating Data course, where we heard from guest speakers like Hadley.)
+
+# Deliver the lesson
+
+All right, so you've sketched out your lesson objectives, checks for understanding, and lecture content. Time to teach! Most likely, you'll teach via live-coding. You demonstrate the code example, and then learners apply what they've just seen you do. Occasionally you might find yourself using slides, but live-coding will cover most code instruction scenarios.
+
+Coding for an audience is a little different than coding for yourself. You gotta be intentional about it! Even when the audience is just one co-worker with their computer next to yours, intentional live-coding can spell the difference between following along with you vs not understanding. The single biggest tip I can give is:
+
+- **Narrate _everything_ you click or type.** I mean everything. Every word you type. Every () and "". Every hotkey shortcut. If you're clicking, describe exactly what you're clicking and where it is on screen. This helps in many respects, like:
+    - it helps learners orient themselves in a program where they may not be super familiar with what buttons do
+    - it helps slow your pace down so that learners can keep up with you as they code along
+    - it helps model coding technique. If you use certain hotkeys to make your life easier, you can pass that along to students. And when you make typos (as we all do!), narrating when you catch and fix typos helps learners with one of the biggest implicit objectives of learning to code: to be able to troubleshoot.
+    
+With the above, remember the lesson-building tip to _calibrate to learners' existing skill level._ I encourage you to narrate less while typing code or demonstrating techniques that you know that your learners already have experience with. For example, when I'm working with less experienced learners, and I want to check a function's documentation, I will announce that I am clicking over to the Help tab in the bottom-right pane of the RStudio window. With more experienced learners, I might just say "let's check the function's arguments in the docs" while clicking over to search the function's docs in the Help tab.
+
+If you do find yourself teaching a group through live-coding, where your screen setup is projected or screen-shared so the whole group can see it, you'll need to consider a few more things:
+
+- **Keep an eye on the time.** Check regularly to see how much time and how much lesson has elapsed, and calibrate accordingly.
+- **Make your screen setup readable to learners.** Zoom in enough, and check your color theme. With total novice learners, you may want to change your color theme back to the default, so that your screen looks more like theirs.
+- **No copying and pasting code!** You can (and often should) code along with notes you've already written, but learners have to type it out, so you do too.
+
+Note: [This paper](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006023) is a great reference for additional lesson delivery tips when teaching a proper programming course.
+
+# In summary
+
+I hope that you are now able to accomplish the [objectives](#objectives) I set out at the beginning of this talk. Go forth and _effectively_ train others in R!

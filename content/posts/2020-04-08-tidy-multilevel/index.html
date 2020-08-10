@@ -2,8 +2,7 @@
 title: "Wrangling multilevel data in the tidyverse"
 date: 2020-04-08
 description: "This is the narrative lesson plan and tutorial for my 2-hour R workshop, **Wrangling Multilevel Data in the R Tidyverse.** Come on in!"
-categories: ["R"]
-tags: ["tidyverse", "tutorial"]
+tags: ["R", "tidyverse", "tutorial"]
 output:
   blogdown::html_page:
     number_sections: true
@@ -288,6 +287,7 @@ avocado %&lt;&gt;%
   group_by(region, type) %&gt;%
   summarize(mean_total_volume = mean(total_volume_log10),
             sd_total_volume = sd(total_volume_log10))</code></pre>
+<pre><code>## `summarise()` regrouping output by &#39;region&#39; (override with `.groups` argument)</code></pre>
 <pre><code>## # A tibble: 92 x 4
 ## # Groups:   region [46]
 ##    region              type         mean_total_volume sd_total_volume
@@ -360,6 +360,7 @@ avocado %&lt;&gt;%
   summarize(mean_volume_diff = mean(total_volume_diff),
             sd_volume_diff = sd(total_volume_diff)) %&gt;%
   arrange(desc(mean_volume_diff))</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
 <pre><code>## # A tibble: 46 x 3
 ##    region            mean_volume_diff sd_volume_diff
 ##    &lt;chr&gt;                        &lt;dbl&gt;          &lt;dbl&gt;
@@ -1051,9 +1052,9 @@ avo_coefplot</code></pre>
   # (for the regions to be ordered by the model estimate)
   # the model estimates need to be bound on to the raw diffs
   left_join(avo_coefs %&gt;% filter(term == &quot;typeorganic&quot;),
-            by = &quot;region&quot;)
-
-avo_coefplot +
+            by = &quot;region&quot;)</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre class="language-r"><code class="language-r">avo_coefplot +
   # error bars and points for the raw data
   # notice that we use the data argument to feed in different data
   geom_errorbar(aes(y = diff_mean,
@@ -1125,7 +1126,8 @@ avo_coefplot +
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
   pull(splits) %&gt;%
   pluck(1)</code></pre>
-<pre><code>## &lt;338/122/338&gt;</code></pre>
+<pre><code>## &lt;Training/Validation/Total&gt;
+## &lt;338/122/338&gt;</code></pre>
 <p>These numbers aren’t really designed for human consumption on their own. The real magic happens when you call <code>as.data.frame()</code> on a <code>split</code> object, which triggers it to actually do the resampling and give you a tibble of data.</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
   pull(splits) %&gt;%
@@ -1252,6 +1254,7 @@ avo_coefplot +
        title = &quot;Bootstrap vs. &#39;raw&#39; errors for the New York avocado sale volume regression&quot;,
        subtitle = &quot;The bootstrapped error is more conservative&quot;) +
   theme_bw()</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
 <p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-boot-coefplot-1.png" width="672" /></p>
 <p>Yep, it looks like the error bounds on the bootstrapped data are wider than the equivalent standard error from the <code>lm</code> fit to the raw data. This will usually be the case! Perhaps a good argument to use bootstrapped standard errors more often, to be conservative with our statistics.</p>
 </div>
