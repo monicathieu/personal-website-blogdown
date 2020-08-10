@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Setting up this website</title>
+      <link>/posts/2020-08-10-setting-up-this-website/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020-08-10-setting-up-this-website/</guid>
+      <description>Setting up a blogdown repository Blogdown-ing with a different Hugo theme  Making a new homepage template  Understanding Hugo’s expected structure  Adding pages to the menu bar  Hooking it into the interwebs  Setting public as the GitHub Pages root directory Re-pointing my old Squarespace domain name  Pointing Squarespace DNS to GitHub Pages URL Get GitHub Pages URL to use new domain   Adding a photo gallery into the theme Fixing code syntax highlighting  Prism.</description>
+    </item>
+    
+    <item>
       <title>Wrangling multilevel data in the tidyverse</title>
       <link>/posts/2020-04-08-tidy-multilevel/</link>
       <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
