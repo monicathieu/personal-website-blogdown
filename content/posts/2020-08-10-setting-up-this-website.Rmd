@@ -1,6 +1,7 @@
 ---
 title: Setting up this website
 date: 2020-08-10
+description: "I hacked the HTML so you don't have to. Learn from my suffering pls!"
 tags: ["R", "Hugo", "html", "pandoc", "hacks", "blogdown"]
 ---
 
