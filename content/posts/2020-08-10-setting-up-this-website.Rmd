@@ -17,7 +17,7 @@ Anyway, here it is! I will describe tidbits I learned (and am still learning) in
 
 # Setting up a blogdown repository
 
-Yihui Xie et al.'s guide to `blogdown` is **indispensable** for setting up a site. I pretty much followed Yihui's instructions. The details I provide below are for features that I set up outside of the scope of the example site.
+Yihui Xie et al.'s [guide to `blogdown`](https://bookdown.org/yihui/blogdown/) is **indispensable** for setting up a site. I pretty much followed Yihui's instructions. The details I provide below are for features that I set up outside of the scope of the example site.
 
 # Blogdown-ing with a different Hugo theme
 
@@ -31,7 +31,7 @@ Radek's Terminal theme by default sets the homepage to be a list of blog posts. 
 
 With little experience in HTML and related front-end coding, it took me a while to wrap my head around the division between webpage _layouts_ and _content._
 
-At first blush it sounds reasonable--you want to be able to specify _what's_ on your webpage separately from _where_ things go on your webpage, to centralize design decisions. Hard-coding the layout of, say, a blog post page would be troublesome if you had add page features by editing the layout of every single page individually. But what about a home page, where the layout would only be used once over the whole website? It would be so straightforward to hard-code layout information directly in my homepage file. Not so fast, though!
+At first blush it sounds reasonable--you want to be able to specify _what's_ on your webpage separately from _where_ things go on your webpage, to centralize design decisions. Hard-coding the layout of, say, a blog post page would be troublesome if you had to add page features by editing the layout of every single page individually. But what about a home page, where the layout would only be used once over the whole website? It would be so straightforward to hard-code layout information directly in my homepage file. Not so fast, though!
 
 To change the layout of the homepage, I had to understand enough Hugo to construct my own homepage _layout_ file separately from my homepage _content_ file, and then save the layout file in the right place for Hugo to know it was the layout guide for my homepage.
 
