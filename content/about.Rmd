@@ -56,6 +56,8 @@ Teaching fellow & section leader, Psych One, Stanford University, fall 2014 - sp
 
 ## Publications and presentations
 
+How to Prepare and Teach an R Lesson. Talk presented at [NYC R Conference](https://rstats.ai/nyr/#speakers) (online), 2020.
+
 Cholinergic modulation of hippocampally mediated attention and perception. Ruiz, NA\*; Thieu, MK\*; Aly, M (\* co-first author). biorXiv preprint, 2020. [link](https://www.biorxiv.org/content/10.1101/2020.05.19.104497v2) [code](https://github.com/alylab/artMuseNicotine)
 
 Psychometric estimation of emotion reporting thresholds. Thieu, M; Ochsner, KN (2019). Poster presented at Society for Affective Science Meeting (Boston, MA), 2019. [link](https://osf.io/ubxtm/)
