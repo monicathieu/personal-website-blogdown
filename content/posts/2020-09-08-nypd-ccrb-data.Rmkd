@@ -1,0 +1,36 @@
+---
+title: "Untitled"
+date: "8/25/2020"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+# Clean data
+
+```{r}
+complaints <- read_csv("https://raw.githubusercontent.com/new-york-civil-liberties-union/NYPD-Misconduct-Complaint-Database/master/CCRB_database_raw.csv", na = c("", "NA", "NULL")) %>%
+  # Assume fully identical records are duplicates
+  distinct() %>% 
+  # UniqueID, (FirstName, LastName), and ShieldNo all uniquely identify officers
+  select(-AsOfDate, -ShieldNo) %>% 
+  rename_with(~str_remove_all(., " "), .cols = everything()) %>% 
+  mutate(across(where(is.numeric), as.integer),
+         across(ends_with("Date"), lubridate::mdy),
+         Allegation = tolower(Allegation)) %>% 
+  nest(details = c(FADOType, Allegation, BoardDisposition, NYPDDisposition, PenaltyDesc))
+
+# UniqueId: 
+```
+
+# Characterizing the data
+
+https://www.thecity.nyc/2020/7/31/21350186/nypd-complaint-files-unions-police-new-york-city
+
+```{r}
+
+```
+
+# 
