@@ -74,10 +74,10 @@
     },
     "backports": {
       "Package": "backports",
-      "Version": "1.1.9",
+      "Version": "1.1.10",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "b29e2d989dfb2e71ca3fd7d5bb1c0d58"
+      "Hash": "05ffd2d4acb51aee70f1de68ad7a6aed"
     },
     "base64enc": {
       "Package": "base64enc",
@@ -256,10 +256,10 @@
     },
     "future": {
       "Package": "future",
-      "Version": "1.18.0",
+      "Version": "1.19.1",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "7f6e18b431939ccf2b4667d406a1f33e"
+      "Hash": "224cbc34a2c97606b0e6311e3bd19e05"
     },
     "generics": {
       "Package": "generics",
@@ -277,10 +277,10 @@
     },
     "globals": {
       "Package": "globals",
-      "Version": "0.12.5",
+      "Version": "0.13.0",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "e9e529fb7a579ad4b4ff65e052e76ed8"
+      "Hash": "0195566df9ebe00c615c097a778fe943"
     },
     "glue": {
       "Package": "glue",
@@ -302,6 +302,11 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "221d0ad75dfa03ebf17b1a4cc5c31dfc"
+    },
+    "here": {
+      "Package": "here",
+      "Version": "0.1",
+      "Source": "Repository"
     },
     "highr": {
       "Package": "highr",
@@ -354,10 +359,10 @@
     },
     "knitr": {
       "Package": "knitr",
-      "Version": "1.29",
+      "Version": "1.30",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "e5f4c41c17df8cdf7b0df12117c0d99a"
+      "Hash": "eed7ee0d02eee88d53881cdc92457c62"
     },
     "labeling": {
       "Package": "labeling",
@@ -429,6 +434,13 @@
       "Repository": "CRAN",
       "Hash": "e87a35ec73b157552814869f45a63aa3"
     },
+    "modeldata": {
+      "Package": "modeldata",
+      "Version": "0.0.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "e2825d34267ad27d30d9ce71dc23bde8"
+    },
     "modelr": {
       "Package": "modelr",
       "Version": "0.1.8",
@@ -452,10 +464,10 @@
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "1.4.2",
+      "Version": "1.4.3",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "b3209c62052922b6c629544d94c8fa8a"
+      "Hash": "a399e4773075fc2375b71f45fca186c4"
     },
     "pillar": {
       "Package": "pillar",
@@ -592,10 +604,10 @@
     },
     "rsample": {
       "Package": "rsample",
-      "Version": "0.0.7",
+      "Version": "0.0.8",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "94abd030ce82d3f7f49139c3d3b457da"
+      "Hash": "a05b5f1136fb3e22efe51e85369c041c"
     },
     "rstudioapi": {
       "Package": "rstudioapi",
@@ -631,6 +643,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "50d06ac0ec97386d9fd470d36f45bfe5"
+    },
+    "slider": {
+      "Package": "slider",
+      "Version": "0.1.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "ac1eb08941cacd8ff16f0041ca60a3de"
     },
     "stringi": {
       "Package": "stringi",
@@ -690,10 +709,10 @@
     },
     "tinytex": {
       "Package": "tinytex",
-      "Version": "0.25",
+      "Version": "0.26",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "a4b9662282097d1033c60420dcb83350"
+      "Hash": "db6477efcfbffcd9b3758c3c2882cf58"
     },
     "utf8": {
       "Package": "utf8",
@@ -716,6 +735,13 @@
       "Repository": "CRAN",
       "Hash": "ce4f6271baa94776db692f1cb2055bee"
     },
+    "warp": {
+      "Package": "warp",
+      "Version": "0.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "5c786a8883c9f49f6d137ee76558ceef"
+    },
     "whisker": {
       "Package": "whisker",
       "Version": "0.4",
@@ -725,10 +751,10 @@
     },
     "withr": {
       "Package": "withr",
-      "Version": "2.2.0",
+      "Version": "2.3.0",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "ecd17882a0b4419545691e095b74ee89"
+      "Hash": "7307d79f58d1885b38c4f4f1a8cb19dd"
     },
     "xfun": {
       "Package": "xfun",
