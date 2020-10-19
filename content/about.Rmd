@@ -44,6 +44,8 @@ Zimbardo Teaching Prize, Psych One, Stanford University, 2015
 
 [Carpentries](https://carpentries.org/)-certified coding instructor, [Foundations for Research Computing](https://rcfoundations.research.columbia.edu/), Columbia University, fall 2019 -
 
+Guest lecturer, [Intro to Psychology](https://www.outlier.org/products/intro-to-psychology), Outlier.org, released fall 2019
+
 Teaching assistant & guest lecturer, Intro to Programming in R, Columbia Business School, spring 2019 + spring 2020
 
 Section leader, Experimental Methods in Psychology, Columbia University, fall 2018 + fall 2019
