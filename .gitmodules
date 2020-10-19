@@ -1,0 +1,3 @@
+[submodule "content/posts/2020-11-12-nypd-ccrb-data"]
+	path = content/posts/2020-11-12-nypd-ccrb-data
+	url = https://gist.github.com/72251888a4e22cde4eaffbdae52a5c22.git
