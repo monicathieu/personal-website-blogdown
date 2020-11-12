@@ -4,31 +4,46 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/2020-08-15-prepare-teach-r-lesson/</loc>
-    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+    <loc>/posts/2020-11-12-nypd-ccrb-data/</loc>
+    <lastmod>2020-11-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/git/</loc>
+    <lastmod>2020-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/slides/</loc>
+    <lastmod>2020-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/tidyverse/</loc>
+    <lastmod>2020-11-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020-08-15-prepare-teach-r-lesson/</loc>
     <lastmod>2020-08-15T00:00:00+00:00</lastmod>
   </url>
   

@@ -6,10 +6,20 @@
     <description>Recent content in tidyverse on Monica Thieu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/tidyverse/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Exploring the NYPD Misconduct Complaint Database</title>
+      <link>/posts/2020-11-12-nypd-ccrb-data/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020-11-12-nypd-ccrb-data/</guid>
+      <description>The NYPD Misconduct Complaint Database Our slides Source code Hosting the slides to this website  A non-exhaustive list of related reports   My cohort-mate and fellow R wonk, Paul Bloom, and I presented these slides for Columbia Foundations for Research Computing. Our presentation focused on cleaning and plotting data on civilian allegations of NYPD misconduct from the New York Civil Liberties Union.
+The NYPD Misconduct Complaint Database From the NYCLU:</description>
+    </item>
     
     <item>
       <title>How to prepare and teach an R lesson</title>

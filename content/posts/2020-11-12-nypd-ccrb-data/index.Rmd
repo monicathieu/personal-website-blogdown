@@ -1,0 +1,64 @@
+---
+title: "Exploring the NYPD Misconduct Complaint Database"
+date: 2020-11-12
+description: "This is the landing page for slides for my presentation with my colleague Paul Bloom."
+tags: ["R", "git", "tidyverse", "slides"]
+output: blogdown::html_page
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+My cohort-mate and fellow R wonk, [Paul Bloom](https://twitter.com/paul_a_bloom?lang=en), and I presented these slides for Columbia [Foundations for Research Computing](https://rcfoundations.research.columbia.edu). Our presentation focused on cleaning and plotting data on **civilian allegations of NYPD misconduct** from the [New York Civil Liberties Union](https://github.com/new-york-civil-liberties-union/NYPD-Misconduct-Complaint-Database).
+
+## The NYPD Misconduct Complaint Database
+
+![](https://upload.wikimedia.org/wikipedia/en/3/32/CCRB_logo.png)
+
+From the [NYCLU](https://www.nyclu.org/en/campaigns/nypd-misconduct-database):
+
+>The NYPD Misconduct Complaint Database is a repository of complaints made by the public on record at the Civilian Complaint Review Board (CCRB). These complaints span two distinct periods: the time since the CCRB started operating as an independent city agency outside the NYPD in 1994 and the prior period when the CCRB operated within the NYPD. The database includes 323,911 unique complaint records involving 81,550 active or former NYPD officers. The database does not include pending complaints for which the CCRB has not completed an investigation as of July 2020.
+
+## Our slides
+
+[Part 1: Data Cleaning](cleaning.html)
+
+[Part 2: Plotting](make_plots.html), with a focus on using [`ggalluvial`](https://cran.r-project.org/web/packages/ggalluvial/vignettes/ggalluvial.html) to visualize complaints as they are ruled on by the CCRB, and then by the NYPD itself
+
+### Source code
+
+These slides were made with [`xaringan`](https://slides.yihui.org/xaringan/). They are hosted in [their own GitHub repo](https://github.com/monicathieu/cu-nypd-ccrb-data) should you like to clone the code yourself.
+
+They are packaged with an [`renv`](https://rstudio.github.io/renv/articles/renv.html) lockfile that should allow you to download all the dependency packages to run the code with a few commands. Please note that the project was written primarily in **R 4.0.3.** If you have R >= 4.0.0, `renv::restore()` should work smoothly to download our dependency packages, but if you have R 3.x.x you may not find it so easy (some of the dependency versions require 4.0.0 or above).
+
+### Hosting the slides to this website
+
+I used [git submodules](https://github.blog/2016-02-01-working-with-submodules/) to keep the main git-tracked repo for this project outside of my personal website, but copy and sync the content into this personal website repo to take advantage of the already-set-up web hosting.
+
+1. Created `cu-nypd-ccrb-data` and cloned to my computer as usual
+1. Used the same clone link to initialize a submodule in `content/posts` of _this_ repo, my personal website repo
+1. Realized I wanted to move the submodule to another subdirectory; used [`git mv`](https://stackoverflow.com/questions/4604486/how-do-i-move-an-existing-git-submodule-within-a-git-repository) to move my submodule directory to `static/posts` instead, [per Yihui Xie](https://bookdown.org/yihui/blogdown/static-files.html).
+    - I originally created this submodule in `content/posts` so that any Rmd files would be auto-knitted by `blogdown` every time I rendered my whole site. However, we ended up going with `xaringan` slides, which need to be knitted on their own, not using the `blogdown::html_page` knitting engine. Putting the slides in `static` ensures that the slide files will still be copied to the `public` folder, but they won't be auto-knitted using the wrong Rmd template.
+1. Whenever big changes were made in `cu-nypd-ccrb-data`, [pulled in upstream changes](https://git-scm.com/book/en/v2/Git-Tools-Submodules) in the submodule directory of my personal website repo
+
+Submodules can be kind of a huge headache, but in this instance they served my needs well. Since I was collaborating with Paul on the slides, it was way easier to have `cu-nypd-ccrb-data` in its own independent GitHub repository. That way we could collaborate on that repo without me having to give Paul access to my entire personal website repo (don't want to overwhelm him with all my files!).
+
+## A non-exhaustive list of related reports
+
+We are by _no_ means the only people to probe this data, or related older data. Please see the following for more:
+
+["Mission Failure: Civilian Review of Policing in New York City -- Summary of Findings", NYCLU, 2006](https://www.nyclu.org/en/mission-failure-civilian-review-policing-new-york-city-summary-findings)
+
+["Police Officers Rarely Disciplined by NYPD for Misconduct", WNYC, Aug 27 2014](https://www.wnyc.org/story/nypds-poor-track-record-meting-out-discipline-officer-misconduct/)
+
+["Newly Released Data Shows 1 Out Of Every 9 NYPD Officers Has A Confirmed Record Of Misconduct", Gothamist, July 28 2020](https://gothamist.com/news/nypd-police-ccrb-database-shows-confirmed-record-misconduct)
+
+["The NYPD Is Withholding Evidence From Investigations Into Police Abuse", ProPublica, Aug 17 2020](https://www.propublica.org/article/the-nypd-is-withholding-evidence-from-investigations-into-police-abuse)
+
+["Why The Majority Of NYPD Misconduct Complaints End Up 'Unsubstantiated'", Gothamist, August 18 2020](https://gothamist.com/news/why-the-majority-of-nypd-misconduct-complaints-end-up-unsubstantiated)
+
+["323,911 Accusations of N.Y.P.D. Misconduct Are Released Online", New York Times, Aug 20 2020](https://www.nytimes.com/2020/08/20/nyregion/nypd-ccrb-records-published.html)
+
+["What happened to NYPD officers who were charged with misconduct? They were promoted or paid more." Columbia Spectator, Sept 22 2020](https://www.columbiaspectator.com/news/2020/09/22/what-happened-to-nypd-officers-who-were-charged-with-misconduct-they-were-promoted-or-paid-more/)

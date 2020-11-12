@@ -1,0 +1,64 @@
+---
+title: "Exploring the NYPD Misconduct Complaint Database"
+date: 2020-11-12
+description: "This is the landing page for slides for my presentation with my colleague Paul Bloom."
+tags: ["R", "git", "tidyverse", "slides"]
+output: blogdown::html_page
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#the-nypd-misconduct-complaint-database">The NYPD Misconduct Complaint Database</a></li>
+<li><a href="#our-slides">Our slides</a><ul>
+<li><a href="#source-code">Source code</a></li>
+<li><a href="#hosting-the-slides-to-this-website">Hosting the slides to this website</a></li>
+</ul></li>
+<li><a href="#a-non-exhaustive-list-of-related-reports">A non-exhaustive list of related reports</a></li>
+</ul>
+</div>
+
+<p>My cohort-mate and fellow R wonk, <a href="https://twitter.com/paul_a_bloom?lang=en">Paul Bloom</a>, and I presented these slides for Columbia <a href="https://rcfoundations.research.columbia.edu">Foundations for Research Computing</a>. Our presentation focused on cleaning and plotting data on <strong>civilian allegations of NYPD misconduct</strong> from the <a href="https://github.com/new-york-civil-liberties-union/NYPD-Misconduct-Complaint-Database">New York Civil Liberties Union</a>.</p>
+<div id="the-nypd-misconduct-complaint-database" class="section level2">
+<h2>The NYPD Misconduct Complaint Database</h2>
+<p><img src="https://upload.wikimedia.org/wikipedia/en/3/32/CCRB_logo.png" /></p>
+<p>From the <a href="https://www.nyclu.org/en/campaigns/nypd-misconduct-database">NYCLU</a>:</p>
+<blockquote>
+<p>The NYPD Misconduct Complaint Database is a repository of complaints made by the public on record at the Civilian Complaint Review Board (CCRB). These complaints span two distinct periods: the time since the CCRB started operating as an independent city agency outside the NYPD in 1994 and the prior period when the CCRB operated within the NYPD. The database includes 323,911 unique complaint records involving 81,550 active or former NYPD officers. The database does not include pending complaints for which the CCRB has not completed an investigation as of July 2020.</p>
+</blockquote>
+</div>
+<div id="our-slides" class="section level2">
+<h2>Our slides</h2>
+<p><a href="cleaning.html">Part 1: Data Cleaning</a></p>
+<p><a href="make_plots.html">Part 2: Plotting</a>, with a focus on using <a href="https://cran.r-project.org/web/packages/ggalluvial/vignettes/ggalluvial.html"><code>ggalluvial</code></a> to visualize complaints as they are ruled on by the CCRB, and then by the NYPD itself</p>
+<div id="source-code" class="section level3">
+<h3>Source code</h3>
+<p>These slides were made with <a href="https://slides.yihui.org/xaringan/"><code>xaringan</code></a>. They are hosted in <a href="https://github.com/monicathieu/cu-nypd-ccrb-data">their own GitHub repo</a> should you like to clone the code yourself.</p>
+<p>They are packaged with an <a href="https://rstudio.github.io/renv/articles/renv.html"><code>renv</code></a> lockfile that should allow you to download all the dependency packages to run the code with a few commands. Please note that the project was written primarily in <strong>R 4.0.3.</strong> If you have R &gt;= 4.0.0, <code>renv::restore()</code> should work smoothly to download our dependency packages, but if you have R 3.x.x you may not find it so easy (some of the dependency versions require 4.0.0 or above).</p>
+</div>
+<div id="hosting-the-slides-to-this-website" class="section level3">
+<h3>Hosting the slides to this website</h3>
+<p>I used <a href="https://github.blog/2016-02-01-working-with-submodules/">git submodules</a> to keep the main git-tracked repo for this project outside of my personal website, but copy and sync the content into this personal website repo to take advantage of the already-set-up web hosting.</p>
+<ol style="list-style-type: decimal">
+<li>Created <code>cu-nypd-ccrb-data</code> and cloned to my computer as usual</li>
+<li>Used the same clone link to initialize a submodule in <code>content/posts</code> of <em>this</em> repo, my personal website repo</li>
+<li>Realized I wanted to move the submodule to another subdirectory; used <a href="https://stackoverflow.com/questions/4604486/how-do-i-move-an-existing-git-submodule-within-a-git-repository"><code>git mv</code></a> to move my submodule directory to <code>static/posts</code> instead, <a href="https://bookdown.org/yihui/blogdown/static-files.html">per Yihui Xie</a>.
+<ul>
+<li>I originally created this submodule in <code>content/posts</code> so that any Rmd files would be auto-knitted by <code>blogdown</code> every time I rendered my whole site. However, we ended up going with <code>xaringan</code> slides, which need to be knitted on their own, not using the <code>blogdown::html_page</code> knitting engine. Putting the slides in <code>static</code> ensures that the slide files will still be copied to the <code>public</code> folder, but they won’t be auto-knitted using the wrong Rmd template.</li>
+</ul></li>
+<li>Whenever big changes were made in <code>cu-nypd-ccrb-data</code>, <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">pulled in upstream changes</a> in the submodule directory of my personal website repo</li>
+</ol>
+<p>Submodules can be kind of a huge headache, but in this instance they served my needs well. Since I was collaborating with Paul on the slides, it was way easier to have <code>cu-nypd-ccrb-data</code> in its own independent GitHub repository. That way we could collaborate on that repo without me having to give Paul access to my entire personal website repo (don’t want to overwhelm him with all my files!).</p>
+</div>
+</div>
+<div id="a-non-exhaustive-list-of-related-reports" class="section level2">
+<h2>A non-exhaustive list of related reports</h2>
+<p>We are by <em>no</em> means the only people to probe this data, or related older data. Please see the following for more:</p>
+<p><a href="https://www.nyclu.org/en/mission-failure-civilian-review-policing-new-york-city-summary-findings">“Mission Failure: Civilian Review of Policing in New York City – Summary of Findings”, NYCLU, 2006</a></p>
+<p><a href="https://www.wnyc.org/story/nypds-poor-track-record-meting-out-discipline-officer-misconduct/">“Police Officers Rarely Disciplined by NYPD for Misconduct”, WNYC, Aug 27 2014</a></p>
+<p><a href="https://gothamist.com/news/nypd-police-ccrb-database-shows-confirmed-record-misconduct">“Newly Released Data Shows 1 Out Of Every 9 NYPD Officers Has A Confirmed Record Of Misconduct”, Gothamist, July 28 2020</a></p>
+<p><a href="https://www.propublica.org/article/the-nypd-is-withholding-evidence-from-investigations-into-police-abuse">“The NYPD Is Withholding Evidence From Investigations Into Police Abuse”, ProPublica, Aug 17 2020</a></p>
+<p><a href="https://gothamist.com/news/why-the-majority-of-nypd-misconduct-complaints-end-up-unsubstantiated">“Why The Majority Of NYPD Misconduct Complaints End Up ‘Unsubstantiated’”, Gothamist, August 18 2020</a></p>
+<p><a href="https://www.nytimes.com/2020/08/20/nyregion/nypd-ccrb-records-published.html">“323,911 Accusations of N.Y.P.D. Misconduct Are Released Online”, New York Times, Aug 20 2020</a></p>
+<p><a href="https://www.columbiaspectator.com/news/2020/09/22/what-happened-to-nypd-officers-who-were-charged-with-misconduct-they-were-promoted-or-paid-more/">“What happened to NYPD officers who were charged with misconduct? They were promoted or paid more.” Columbia Spectator, Sept 22 2020</a></p>
+</div>
