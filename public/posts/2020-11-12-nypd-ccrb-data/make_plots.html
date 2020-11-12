@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Exploring the NYPD Misconduct Complaint Database</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Paul Bloom" />
+    <link rel="stylesheet" href="theme.css" type="text/css" />
+    <link rel="stylesheet" href="fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Exploring the NYPD Misconduct Complaint Database
+## Plotting
+### Paul Bloom
+### Dept of Psychology, Columbia University
+### 2020-11-12 (updated: 2020-11-12)
+
+---
+
+
+
+
+### Key questions
+
+* How many complaints are there?
+
+--
+
+* How many officers are their complaints against?
+
+--
+
+* What types of allegations are most common?
+
+--
+
+* **At what stage(s) are complaints getting diverted away from penalties to the officer?**
+
+--
+
+* What happens to complaints when they are brought to the Civilian Complaint Review Board (CCRB)?
+
+--
+
+* What happens to complaints deemed 'substantiated' by the CCRB when brought to the NYPD?
+
+---
+
+### Load packages
+
+
+```r
+# load packages
+library(tidyverse)
+library(ggalluvial)
+library(ggrepel)
+
+# set ggplot theme
+theme_set(theme_bw())
+
+# load cleaned data
+load('nypd_ccrb_data_clean.rda')
+```
+
+---
+
+### What types of allegations are being made?
+
+Make a dataframe with the 20 most frequent allegations between 2010-2020
+
+
+```r
+alleg = complaints %&gt;%
+  dplyr::filter(IncidentDate &gt;= "2010-01-01",
+                IncidentDate &lt; "2020-01-01") %&gt;%
+  count(FADOType, Allegation) %&gt;%
+  mutate(Allegation = fct_reorder(Allegation, n)) %&gt;%
+  top_n(n = 20, wt = n)
+```
+
+--
+
+Plot to compare frequencies of allegation types
+
+
+```r
+top_allegations = ggplot(alleg, aes(x = Allegation, y = n, color = FADOType)) +
+  geom_point() +
+  geom_segment(aes(x = Allegation, xend = Allegation,
+                   y = 0, yend = n)) +
+  coord_flip() +
+  labs(y = 'Number of Allegations 2010-2019') +
+  theme(axis.ticks = element_blank()) +
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 18000))
+```
+
+---
+
+class: center, middle
+
+![](make_plots_files/figure-html/unnamed-chunk-4-1.svg)&lt;!-- --&gt;
+
+---
+
+### How many unique officers are there complaints against each year?
+
+Pull just the year out of `IncidentDate`
+
+
+```r
+complaints = mutate(complaints, year = lubridate::year(IncidentDate))
+```
+
+--
+
+Get the number of unique officers with complaints for each year
+
+
+```r
+officers_yearly = complaints %&gt;%
+  group_by(year) %&gt;%
+  summarise(n_officers = length(unique(UniqueId))) %&gt;%
+  dplyr::filter(year &gt;= 1985, year &lt; 2020)
+```
+
+```
+## `summarise()` ungrouping output (override with `.groups` argument)
+```
+
+---
+
+### Plot number of officers as a function of year
+
+
+```r
+officers_year_plot = ggplot(officers_yearly,
+                            aes(x = year, y = n_officers)) +
+  geom_point() +
+  geom_line() +
+  labs(x = 'Year',
+       y = 'Number of officers with at least 1 CCRB complaint') +
+  theme(text = element_text(face='bold'))
+```
+
+---
+
+class: center, middle
+
+![](make_plots_files/figure-html/unnamed-chunk-8-1.svg)&lt;!-- --&gt;
+
+---
+
+### What kinds of allegations does the CCRB find are substantiated?
+
+--
+
+
+```r
+# group complaints by type (FADOType and CCRB disposition)
+substantiated = complaints %&gt;%
+  dplyr::filter(IncidentDate &gt;= "2010-01-01") %&gt;%
+  count(FADOType, BoardDispositionShort) 
+```
+
+--
+
+The number of cases by type and CCRB decision 
+
+
+```r
+num_substantiated_plt = ggplot(substantiated,
+                               aes(x = BoardDispositionShort,
+                                   y = n,
+                                   color = FADOType)) +
+  geom_point(position = position_dodge(0.4)) +
+  geom_linerange(position = position_dodge(.4),
+                 aes(ymin = 0, ymax = n)) +
+  coord_flip() +
+  labs(y = "Number of cases 2010-2019",
+       x = 'CCPD Status',
+       color = 'Complaint Type')
+```
+
+---
+
+class: center, middle
+
+![](make_plots_files/figure-html/unnamed-chunk-11-1.svg)&lt;!-- --&gt;
+
+---
+
+### Maybe also helpful to see the _proportion_ substantiated of each type
+
+
+```r
+prop_substantiated_plt = complaints %&gt;%
+  dplyr::filter(IncidentDate &gt;= "2010-01-01") %&gt;%
+  group_by(FADOType) %&gt;%
+  summarise(n = n(), 
+            substantiated = sum(BoardDispositionShort == 'Substantiated')) %&gt;%
+  mutate(substantiated_proportion = substantiated/n) %&gt;% 
+  ggplot(data = .,
+         aes(x = FADOType, y = substantiated_proportion)) +
+  geom_point(size = 2) +
+  expand_limits(y = 0) +
+  labs(x = 'Complaint Type',
+       y = 'Proportion of Cases Substantiated')
+```
+
+```
+## `summarise()` ungrouping output (override with `.groups` argument)
+```
+
+---
+
+class: center, middle
+
+![](make_plots_files/figure-html/unnamed-chunk-13-1.svg)&lt;!-- --&gt;
+
+---
+
+### If the CCRB finds a complaint to be substantiated, what tends to be the outcome? 
+
+Filter only substantiated complaints, count by the penalty applied
+
+
+```r
+substantiated_penalties = complaints %&gt;%
+  dplyr::filter(IncidentDate &gt;= "2010-01-01", 
+                BoardDispositionShort == 'Substantiated') %&gt;%
+  count(PenaltyDesc) %&gt;%
+  mutate(PenaltyDesc = fct_reorder(PenaltyDesc, n))
+```
+
+---
+
+Make barplot
+
+```r
+penalty_barplot = ggplot(substantiated_penalties,
+                         aes(x = PenaltyDesc, y = n)) +
+  geom_bar(stat = 'identity', fill = 'blue', alpha = .5) +
+  geom_text(aes(label=n),hjust=0, vjust=0) +
+  ylim(0,2500) +
+  coord_flip() +
+  labs(x = '',
+       y = 'Number of Cases',
+       title = 'Outcomes of cases CCPD decided as substantiated')
+```
+
+---
+
+class: center, middle
+
+![](make_plots_files/figure-html/unnamed-chunk-16-1.svg)&lt;!-- --&gt;
+
+---
+
+### Can we trace the *flow* of complaints better?
+
+* By type of allegation
+
+--
+
+* What happens at CCRB
+
+--
+
+* What happens in the outcome
+
+--
+
+Maybe alluvial plots can help....
+
+using the [`ggalluvial`](https://cran.r-project.org/web/packages/ggalluvial/vignettes/ggalluvial.html) package
+
+---
+
+Summarize the data, grouping by:
+
+* complaint type (`FADOType`)
+* CCRB Disposition (`BoardDispositionShort`)
+* penalty applied (`PenaltyDesc`)
+
+
+```r
+alluvial_summary = complaints %&gt;%
+  dplyr::filter(IncidentDate &gt;= "2010-01-01") %&gt;%
+  count(FADOType, BoardDispositionShort, PenaltyDesc) %&gt;%
+  mutate(freq = n)
+```
+
+---
+
+Make the alluvial plot
+
+--
+
+* Multiple axes have to be created here
+
+--
+
+* `geom_alluvium()` makes the flowy stuff
+
+--
+
+* `geom_stratum()` makes the boxes
+
+--
+
+* `ggrepel::geom_label_repel()` labels the boxes, avoiding collisions
+
+---
+
+
+```r
+al_disp1 = alluvial_summary %&gt;%
+  ggplot(data = ., 
+         aes(y = freq,
+             axis1 = FADOType,
+             axis2 = BoardDispositionShort,
+             axis3 = PenaltyDesc)) +
+  geom_alluvium(aes(fill = BoardDispositionShort), width = 1/12) +
+  geom_stratum(width = 1/12, alpha = .5, lwd = .2) +
+  scale_x_continuous(breaks = 1:3,
+                     labels = c('Allegation Type',
+                                'CCRB Disposition',
+                                'Penalty Applied')) + 
+  ggrepel::geom_label_repel(stat = "stratum",
+                            aes(label = after_stat(stratum)),
+                            reverse = TRUE,
+                            size = 2,
+                            direction = 'both',
+                            segment.alpha = 1,
+                            label.padding = .2) +
+  labs(y = 'Cases', x = 'Decision Points', fill = 'CCRB Disposition')
+```
+
+
+
+---
+
+class: center, middle
+
+![](figures/al_disp1.png)&lt;!-- --&gt;
+
+---
+
+Another alluvial plot option, filling in the color by type...
+
+
+```r
+al_disp2 = alluvial_summary %&gt;%
+  ggplot(data = ., 
+         aes(y = freq,
+             axis1 = FADOType,
+             axis2 = BoardDispositionShort,
+             axis3 = PenaltyDesc)) +
+  geom_alluvium(aes(fill = FADOType), width = 1/12) +
+  geom_stratum(width = 1/12, alpha = .5, lwd = .2) +
+  scale_x_continuous(breaks = 1:3, labels = c('Allegation Type',
+                                              'CCRB Disposition',
+                                              'Penalty Applied')) + 
+  ggrepel::geom_label_repel(stat = "stratum",
+                            aes(label = after_stat(stratum)),
+                            reverse = TRUE,
+                            size = 2,
+                            direction = 'both',
+                            segment.alpha = 1,
+                            label.padding = .2) +
+  labs(y = 'Cases', x = 'Decision Points', fill = 'Allegation Type')
+```
+
+
+
+---
+
+class: center, middle
+
+![](figures/al_disp2.png)&lt;!-- --&gt;
+
+---
+
+Another alluvial plot option, filling in the color by the eventual penalty applied
+
+
+```r
+al_disp3 = alluvial_summary %&gt;%
+  ggplot(data = ., 
+         aes(y = freq,
+             axis1 = FADOType,
+             axis2 = BoardDispositionShort,
+             axis3 = PenaltyDesc)) +
+  geom_alluvium(aes(fill = PenaltyDesc), width = 1/12) +
+  geom_stratum(width = 1/12, alpha = .5, lwd = .2) +
+  scale_x_continuous(breaks = 1:3, labels = c('Allegation Type',
+                                              'CCRB Disposition',
+                                              'Penalty Applied')) + 
+  ggrepel::geom_label_repel(stat = "stratum",
+                            aes(label = after_stat(stratum)),
+                            reverse = TRUE,
+                            size = 2,
+                            direction = 'both',
+                            segment.alpha = 1,
+                            label.padding = .2) +
+  labs(y = 'Cases', x = 'Decision Points', fill = 'Penalty Applied')
+```
+
+
+
+---
+
+class: center, middle
+
+![](figures/al_disp3.png)&lt;!-- --&gt;
+
+---
+
+### Wrapping up
+
+--
+
+There is a **lot** in this dataset, and there is also a **lot** that is missing from this dataset.
+
+--
+
+* What incidents aren't being reported, and why?
+
+--
+
+* What is *actually* happening at each level?
+
+--
+
+* Are complaints being treated differently based on the gender/race/age of the person filing the complaint?
+
+--
+
+What goals can this dataset serve? What would we want to be able to know?
+
+
+Thank you to the [NYCLU](https://www.nyclu.org) for making the data available!
+
+&lt;img src="https://www.clearinghouse.net/images/attorneyOrganization/126.png" width="150" height="100" /&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-light",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
