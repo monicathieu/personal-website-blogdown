@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Monica Thieu</title>
+    <link>/tags/git/</link>
+    <description>Recent content in git on Monica Thieu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Nov 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Exploring the NYPD Misconduct Complaint Database</title>
+      <link>/posts/2020-11-12-nypd-ccrb-data/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020-11-12-nypd-ccrb-data/</guid>
+      <description>The NYPD Misconduct Complaint Database Our slides Source code Hosting the slides to this website  A non-exhaustive list of related reports   My cohort-mate and fellow R wonk, Paul Bloom, and I presented these slides for Columbia Foundations for Research Computing. Our presentation focused on cleaning and plotting data on civilian allegations of NYPD misconduct from the New York Civil Liberties Union.
+The NYPD Misconduct Complaint Database From the NYCLU:</description>
+    </item>
+    
+  </channel>
+</rss>

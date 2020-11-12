@@ -6,24 +6,42 @@
     <description>Recent content in Tags on Monica Thieu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>git</title>
+      <link>/tags/git/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>R</title>
       <link>/tags/r/</link>
-      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>slides</title>
+      <link>/tags/slides/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/slides/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>tidyverse</title>
       <link>/tags/tidyverse/</link>
-      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/tidyverse/</guid>
       <description></description>
