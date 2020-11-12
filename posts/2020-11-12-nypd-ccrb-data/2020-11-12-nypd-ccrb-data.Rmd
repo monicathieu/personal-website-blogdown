@@ -1,0 +1,166 @@
+---
+title: "Untitled"
+date: "8/25/2020"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(magrittr)
+```
+
+[Data](https://www.nyclu.org/en/campaigns/nypd-misconduct-database) are sourced from the NYCLU.
+
+# Read in data
+
+`readr::read_csv()` can read URLs just as it would read local file paths, so we have the slight benefit of not needing to download an intermediate local copy of the data as long as we're connected to the internet.
+
+```{r}
+complaints <- read_csv("https://raw.githubusercontent.com/new-york-civil-liberties-union/NYPD-Misconduct-Complaint-Database/master/CCRB_database_raw.csv", na = c("", "NA", "NULL")) %>%
+  # Assume fully identical records are duplicates
+  distinct() %>% 
+  # UniqueID, (FirstName, LastName), and ShieldNo all uniquely identify officers
+  select(-AsOfDate, -ShieldNo) %>% 
+  rename_with(~str_remove_all(., " "), .cols = everything()) %>% 
+  mutate(across(where(is.numeric), as.integer),
+         across(ends_with("Date"), lubridate::mdy),
+         Allegation = tolower(Allegation)) # %>% 
+  # nest(details = c(FADOType, Allegation, BoardDisposition, NYPDDisposition, PenaltyDesc))
+
+# UniqueId: 
+```
+
+# Assess the data
+
+The NYCLU provides a helpful key to each of the columns of the data on [their website](https://www.nyclu.org/en/campaigns/nypd-misconduct-database). They have renamed some of the columns to more user-friendly phrases, though, so note the following:
+
+- `FADOType` corresponds to "Complaint Category", with each of the letters in "FADO" standing for each of the four possible levels of the column:
+  - Force
+  - Abuse of authority (includes many things: sexual harassment, threats, refusal to show officer docs, search of body or property without warrant, etc)
+  - Discourtesy (general rudeness?)
+  - Offensive language (specifically demographic slurs)
+- `BoardDisposition` corresponds to "CCRB Finding", or the board's determination of the complaint
+- `NYPDDisposition` corresponds to "NYPD Finding", or the NYPD's determination of the complaint. This only applies in cases where the CCRB found the complaint to be substantiated--that it did happen as the complainant alleged, and that the board considered those actions to be misconduct. Essentially, the NYPD makes additional determinations only for cases that the board considers to warrant penalty and/or further investigation.
+
+# Clean the data
+
+## Recode columns into larger categories
+
+### Recode recommended and levied misconduct penalties
+
+The CCRB Data Transparency Initiative details the possible labels given to cases depending on what the board rules for a given case.
+
+All of the labels starting with "Substantiated" indicate cases where the board determined that the police officer's conduct occurred as alleged and was indeed improper. The parentheticals after the main label seem to indicate the recommended penalty, if any. Ideally, we would be able to order the recommended penalties for substantiated cases from least to most severe. In order to do this, we need to figure out what each penalty label corresponds to.
+
+First, we can break the `BoardDisposition` column into two. For any substantiated claims, the second column will contain the recommended penalty, with `NA` for claims not labeled as substantiated.
+
+Here, we're relying on the fact that only the "Substantiated" claims have a parenthetical statement after them. Telling `separate()` to split the `BoardDisposition` column at a space followed by an open parenthesis should fill the new column, `PenaltyRec`, with whatever was in the parentheses if applicable, while filling it with `NA` for rows that don't have parentheses.
+
+After we break the column into two, we clean `PenaltyRec` by removing that pesky final close parenthesis from the end of each recommended penalty.
+
+```{r}
+complaints %<>%
+  separate(BoardDisposition, into = c("BoardDisposition", "PenaltyRec"), sep = " \\(", fill = "right") %>% 
+  mutate(PenaltyRec = str_remove(PenaltyRec, "\\)"))
+```
+
+Now that we've broken up `BoardDisposition`, we have 
+
+The CCRB describes the [three main families of penalty](https://www1.nyc.gov/site/ccrb/prosecution/police-discipline.page) that may be recommended for substantiated cases from least to most severe:
+
+1. Attending additional training
+  1. Note that Command-Level Instructions, which are administered by an officer's direct superior, appear to be equally severe as Formalized Training, which are administered by the Police Academy or NYPD Legal Bureau
+1. Command Disciplines (which appear to primarily involve docking vacation days)
+1. Charges that are prosecuted administratively in the [NYPD Trial Room](https://www1.nyc.gov/site/nypd/bureaus/administrative/trials.page). Note that these are internal trials, not proper criminal cases.
+
+Now, we can try to compare the `PenaltyRec` column to the `PenaltyDesc` column, which contains (some summary of) the actual penalty levied by the NYPD on that officer for that case. In particular, we may be able to code for whether the recommended penalty is more or less severe than the actual levied penalty.
+
+Several of the levied penalties in `PenaltyDesc` look like a less severe penalty combined with a more severe one--usually additional training (less-severe) along with forfeiting vacation days (more severe). For simplicity, whenever multiple penalties are levied, we will classify that case according to its most severe penalty.
+
+A lot of the penalties recorded in `PenaltyDesc` have been entered non-programmatically. For example, see all the different ways that forfeited vacation days have been entered for different cases:
+
+```{r}
+complaints %>% 
+  distinct(PenaltyDesc) %>% 
+  filter(grepl("vacation", PenaltyDesc, ignore.case = TRUE)) %>% 
+  pull(PenaltyDesc)
+```
+
+Whatever data entry system that was used to log these does not seem to be using a consistent prefix for when forfeited vacation days are listed in the penalty.
+
+Blessedly, one thing that _does_ appear consistent is that whenever distinct penalties are levied, they look to be separated with a `+` in that record. We can use this as the separator pattern in `str_split()` to turn `PenaltyDesc` into a list-column of character vectors. For most cases, the vector will be `NA` or length 1 for a single penalty. 
+
+On [Page 6 of the 2018 NYPD Discipline Guide](https://www1.nyc.gov/assets/nypd/downloads/pdf/analysis_and_planning/discipline/discipline-in-the-nypd-2018.pdf), Dismissal Probation is described as a 12-month probationary period where the officer must report extra. They may be reinstated or dismissed at the end of the probation period depending on their performance. There doesn't appear to be any additional hard documentation as to whether any officers who were put on probation actually ended up getting terminated. From eyeballing it, every time "Probation months:" is listed with a number, it's listed at 12, so it may be reasonable for us to assume that "Probation months:" is equivalent to Dismissal Probation, and the varying penalty amount doesn't need to apply here.
+
+```{r}
+complaints %<>%
+  # filter(!is.na(PenaltyDesc)) %>% 
+  mutate(PenaltyRec = case_when(
+    PenaltyRec %in% c("Command Lvl Instructions", "Formalized Training") ~ "Instructions",  
+    PenaltyRec == "Command Discipline" ~ "Command Discipline A",
+    PenaltyRec == "MOS Unidentified" ~ NA_character_,
+    TRUE ~ PenaltyRec
+  )
+  ) %>% 
+  mutate(PenaltyDesc = str_split(PenaltyDesc, " \\+ ")) %>% 
+  unchop(PenaltyDesc) %>% 
+  # A shitload of recoding for cleanliness
+  mutate(PenaltyDesc = case_when(
+    grepl("Instruction", PenaltyDesc) | grepl("Training", PenaltyDesc) ~ "Instructions",
+    startsWith(PenaltyDesc, "Forfeit vacation") ~ str_replace(str_remove(PenaltyDesc, "days"), "Forfeit vacation", "Vacation days:"),
+    PenaltyDesc == "Suspension" ~ "Suspen. days",
+    # Dismissed here seems to refer to charges, not the officer's job
+    grepl("no penalty", PenaltyDesc, ignore.case = TRUE) | PenaltyDesc %in% c("Not Guilty - DCT", "Charges Dismissed - DCT", "Dismissed") ~ "No penalty",
+    PenaltyDesc == "Command Discipline - A 7" ~ "Command Discipline A",
+    startsWith(PenaltyDesc, "Command Discipline") ~ str_replace(PenaltyDesc, " \\- ", " "),
+    startsWith(PenaltyDesc, "Terminat") ~ "Terminated",
+    startsWith(PenaltyDesc, "W&A") | PenaltyDesc == "Reprimand" ~ "Warned and admonished",
+    # Note that we are discarding the 12 months count for any that were listed as "Probation months:"
+    grepl("Probation", PenaltyDesc) ~ "Dismissal Probation",
+    PenaltyDesc == "APU - Decision Pending" ~ NA_character_,
+    TRUE ~ PenaltyDesc
+  )
+  ) %>%
+  separate(PenaltyDesc, into = c("PenaltyDesc", "PenaltyDescAmt"), sep = "\\:", fill = "right") %>% 
+  mutate(PenaltyDescAmt = as.integer(PenaltyDescAmt),
+         PenaltyDescSeverity = recode(PenaltyDesc,
+                                      `No penalty` = 0L,
+                                      `Warned and admonished` = 1L,
+                                      Instructions = 2L,
+                                      `Command Discipline A` = 3L,
+                                      `Command Discipline B` = 4L,
+                                      `Vacation days` = 4L,
+                                      `Suspen. days` = 5L,
+                                      `Dismissal Probation` = 6L,
+                                      Resigned = 7L,
+                                      Retire = 7L,
+                                      Terminated = 7L)) %>% 
+  group_by(UniqueId, ComplaintId, FADOType) %>% 
+  filter(PenaltyDescSeverity == max(PenaltyDescSeverity) | is.na(PenaltyDescSeverity)) %>% 
+  ungroup() %>% 
+  mutate(PenaltyRecSeverity = recode(PenaltyRec,
+                                     `No Recommendations` = 0L,
+                                     `Instructions` = 2L,
+                                     `Command Discipline A` = 3L,
+                                     `Command Discipline B` = 4L,
+                                     Charges = 5L))
+```
+
+Eventually, we'll change `PenaltyDesc` back from a list-column to an atomic character column. In order to do that, we need to identify the most severe penalty for each case where more than one penalty was listed.
+
+Finally, since the cleaning does take a little bit, we can save out an intermediate version of the clean data to be used for graphing without having to run all the data cleaning code.
+
+```{r}
+write_csv(complaints, file = "nypd_ccrb_data_clean.csv")
+```
+
+
+# Characterizing the data
+
+https://www.thecity.nyc/2020/7/31/21350186/nypd-complaint-files-unions-police-new-york-city
+
+```{r}
+
+```
+
+# 
