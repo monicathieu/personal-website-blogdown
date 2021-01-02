@@ -7,7 +7,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [params]
   contentTypeName = "posts"
   themeColor = "red"
-  showMenuItems = 4
+  showMenuItems = 5
   fullWidthTheme = false
   centerTheme = false
   author = "Monica Thieu"
@@ -43,3 +43,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
         identifier = "research"
         name = "Research"
         url = "/research"
+      [[languages.en.menu.main]]
+        identifier = "contact"
+        name = "Contact me"
+        url = "/contact"
