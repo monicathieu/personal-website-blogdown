@@ -6,18 +6,25 @@ title: "Research"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+# Participating in research studies
 
-# Research tools
+In accordance with my IRB protocols, I do not advertise my own research studies on my website. However, if you're interested in participating in research in general there are many other studies you can take part in.
+
+You can participate in _online_ research studies from researchers all over the world at [prolific.co](https://prolific.co). They're based in the UK, but many studies are posted for participants in the US as well.
+
+You can participate in _local in-person_ research studies at a university near you. Check out your local university's psychology department and medical school websites to find out what kinds of research studies they're recruiting for.
+
+# Tools for conducting research
 
 ## Recruiting online participants
 
-I recently started using [prolific.co](https://prolific.co), a researcher-friendly website for online behavioral study recruitment that's kind both to researchers and to participants. All my contacts with participants have been pleasant, and the Prolific support staff are so responsive and helpful. You can get a credit towards paying your first batch of participants if you sign up with [my link here](https://www.prolific.co/r?ref=N8XQG222)!
+I run online studies on [prolific.co](https://prolific.co), a researcher-friendly website for online behavioral study recruitment that's kind both to researchers and to participants. All my contacts with participants have been pleasant, and the Prolific support staff are so responsive and helpful. You can get a credit towards paying your first batch of participants if you sign up with [my link here](https://www.prolific.co/r?ref=N8XQG222)!
 
 ## Running behavioral tasks online
 
 I use [gorilla.sc](https://gorilla.sc/?utm_medium=referral&utm_source=monicathieu.com), a site that lets you build behavioral tasks both through GUI and code (their software is based on JavaScript/JQuery, though you don't need to know either of those languages to use their tools). Their site is easy to use for JavaScript novices (like me), and still allows for full customization through added code. Their support staff are stellar as well! Instead of paying a subscription fee, you pay about a dollar per each participant who completes a task built on their platform. If you'd like to sign up, you can run twenty participants free with a referral. (email me for a referral link; they don't currently have a referral link set up. PS: An academic email address is required to claim the bonus.)
 
-# Active projects
+# My active projects
 
 ## Individual differences in age perception
 
@@ -40,23 +47,18 @@ Preliminary results indicate that younger participants (say, in their 20s) tend 
 
 What emotion are you feeling right now? When you're experiencing some emotion, you could probably report what it is you're feeling without much difficulty--this is something that humans can do readily. But **_how_ do we turn our subjective emotional experience into self-report, and how does this relate to other parts of our emotional lives?** We've developed a psychophysics-style paradigm where we show participants a series of brief, emotionally evocative GIFs, ask them to choose one of two emotion words to describe each experience (e.g. "neutral" or "fear"), and then fit their responses to a psychometric function. This way, we can find out how fearful (for example) a GIF has to be for an individual to say they feel fear (their psychometric threshold). We’ve also administered a series of surveys on things like mood, depression/anxiety tendencies, and more, so we can begin to examine how emotion-labeling patterns (as indexed by the psychometric task) predict facets of people's social & emotional lives.
 
-We've run this first as a behavioral study, where results indicate that people who report being _more_ emotionally expressive in their day-to-day lives have _lower_ thresholds for reporting emotional responses to our GIFs (see [this poster](https://osf.io/ubxtm/)). We’re also planning an fMRI study, so we can investigate whether people show systematic neural representations of subjective emotional experiences that correspond with the emotion terms that they use to describe said experiences.
+We've run this first as a behavioral study, where results indicate that people who report being _more_ emotionally expressive in their day-to-day lives have _lower_ thresholds for reporting emotional responses to our GIFs (see [this poster](https://osf.io/ubxtm/)). 
+
+We’re also running an fMRI study to investigate whether people's neural representations of subjective emotional experiences, specifically ambiguous, mixed-emotion experiences, change based on how they report their emotional response to said experiences. Preliminary results indicate that fMRI patterns for mixed emotional experiences appear not as a blend of positive and negative patterns, but as a distinct pattern that may arise from the process of resolving emotional ambiguity. (see [this poster](https://society-for-affective-science.org/list-of-sas-virtual-posters-2020/entry/5196/?gvid=7225)).
 
 # Previous projects
 
 ## Attention, memory, and media multitasking
 
-Media multitasking, or the act of engaging with multiple streams of media simultaneously, something. (If you're listening to music while reading this, you're engaging in media multitasking right now!) In the Stanford Memory Lab, we've demonstrated that individuals who chronically media multitask show a reduced working memory capacity, and that those people also show reduced long-term memory for the items they seem to be having more difficulty maintaining in working memory. **What are the neural mechanisms subserving this relationship, and how do individual differences on a neural level track with trait media multitasking?** It's possible that the degree to which people favor the use of top-down, goal-directed attention vs. bottom-up, salience-reorienting attention might predict someone's tendency to perform worse on these working memory and long-term memory tasks. We're using fMRI to investigate how activation in top-down dorsal attention networks and bottom-up ventral attention networks might predict whether someone will successfully engage with and remember a given stimulus. In addition, we're using EEG to investigate whether individual differences in power in certain EEG frequency bands, which might track top-down pre-stimulus preparatory attention, predict the degree to which someone will successfully engage with and remember a given stimulus.
+Media multitasking, or the act of engaging with multiple streams of media simultaneously, something. (If you're listening to music while reading this, you're engaging in media multitasking right now!) In the Stanford Memory Lab, we've demonstrated that individuals who chronically media multitask show a reduced working memory capacity, and that those people also show reduced long-term memory for the items they seem to be having more difficulty maintaining in working memory. **What are the neural mechanisms subserving this relationship, and how do individual differences on a neural level track with trait media multitasking?** It's possible that the degree to which people favor the use of top-down, goal-directed attention vs. bottom-up, salience-reorienting attention might predict someone's tendency to perform worse on these working memory and long-term memory tasks. At the [Stanford Memory Lab](https://memorylab.stanford.edu), I helped use fMRI to investigate how activation in top-down dorsal attention networks and bottom-up ventral attention networks might predict whether someone will successfully engage with and remember a given stimulus. They are conducting a follow-up EEG project to investigate whether individual differences in power in certain EEG frequency bands, which might track top-down pre-stimulus preparatory attention, predict the degree to which someone will successfully engage with and remember a given stimulus.
 
 ## Healthy aging and associative memory
 
-Everyone experiences changes in cognition as they get older. We understand that some people develop neurodegenerative disorders as they age, such as Alzheimer's disease and dementia, and that these pathological changes are associated with marked deficits in cognition. But this isn't inevitable for people as they age. **What kinds of cognitive changes should we expect as we age? What changes are nothing to worry about, and what changes are of medical concern?** Existing research indicates that associative memory, the particular task of binding previously unrelated features into a single memory representation, may be a "canary in the coal mine" for pre-clinical cognitive decline. (When you run into an acquaintance at the grocery store, and you can remember the context in which you know them, but not what their name is, that's your associative memory that's failing you.) We're currently running a large-scale individual differences study to try to describe how changes in cognition (associative memory in particular) relate to clinical markers of neurodegeneration in cognitively healthy older adults. We're using various techniques to investigate the relationships between:
+Everyone experiences changes in cognition as they get older. We understand that some people develop neurodegenerative disorders as they age, such as Alzheimer's disease and dementia, and that these pathological changes are associated with marked deficits in cognition. But this isn't inevitable for people as they age. **What kinds of cognitive changes should we expect as we age? What changes are nothing to worry about, and what changes are of medical concern?** Existing research indicates that associative memory, the particular task of binding previously unrelated features into a single memory representation, may be a "canary in the coal mine" for pre-clinical cognitive decline. (When you run into an acquaintance at the grocery store, and you can remember the context in which you know them, but not what their name is, that's your associative memory that's failing you.) At the [Stanford Memory Lab](https://memorylab.stanford.edu), I assisted with a large-scale individual differences study to try to describe how changes in cognition (associative memory in particular) relate to clinical markers of neurodegeneration in cognitively healthy older adults.
 
-- age
-- Known Alzheimer's biomarkers
-    - APOE genotype
-    - CSF beta-amyloid concentration
-    - CSF phosphorylated tau concentration
-- hippocampal subfield volume
-- BOLD correlates of associative encoding and retrieval
-- behavioral measures of associative memory
+You can read the published results (to date) of this research [here](https://elifesciences.org/articles/55335)!
