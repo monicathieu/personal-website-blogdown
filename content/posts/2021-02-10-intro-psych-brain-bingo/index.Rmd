@@ -9,7 +9,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 This post will show you my motivation and methods for designing and running a game of Zoom bingo, but for basic neuroanatomy! This activity would be appropriate for an introductory psychology or neuroscience class. The instructions below are specific to an online class (the activity was run in the spring 2021 semester), but can be simplified to run in-person. (You can skip all the streaming stuff; that's the most complicated part anyway.)
