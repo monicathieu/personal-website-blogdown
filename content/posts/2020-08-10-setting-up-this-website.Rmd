@@ -23,6 +23,18 @@ Yihui Xie et al.'s [guide to `blogdown`](https://bookdown.org/yihui/blogdown/) i
 
 `blogdown` tends to play best with Hugo themes that are structured very similarly to Yihui's pre-formatted [`hugo-lithium`](https://github.com/yihui/hugo-lithium) theme. I ended up pulling [Radek Koziel's Terminal theme](https://themes.gohugo.io/hugo-theme-terminal/) from the Hugo theme gallery. Aside from the minimalist look, I liked that it came with support for code highlighting, as I knew I'd be posting blogs with R code chunks. Getting the code highlighting to work ended up taking [a bit more finagling](#fixing-code-syntax-highlighting) than I anticipated at first, though.
 
+## Overriding one or two layouts of a git submodule theme
+
+When I first set this website up, I didn't know how to override default theme layouts without editing in the theme folder itself, so I grabbed a static copy of the theme folder from GitHub. I figured this would let me make the theme edits I wanted without accidentally harming the upstream theme, or getting overwritten if I kept the theme as a git submodule and updated the theme regularly.
+
+However, I eventually realized that it was too bothersome to try to keep the theme dependency software updated (turns out I don't fully understand all the front-end code that Radek uses to render the aesthetics!). Too many [GitHub Dependabot](https://docs.github.com/en/code-security/supply-chain-security/managing-vulnerabilities-in-your-projects-dependencies/configuring-dependabot-security-updates) updates that went over my head! I decided to sync back on to Radek's updated theme repo using a [git submodule](https://bookdown.org/yihui/blogdown/version-control.html) for the theme instead. I renamed the old theme folder to remove name conflicts with the incoming updated theme, and then `git submodule add`-ed the `hugo-theme-terminal` repo into my `themes` folder.
+
+(Now, every time I want to update the theme, I can use `git submodule update` and get any security updates taken care of as well.)
+
+Now, how to override layouts in the one or two places I might want to? Turns out this was straightforward to do all along! Per [these instructions](https://bwaycer.github.io/hugo_tutorial.hugo/themes/customizing/#replace-a-single-template-file), I created a `layouts` folder in the root folder of the repo, the contents of which would override any files in `theme/hugo-theme-terminal/layouts`, as long as any file/folder names in the override layouts folder exactly matched files in the theme folder to be overridden.
+
+For the theme edits below where I needed to create new layout pages or edit existing ones, I made copies in this theme-external `layouts` folder.
+
 ## Making a new homepage template
 
 Radek's Terminal theme by default sets the homepage to be a list of blog posts. I knew that for this site, I wanted a simple splash landing page. Additionally, I still wanted to use the blog posts list layout, but as a page accessible through the menu bar.
@@ -35,7 +47,7 @@ At first blush it sounds reasonable--you want to be able to specify _what's_ on 
 
 To change the layout of the homepage, I had to understand enough Hugo to construct my own homepage _layout_ file separately from my homepage _content_ file, and then save the layout file in the right place for Hugo to know it was the layout guide for my homepage.
 
-The homepage layout file should live at `themes/your-theme/layouts/_index.html`. Depending on your theme, either this file will already exist and you can edit it, or a dedicated homepage layout will not already exist and you will need to create a file at this path. I created this file, and copied and pasted enough Hugo code from existing layout files to get the `_index.html` homepage to show a "cover image", and underneath the cover image, whatever text lives in the homepage content file. The cover image functionality was included with Radek's theme, so I didn't have to set that up myself.
+The homepage layout file that comes with your theme should live at `themes/your-theme/layouts/_index.html`. Depending on your theme, either this file will already exist and you can edit it, or a dedicated homepage layout will not already exist and you will need to create a file at `layouts/_index.html` in your override layouts folder to override whatever theme default is set for the homepage. Since a dedicated homepage didn't exist for this theme (the default homepage was a list of blog posts), I created this file from scratch. I copied and pasted enough Hugo code from existing layout files to get the `_index.html` homepage to show a "cover image", and underneath the cover image, whatever text lives in the homepage content file. The cover image functionality was included with Radek's theme, so I didn't have to set that up myself.
 
 The homepage content file should live at `content/_index.Rmd`. Again, I set up the homepage content file to render the R Markdown content on this page and show it beneath the cover image on the home page. I didn't do anything fancy here--just a couple sentences introducing myself and the website. Not enough to reveal that the homepage theme is actually super crappy!
 
@@ -77,8 +89,8 @@ Bruno's code uses a combination of pure CSS to organize photos into a tiled arra
 I attempted reproduce Bruno's gallery by copying his the code examples into files at the following paths in my own repo:
 
 1. **Front matter:** In the YAML header of the `game-shows` index Rmd file
-1. **Gallery shortcode:** Into a new file at `themes/hugo-theme-terminal/layouts/shortcodes/gallery.html`
-1. **Photoswipe calling code:** In the footer of `themes/hugo-theme-terminal/layouts/_default/single.html`. This I put into a `{{if .HasShortcode }}` block per Bruno's instructions, so that it would only trigger in the footer of pages that had a gallery specified for them. (It was a little hacky to put it in `single.html` such that the code was included for ANY basic web page, but it seemed to work.)
+1. **Gallery shortcode:** Into a new file at `layouts/shortcodes/gallery.html` (to avoid messing with the base theme, per above)
+1. **Photoswipe calling code:** In the footer of `layouts/_default/single.html`. This I put into a `{{if .HasShortcode }}` block per Bruno's instructions, so that it would only trigger in the footer of pages that had a gallery specified for them. (It was a little hacky to put it in `single.html` such that the code was included for ANY basic web page, but it seemed to work.)
 1. ***Photoswipe source code** (not directly shown in Bruno's post, but linked:) Downloaded the contents of the [Photoswipe distribution folder](https://github.com/dimsemenov/PhotoSwipe/tree/master/dist) into `static/plugins/photoswipe`. Any files in this path, thanks to the behavior of the `static` folder, are "seen" by web pages as being at `plugins/photoswipe`, for example.
 1. **Photo tiling CSS:** At the end of `static/plugins/photoswipe/photoswipe.css`
 

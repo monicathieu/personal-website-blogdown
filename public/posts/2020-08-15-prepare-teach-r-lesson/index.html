@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   
-    <title>How to prepare and teach an R lesson :: Monica Thieu — Research &amp; goodies</title>
+    <title>How to prepare and teach an R lesson :: Monica Thieu</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="1 Notes for readers 2 Why this talk? 3 Objectives 4 Lesson construction using backward design  4.1 What is backward design? 4.2 Define outcomes 4.3 Define evidence of learning  4.3.1 Formative assessment: more smaller tests 4.3.2 Tidy formative assessments 4.3.3 Multiple choice check-ins scale pretty well  4.4 Build lesson  5 Deliver the lesson 6 In summary   1 Notes for readers This blog post contains a written version of my speaker notes for my 20-minute 2020 NYC R conference talk."/>
-<meta name="keywords" content=""/>
-<meta name="robots" content="noodp"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="This is the outline for my 2020 NYC R Conference talk. Come on in!" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
 <link rel="canonical" href="/posts/2020-08-15-prepare-teach-r-lesson/" />
 
 
@@ -23,31 +23,33 @@
 
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon-192x192.png">
 
-<link rel="shortcut icon" href="/img/favicon/red.png">
+  <link rel="shortcut icon" href="/img/favicon/red.png">
 
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="How to prepare and teach an R lesson :: Monica Thieu — Research &amp; goodies" />
-<meta name="twitter:description" content="1 Notes for readers 2 Why this talk? 3 Objectives 4 Lesson construction using backward design  4.1 What is backward design? 4.2 Define outcomes 4.3 Define evidence of learning  4.3.1 Formative assessment: more smaller tests 4.3.2 Tidy formative assessments 4.3.3 Multiple choice check-ins scale pretty well  4.4 Build lesson  5 Deliver the lesson 6 In summary   1 Notes for readers This blog post contains a written version of my speaker notes for my 20-minute 2020 NYC R conference talk." />
-<meta name="twitter:site" content="/" />
-<meta name="twitter:creator" content="" />
-<meta name="twitter:image" content="">
+
 
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="How to prepare and teach an R lesson :: Monica Thieu — Research &amp; goodies">
-<meta property="og:description" content="1 Notes for readers 2 Why this talk? 3 Objectives 4 Lesson construction using backward design  4.1 What is backward design? 4.2 Define outcomes 4.3 Define evidence of learning  4.3.1 Formative assessment: more smaller tests 4.3.2 Tidy formative assessments 4.3.3 Multiple choice check-ins scale pretty well  4.4 Build lesson  5 Deliver the lesson 6 In summary   1 Notes for readers This blog post contains a written version of my speaker notes for my 20-minute 2020 NYC R conference talk." />
+<meta property="og:title" content="How to prepare and teach an R lesson">
+<meta property="og:description" content="This is the outline for my 2020 NYC R Conference talk. Come on in!" />
 <meta property="og:url" content="/posts/2020-08-15-prepare-teach-r-lesson/" />
-<meta property="og:site_name" content="How to prepare and teach an R lesson" />
-<meta property="og:image" content="">
-<meta property="og:image:width" content="50%">
-<meta property="og:image:height" content="25%">
+<meta property="og:site_name" content="Monica Thieu" />
 
-<meta property="article:published_time" content="2020-08-15 00:00:00 &#43;0000 UTC" />
+  
+    <meta property="og:image" content="/img/favicon/red.png">
+  
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2020-08-15 00:00:00 &#43;0000 UTC" />
+
 
 
 
@@ -60,7 +62,7 @@
 
 
 </head>
-<body class="">
+<body class="red">
 
 
 <div class="container headings--one-size">
@@ -75,7 +77,9 @@
 </a>
 
     </div>
-    <div class="menu-trigger">menu</div>
+    
+      <div class="menu-trigger">menu</div>
+    
   </div>
   
     <nav class="menu">
@@ -144,15 +148,11 @@
   <h1 class="post-title">
     <a href="/posts/2020-08-15-prepare-teach-r-lesson/">How to prepare and teach an R lesson</a></h1>
   <div class="post-meta">
-      
-    <span class="post-date">
-      2020-08-15
-    </span>
     
+      <span class="post-date">
+        2020-08-15 
+      </span>
     
-    <span class="post-author">::
-      Monica Thieu
-    </span>
     
   </div>
 
@@ -165,26 +165,27 @@
     
     #<a href="/tags/tutorial/">tutorial</a>&nbsp;
     
+    #<a href="/tags/teaching/">teaching</a>&nbsp;
+    
   </span>
+  
+
   
 
   
 
   <div class="post-content"><div>
         
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 <div id="TOC">
 <ul>
 <li><a href="#notes-for-readers"><span class="toc-section-number">1</span> Notes for readers</a></li>
 <li><a href="#why-this-talk"><span class="toc-section-number">2</span> Why this talk?</a></li>
 <li><a href="#objectives"><span class="toc-section-number">3</span> Objectives</a></li>
-<li><a href="#lesson-construction-using-backward-design"><span class="toc-section-number">4</span> Lesson construction using backward design</a>
-<ul>
+<li><a href="#lesson-construction-using-backward-design"><span class="toc-section-number">4</span> Lesson construction using backward design</a><ul>
 <li><a href="#what-is-backward-design"><span class="toc-section-number">4.1</span> What is backward design?</a></li>
 <li><a href="#define-outcomes"><span class="toc-section-number">4.2</span> Define outcomes</a></li>
-<li><a href="#define-evidence-of-learning"><span class="toc-section-number">4.3</span> Define evidence of learning</a>
-<ul>
+<li><a href="#define-evidence-of-learning"><span class="toc-section-number">4.3</span> Define evidence of learning</a><ul>
 <li><a href="#formative-assessment-more-smaller-tests"><span class="toc-section-number">4.3.1</span> Formative assessment: more smaller tests</a></li>
 <li><a href="#tidy-formative-assessments"><span class="toc-section-number">4.3.2</span> Tidy formative assessments</a></li>
 <li><a href="#multiple-choice-check-ins-scale-pretty-well"><span class="toc-section-number">4.3.3</span> Multiple choice check-ins scale pretty well</a></li>
@@ -196,17 +197,17 @@
 </ul>
 </div>
 
-<div id="notes-for-readers" class="section level1" number="1">
+<div id="notes-for-readers" class="section level1">
 <h1><span class="header-section-number">1</span> Notes for readers</h1>
 <p>This blog post contains a written version of my speaker notes for my 20-minute 2020 NYC R conference talk. Since the talk time is on the shorter side, I trimmed a few things out of the talk that I would have liked to include with more time. The speaker notes for the unabridged version are included here for your reference.</p>
 </div>
-<div id="why-this-talk" class="section level1" number="2">
+<div id="why-this-talk" class="section level1">
 <h1><span class="header-section-number">2</span> Why this talk?</h1>
 <p>Nobody is born knowing how to code. All programmers must start somewhere, and we’re all constantly learning. If you <em>ever</em> find yourself entrusted with the responsibility to train others to program, from informal tutoring all the way up to running a workshop, you and your learners will benefit from you knowing how to teach.</p>
 <p>Teaching well promotes equity as well. While we have a long way to go toward equal access and representation in technical professions, any chance you get to teach well is a chance to level one of the many uneven playing fields people may encounter on the way to a career in data science or scientific computing. Teach effectively and lower those barriers.</p>
 <p>So let’s get into it!</p>
 </div>
-<div id="objectives" class="section level1" number="3">
+<div id="objectives" class="section level1">
 <h1><span class="header-section-number">3</span> Objectives</h1>
 <p>By the end of my talk, you will be able to:</p>
 <ul>
@@ -216,9 +217,9 @@
 <li>Describe benefits of narrated live-coding</li>
 </ul>
 </div>
-<div id="lesson-construction-using-backward-design" class="section level1" number="4">
+<div id="lesson-construction-using-backward-design" class="section level1">
 <h1><span class="header-section-number">4</span> Lesson construction using backward design</h1>
-<div id="what-is-backward-design" class="section level2" number="4.1">
+<div id="what-is-backward-design" class="section level2">
 <h2><span class="header-section-number">4.1</span> What is backward design?</h2>
 <p>When writing code, be it a helper function, a data processing script, or a whole package, there’s a common logical order we follow.</p>
 <ol style="list-style-type: decimal">
@@ -242,7 +243,7 @@
 <p>You already know this logic! Lesson planning is conceptually similar to writing code. You don’t need to acquire a whole new knowledge base from scratch to be able to plan R lessons. You only need to learn how to relate concepts from coding logic to backward lesson design, and that’s exactly what we’re going to do.</p>
 <p>Next, we’ll dig more into each of these three steps of backward design as they might manifest in an R coding lesson.</p>
 </div>
-<div id="define-outcomes" class="section level2" number="4.2">
+<div id="define-outcomes" class="section level2">
 <h2><span class="header-section-number">4.2</span> Define outcomes</h2>
 <p>Defining the learning outcome, or objective (used interchangeably from here on out), is conceptually similar to defining the output of a function, script, or entire package that one might write. It’s the answer to the following question:</p>
 <p><strong>What will learners be able to <em>do</em> when the lesson is finished?</strong></p>
@@ -267,7 +268,7 @@
 </ul>
 <p>Note: Most learning goals in lessons about R will be to “use” or “implement” certain functions or techniques. However, depending on the topic, the goal may be something lower, like to “recognize” or “recall” which function does what, or something higher, like to “evaluate” or “critique” code for style and speed. If you’re interested in reading more about the different types of learning goals one might set for a lesson, and which one best fits the level of learning you want, <a href="https://www.celt.iastate.edu/teaching/effective-teaching-practices/revised-blooms-taxonomy/">Bloom’s Revised Taxonomy</a> is a helpful framework.</p>
 </div>
-<div id="define-evidence-of-learning" class="section level2" number="4.3">
+<div id="define-evidence-of-learning" class="section level2">
 <h2><span class="header-section-number">4.3</span> Define evidence of learning</h2>
 <p>Once you’ve outlined your desired learning objectives, the next step is to define <em>acceptable evidence of learning.</em> How will you determine that learners can indeed accomplish what the learning objective says they can?</p>
 <p>Again, in programming and teaching, we must <em>test</em> to confirm that our code (or our learners) have accomplished the objective.</p>
@@ -286,7 +287,7 @@
 </blockquote>
 <p>There doesn’t have to be one test question for each objective, but it’s a good place to start to make sure you have appropriate coverage. Just like you want high code coverage when testing your own code, you want high objective coverage with your final assessment, to ensure that you’re testing learners’ ability to execute every objective that you want them to accomplish. No matter how many prompts you include in your assessment, make sure that tests are written specifically enough that a learner who has reached the objective would be able to answer every question acceptably. Vague prompts don’t “give away the answer,” they give enough information for learners to get to the answer.</p>
 <p>There can (and often should) be a back-and-forth process between defining learning outcomes and defining tests of learning. Sometimes, you might find that your test isn’t testing exactly what you think learners should be able to do. You might add more to your test, or change what’s already in it, so that it better fits the learning outcome. Other times, you might have a sense that the test itself correctly expresses what you want learners to come away with. In those cases, you might re-write the learning outcome so that it better fits the test. The key is to plan with intention either way.</p>
-<div id="formative-assessment-more-smaller-tests" class="section level3" number="4.3.1">
+<div id="formative-assessment-more-smaller-tests" class="section level3">
 <h3><span class="header-section-number">4.3.1</span> Formative assessment: more smaller tests</h3>
 <p>The final assessment is of course essential to determining whether learners have met your objective. But, by design, it happens at the <em>end</em> of the lesson. What if learners make critical mistakes on the final assessment, showing that they haven’t actually reached the objective? At that point, the lesson is over, and you don’t have any time remaining to get learners back on track. :(</p>
 <p>Enter formative assessment! When teaching, you have many chances to assess learning <em>before you get to the end of the lesson.</em> <strong>Formative assessments</strong> are <em>frequent</em> and <em>specific</em> tests of learner understanding <em>during teaching.</em></p>
@@ -306,7 +307,7 @@
                names_sep = &quot;\\.&quot;) %&gt;% 
   group_by(species, part) %&gt;% 
   summarize(across(everything(), list(mean = mean, sd = sd)))</code></pre>
-<pre><code>## `summarise()` regrouping output by &#39;species&#39; (override with `.groups` argument)</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;species&#39;. You can override using the `.groups` argument.</code></pre>
 <pre><code>## # A tibble: 6 x 6
 ## # Groups:   species [3]
 ##   species    part  length_mean length_sd width_mean width_sd
@@ -331,7 +332,7 @@
 <p>An experienced instructor can read the error message and deduce that the error occurs inside of <code>group_by()</code>, and is likely to be a misspelling bug (or, perhaps more likely, was carried over from a version of the code where the column names were not coerced to lowercase). However, this error message may be opaque to the learner, and does little to help them identify their mistake themselves.</p>
 <p>Further, this test requires the instructor to exert extra effort to trace the error. If multiple learners make unique errors in writing this block of code, the instructor must now take even more time to correct each learner’s unique mistake. Learners must also spend time waiting for the instructor, instead of progressing.</p>
 </div>
-<div id="tidy-formative-assessments" class="section level3" number="4.3.2">
+<div id="tidy-formative-assessments" class="section level3">
 <h3><span class="header-section-number">4.3.2</span> Tidy formative assessments</h3>
 <p>The function chains encouraged by tidyverse style lend themselves to regular formative assessments. Formative assessment check-ins can built in to the lesson after every function in the pipe chain is introduced.</p>
 <p>We can reformat the code chunk above to have a formative assessment check-in for each verb. For example, here’s a couple ways we might test learners’ understanding of what named functions do inside of <code>summarize(across())</code>. We start with the block of code that learners will have already successfully written and run:</p>
@@ -352,7 +353,7 @@
 </blockquote>
 <pre class="language-r"><code class="language-r">iris_long %&gt;% 
   summarize(across(everything(), list(mean = mean, sd = sd)))</code></pre>
-<pre><code>## `summarise()` regrouping output by &#39;species&#39; (override with `.groups` argument)</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;species&#39;. You can override using the `.groups` argument.</code></pre>
 <pre><code>## # A tibble: 6 x 6
 ## # Groups:   species [3]
 ##   species    part  length_mean length_sd width_mean width_sd
@@ -370,7 +371,7 @@
 <li>Each check-in can be repeated until 100% of learners pass, ensuring that when the next function is introduced, learners will all be caught up</li>
 </ul>
 </div>
-<div id="multiple-choice-check-ins-scale-pretty-well" class="section level3" number="4.3.3">
+<div id="multiple-choice-check-ins-scale-pretty-well" class="section level3">
 <h3><span class="header-section-number">4.3.3</span> Multiple choice check-ins scale pretty well</h3>
 <p>The above check-in is written as a free-response prompt to “write code that does the job”. In small learner groups, this is the most flexible way to check for understanding. If they can write working code, then they’ve met the learning objective! However, this does require that the instructor either trust that everyone’s code works, or visually check each learner’s work to confirm the code behaves as intended. This can be time-consuming for larger groups.</p>
 <p>There are other methods of formative assessment check-in that, while less comprehensive, scale much better to large groups of learners. My favorite of these are multiple choice questions:</p>
@@ -387,7 +388,7 @@
 <p>Additionally, to the previous point, do not write “trick” distractor answers, particularly those where <em>you have not yet shown learners why such a mistake is incorrect.</em> Testing learners on skills/concepts you haven’t taught them is a waste of testing time for you, and a waste of effort for learners.</p>
 </div>
 </div>
-<div id="build-lesson" class="section level2" number="4.4">
+<div id="build-lesson" class="section level2">
 <h2><span class="header-section-number">4.4</span> Build lesson</h2>
 <p>The beauty of backwards design is that once you’ve spelled out your learning objectives, and the tests you’ll use to verify that learners have reached those objectives, the lesson itself is nearly done. Ideally, once you’ve laid out your assessments, you will be able to see exactly what you need to demonstrate and explain to equip learners with enough knowledge to complete those assessments.</p>
 <p>The core principle I try to rely on when crafting lessons is to <strong>teach what you need to teach: no more and no less.</strong> What does this mean? This encompasses several things, including:</p>
@@ -442,7 +443,7 @@
 <p>(I actually heard the above from Hadley Wickham! At Columbia I was lucky to be able to take Dr. Andrew Gelman’s Communicating Data course, where we heard from guest speakers like Hadley.)</p>
 </div>
 </div>
-<div id="deliver-the-lesson" class="section level1" number="5">
+<div id="deliver-the-lesson" class="section level1">
 <h1><span class="header-section-number">5</span> Deliver the lesson</h1>
 <p>All right, so you’ve sketched out your lesson objectives, checks for understanding, and lecture content. Time to teach! Most likely, you’ll teach via live-coding. You demonstrate the code example, and then learners apply what they’ve just seen you do. Occasionally you might find yourself using slides, but live-coding will cover most code instruction scenarios.</p>
 <p>Coding for an audience is a little different than coding for yourself. You gotta be intentional about it! Even when the audience is just one co-worker with their computer next to yours, intentional live-coding can spell the difference between following along with you vs not understanding. The single biggest tip I can give is:</p>
@@ -463,49 +464,45 @@
 </ul>
 <p>Note: <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006023">This paper</a> is a great reference for additional lesson delivery tips when teaching a proper programming course.</p>
 </div>
-<div id="in-summary" class="section level1" number="6">
+<div id="in-summary" class="section level1">
 <h1><span class="header-section-number">6</span> In summary</h1>
 <p>I hope that you are now able to accomplish the <a href="#objectives">objectives</a> I set out at the beginning of this talk. Go forth and <em>effectively</em> train others in R!</p>
 </div>
 
       </div></div>
-  <div class="pagination">
+
+<div class="pagination">
     <div class="pagination__title">
-      <span
-        class="pagination__title-h">Read other posts</span>
-      <hr />
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
     </div>
     <div class="pagination__buttons">
-      
-      <span class="button previous">
-        <a href="/posts/2020-11-12-nypd-ccrb-data/">
-          <span class="button__icon">←</span>
-          <span class="button__text">Exploring the NYPD Misconduct Complaint Database</span>
-        </a>
-      </span>
-      
-      
-      <span class="button next">
-        <a href="/posts/2020-08-10-setting-up-this-website/">
-          <span class="button__text">Setting up this website</span>
-          <span class="button__icon">→</span>
-        </a>
-      </span>
-      
+        
+        <span class="button previous">
+            <a href="/posts/2020-11-12-nypd-ccrb-data/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Exploring the NYPD Misconduct Complaint Database</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="/posts/2020-08-10-setting-up-this-website/">
+                <span class="button__text">Setting up this website</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
     </div>
-  </div>
-  
+</div>
 
-  
+
+
+
 
 </div>
 
   </div>
-
-  
-    
-
-  
 
   
     <footer class="footer">
@@ -521,6 +518,8 @@
 
 <script src="/assets/main.js"></script>
 <script src="/assets/prism.js"></script>
+
+
 
 
 

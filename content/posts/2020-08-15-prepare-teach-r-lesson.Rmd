@@ -2,7 +2,7 @@
 title: "How to prepare and teach an R lesson"
 date: 2020-08-15
 description: "This is the outline for my 2020 NYC R Conference talk. Come on in!"
-tags: ["R", "tidyverse", "tutorial"]
+tags: ["R", "tidyverse", "tutorial", "teaching"]
 output:
   blogdown::html_page:
     number_sections: true

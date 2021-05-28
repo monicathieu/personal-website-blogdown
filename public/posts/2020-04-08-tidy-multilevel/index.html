@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   
-    <title>Wrangling multilevel data in the tidyverse :: Monica Thieu — Research &amp; goodies</title>
+    <title>Wrangling multilevel data in the tidyverse :: Monica Thieu</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="1 Learning goals 2 Notes for instructors 3 Lesson body  3.1 A brief intro to multilevel structure: It’s everywhere! 3.2 Introducing the data 3.3 Reading in the data 3.4 Inspecting the data  3.4.1 Quick graphs 3.4.2 Basic summary statistics  3.5 Nesting the data  3.5.1 Intro to nest(), unnest(), and tibble list-columns  3.6 Going vectorize crazy  3.6.1 Vectorizing: it’s like a for loop, but not 3."/>
-<meta name="keywords" content=""/>
-<meta name="robots" content="noodp"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="This is the narrative lesson plan and tutorial for my 2-hour R workshop, **Wrangling Multilevel Data in the R Tidyverse.** Come on in!" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
 <link rel="canonical" href="/posts/2020-04-08-tidy-multilevel/" />
 
 
@@ -23,31 +23,33 @@
 
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon-192x192.png">
 
-<link rel="shortcut icon" href="/img/favicon/red.png">
+  <link rel="shortcut icon" href="/img/favicon/red.png">
 
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Wrangling multilevel data in the tidyverse :: Monica Thieu — Research &amp; goodies" />
-<meta name="twitter:description" content="1 Learning goals 2 Notes for instructors 3 Lesson body  3.1 A brief intro to multilevel structure: It’s everywhere! 3.2 Introducing the data 3.3 Reading in the data 3.4 Inspecting the data  3.4.1 Quick graphs 3.4.2 Basic summary statistics  3.5 Nesting the data  3.5.1 Intro to nest(), unnest(), and tibble list-columns  3.6 Going vectorize crazy  3.6.1 Vectorizing: it’s like a for loop, but not 3." />
-<meta name="twitter:site" content="/" />
-<meta name="twitter:creator" content="" />
-<meta name="twitter:image" content="">
+
 
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Wrangling multilevel data in the tidyverse :: Monica Thieu — Research &amp; goodies">
-<meta property="og:description" content="1 Learning goals 2 Notes for instructors 3 Lesson body  3.1 A brief intro to multilevel structure: It’s everywhere! 3.2 Introducing the data 3.3 Reading in the data 3.4 Inspecting the data  3.4.1 Quick graphs 3.4.2 Basic summary statistics  3.5 Nesting the data  3.5.1 Intro to nest(), unnest(), and tibble list-columns  3.6 Going vectorize crazy  3.6.1 Vectorizing: it’s like a for loop, but not 3." />
+<meta property="og:title" content="Wrangling multilevel data in the tidyverse">
+<meta property="og:description" content="This is the narrative lesson plan and tutorial for my 2-hour R workshop, **Wrangling Multilevel Data in the R Tidyverse.** Come on in!" />
 <meta property="og:url" content="/posts/2020-04-08-tidy-multilevel/" />
-<meta property="og:site_name" content="Wrangling multilevel data in the tidyverse" />
-<meta property="og:image" content="">
-<meta property="og:image:width" content="50%">
-<meta property="og:image:height" content="25%">
+<meta property="og:site_name" content="Monica Thieu" />
 
-<meta property="article:published_time" content="2020-04-08 00:00:00 &#43;0000 UTC" />
+  
+    <meta property="og:image" content="/img/favicon/red.png">
+  
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2020-04-08 00:00:00 &#43;0000 UTC" />
+
 
 
 
@@ -60,7 +62,7 @@
 
 
 </head>
-<body class="">
+<body class="red">
 
 
 <div class="container headings--one-size">
@@ -75,7 +77,9 @@
 </a>
 
     </div>
-    <div class="menu-trigger">menu</div>
+    
+      <div class="menu-trigger">menu</div>
+    
   </div>
   
     <nav class="menu">
@@ -144,15 +148,11 @@
   <h1 class="post-title">
     <a href="/posts/2020-04-08-tidy-multilevel/">Wrangling multilevel data in the tidyverse</a></h1>
   <div class="post-meta">
-      
-    <span class="post-date">
-      2020-04-08
-    </span>
     
+      <span class="post-date">
+        2020-04-08 
+      </span>
     
-    <span class="post-author">::
-      Monica Thieu
-    </span>
     
   </div>
 
@@ -170,36 +170,32 @@
 
   
 
+  
+
   <div class="post-content"><div>
         
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 <div id="TOC">
 <ul>
 <li><a href="#learning-goals"><span class="toc-section-number">1</span> Learning goals</a></li>
 <li><a href="#notes-for-instructors"><span class="toc-section-number">2</span> Notes for instructors</a></li>
-<li><a href="#lesson-body"><span class="toc-section-number">3</span> Lesson body</a>
-<ul>
+<li><a href="#lesson-body"><span class="toc-section-number">3</span> Lesson body</a><ul>
 <li><a href="#a-brief-intro-to-multilevel-structure-its-everywhere"><span class="toc-section-number">3.1</span> A brief intro to multilevel structure: It’s everywhere!</a></li>
 <li><a href="#introducing-the-data"><span class="toc-section-number">3.2</span> Introducing the data</a></li>
 <li><a href="#reading-in-the-data"><span class="toc-section-number">3.3</span> Reading in the data</a></li>
-<li><a href="#inspecting-the-data"><span class="toc-section-number">3.4</span> Inspecting the data</a>
-<ul>
+<li><a href="#inspecting-the-data"><span class="toc-section-number">3.4</span> Inspecting the data</a><ul>
 <li><a href="#quick-graphs"><span class="toc-section-number">3.4.1</span> Quick graphs</a></li>
 <li><a href="#basic-summary-statistics"><span class="toc-section-number">3.4.2</span> Basic summary statistics</a></li>
 </ul></li>
-<li><a href="#nesting-the-data"><span class="toc-section-number">3.5</span> Nesting the data</a>
-<ul>
+<li><a href="#nesting-the-data"><span class="toc-section-number">3.5</span> Nesting the data</a><ul>
 <li><a href="#intro-to-nest-unnest-and-tibble-list-columns"><span class="toc-section-number">3.5.1</span> Intro to nest(), unnest(), and tibble list-columns</a></li>
 </ul></li>
-<li><a href="#going-vectorize-crazy"><span class="toc-section-number">3.6</span> Going vectorize crazy</a>
-<ul>
+<li><a href="#going-vectorize-crazy"><span class="toc-section-number">3.6</span> Going vectorize crazy</a><ul>
 <li><a href="#vectorizing-its-like-a-for-loop-but-not"><span class="toc-section-number">3.6.1</span> Vectorizing: it’s like a for loop, but not</a></li>
 <li><a href="#tidy-vectorizing"><span class="toc-section-number">3.6.2</span> Tidy vectorizing</a></li>
 <li><a href="#a-caveat-when-not-to-vectorize"><span class="toc-section-number">3.6.3</span> A caveat: When not to vectorize</a></li>
 </ul></li>
-<li><a href="#hella-models"><span class="toc-section-number">3.7</span> Hella models</a>
-<ul>
+<li><a href="#hella-models"><span class="toc-section-number">3.7</span> Hella models</a><ul>
 <li><a href="#fitting-many-models"><span class="toc-section-number">3.7.1</span> Fitting many models</a></li>
 <li><a href="#extracting-statistics-from-models"><span class="toc-section-number">3.7.2</span> Extracting statistics from models</a></li>
 <li><a href="#visualizing-many-statistics"><span class="toc-section-number">3.7.3</span> Visualizing many statistics</a></li>
@@ -211,7 +207,7 @@
 </div>
 
 <p>This is the narrative lesson plan for my 2-hour R workshop, <strong>Wrangling Multilevel Data in the R Tidyverse.</strong></p>
-<div id="learning-goals" class="section level1" number="1">
+<div id="learning-goals" class="section level1">
 <h1><span class="header-section-number">1</span> Learning goals</h1>
 <p>By the end of this lesson, learners will be able to:</p>
 <ul>
@@ -233,7 +229,7 @@
 <p>For more exhaustive documentation, you can visit the online reference pages for your package of interest. For more in-depth self-teaching, please refer to the <a href="http://r4ds.had.co.nz/">R for Data Science online textbook</a> by Garrett Grolemund and Hadley Wickham.</p>
 <p>*The analyses demonstrated here are by no means the final analyses you might do with these data! There is just only so much that can be covered within the scope of this tutorial.</p>
 </div>
-<div id="notes-for-instructors" class="section level1" number="2">
+<div id="notes-for-instructors" class="section level1">
 <h1><span class="header-section-number">2</span> Notes for instructors</h1>
 <p>This lesson is written to be usable as a standalone, follow-along-at-home tutorial. For those wishing to use this as a lesson plan for live instruction, please refer to the following.</p>
 <ul>
@@ -247,9 +243,9 @@
 <p>I have some useful asides written throughout the tutorial marked as <strong>instructor’s notes.</strong> If you’re following along with this tutorial at home, you may find these notes useful as supplementary information. Usually, these notes will occur in locations where I have deliberately <em>omitted</em> teaching a particular concept or technique. I’ve tried to summarize what I’m omitting from the primary lesson plan and why I’m doing so, with links for additional exploration for those at home who do want to jump further in.</p>
 <p>And now, the feature presentation:</p>
 </div>
-<div id="lesson-body" class="section level1" number="3">
+<div id="lesson-body" class="section level1">
 <h1><span class="header-section-number">3</span> Lesson body</h1>
-<div id="a-brief-intro-to-multilevel-structure-its-everywhere" class="section level2" number="3.1">
+<div id="a-brief-intro-to-multilevel-structure-its-everywhere" class="section level2">
 <h2><span class="header-section-number">3.1</span> A brief intro to multilevel structure: It’s everywhere!</h2>
 <p>Chances are, you’ve dealt with multilevel data before.</p>
 <p>In the more micro-scale experimental sciences, data take multilevel structure every time you take multiple measurements per research unit, repeated for multiple research units. In psychology research like mine, this means multiple measurements per participant, repeated for multiple participants. This holds true for any set of multiple measurements out of multiple lab setups (petri dishes, vacuum chambers, whatever you use). Observations can be <em>grouped</em> in all of these cases, by whichever participant/lab apparatus/otherwise that they were collected from.</p>
@@ -267,10 +263,10 @@
 <p><strong>Instructor’s note:</strong> A full exploration of the motivations behind multilevel data analysis is beyond the scope of this tutorial. Today, we will be focusing on data wrangling tools you can use to explore the multilevel-ness of your data, which can lend useful insights no matter how you ultimately decide to analyze your data.</p>
 </blockquote>
 </div>
-<div id="introducing-the-data" class="section level2" number="3.2">
+<div id="introducing-the-data" class="section level2">
 <h2><span class="header-section-number">3.2</span> Introducing the data</h2>
 <p>In this tutorial, we’ll be exploring grocery store sales data of millenials’ favorite fruit: avocados!</p>
-
+<p>
   <figure class="center" >
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Avocado_open_side_by_side.jpg/640px-Avocado_open_side_by_side.jpg"   />
     
@@ -278,7 +274,7 @@
     
   </figure>
 
-
+</p>
 <p><a href="https://www.kaggle.com/neuromusic/avocado-prices/data">These data</a> originally come from the Hass Avocado board, via Justin Kiggins on Kaggle. (I downloaded the local copy of these data on 2020-03-25.)</p>
 <p>The data come from many weekly measures of avocado sales over a few years, collected in many metropolitan areas of the United States. Intuitively, we might expect that avocado sale data might differ based on which region the avocados were sold in. For example, all regions of the US might show similar patterns of avocado sales, but at different levels depending on the average cost of living in that region. Avocados probably sell for cheaper in Dallas, TX, where I grew up, than in New York City, where I live currently, and I’d like to group avocado sales by region so that region-specific avocado prices don’t influence the patterns I see in the data.</p>
 <hr />
@@ -286,7 +282,7 @@
 <p>Unless you specifically do research on grocery store avocado prices, it’s unlikely that these data map directly onto the data you deal with in your own research, and <em>that’s okay.</em> It’s important to practice abstracting data cleaning/manipulation and statistical techniques <em>away from the specific data you’re practicing them on,</em> so that you can learn from techniques demonstrated in other disciplines, figure out how they might help you with your own data, and then apply those techniques. Psychologists can learn from economists can learn from biologists, and vice versa. :)</p>
 <hr />
 </div>
-<div id="reading-in-the-data" class="section level2" number="3.3">
+<div id="reading-in-the-data" class="section level2">
 <h2><span class="header-section-number">3.3</span> Reading in the data</h2>
 <p>This blog post’s local copy of the avocado sales CSV can be found in the static website files <a href="avocado.csv">here</a>. You should be able to download the CSV from that link by right-clicking and downloading a copy to your computer, or if your computer is actively connected to the internet, you can use the URL as the path to data in a <code>readr::read_csv()</code> call.</p>
 <p>In this post, I can use a relative path because the .Rmd this web page is generated from is saved in the same folder as the avocado data. You will need to use the appropriate URL or path to a local copy of the data when you <code>read_csv()</code> on your own machine, so be aware that copying and pasting the code out of this chunk will probably not work out of the box.</p>
@@ -398,12 +394,12 @@ avocado &lt;- avocado_raw %&gt;%
 <p><strong>Instructor’s note:</strong> If you wish, you can set tibble printing options to print preview values for all columns of a tibble, irrespective of whether those additional columns spill over to the next row of print output. You can do it temporarily by explicitly calling <code>print(my_tibble, width = Inf)</code> to override the default console-width-detecting behavior, or by setting your R instance’s global options with <code>options(tibble.width = Inf)</code> to print all columns for all tibbles. However, I personally like the width-restricting behavior of default tibble printing. I’ll take the clean console output.</p>
 </blockquote>
 </div>
-<div id="inspecting-the-data" class="section level2" number="3.4">
+<div id="inspecting-the-data" class="section level2">
 <h2><span class="header-section-number">3.4</span> Inspecting the data</h2>
 <p>Today’s explorations will focus around the following diffuse research question: <strong>Do avocado buyers prefer buying conventional or organic avocados? By how much? How do these patterns differ from region to region?</strong> For a variety of reasons (pick your favorite), it might be interesting to try to quantify grocery shoppers’ relative preference for conventional vs. organic avocados, as it probably tracks with regional variations in supply chain access, and/or psychological attitudes about health and environmentalism.</p>
 <p>(We won’t be able to get into those more complex variables because they aren’t present in the avocado data we have, but just an inspiration!)</p>
 <p>Even before we get into looking for more complex statistics within each region, we can use simpler tidyverse tools to generate and inspect single-value summary statistics, both visually and numerically, for each metropolitan area present in the data.</p>
-<div id="quick-graphs" class="section level3" number="3.4.1">
+<div id="quick-graphs" class="section level3">
 <h3><span class="header-section-number">3.4.1</span> Quick graphs</h3>
 <p>We can use built-in grouping features of <code>ggplot2</code> to inspect the data visually without having to pre-manipulate it much.</p>
 <p>First, let’s look at a histogram of weekly avocado sales, across all weeks, and all metropolitan areas. How many avocados are people buying in a given week? I’m also going to split this histogram to get two different filled histograms for conventional and organic avocado sales so we can see those sales separately. I’ll set the colors to… ah, avocado-themed.</p>
@@ -440,7 +436,7 @@ plot_hist_avo_total_volume</code></pre>
 <p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-vol-hist-bad-1.png" width="672" /></p>
 <p>I might see a bimodal histogram and say “huh, that’s funny.” If I weren’t so careful, I might continue my business without accounting for this bimodality. But optimally I’d stop and think “what additional variable might be driving this bimodality?” and after some exploration, realize that I need to consider conventional vs. organic avocado type when looking at avocado sales in order to properly characterize the data. Always keep an eye out!</p>
 </div>
-<div id="basic-summary-statistics" class="section level3" number="3.4.2">
+<div id="basic-summary-statistics" class="section level3">
 <h3><span class="header-section-number">3.4.2</span> Basic summary statistics</h3>
 <p>In addition to graphs, we can generate simple one-shot summary statistics using <code>group_by()</code> and <code>summarize()</code> from the <code>dplyr</code> package.</p>
 <p>As a companion to the exploratory graphs of <code>total_volume</code> we just generated, we can calculate numerical summaries of the weekly number of avocados sold as a quick metric of the difference in buying patterns for conventional and organic avocados. Before we calculate these summaries, though, we should create a new column for log-10-transformed <code>total_volume</code>, as we saw earlier in our graphs that it’s massively right-tailed and needs to be log-transformed to look more normal.</p>
@@ -459,7 +455,7 @@ avocado %&lt;&gt;%
   group_by(region, type) %&gt;%
   summarize(mean_total_volume = mean(total_volume_log10),
             sd_total_volume = sd(total_volume_log10))</code></pre>
-<pre><code>## `summarise()` regrouping output by &#39;region&#39; (override with `.groups` argument)</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;region&#39;. You can override using the `.groups` argument.</code></pre>
 <pre><code>## # A tibble: 92 x 4
 ## # Groups:   region [46]
 ##    region              type         mean_total_volume sd_total_volume
@@ -532,7 +528,6 @@ avocado %&lt;&gt;%
   summarize(mean_volume_diff = mean(total_volume_diff),
             sd_volume_diff = sd(total_volume_diff)) %&gt;%
   arrange(desc(mean_volume_diff))</code></pre>
-<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
 <pre><code>## # A tibble: 46 x 3
 ##    region            mean_volume_diff sd_volume_diff
 ##    &lt;chr&gt;                        &lt;dbl&gt;          &lt;dbl&gt;
@@ -551,10 +546,10 @@ avocado %&lt;&gt;%
 <p>We can get a fair amount of mileage out of these initial visualizations and summaries, and there’s nothing wrong with using these summaries as a first pass. I do so all the time! However, when you <em>want</em> (or need) to be able to calculate more complex statistics on the weekly data for each metro area, you’ll need more complex tools.</p>
 </div>
 </div>
-<div id="nesting-the-data" class="section level2" number="3.5">
+<div id="nesting-the-data" class="section level2">
 <h2><span class="header-section-number">3.5</span> Nesting the data</h2>
 <p>Nearly all of the tidyverse features we’ll be working through in the rest of this tutorial rely on two key features of R to make their magic happen: <strong>list-columns</strong> and <strong>flexible vectorizing functions.</strong></p>
-<div id="intro-to-nest-unnest-and-tibble-list-columns" class="section level3" number="3.5.1">
+<div id="intro-to-nest-unnest-and-tibble-list-columns" class="section level3">
 <h3><span class="header-section-number">3.5.1</span> Intro to nest(), unnest(), and tibble list-columns</h3>
 <p>A df is composed of columns, each of which is a vector of identical length. But nobody ever said the columns of a df all have to be atomic vectors! <strong>A df column can be a list vector,</strong> where each element of said list-column can contain objects of different data types and lengths. While each element of list-column <em>can</em> contain objects of various and sundry types/lengths, list-columns gain a lot of power when they contain objects of <em>consistent</em> type. (When this is true, you can apply a single function to every row of a list-column, and get a single column of consistent output–this is where we’re headed.)</p>
 <p>In this way, a list-column allows you to store multiple observations per unit wrapped up in such a way that the main df still has one row per unit, but you retain the observation-level data because you haven’t actually collapsed across any variables.</p>
@@ -719,11 +714,11 @@ avocado %&lt;&gt;%
 </blockquote>
 </div>
 </div>
-<div id="going-vectorize-crazy" class="section level2" number="3.6">
+<div id="going-vectorize-crazy" class="section level2">
 <h2><span class="header-section-number">3.6</span> Going vectorize crazy</h2>
 <p>Next, we’ll review vectorizing: this is a feature of R that you probably use all the time and don’t even know it! We’ll learn a little more about what vectorized functions do and how you can vectorize any function you wish.</p>
 <p>To read more in-depth about vectorized functions in R, check out Noam Ross’s handy <a href="http://www.noamross.net/blog/2014/4/16/vectorization-in-r--why.html">blog post</a>. We won’t be getting deep into the nuts and bolts of how vectorization works in R today. We’ll just be discussing it at a high level that should orient you enough to be able to make quick use of vectorizing helper functions.</p>
-<div id="vectorizing-its-like-a-for-loop-but-not" class="section level3" number="3.6.1">
+<div id="vectorizing-its-like-a-for-loop-but-not" class="section level3">
 <h3><span class="header-section-number">3.6.1</span> Vectorizing: it’s like a for loop, but not</h3>
 <p>As you’ve likely experienced, much data processing requires writing code to perform a particular action, and then wrapping it in other code to repeat that action many times over many objects. In R, this usually means doing the same operation to every element in a vector or every row in a df column.</p>
 <p>In most computing languages, the most sensible way to do one thing a bunch of times is to use a for loop, which (I know you know this but I’ll spell it out just to be extra) repeats the code inside the loop once for every element of a vector that’s specified at the beginning of the loop code.</p>
@@ -766,7 +761,7 @@ avocado %&lt;&gt;%
 </ul>
 <p>In general, it’s worth always checking to see if the function you plan to call on a vector is vectorized, and then you can use it on your vector or dataframe column without needing any additional looping.</p>
 </div>
-<div id="tidy-vectorizing" class="section level3" number="3.6.2">
+<div id="tidy-vectorizing" class="section level3">
 <h3><span class="header-section-number">3.6.2</span> Tidy vectorizing</h3>
 <p>If you use <code>mutate()</code> for your everyday column-wise data manipulation needs, using vectorized functions is smooth. In fact, <code>mutate()</code> is built to encourage you to use vectorized functions for column manipulation.</p>
 <p>If we go back to the Hass avocado sale data, we can see this at work. For example, let’s take another look at the code we used earlier to create a new column for the weekly total number of avocados sold, but log-10 transformed. Earlier, we saw order-of-magnitude differences in avocado sales between different regions, so we log-transformed the data to get it to be more normally distributed.</p>
@@ -789,7 +784,7 @@ avocado %&lt;&gt;%
 ## # … with 15,535 more rows</code></pre>
 <p>We can write this in one call, without needing to wrap it in a loop, because <code>log10()</code> is vectorized, and returns a vector the same length as the input vector. Neat! You can use any vectorized functions “naked” (without any extra looping code) to create new dataframe columns inside of <code>mutate()</code> with no problem.</p>
 <p>But what about functions that aren’t already vectorized? Can we use R magic to make them vectorized, if we so wish? Why yes, we can!</p>
-<div id="intro-to-map-anything-is-vectorized-if-you-want" class="section level4" number="3.6.2.1">
+<div id="intro-to-map-anything-is-vectorized-if-you-want" class="section level4">
 <h4><span class="header-section-number">3.6.2.1</span> Intro to <code>map()</code>: Anything is vectorized if you want</h4>
 <p>At their root, vectorizing helper functions do <em>very nearly what a for loop does,</em> but with a little more specificity in their syntax that can help protect you from tricky typos. With a vectorizing function, you still specify the two main code components that you’d specify in a for loop:</p>
 <ol style="list-style-type: decimal">
@@ -854,7 +849,7 @@ avocado %&lt;&gt;%
 <p><strong>Instructor’s note:</strong> Please note that this is not the only valid syntax for feeding functions into <code>map()</code>. There are subtle reasons to prefer tilde <code>~</code> formula-style anonymous functions in some cases, and bare function names as objects in others, and full <code>function (x) {...}</code> anonymous functions in other cases still. As long as you’re consistent about it, <em>for non-advanced learners, pick one syntax and teach that one only.</em> Avoiding confusion is more important than a comprehensive explanation at this level.</p>
 </blockquote>
 </div>
-<div id="special-versions-of-map" class="section level4" number="3.6.2.2">
+<div id="special-versions-of-map" class="section level4">
 <h4><span class="header-section-number">3.6.2.2</span> Special versions of <code>map()</code></h4>
 <p>It’s important to remember this: <strong><code>map()</code> <em>always</em> returns a list.</strong> Even if each element of the output list contains an element of the same atomic type, and length 1, <code>map()</code> is not going to try to guess anything and turn your output into an atomic vector. The philosophy of the tidyverse is to be conservative, and avoid guessing data types of output, lest it be wrong.</p>
 <p>If you, the coder, know <em>exactly</em> the data type you expect in your output vector, you can use a specialized version of <code>map()</code> that will return an atomic output vector of your desired data type, or else throw an error (at which point you would go and fix the offending code). These are all called <code>map_*()</code>, where the suffix indicates the expected data type of your output.</p>
@@ -867,7 +862,7 @@ avocado %&lt;&gt;%
 <p>There’s a version of <code>map_*()</code> for every possible atomic vector data type.</p>
 <p>Added benefit: these functions will also will not coerce any output data types without your knowledge. If you pick the wrong <code>map_*()</code> function for your output data type, or the code inside <code>map_*()</code> doesn’t actually return the data type you thought it would, you’ll get an R error that should remind you to go back and fix the offending code.</p>
 </div>
-<div id="using-map-on-list-columns-inside-a-df" class="section level4" number="3.6.2.3">
+<div id="using-map-on-list-columns-inside-a-df" class="section level4">
 <h4><span class="header-section-number">3.6.2.3</span> Using <code>map()</code> on list-columns inside a df</h4>
 <p>Remember from before when we learned about creating nested dataframes, that nesting creates a <strong>list-column</strong> where each list element contains another, smaller dataframe pertaining to just the data from that row’s record. What if we wanted to manipulate the data contained inside each sub-dataframe? Since the column of nested data is a list, we should be able to use <code>map()</code> to operate on it.</p>
 <p>Here, we’ll see how we can use <code>map()</code> to calculate subject-level summary statistics without discarding observation-level data from the dataframe.</p>
@@ -983,7 +978,7 @@ avocado %&lt;&gt;%
 <p>Ultimately, it’s a matter of personal taste, but if you find that you like managing your observation-level data and your unit-level summary data in this way, then you can use these techniques as you like!</p>
 </div>
 </div>
-<div id="a-caveat-when-not-to-vectorize" class="section level3" number="3.6.3">
+<div id="a-caveat-when-not-to-vectorize" class="section level3">
 <h3><span class="header-section-number">3.6.3</span> A caveat: When not to vectorize</h3>
 <p>Ultimately, I love vectorizing functions like <code>map()</code>–they’ve helped me keep a lot more of my data processing inside of tidyverse functions, and often saved me from copying and pasting code. There are, of course, cases when writing your code to work inside of vectorizing helpers isn’t necessarily optimal. Here are a couple that I’ve run into:</p>
 <ul>
@@ -1000,7 +995,7 @@ avocado %&lt;&gt;%
 </ul>
 </div>
 </div>
-<div id="hella-models" class="section level2" number="3.7">
+<div id="hella-models" class="section level2">
 <h2><span class="header-section-number">3.7</span> Hella models</h2>
 <p>Now that we’ve demonstrated its functionality through a simpler example, we can get into the the real star of using <code>map()</code> inside <code>mutate()</code> to work with list-columns in a dataframe. If each element of a list can contain <em>any</em> R object that could otherwise be stored in its own variable, then a list should be able to hold model objects in it. And we can create each model object in that list-column of models by using <code>map()</code> to fit a model to every sub-dataframe in a list-column of dataframes. Then, if we produce a list-column where each element is a model object with the same values in it, because it’s the same model fit to different data, we can use <code>map()</code> again to extract model coefficients from each model in the list into their own list-column. In this way, we can generate more complex (and hopefully more informative) statistics about each of the grouping units in our multilevel data.</p>
 <p>Let’s get back to the question driving our earlier data exploration, before we did a dive into list-columns and <code>map()</code>: <strong>Do avocado buyers prefer buying conventional or organic avocados? By how much? How do these patterns differ from region to region?</strong></p>
@@ -1021,7 +1016,7 @@ avocado %&lt;&gt;%
 <p>The model formula would look something like this:</p>
 <p><code>total_volume ~ type + avg_price</code></p>
 <p>We’ll want to use <code>lm()</code> to fit this model to each <code>region</code> separately, so that we can see the variation in avocado buying preference across each metropolitan area. An incidental benefit of running a multiple regression that adjusts for <code>avg_price</code> is that it helps adjust for differences in avocado prices across regions that are likely due to differences in cost of living from place to place.</p>
-<div id="fitting-many-models" class="section level3" number="3.7.1">
+<div id="fitting-many-models" class="section level3">
 <h3><span class="header-section-number">3.7.1</span> Fitting many models</h3>
 <p>We can use dataframe list-columns, manipulated with <code>map()</code> inside <code>mutate()</code>, to fit this particular model to the avocado sales data from every metropolitan area. Since <code>mutate()</code> is amenable to defining a flexible number of columns, we can first do some light data preprocessing on the observation-level data contained in the <code>sales</code> column, and then in the next command, within <code>mutate()</code>, create a new list-column using <code>map()</code> to fit an <code>lm()</code> model to each row’s data in <code>sales</code>.</p>
 <pre class="language-r"><code class="language-r"># Again, the double-sided pipe in magrittr
@@ -1112,7 +1107,7 @@ avo_by_region %&lt;&gt;%
 <p>Importantly, because this is a multiple regression, the <code>typeorganic</code> term tells us the estimate difference in volume of avocados sold with price “held constant”, or <em>if both conventional and organic avocados cost the same in a hypothetical week.</em> If we can estimate the difference volume sold when the two avocado types cost the same, and people are STILL buying more conventional avocados, there must be an extenuating reason why people don’t buy organic avocados even if they’re not more expensive.</p>
 <p>The console output that you get from calling <code>summary()</code> on a single <code>lm</code> object is great for visual inspection, but there’s a whole lot of output here that is not the most efficient to parse programmatically with code. As such, we won’t be using <code>map()</code> inside <code>mutate()</code> to call <code>summary()</code> on every single model object in the <code>model</code> column. There are other functions we can use to give us cleaner, more ready-to-use output, that we’ll explore next.</p>
 </div>
-<div id="extracting-statistics-from-models" class="section level3" number="3.7.2">
+<div id="extracting-statistics-from-models" class="section level3">
 <h3><span class="header-section-number">3.7.2</span> Extracting statistics from models</h3>
 <p>In order to programmatically extract coefficients, standard errors, and other statistics of interest from each model object in the <code>model</code> column of <code>avo_by_region</code>, our nested avocado sale data, we are going to use the <code>tidy()</code> helper function in the <code>broom</code> R package. <code>broom</code> is designed for generating tidyverse-safe versions of statistical analysis objects to get you from models to plots &amp; interpretation with as little hacking as possible.</p>
 <p>First, to demonstrate the output of <code>broom::tidy()</code>, we can call it just on the first model element of the <code>model</code> column of <code>avo_by_region</code> just as we called <code>summary()</code> on it above.</p>
@@ -1162,7 +1157,7 @@ avo_coefs</code></pre>
 <p>Notice that as of <code>tidyr &gt;=1.0.0</code>, <code>unnest()</code>’s default behavior is to retain any other list-columns present in the df that aren’t getting unnested. If you unnested a list-column of dataframes that each had multiple rows, e.g. the <code>coefs</code> column, where each sub-dataframe has a row for each coefficient, the other list-column(s) getting retained would have their values <em>repeated</em> for each of the new rows created by unnesting the other column. Sometimes you might want that, but sometimes you might not want to increase your df’s memory footprint so much. In those cases, you should use <code>select()</code> to remove list-columns that you don’t want repeated before unnesting.</p>
 <hr />
 </div>
-<div id="visualizing-many-statistics" class="section level3" number="3.7.3">
+<div id="visualizing-many-statistics" class="section level3">
 <h3><span class="header-section-number">3.7.3</span> Visualizing many statistics</h3>
 <p>Now that we have our model coefficients in a long form dataframe, with a chunk of rows for each metropolitan area, let’s plot the model estimates for each region!</p>
 <p>Here, we’ll focus on plotting the values of the <code>typeorganic</code> term, as this will index each region’s relative buying preference (or anti-preference?) for organic relative to conventional avocados. This estimate will conveniently also be adjusted for average avocado price across regions, so it should <em>not</em> be affected by general differences in avocado prices (and cost of living) from region to region.</p>
@@ -1224,9 +1219,9 @@ avo_coefplot</code></pre>
   # (for the regions to be ordered by the model estimate)
   # the model estimates need to be bound on to the raw diffs
   left_join(avo_coefs %&gt;% filter(term == &quot;typeorganic&quot;),
-            by = &quot;region&quot;)</code></pre>
-<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
-<pre class="language-r"><code class="language-r">avo_coefplot +
+            by = &quot;region&quot;)
+
+avo_coefplot +
   # error bars and points for the raw data
   # notice that we use the data argument to feed in different data
   geom_errorbar(aes(y = diff_mean,
@@ -1249,7 +1244,7 @@ avo_coefplot</code></pre>
 <p>That concludes the core analysis of this tutorial! If you like, continue following along for a rapid-fire demonstration of another use case of <code>map()</code> inside <code>mutate()</code> with nested dataframes to repeat analysis across many datasets containing similarly structured data.</p>
 </div>
 </div>
-<div id="bonus-example-bootstrapping" class="section level2" number="3.8">
+<div id="bonus-example-bootstrapping" class="section level2">
 <h2><span class="header-section-number">3.8</span> Bonus example: bootstrapping</h2>
 <blockquote>
 <p><strong>Instructor’s note:</strong> This section is designed as a demonstration of features rather than a live how-to. The main body of the code-along lesson concludes after generating a summary graph of model statistics for each <code>region</code>. The lesson teaches one example case of using <code>map()</code> inside <code>mutate()</code> to fit a model to a bunch of sub-dataframes in a nested master dataframe, but there are other analysis contexts where this strategy comes in handy.</p>
@@ -1283,23 +1278,23 @@ avo_coefplot</code></pre>
 ## # A tibble: 200 x 2
 ##    splits            id          
 ##    &lt;list&gt;            &lt;chr&gt;       
-##  1 &lt;split [338/122]&gt; Bootstrap001
+##  1 &lt;split [338/123]&gt; Bootstrap001
 ##  2 &lt;split [338/118]&gt; Bootstrap002
-##  3 &lt;split [338/122]&gt; Bootstrap003
+##  3 &lt;split [338/124]&gt; Bootstrap003
 ##  4 &lt;split [338/124]&gt; Bootstrap004
 ##  5 &lt;split [338/137]&gt; Bootstrap005
 ##  6 &lt;split [338/126]&gt; Bootstrap006
-##  7 &lt;split [338/126]&gt; Bootstrap007
+##  7 &lt;split [338/125]&gt; Bootstrap007
 ##  8 &lt;split [338/138]&gt; Bootstrap008
-##  9 &lt;split [338/119]&gt; Bootstrap009
-## 10 &lt;split [338/125]&gt; Bootstrap010
+##  9 &lt;split [338/118]&gt; Bootstrap009
+## 10 &lt;split [338/124]&gt; Bootstrap010
 ## # … with 190 more rows</code></pre>
 <p><code>bootstraps()</code> returns a dataframe with a character column called <code>id</code> which labels each iteration, and a list column called <code>splits</code> where each element houses metadata for a resampled dataset. I say metadata because part of the trick that <code>bootstraps()</code> uses is that the native <code>split</code> object type doesn’t actually contain any data on its own:</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
   pull(splits) %&gt;%
   pluck(1)</code></pre>
-<pre><code>## &lt;Training/Validation/Total&gt;
-## &lt;338/122/338&gt;</code></pre>
+<pre><code>## &lt;Analysis/Assess/Total&gt;
+## &lt;338/123/338&gt;</code></pre>
 <p>These numbers aren’t really designed for human consumption on their own. The real magic happens when you call <code>as.data.frame()</code> on a <code>split</code> object, which triggers it to actually do the resampling and give you a tibble of data.</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
   pull(splits) %&gt;%
@@ -1308,16 +1303,16 @@ avo_coefplot</code></pre>
 <pre><code>## # A tibble: 338 x 8
 ##    region date       avg_price total_volume type   year total_volume_lo…
 ##    &lt;chr&gt;  &lt;date&gt;         &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt; &lt;int&gt;            &lt;dbl&gt;
-##  1 NewYo… 2017-08-20      1.75     1057189. conv…  2017             6.02
-##  2 NewYo… 2018-03-18      1.7       189434. orga…  2018             5.28
-##  3 NewYo… 2017-05-28      2.38       76002. orga…  2017             4.88
-##  4 NewYo… 2015-08-02      2.12       13852. orga…  2015             4.14
-##  5 NewYo… 2016-08-21      2.16       30583. orga…  2016             4.49
-##  6 NewYo… 2016-09-04      1.47     1278749. conv…  2016             6.11
-##  7 NewYo… 2017-08-20      1.85      107275. orga…  2017             5.03
-##  8 NewYo… 2016-12-11      2.22       32659. orga…  2016             4.51
-##  9 NewYo… 2015-02-01      1.36     1433763. conv…  2015             6.16
-## 10 NewYo… 2016-07-31      2.41       24048. orga…  2016             4.38
+##  1 NewYo… 2017-05-28      2.38       76002. orga…  2017             4.88
+##  2 NewYo… 2015-08-02      2.12       13852. orga…  2015             4.14
+##  3 NewYo… 2016-08-21      2.16       30583. orga…  2016             4.49
+##  4 NewYo… 2016-09-04      1.47     1278749. conv…  2016             6.11
+##  5 NewYo… 2017-08-20      1.85      107275. orga…  2017             5.03
+##  6 NewYo… 2016-12-11      2.22       32659. orga…  2016             4.51
+##  7 NewYo… 2015-02-01      1.36     1433763. conv…  2015             6.16
+##  8 NewYo… 2016-07-31      2.41       24048. orga…  2016             4.38
+##  9 NewYo… 2017-02-12      1.19     1955395. conv…  2017             6.29
+## 10 NewYo… 2015-08-23      2.28       15343. orga…  2015             4.19
 ## # … with 328 more rows, and 1 more variable: avg_price_shift1 &lt;dbl&gt;</code></pre>
 <p>To double-check that the data were actually resampled with replacement, we can look in this first resampled tibble to make sure that at least some of the rows appear multiple times in the data.</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
@@ -1326,7 +1321,7 @@ avo_coefplot</code></pre>
   as.data.frame() %&gt;%
   count(date) %&gt;%
   arrange(desc(n))</code></pre>
-<pre><code>## # A tibble: 144 x 2
+<pre><code>## # A tibble: 143 x 2
 ##    date           n
 ##    &lt;date&gt;     &lt;int&gt;
 ##  1 2016-12-18     6
@@ -1339,7 +1334,7 @@ avo_coefplot</code></pre>
 ##  8 2017-05-28     5
 ##  9 2015-02-22     4
 ## 10 2015-04-19     4
-## # … with 134 more rows</code></pre>
+## # … with 133 more rows</code></pre>
 <p>Looks resampled to me! Now, we can use the same strategy we used before, but instead of operating on the raw data for each <code>region</code> contained in the <code>sales</code> column of <code>avo_by_region</code>, we’ll operate on the resampled data for each bootstrap <code>id</code> contained in the <code>splits</code> column of <code>avo_nyc_boot</code>.</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&lt;&gt;%
   # Note that here, I&#39;m not saving the models into their own column
@@ -1364,16 +1359,16 @@ avo_coefplot</code></pre>
 <pre><code>## # A tibble: 600 x 6
 ##    id           term             estimate std.error statistic   p.value
 ##    &lt;chr&gt;        &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-##  1 Bootstrap001 (Intercept)         6.23     0.0285    218.   0.       
-##  2 Bootstrap001 typeorganic        -1.41     0.0450    -31.3  2.03e-101
-##  3 Bootstrap001 avg_price_shift1   -0.255    0.0562     -4.54 7.99e-  6
-##  4 Bootstrap002 (Intercept)         6.28     0.0283    222.   0.       
-##  5 Bootstrap002 typeorganic        -1.31     0.0441    -29.7  7.27e- 96
-##  6 Bootstrap002 avg_price_shift1   -0.383    0.0564     -6.78 5.51e- 11
-##  7 Bootstrap003 (Intercept)         6.29     0.0289    217.   0.       
-##  8 Bootstrap003 typeorganic        -1.28     0.0409    -31.4  1.13e-101
-##  9 Bootstrap003 avg_price_shift1   -0.397    0.0539     -7.37 1.35e- 12
-## 10 Bootstrap004 (Intercept)         6.24     0.0279    223.   0.       
+##  1 Bootstrap001 (Intercept)         6.22     0.0281    221.   0.       
+##  2 Bootstrap001 typeorganic        -1.42     0.0449    -31.6  1.37e-102
+##  3 Bootstrap001 avg_price_shift1   -0.239    0.0559     -4.28 2.40e-  5
+##  4 Bootstrap002 (Intercept)         6.29     0.0284    221.   0.       
+##  5 Bootstrap002 typeorganic        -1.31     0.0441    -29.7  7.42e- 96
+##  6 Bootstrap002 avg_price_shift1   -0.384    0.0565     -6.80 4.90e- 11
+##  7 Bootstrap003 (Intercept)         6.29     0.0290    217.   0.       
+##  8 Bootstrap003 typeorganic        -1.28     0.0408    -31.5  4.19e-102
+##  9 Bootstrap003 avg_price_shift1   -0.394    0.0539     -7.32 1.91e- 12
+## 10 Bootstrap004 (Intercept)         6.24     0.0278    224.   0.       
 ## # … with 590 more rows</code></pre>
 <p>These coefficients are now ready to feed into a <code>ggplot2</code> histogram. I’ll just inspect the bootstrapped error distribution for <code>typeorganic</code>, the coefficient for the weekly difference in (log-10) volume of organic avocados sold relative to conventional avocados.</p>
 <pre class="language-r"><code class="language-r">avo_nyc_boot %&gt;%
@@ -1426,48 +1421,43 @@ avo_coefplot</code></pre>
        title = &quot;Bootstrap vs. &#39;raw&#39; errors for the New York avocado sale volume regression&quot;,
        subtitle = &quot;The bootstrapped error is more conservative&quot;) +
   theme_bw()</code></pre>
-<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
 <p><img src="/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-boot-coefplot-1.png" width="672" /></p>
 <p>Yep, it looks like the error bounds on the bootstrapped data are wider than the equivalent standard error from the <code>lm</code> fit to the raw data. This will usually be the case! Perhaps a good argument to use bootstrapped standard errors more often, to be conservative with our statistics.</p>
 </div>
 </div>
-<div id="in-closing" class="section level1" number="4">
+<div id="in-closing" class="section level1">
 <h1><span class="header-section-number">4</span> In closing</h1>
 <p>I hope from this tutorial you’ve become comfortable exploring multilevel data by using <code>nest()</code> and <code>unnest()</code> to work with list-columns of sub-dataframes, and by using <code>map()</code> inside <code>mutate()</code> to calculate all manner of summary statistics for each grouping unit in your data. The tools and techniques we’ve practiced here may prove useful to you for all sorts of other data wrangling and sense-making tasks, so keep an eye out for contexts with similarly structured data where you might be able to use these tools.</p>
 <p>Happy analyzing!</p>
 </div>
 
       </div></div>
-  <div class="pagination">
+
+<div class="pagination">
     <div class="pagination__title">
-      <span
-        class="pagination__title-h">Read other posts</span>
-      <hr />
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
     </div>
     <div class="pagination__buttons">
-      
-      <span class="button previous">
-        <a href="/posts/2020-08-10-setting-up-this-website/">
-          <span class="button__icon">←</span>
-          <span class="button__text">Setting up this website</span>
-        </a>
-      </span>
-      
-      
+        
+        <span class="button previous">
+            <a href="/posts/2020-08-10-setting-up-this-website/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Setting up this website</span>
+            </a>
+        </span>
+        
+        
     </div>
-  </div>
-  
+</div>
 
-  
+
+
+
 
 </div>
 
   </div>
-
-  
-    
-
-  
 
   
     <footer class="footer">
@@ -1483,6 +1473,8 @@ avo_coefplot</code></pre>
 
 <script src="/assets/main.js"></script>
 <script src="/assets/prism.js"></script>
+
+
 
 
 

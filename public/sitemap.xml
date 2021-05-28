@@ -4,12 +4,32 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2020-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2021-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/teaching/</loc>
+    <lastmod>2021-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2021-02-10-intro-psych-brain-bingo/</loc>
+    <lastmod>2021-02-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/tutorial/</loc>
+    <lastmod>2021-02-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -33,22 +53,12 @@
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/tidyverse/</loc>
     <lastmod>2020-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/2020-08-15-prepare-teach-r-lesson/</loc>
-    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/tutorial/</loc>
     <lastmod>2020-08-15T00:00:00+00:00</lastmod>
   </url>
   

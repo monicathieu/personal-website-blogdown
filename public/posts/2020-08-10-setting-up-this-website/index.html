@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   
-    <title>Setting up this website :: Monica Thieu — Research &amp; goodies</title>
+    <title>Setting up this website :: Monica Thieu</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="Setting up a blogdown repository Blogdown-ing with a different Hugo theme  Making a new homepage template  Understanding Hugo’s expected structure  Adding pages to the menu bar  Hooking it into the interwebs  Setting public as the GitHub Pages root directory Re-pointing my old Squarespace domain name  Pointing Squarespace DNS to GitHub Pages URL Get GitHub Pages URL to use new domain   Adding a photo gallery into the theme Fixing code syntax highlighting  Prism."/>
-<meta name="keywords" content=""/>
-<meta name="robots" content="noodp"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="I hacked the HTML so you don&#39;t have to. Learn from my suffering pls!" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
 <link rel="canonical" href="/posts/2020-08-10-setting-up-this-website/" />
 
 
@@ -23,31 +23,33 @@
 
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon-192x192.png">
 
-<link rel="shortcut icon" href="/img/favicon/red.png">
+  <link rel="shortcut icon" href="/img/favicon/red.png">
 
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Setting up this website :: Monica Thieu — Research &amp; goodies" />
-<meta name="twitter:description" content="Setting up a blogdown repository Blogdown-ing with a different Hugo theme  Making a new homepage template  Understanding Hugo’s expected structure  Adding pages to the menu bar  Hooking it into the interwebs  Setting public as the GitHub Pages root directory Re-pointing my old Squarespace domain name  Pointing Squarespace DNS to GitHub Pages URL Get GitHub Pages URL to use new domain   Adding a photo gallery into the theme Fixing code syntax highlighting  Prism." />
-<meta name="twitter:site" content="/" />
-<meta name="twitter:creator" content="" />
-<meta name="twitter:image" content="">
+
 
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Setting up this website :: Monica Thieu — Research &amp; goodies">
-<meta property="og:description" content="Setting up a blogdown repository Blogdown-ing with a different Hugo theme  Making a new homepage template  Understanding Hugo’s expected structure  Adding pages to the menu bar  Hooking it into the interwebs  Setting public as the GitHub Pages root directory Re-pointing my old Squarespace domain name  Pointing Squarespace DNS to GitHub Pages URL Get GitHub Pages URL to use new domain   Adding a photo gallery into the theme Fixing code syntax highlighting  Prism." />
+<meta property="og:title" content="Setting up this website">
+<meta property="og:description" content="I hacked the HTML so you don&#39;t have to. Learn from my suffering pls!" />
 <meta property="og:url" content="/posts/2020-08-10-setting-up-this-website/" />
-<meta property="og:site_name" content="Setting up this website" />
-<meta property="og:image" content="">
-<meta property="og:image:width" content="50%">
-<meta property="og:image:height" content="25%">
+<meta property="og:site_name" content="Monica Thieu" />
 
-<meta property="article:published_time" content="2020-08-10 00:00:00 &#43;0000 UTC" />
+  
+    <meta property="og:image" content="/img/favicon/red.png">
+  
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2020-08-10 00:00:00 &#43;0000 UTC" />
+
 
 
 
@@ -60,7 +62,7 @@
 
 
 </head>
-<body class="">
+<body class="red">
 
 
 <div class="container headings--one-size">
@@ -75,7 +77,9 @@
 </a>
 
     </div>
-    <div class="menu-trigger">menu</div>
+    
+      <div class="menu-trigger">menu</div>
+    
   </div>
   
     <nav class="menu">
@@ -144,15 +148,11 @@
   <h1 class="post-title">
     <a href="/posts/2020-08-10-setting-up-this-website/">Setting up this website</a></h1>
   <div class="post-meta">
-      
-    <span class="post-date">
-      2020-08-10
-    </span>
     
+      <span class="post-date">
+        2020-08-10 
+      </span>
     
-    <span class="post-author">::
-      Monica Thieu
-    </span>
     
   </div>
 
@@ -176,33 +176,30 @@
 
   
 
+  
+
   <div class="post-content"><div>
         
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 <div id="TOC">
 <ul>
 <li><a href="#setting-up-a-blogdown-repository">Setting up a blogdown repository</a></li>
-<li><a href="#blogdown-ing-with-a-different-hugo-theme">Blogdown-ing with a different Hugo theme</a>
-<ul>
-<li><a href="#making-a-new-homepage-template">Making a new homepage template</a>
-<ul>
+<li><a href="#blogdown-ing-with-a-different-hugo-theme">Blogdown-ing with a different Hugo theme</a><ul>
+<li><a href="#overriding-one-or-two-layouts-of-a-git-submodule-theme">Overriding one or two layouts of a git submodule theme</a></li>
+<li><a href="#making-a-new-homepage-template">Making a new homepage template</a><ul>
 <li><a href="#understanding-hugos-expected-structure">Understanding Hugo’s expected structure</a></li>
 </ul></li>
 <li><a href="#adding-pages-to-the-menu-bar">Adding pages to the menu bar</a></li>
 </ul></li>
-<li><a href="#hooking-it-into-the-interwebs">Hooking it into the interwebs</a>
-<ul>
+<li><a href="#hooking-it-into-the-interwebs">Hooking it into the interwebs</a><ul>
 <li><a href="#setting-public-as-the-github-pages-root-directory">Setting <code>public</code> as the GitHub Pages root directory</a></li>
-<li><a href="#re-pointing-my-old-squarespace-domain-name">Re-pointing my old Squarespace domain name</a>
-<ul>
+<li><a href="#re-pointing-my-old-squarespace-domain-name">Re-pointing my old Squarespace domain name</a><ul>
 <li><a href="#pointing-squarespace-dns-to-github-pages-url">Pointing Squarespace DNS to GitHub Pages URL</a></li>
 <li><a href="#get-github-pages-url-to-use-new-domain">Get GitHub Pages URL to use new domain</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#adding-a-photo-gallery-into-the-theme">Adding a photo gallery into the theme</a></li>
-<li><a href="#fixing-code-syntax-highlighting">Fixing code syntax highlighting</a>
-<ul>
+<li><a href="#fixing-code-syntax-highlighting">Fixing code syntax highlighting</a><ul>
 <li><a href="#prism.js-and-the-mysterious-case-of-pre-vs-code-classes">Prism.js, and the mysterious case of pre vs code classes</a></li>
 <li><a href="#lua-filters-for-pandoc">Lua filters for pandoc</a></li>
 <li><a href="#updating-rstudios-pandoc-installation">Updating RStudio’s pandoc installation</a></li>
@@ -222,6 +219,14 @@
 <div id="blogdown-ing-with-a-different-hugo-theme" class="section level1">
 <h1>Blogdown-ing with a different Hugo theme</h1>
 <p><code>blogdown</code> tends to play best with Hugo themes that are structured very similarly to Yihui’s pre-formatted <a href="https://github.com/yihui/hugo-lithium"><code>hugo-lithium</code></a> theme. I ended up pulling <a href="https://themes.gohugo.io/hugo-theme-terminal/">Radek Koziel’s Terminal theme</a> from the Hugo theme gallery. Aside from the minimalist look, I liked that it came with support for code highlighting, as I knew I’d be posting blogs with R code chunks. Getting the code highlighting to work ended up taking <a href="#fixing-code-syntax-highlighting">a bit more finagling</a> than I anticipated at first, though.</p>
+<div id="overriding-one-or-two-layouts-of-a-git-submodule-theme" class="section level2">
+<h2>Overriding one or two layouts of a git submodule theme</h2>
+<p>When I first set this website up, I didn’t know how to override default theme layouts without editing in the theme folder itself, so I grabbed a static copy of the theme folder from GitHub. I figured this would let me make the theme edits I wanted without accidentally harming the upstream theme, or getting overwritten if I kept the theme as a git submodule and updated the theme regularly.</p>
+<p>However, I eventually realized that it was too bothersome to try to keep the theme dependency software updated (turns out I don’t fully understand all the front-end code that Radek uses to render the aesthetics!). Too many <a href="https://docs.github.com/en/code-security/supply-chain-security/managing-vulnerabilities-in-your-projects-dependencies/configuring-dependabot-security-updates">GitHub Dependabot</a> updates that went over my head! I decided to sync back on to Radek’s updated theme repo using a <a href="https://bookdown.org/yihui/blogdown/version-control.html">git submodule</a> for the theme instead. I renamed the old theme folder to remove name conflicts with the incoming updated theme, and then <code>git submodule add</code>-ed the <code>hugo-theme-terminal</code> repo into my <code>themes</code> folder.</p>
+<p>(Now, every time I want to update the theme, I can use <code>git submodule update</code> and get any security updates taken care of as well.)</p>
+<p>Now, how to override layouts in the one or two places I might want to? Turns out this was straightforward to do all along! Per <a href="https://bwaycer.github.io/hugo_tutorial.hugo/themes/customizing/#replace-a-single-template-file">these instructions</a>, I created a <code>layouts</code> folder in the root folder of the repo, the contents of which would override any files in <code>theme/hugo-theme-terminal/layouts</code>, as long as any file/folder names in the override layouts folder exactly matched files in the theme folder to be overridden.</p>
+<p>For the theme edits below where I needed to create new layout pages or edit existing ones, I made copies in this theme-external <code>layouts</code> folder.</p>
+</div>
 <div id="making-a-new-homepage-template" class="section level2">
 <h2>Making a new homepage template</h2>
 <p>Radek’s Terminal theme by default sets the homepage to be a list of blog posts. I knew that for this site, I wanted a simple splash landing page. Additionally, I still wanted to use the blog posts list layout, but as a page accessible through the menu bar.</p>
@@ -230,7 +235,7 @@
 <p>With little experience in HTML and related front-end coding, it took me a while to wrap my head around the division between webpage <em>layouts</em> and <em>content.</em></p>
 <p>At first blush it sounds reasonable–you want to be able to specify <em>what’s</em> on your webpage separately from <em>where</em> things go on your webpage, to centralize design decisions. Hard-coding the layout of, say, a blog post page would be troublesome if you had to add page features by editing the layout of every single page individually. But what about a home page, where the layout would only be used once over the whole website? It would be so straightforward to hard-code layout information directly in my homepage file. Not so fast, though!</p>
 <p>To change the layout of the homepage, I had to understand enough Hugo to construct my own homepage <em>layout</em> file separately from my homepage <em>content</em> file, and then save the layout file in the right place for Hugo to know it was the layout guide for my homepage.</p>
-<p>The homepage layout file should live at <code>themes/your-theme/layouts/_index.html</code>. Depending on your theme, either this file will already exist and you can edit it, or a dedicated homepage layout will not already exist and you will need to create a file at this path. I created this file, and copied and pasted enough Hugo code from existing layout files to get the <code>_index.html</code> homepage to show a “cover image”, and underneath the cover image, whatever text lives in the homepage content file. The cover image functionality was included with Radek’s theme, so I didn’t have to set that up myself.</p>
+<p>The homepage layout file that comes with your theme should live at <code>themes/your-theme/layouts/_index.html</code>. Depending on your theme, either this file will already exist and you can edit it, or a dedicated homepage layout will not already exist and you will need to create a file at <code>layouts/_index.html</code> in your override layouts folder to override whatever theme default is set for the homepage. Since a dedicated homepage didn’t exist for this theme (the default homepage was a list of blog posts), I created this file from scratch. I copied and pasted enough Hugo code from existing layout files to get the <code>_index.html</code> homepage to show a “cover image”, and underneath the cover image, whatever text lives in the homepage content file. The cover image functionality was included with Radek’s theme, so I didn’t have to set that up myself.</p>
 <p>The homepage content file should live at <code>content/_index.Rmd</code>. Again, I set up the homepage content file to render the R Markdown content on this page and show it beneath the cover image on the home page. I didn’t do anything fancy here–just a couple sentences introducing myself and the website. Not enough to reveal that the homepage theme is actually super crappy!</p>
 <p>You can find a bunch more details in <a href="https://bookdown.org/yihui/blogdown/templates.html#a-minimal-example">section 2.5.1</a> of the <code>blogdown</code> manual and the <a href="https://gohugo.io/templates/homepage/">homepage template section</a> of the Hugo manual.</p>
 </div>
@@ -271,8 +276,8 @@
 <p>I attempted reproduce Bruno’s gallery by copying his the code examples into files at the following paths in my own repo:</p>
 <ol style="list-style-type: decimal">
 <li><strong>Front matter:</strong> In the YAML header of the <code>game-shows</code> index Rmd file</li>
-<li><strong>Gallery shortcode:</strong> Into a new file at <code>themes/hugo-theme-terminal/layouts/shortcodes/gallery.html</code></li>
-<li><strong>Photoswipe calling code:</strong> In the footer of <code>themes/hugo-theme-terminal/layouts/_default/single.html</code>. This I put into a <code>{{if .HasShortcode }}</code> block per Bruno’s instructions, so that it would only trigger in the footer of pages that had a gallery specified for them. (It was a little hacky to put it in <code>single.html</code> such that the code was included for ANY basic web page, but it seemed to work.)</li>
+<li><strong>Gallery shortcode:</strong> Into a new file at <code>layouts/shortcodes/gallery.html</code> (to avoid messing with the base theme, per above)</li>
+<li><strong>Photoswipe calling code:</strong> In the footer of <code>layouts/_default/single.html</code>. This I put into a <code>{{if .HasShortcode }}</code> block per Bruno’s instructions, so that it would only trigger in the footer of pages that had a gallery specified for them. (It was a little hacky to put it in <code>single.html</code> such that the code was included for ANY basic web page, but it seemed to work.)</li>
 <li>*<strong>Photoswipe source code</strong> (not directly shown in Bruno’s post, but linked:) Downloaded the contents of the <a href="https://github.com/dimsemenov/PhotoSwipe/tree/master/dist">Photoswipe distribution folder</a> into <code>static/plugins/photoswipe</code>. Any files in this path, thanks to the behavior of the <code>static</code> folder, are “seen” by web pages as being at <code>plugins/photoswipe</code>, for example.</li>
 <li><strong>Photo tiling CSS:</strong> At the end of <code>static/plugins/photoswipe/photoswipe.css</code></li>
 </ol>
@@ -304,10 +309,10 @@
 <p>I downloaded the <code>highlight.lua</code> file from Duncan Garmonsway’s <code>govdown</code> website repository and saved it into the <code>resources</code> folder of my own repo.</p>
 <p>Then, to test that the filter file worked at all, I partially knitted a tester Markdown file directly from the terminal. To debug just the pandoc part, and not the R Markdown part, I created a .md file where I wrote some filler Markdown text and included a styled code chunk with a language label like <code>```r</code> or <code>```html</code>. Then, in terminal, I ran a version of following pandoc command to try to knit the Markdown file with the highlighting syntax Lua filter script:</p>
 <p>(paths as always are machine-specific)</p>
-<pre class="shell"><code>pandoc intermediate-file.md --output output-file.html --lua-filter=PATH/TO/HIGHLIGHT/FILTER.lua --no-highlight</code></pre>
+<pre class="language-shell"><code class="language-shell">pandoc intermediate-file.md --output output-file.html --lua-filter=PATH/TO/HIGHLIGHT/FILTER.lua --no-highlight</code></pre>
 <p>The test worked! The knitted HTML had correctly highlighted chunks! So I went back to R Markdown and edited the <code>_output.yml</code> file to add the <code>highlight.lua</code> filtering command to the default YAML header that would run for every R Markdown in the directory. <a href="https://bookdown.org/yihui/rmarkdown/bookdown-project.html#output.yml"><code>_output.yml</code></a> allows you to specify default settings that would get thrown under the <code>output:</code> YAML header at the top of your Rmd. In this case, the <code>pandoc_args:</code> subheader takes a character vector of flags as they would be specified if you were calling pandoc through the terminal (as in the example code above).</p>
 <p>For this repo, the <code>_output.yml</code> contains the following YAML headers:</p>
-<pre class="yaml"><code>blogdown::html_page:
+<pre class="language-yaml"><code class="language-yaml">blogdown::html_page:
   toc: true
   pandoc_args: [&quot;--lua-filter=$HOME/Repos/personal-website/resources/highlight.lua&quot;, &quot;--no-highlight&quot;]</code></pre>
 <p>With the R Markdown pandoc settings now configured to call the <code>highlight.lua</code> filter script, everything SHOULD work smoothly. I crossed my fingers and ran <code>blogdown::serve_site()</code> to render my Rmd web pages and…</p>
@@ -322,43 +327,39 @@
 </div>
 
       </div></div>
-  <div class="pagination">
+
+<div class="pagination">
     <div class="pagination__title">
-      <span
-        class="pagination__title-h">Read other posts</span>
-      <hr />
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
     </div>
     <div class="pagination__buttons">
-      
-      <span class="button previous">
-        <a href="/posts/2020-08-15-prepare-teach-r-lesson/">
-          <span class="button__icon">←</span>
-          <span class="button__text">How to prepare and teach an R lesson</span>
-        </a>
-      </span>
-      
-      
-      <span class="button next">
-        <a href="/posts/2020-04-08-tidy-multilevel/">
-          <span class="button__text">Wrangling multilevel data in the tidyverse</span>
-          <span class="button__icon">→</span>
-        </a>
-      </span>
-      
+        
+        <span class="button previous">
+            <a href="/posts/2020-08-15-prepare-teach-r-lesson/">
+                <span class="button__icon">←</span>
+                <span class="button__text">How to prepare and teach an R lesson</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="/posts/2020-04-08-tidy-multilevel/">
+                <span class="button__text">Wrangling multilevel data in the tidyverse</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
     </div>
-  </div>
-  
+</div>
 
-  
+
+
+
 
 </div>
 
   </div>
-
-  
-    
-
-  
 
   
     <footer class="footer">
@@ -374,6 +375,8 @@
 
 <script src="/assets/main.js"></script>
 <script src="/assets/prism.js"></script>
+
+
 
 
 
