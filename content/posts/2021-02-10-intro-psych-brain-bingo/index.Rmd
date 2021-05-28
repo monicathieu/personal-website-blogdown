@@ -104,3 +104,5 @@ I know this sounds so glib, but my biggest tip for success in the actual stream 
 My second biggest tip is to make sure you are keeping an eye on _all_ necessary windows: the slides, the timer for each slide, the stream chat, and any message channel with the teaching team (incase they notice a technical difficulty).
 
 Overall, I had a lot of fun running it, and students reported that they enjoyed it too! The weirdest thing for me to get used to was the 5-ish second delay between me saying something and it getting streamed to students. When they commented in the chat (which was an effective way to hear from them because we couldn't see their Zoom messages from their breakout rooms!), I had to mentally adjust for comment lag in connecting what they'd typed to what I'd said. Not a huge deal, but I had to remind myself to wait for several seconds after I said something before expecting comments.
+
+If you want, you can watch a [replay of my stream](https://www.youtube.com/watch?v=L08QTtP7xSE) and see how engaging (lol) you think I managed to be!
