@@ -6,18 +6,161 @@
     <description>Recent content in hacks on Monica Thieu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/hacks/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 10 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/hacks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting up this website</title>
       <link>/posts/2020-08-10-setting-up-this-website/</link>
       <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>/posts/2020-08-10-setting-up-this-website/</guid>
-      <description>Setting up a blogdown repository Blogdown-ing with a different Hugo theme  Making a new homepage template  Understanding Hugo’s expected structure  Adding pages to the menu bar  Hooking it into the interwebs  Setting public as the GitHub Pages root directory Re-pointing my old Squarespace domain name  Pointing Squarespace DNS to GitHub Pages URL Get GitHub Pages URL to use new domain   Adding a photo gallery into the theme Fixing code syntax highlighting  Prism.</description>
+      <description>Setting up a blogdown repository Blogdown-ing with a different Hugo theme Overriding one or two layouts of a git submodule theme Making a new homepage template Understanding Hugo’s expected structure  Adding pages to the menu bar  Hooking it into the interwebs Setting public as the GitHub Pages root directory Re-pointing my old Squarespace domain name Pointing Squarespace DNS to GitHub Pages URL Get GitHub Pages URL to use new domain   Adding a photo gallery into the theme Fixing code syntax highlighting Prism.</description>
+      <content>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#setting-up-a-blogdown-repository&#34;&gt;Setting up a blogdown repository&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#blogdown-ing-with-a-different-hugo-theme&#34;&gt;Blogdown-ing with a different Hugo theme&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#overriding-one-or-two-layouts-of-a-git-submodule-theme&#34;&gt;Overriding one or two layouts of a git submodule theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#making-a-new-homepage-template&#34;&gt;Making a new homepage template&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#understanding-hugos-expected-structure&#34;&gt;Understanding Hugo’s expected structure&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#adding-pages-to-the-menu-bar&#34;&gt;Adding pages to the menu bar&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#hooking-it-into-the-interwebs&#34;&gt;Hooking it into the interwebs&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#setting-public-as-the-github-pages-root-directory&#34;&gt;Setting &lt;code&gt;public&lt;/code&gt; as the GitHub Pages root directory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#re-pointing-my-old-squarespace-domain-name&#34;&gt;Re-pointing my old Squarespace domain name&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#pointing-squarespace-dns-to-github-pages-url&#34;&gt;Pointing Squarespace DNS to GitHub Pages URL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#get-github-pages-url-to-use-new-domain&#34;&gt;Get GitHub Pages URL to use new domain&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#adding-a-photo-gallery-into-the-theme&#34;&gt;Adding a photo gallery into the theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#fixing-code-syntax-highlighting&#34;&gt;Fixing code syntax highlighting&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#prism.js-and-the-mysterious-case-of-pre-vs-code-classes&#34;&gt;Prism.js, and the mysterious case of pre vs code classes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#lua-filters-for-pandoc&#34;&gt;Lua filters for pandoc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#updating-rstudios-pandoc-installation&#34;&gt;Updating RStudio’s pandoc installation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;About two weeks into (the first) CoVID-19 lockdown, my social distancing brain was starting to feel quite out of sorts. I decided the most useful thing I could handle doing with my day inside was scratching a (hopefully) fun technical to-do off of my list would be moving my personal website over to &lt;code&gt;blogdown&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;My previous personal website was through &lt;a href=&#34;https://www.squarespace.com/&#34;&gt;Squarespace&lt;/a&gt;. Squarespace is incredibly powerful if you want more sophisticated site features (floating navbars, clicking and dragging to set up complex text box layouts, etc), but I always felt that it was a bit overkill feature-wise (and subscription-wise) for an aesthetically pleasing, yet ultimately information-light website. Further, I hadn’t integrated my Squarespace site with any blogging tools, so I wasn’t able to have much regularly updated content beyond adding things onto the CV section of my About Me page.&lt;/p&gt;
+&lt;p&gt;I’d been thinking of moving to a self-maintained static site for a while, especially one that would easily let me post R Markdown blog posts to the internet. I’m happy to trade in a less impressive theme for blog post compatibility with R Markdown. In case others might want to read my R Markdown ramblings, I want to put them online!&lt;/p&gt;
+&lt;p&gt;After a couple days of not insignificant headache, I got the website up and (mostly) running! At the time, while it was fresh in my mind, I meant to immediately publish a summary of all of the website setup headaches. That way, anyone else setting up a &lt;code&gt;blogdown&lt;/code&gt; site running into similar problems might be able to refer to my experience and save themselves some trouble. Predictably, I never finished writing up this post until months later.&lt;/p&gt;
+&lt;p&gt;Anyway, here it is! I will describe tidbits I learned (and am still learning) in the process of setting this site up that might help you if you find yourself plumbing the &lt;code&gt;blogdown&lt;/code&gt; waters in the future.&lt;/p&gt;
+&lt;div id=&#34;setting-up-a-blogdown-repository&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Setting up a blogdown repository&lt;/h1&gt;
+&lt;p&gt;Yihui Xie et al.’s &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;guide to &lt;code&gt;blogdown&lt;/code&gt;&lt;/a&gt; is &lt;strong&gt;indispensable&lt;/strong&gt; for setting up a site. I pretty much followed Yihui’s instructions. The details I provide below are for features that I set up outside of the scope of the example site.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;blogdown-ing-with-a-different-hugo-theme&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Blogdown-ing with a different Hugo theme&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;blogdown&lt;/code&gt; tends to play best with Hugo themes that are structured very similarly to Yihui’s pre-formatted &lt;a href=&#34;https://github.com/yihui/hugo-lithium&#34;&gt;&lt;code&gt;hugo-lithium&lt;/code&gt;&lt;/a&gt; theme. I ended up pulling &lt;a href=&#34;https://themes.gohugo.io/hugo-theme-terminal/&#34;&gt;Radek Koziel’s Terminal theme&lt;/a&gt; from the Hugo theme gallery. Aside from the minimalist look, I liked that it came with support for code highlighting, as I knew I’d be posting blogs with R code chunks. Getting the code highlighting to work ended up taking &lt;a href=&#34;#fixing-code-syntax-highlighting&#34;&gt;a bit more finagling&lt;/a&gt; than I anticipated at first, though.&lt;/p&gt;
+&lt;div id=&#34;overriding-one-or-two-layouts-of-a-git-submodule-theme&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Overriding one or two layouts of a git submodule theme&lt;/h2&gt;
+&lt;p&gt;When I first set this website up, I didn’t know how to override default theme layouts without editing in the theme folder itself, so I grabbed a static copy of the theme folder from GitHub. I figured this would let me make the theme edits I wanted without accidentally harming the upstream theme, or getting overwritten if I kept the theme as a git submodule and updated the theme regularly.&lt;/p&gt;
+&lt;p&gt;However, I eventually realized that it was too bothersome to try to keep the theme dependency software updated (turns out I don’t fully understand all the front-end code that Radek uses to render the aesthetics!). Too many &lt;a href=&#34;https://docs.github.com/en/code-security/supply-chain-security/managing-vulnerabilities-in-your-projects-dependencies/configuring-dependabot-security-updates&#34;&gt;GitHub Dependabot&lt;/a&gt; updates that went over my head! I decided to sync back on to Radek’s updated theme repo using a &lt;a href=&#34;https://bookdown.org/yihui/blogdown/version-control.html&#34;&gt;git submodule&lt;/a&gt; for the theme instead. I renamed the old theme folder to remove name conflicts with the incoming updated theme, and then &lt;code&gt;git submodule add&lt;/code&gt;-ed the &lt;code&gt;hugo-theme-terminal&lt;/code&gt; repo into my &lt;code&gt;themes&lt;/code&gt; folder.&lt;/p&gt;
+&lt;p&gt;(Now, every time I want to update the theme, I can use &lt;code&gt;git submodule update&lt;/code&gt; and get any security updates taken care of as well.)&lt;/p&gt;
+&lt;p&gt;Now, how to override layouts in the one or two places I might want to? Turns out this was straightforward to do all along! Per &lt;a href=&#34;https://bwaycer.github.io/hugo_tutorial.hugo/themes/customizing/#replace-a-single-template-file&#34;&gt;these instructions&lt;/a&gt;, I created a &lt;code&gt;layouts&lt;/code&gt; folder in the root folder of the repo, the contents of which would override any files in &lt;code&gt;theme/hugo-theme-terminal/layouts&lt;/code&gt;, as long as any file/folder names in the override layouts folder exactly matched files in the theme folder to be overridden.&lt;/p&gt;
+&lt;p&gt;For the theme edits below where I needed to create new layout pages or edit existing ones, I made copies in this theme-external &lt;code&gt;layouts&lt;/code&gt; folder.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;making-a-new-homepage-template&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Making a new homepage template&lt;/h2&gt;
+&lt;p&gt;Radek’s Terminal theme by default sets the homepage to be a list of blog posts. I knew that for this site, I wanted a simple splash landing page. Additionally, I still wanted to use the blog posts list layout, but as a page accessible through the menu bar.&lt;/p&gt;
+&lt;div id=&#34;understanding-hugos-expected-structure&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Understanding Hugo’s expected structure&lt;/h3&gt;
+&lt;p&gt;With little experience in HTML and related front-end coding, it took me a while to wrap my head around the division between webpage &lt;em&gt;layouts&lt;/em&gt; and &lt;em&gt;content.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;At first blush it sounds reasonable–you want to be able to specify &lt;em&gt;what’s&lt;/em&gt; on your webpage separately from &lt;em&gt;where&lt;/em&gt; things go on your webpage, to centralize design decisions. Hard-coding the layout of, say, a blog post page would be troublesome if you had to add page features by editing the layout of every single page individually. But what about a home page, where the layout would only be used once over the whole website? It would be so straightforward to hard-code layout information directly in my homepage file. Not so fast, though!&lt;/p&gt;
+&lt;p&gt;To change the layout of the homepage, I had to understand enough Hugo to construct my own homepage &lt;em&gt;layout&lt;/em&gt; file separately from my homepage &lt;em&gt;content&lt;/em&gt; file, and then save the layout file in the right place for Hugo to know it was the layout guide for my homepage.&lt;/p&gt;
+&lt;p&gt;The homepage layout file that comes with your theme should live at &lt;code&gt;themes/your-theme/layouts/_index.html&lt;/code&gt;. Depending on your theme, either this file will already exist and you can edit it, or a dedicated homepage layout will not already exist and you will need to create a file at &lt;code&gt;layouts/_index.html&lt;/code&gt; in your override layouts folder to override whatever theme default is set for the homepage. Since a dedicated homepage didn’t exist for this theme (the default homepage was a list of blog posts), I created this file from scratch. I copied and pasted enough Hugo code from existing layout files to get the &lt;code&gt;_index.html&lt;/code&gt; homepage to show a “cover image”, and underneath the cover image, whatever text lives in the homepage content file. The cover image functionality was included with Radek’s theme, so I didn’t have to set that up myself.&lt;/p&gt;
+&lt;p&gt;The homepage content file should live at &lt;code&gt;content/_index.Rmd&lt;/code&gt;. Again, I set up the homepage content file to render the R Markdown content on this page and show it beneath the cover image on the home page. I didn’t do anything fancy here–just a couple sentences introducing myself and the website. Not enough to reveal that the homepage theme is actually super crappy!&lt;/p&gt;
+&lt;p&gt;You can find a bunch more details in &lt;a href=&#34;https://bookdown.org/yihui/blogdown/templates.html#a-minimal-example&#34;&gt;section 2.5.1&lt;/a&gt; of the &lt;code&gt;blogdown&lt;/code&gt; manual and the &lt;a href=&#34;https://gohugo.io/templates/homepage/&#34;&gt;homepage template section&lt;/a&gt; of the Hugo manual.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;adding-pages-to-the-menu-bar&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Adding pages to the menu bar&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;config.toml&lt;/code&gt; file, as indicated by the name, handles site-wide configuration settings. I think this may differ from Hugo theme to theme, but in the theme I selected, this file also determines which pages are linked in the main navbar. To change the organization of the menu bar, and add pages like my research and game show summaries, I copied and pasted existing menu bar subsections and changed the identifier, name, and URL arguments to match the new page files I’d created (&lt;code&gt;research&lt;/code&gt; and &lt;code&gt;game-shows&lt;/code&gt; respectively, in this case).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;hooking-it-into-the-interwebs&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Hooking it into the interwebs&lt;/h1&gt;
+&lt;p&gt;I followed the &lt;a href=&#34;https://bookdown.org/yihui/blogdown/github-pages.html&#34;&gt;GitHub Pages section&lt;/a&gt; of the &lt;code&gt;blogdown&lt;/code&gt; manual as a starting point to get the repo served at monicathieu.github.io . Then, I did a little extra finagling to get my old URL, monicathieu.com , to redirect to my new website.&lt;/p&gt;
+&lt;div id=&#34;setting-public-as-the-github-pages-root-directory&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Setting &lt;code&gt;public&lt;/code&gt; as the GitHub Pages root directory&lt;/h2&gt;
+&lt;p&gt;I followed the instructions &lt;a href=&#34;https://gist.github.com/cobyism/4730490&#34;&gt;Coby Chapple’s GitHub Gist post&lt;/a&gt; to create the &lt;code&gt;gh-pages&lt;/code&gt; branch of my repository with a subfolder as the root directory of the other branch. This way, I could git-track the whole directory on the &lt;code&gt;master&lt;/code&gt; branch, editing and rendering as usual, while treating the &lt;code&gt;public&lt;/code&gt; subfolder as the root folder of my website so everything shows up properly when someone visits in a browser.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;re-pointing-my-old-squarespace-domain-name&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Re-pointing my old Squarespace domain name&lt;/h2&gt;
+&lt;p&gt;To hook a GitHub Pages site to a custom domain name, you have to set up two steps:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Tell your domain name system (DNS) provider to point your domain name to your GitHub Pages URL&lt;/li&gt;
+&lt;li&gt;Tell your GitHub Pages site to use a custom domain&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;pointing-squarespace-dns-to-github-pages-url&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Pointing Squarespace DNS to GitHub Pages URL&lt;/h3&gt;
+&lt;p&gt;The Squarespace website management feature that I opted to keep was &lt;strong&gt;domain name management.&lt;/strong&gt; Squarespace allows you to buy an available domain name directly through their own site editor, so I’d previously bought monicathieu.com for my old website. I followed the instructions on Squarespace’s help pages to &lt;a href=&#34;https://support.squarespace.com/hc/en-us/articles/215744668-Pointing-a-Squarespace-Domain&#34;&gt;point my existing domain to a non-Squarespace site&lt;/a&gt;, so that when you go to monicathieu.com, it shows you whatever’s hosted at monicathieu.github.io instead. This takes care of the first half of the domain connection.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;get-github-pages-url-to-use-new-domain&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Get GitHub Pages URL to use new domain&lt;/h3&gt;
+&lt;p&gt;In order to complete the connection, I followed &lt;a href=&#34;https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site&#34;&gt;GitHub’s instructions&lt;/a&gt; to set www.monicathieu.com as the “custom domain” option in the GitHub Pages GUI settings for my repository, and then initialized the CNAME helper file in the &lt;code&gt;public&lt;/code&gt; folder (so that to GitHub Pages, it looks like it’s in the root directory).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;adding-a-photo-gallery-into-the-theme&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Adding a photo gallery into the theme&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://brunoamaral.eu/post/creating-a-gallery-component-for-the-hugo-static-site-generator/&#34;&gt;Bruno Amaral’s post&lt;/a&gt; for Digital Insanity magazine shows example code for adding a fancy tiled photo gallery to a webpage in a Hugo-rendered site. Perfect for showing photos from my various game show experiences, I thought!&lt;/p&gt;
+&lt;p&gt;Bruno’s code uses a combination of pure CSS to organize photos into a tiled arrangement, and the &lt;a href=&#34;https://photoswipe.com/documentation/getting-started.html&#34;&gt;PhotoSwipe JavaScript plugin&lt;/a&gt; to render a nice browsable gallery when you click on any of the individual photos in the tiled layout.&lt;/p&gt;
+&lt;p&gt;I attempted reproduce Bruno’s gallery by copying his the code examples into files at the following paths in my own repo:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Front matter:&lt;/strong&gt; In the YAML header of the &lt;code&gt;game-shows&lt;/code&gt; index Rmd file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gallery shortcode:&lt;/strong&gt; Into a new file at &lt;code&gt;layouts/shortcodes/gallery.html&lt;/code&gt; (to avoid messing with the base theme, per above)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Photoswipe calling code:&lt;/strong&gt; In the footer of &lt;code&gt;layouts/_default/single.html&lt;/code&gt;. This I put into a &lt;code&gt;{{if .HasShortcode }}&lt;/code&gt; block per Bruno’s instructions, so that it would only trigger in the footer of pages that had a gallery specified for them. (It was a little hacky to put it in &lt;code&gt;single.html&lt;/code&gt; such that the code was included for ANY basic web page, but it seemed to work.)&lt;/li&gt;
+&lt;li&gt;*&lt;strong&gt;Photoswipe source code&lt;/strong&gt; (not directly shown in Bruno’s post, but linked:) Downloaded the contents of the &lt;a href=&#34;https://github.com/dimsemenov/PhotoSwipe/tree/master/dist&#34;&gt;Photoswipe distribution folder&lt;/a&gt; into &lt;code&gt;static/plugins/photoswipe&lt;/code&gt;. Any files in this path, thanks to the behavior of the &lt;code&gt;static&lt;/code&gt; folder, are “seen” by web pages as being at &lt;code&gt;plugins/photoswipe&lt;/code&gt;, for example.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Photo tiling CSS:&lt;/strong&gt; At the end of &lt;code&gt;static/plugins/photoswipe/photoswipe.css&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Saving the Photoswipe plugin code into &lt;code&gt;static/plugins&lt;/code&gt; should allow the links included in Bruno Amaral’s example to work, but…&lt;/p&gt;
+&lt;p&gt;I currently can only get the tiling CSS to work, not the actual Photoswipe JavaScript code. So you can click through the photos, just not nicely. If I figure out how to set up Photoswipe properly in the future, I’ll update this post, but for now it works enough for me to leave it alone.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;fixing-code-syntax-highlighting&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Fixing code syntax highlighting&lt;/h1&gt;
+&lt;p&gt;In order to get my R Markdown code chunks to show nice syntax highlighting in my blog post HTMLs, I had to do the following:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Manually update the version of pandoc included with RStudio&lt;/li&gt;
+&lt;li&gt;Download a special Lua filter script file to my &lt;code&gt;blogdown&lt;/code&gt; repo&lt;/li&gt;
+&lt;li&gt;Update &lt;code&gt;_output.yml&lt;/code&gt; to add &lt;code&gt;pandoc_args&lt;/code&gt; to the default R Markdown YAML header for all pages&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ve outlined the saga that led me to this solution below.&lt;/p&gt;
+&lt;div id=&#34;prism.js-and-the-mysterious-case-of-pre-vs-code-classes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Prism.js, and the mysterious case of pre vs code classes&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;hugo-theme-lithium&lt;/code&gt; default theme that &lt;code&gt;blogdown&lt;/code&gt; sets up with comes with &lt;a href=&#34;https://highlightjs.org/&#34;&gt;highlight.js&lt;/a&gt; for code syntax highlighting. Many Hugo websites don’t involve people posting code they’ve written, so Hugo themes don’t &lt;em&gt;all&lt;/em&gt; come with syntax highlighting Javascript plugins. When they do, though, they don’t all use the same plugin to color the code. Terminal, the theme I selected, uses &lt;a href=&#34;https://prismjs.com/&#34;&gt;Prism.js&lt;/a&gt; for syntax highlighting.&lt;/p&gt;
+&lt;p&gt;What these plugins do, somewhere under the hood, is look for HTML content with a specific tag. All content tagged to identify it as code gets passed through the coloring plugin, which formats the text with the right colors for function names, arguments, and such.&lt;/p&gt;
+&lt;p&gt;When &lt;code&gt;blogdown&lt;/code&gt; knits R Markdown files to raw Markdown, and then knits those files to HTML, it detects the location of code chunks and adds the tags &lt;code&gt;&amp;lt;pre class=r&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; so that the syntax highlighting plugin knows which sections are R code, and should be pre-formatted and highlighted. To embed chunks of another language, the preformatting tag can take a different class, e.g. &lt;code&gt;&amp;lt;pre class=python&amp;gt;&lt;/code&gt;. Ideally, your code gets seamlessly colored in HTML, with the colors adapting to whatever language you’d written in. However, clearly that’s not what happened for me, because you’re reading this now.&lt;/p&gt;
+&lt;p&gt;What I discovered, after knitting my website several times and seeing that code chunks did &lt;em&gt;not&lt;/em&gt; have highlighted text, was that &lt;strong&gt;&lt;code&gt;blogdown&lt;/code&gt; was formatting the HTML tags using an outdated syntax Prism.js did not understand.&lt;/strong&gt; &lt;code&gt;blogdown&lt;/code&gt; was labeling knitted code chunks with the tags &lt;code&gt;&amp;lt;pre class=r&amp;gt;&amp;lt;code&amp;gt;&lt;/code&gt;. But Prism.js was expecting the tag to be a little different: &lt;code&gt;&amp;lt;pre&amp;gt;&amp;lt;code class=language-r&amp;gt;&lt;/code&gt;. The &lt;code&gt;language&lt;/code&gt; class had moved from the &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; tag to the &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; tag, and now had the &lt;code&gt;language-&lt;/code&gt; prefix. (I believe that highlight.js has now updated as well to expect the language tag as &lt;code&gt;&amp;lt;pre&amp;gt;&amp;lt;code class=language-r&amp;gt;&lt;/code&gt;, but it might still be backwards compatible with &lt;code&gt;blogdown&lt;/code&gt;’s output, thus not requiring the hacking I did. Prism.js is most definitely not backwards compatible.)&lt;/p&gt;
+&lt;p&gt;Okay, so this seemed fixable with a bit of pattern matching magic. All I had to do was string-replace all of the code chunk tags in my blog post HTMLs with the Prism.js-compatible syntax. Seems easy enough right? Well, not so fast.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lua-filters-for-pandoc&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Lua filters for pandoc&lt;/h2&gt;
+&lt;p&gt;I learned that pandoc uses &lt;a href=&#34;https://pandoc.org/lua-filters.html&#34;&gt;filters&lt;/a&gt; to apply small formatting changes. These changes are made on a special pandoc intermediate file (so, when an Rmd file is knitted, it actually goes Rmd -&amp;gt; md -&amp;gt; pandoc -&amp;gt; HTML). At their core, these filters allow you to apply complex string matching to edit the pandoc intermediate file, in a way such that the search-and-replace always searches in a consistent language (pandoc intermediate syntax) but can modify formatting tags that will go into a variety of languages (HTML, LaTeX, etc). You could use this to, say, replace all HTML tags matching a certain pattern with slightly modified HTML tags. This should solve my HTML code highlighting issue!&lt;/p&gt;
+&lt;p&gt;Pandoc’s filters are written in a scripting language called &lt;a href=&#34;http://www.lua.org/docs.html&#34;&gt;Lua&lt;/a&gt;, which I had never heard of until I started diving into this pandoc debugging issue. Lua seems really handy, but I still am no Lua expert. All I could tell was that pandoc had the ability to run extra Lua scripting files while knitting an Rmd to string-replace whatever formatting tags I wanted to replace. All I needed was a local copy of the script file.&lt;/p&gt;
+&lt;p&gt;As is usually the case with odd code issues, I wasn’t the first one to use Lua filters to fix R Markdown’s HTML syntax highlighting tags. I found that &lt;a href=&#34;https://github.com/ukgovdatascience/govdown/commit/c294943bdae3428ec6f82a0210cefb0ad7c55778&#34;&gt;Duncan Garmonsway&lt;/a&gt; had implemented a local Lua filter to reformat Prism.js-compatible HTML code tags in a blogdown-based website he maintained. He himself had created an R-specific version of &lt;a href=&#34;https://github.com/a-vrma/pandoc-filters/blob/master/src/standard-code.lua&#34;&gt;a-vrma’s&lt;/a&gt; original (pandoc-wide, not just Rmd) Lua filter to fix the same syntax highlighting issue.&lt;/p&gt;
+&lt;p&gt;I downloaded the &lt;code&gt;highlight.lua&lt;/code&gt; file from Duncan Garmonsway’s &lt;code&gt;govdown&lt;/code&gt; website repository and saved it into the &lt;code&gt;resources&lt;/code&gt; folder of my own repo.&lt;/p&gt;
+&lt;p&gt;Then, to test that the filter file worked at all, I partially knitted a tester Markdown file directly from the terminal. To debug just the pandoc part, and not the R Markdown part, I created a .md file where I wrote some filler Markdown text and included a styled code chunk with a language label like &lt;code&gt;```r&lt;/code&gt; or &lt;code&gt;```html&lt;/code&gt;. Then, in terminal, I ran a version of following pandoc command to try to knit the Markdown file with the highlighting syntax Lua filter script:&lt;/p&gt;
+&lt;p&gt;(paths as always are machine-specific)&lt;/p&gt;
+&lt;pre class=&#34;language-shell&#34;&gt;&lt;code class=&#34;language-shell&#34;&gt;pandoc intermediate-file.md --output output-file.html --lua-filter=PATH/TO/HIGHLIGHT/FILTER.lua --no-highlight&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The test worked! The knitted HTML had correctly highlighted chunks! So I went back to R Markdown and edited the &lt;code&gt;_output.yml&lt;/code&gt; file to add the &lt;code&gt;highlight.lua&lt;/code&gt; filtering command to the default YAML header that would run for every R Markdown in the directory. &lt;a href=&#34;https://bookdown.org/yihui/rmarkdown/bookdown-project.html#output.yml&#34;&gt;&lt;code&gt;_output.yml&lt;/code&gt;&lt;/a&gt; allows you to specify default settings that would get thrown under the &lt;code&gt;output:&lt;/code&gt; YAML header at the top of your Rmd. In this case, the &lt;code&gt;pandoc_args:&lt;/code&gt; subheader takes a character vector of flags as they would be specified if you were calling pandoc through the terminal (as in the example code above).&lt;/p&gt;
+&lt;p&gt;For this repo, the &lt;code&gt;_output.yml&lt;/code&gt; contains the following YAML headers:&lt;/p&gt;
+&lt;pre class=&#34;language-yaml&#34;&gt;&lt;code class=&#34;language-yaml&#34;&gt;blogdown::html_page:
+  toc: true
+  pandoc_args: [&amp;quot;--lua-filter=$HOME/Repos/personal-website/resources/highlight.lua&amp;quot;, &amp;quot;--no-highlight&amp;quot;]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With the R Markdown pandoc settings now configured to call the &lt;code&gt;highlight.lua&lt;/code&gt; filter script, everything SHOULD work smoothly. I crossed my fingers and ran &lt;code&gt;blogdown::serve_site()&lt;/code&gt; to render my Rmd web pages and…&lt;/p&gt;
+&lt;p&gt;An error! “pandoc: unrecognized option”! Aaaghhhhh! Why was it running in terminal, but not through R Markdown?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;updating-rstudios-pandoc-installation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Updating RStudio’s pandoc installation&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/rstudio/bookdown/issues/617&#34;&gt;This bookdown GitHub issue from 2018&lt;/a&gt; revealed the solution. Pandoc was too old! But then why was it working when I tried to run the pandoc commands directly from the terminal, and failing when pandoc was run inside of RStudio?&lt;/p&gt;
+&lt;p&gt;After much digging, I discovered that I had a second, newer copy of pandoc installed with Anaconda. (Yes y’all, I installed Anaconda WAY after I started using R.) When I was calling pandoc through the terminal, it was calling the Anaconda version, which was new enough to work with Lua. However, RStudio was calling the older copy of pandoc inside of the RStudio app folder, which did not have Lua filters installed. Freaking path problems…&lt;/p&gt;
+&lt;p&gt;I manually downloaded the newest version of pandoc and copied it into the RStudio app folder to overwrite the original bundled version. It worked, and the Lua filters ran! I finally had the delicious, multi-language syntax highlighting I was originally promised.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
     </item>
     
   </channel>

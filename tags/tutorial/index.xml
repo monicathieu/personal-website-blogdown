@@ -6,10 +6,79 @@
     <description>Recent content in tutorial on Monica Thieu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Wed, 10 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Teaching introductory psychology: Brain bingo</title>
+      <link>/posts/2021-02-10-intro-psych-brain-bingo/</link>
+      <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2021-02-10-intro-psych-brain-bingo/</guid>
+      <description>1 What’s the activity 2 Why this activity 3 Materials 4 What I did: Step by step methods 4.1 Choose key terms 4.2 Prepare bingo cards 4.3 Prepare bingo calls 4.4 Prepare computer for streaming 4.4.1 Streaming destination: configure YouTube Live 4.4.2 Streaming source: configure StreamLabs app  4.5 Run the activity    This post will show you my motivation and methods for designing and running thi</description>
+      <content>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#whats-the-activity&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; What’s the activity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#why-this-activity&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Why this activity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#materials&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Materials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-i-did-step-by-step-methods&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; What I did: Step by step methods&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#choose-key-terms&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.1&lt;/span&gt; Choose key terms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prepare-bingo-cards&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.2&lt;/span&gt; Prepare bingo cards&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prepare-bingo-calls&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.3&lt;/span&gt; Prepare bingo calls&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#prepare-computer-for-streaming&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.4&lt;/span&gt; Prepare computer for streaming&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#streaming-destination-configure-youtube-live&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.4.1&lt;/span&gt; Streaming destination: configure YouTube Live&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#streaming-source-configure-streamlabs-app&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.4.2&lt;/span&gt; Streaming source: configure StreamLabs app&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#run-the-activity&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.5&lt;/span&gt; Run the activity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This post will show you my motivation and methods for designing and running thi&lt;/p&gt;
+&lt;div id=&#34;whats-the-activity&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; What’s the activity&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;why-this-activity&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Why this activity&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;materials&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Materials&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-i-did-step-by-step-methods&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; What I did: Step by step methods&lt;/h1&gt;
+&lt;div id=&#34;choose-key-terms&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.1&lt;/span&gt; Choose key terms&lt;/h2&gt;
+&lt;p&gt;In some way, this is the most important part of the activity. By choosing the key terms to quiz in bingo, &lt;em&gt;you are deciding which key terms you want students to know.&lt;/em&gt; Don’t take this lightly! I kept this in mind when deciding which terms to omit. Intro-level students don’t need to be neuroanatomy experts; they only need to know enough to be able to orient themselves when we discuss cognitive neuroscience research in class.&lt;/p&gt;
+&lt;p&gt;Based on a combination of the key terms presented in the Brain chapter of our course’s &lt;a href=&#34;https://catalog.flatworldknowledge.com/catalog/editions/intropsych_bpg-5-1&#34;&gt;textbook&lt;/a&gt;, and the judgment of the teaching team.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;prepare-bingo-cards&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; Prepare bingo cards&lt;/h2&gt;
+&lt;p&gt;Columbia has a subscription to the G Suite for Education, which means we have access to &lt;a href=&#34;https://jamboard.google.com&#34;&gt;Jamboard&lt;/a&gt;, Google’s interactive whiteboard app. A whiteboard app like Jamboard isn’t strictly necessary for an activity like this, but it is useful. We could send students a link to the Jamboard file and direct them to their respective bingo cards on the large whiteboard document, which we could also have open to monitor their progress.&lt;/p&gt;
+&lt;p&gt;Ultimately, Jamboard or not, students just need unique bingo cards that they can annotate somehow to mark when key terms have been called. Bingo cards can even be static screenshot images, with which students would use a markup tool on their own device or mark corresponding locations on a 4x4 grid on a sheet of paper.&lt;/p&gt;
+&lt;p&gt;I used the sticky note feature to create a 4x4 grid of sticky notes on the first frame (or “slide”) of a Jamboard file. I typed in 16 key terms, one in each sticky note, and used the mouse to physically shuffle the sticky notes around until the board looked sufficiently pseudo-random.&lt;/p&gt;
+&lt;p&gt;To create additional unique bingo cards, I duplicated an existing bingo card, replaced some key terms with other key terms (to ensure that not every bingo card had the exact same items, and so students can’t assume every key term appears on their card), and manually shuffled the sticky notes again.&lt;/p&gt;
+&lt;p&gt;Finally, just in case students encountered Jamboard access issues, I screenshotted every unique bingo card and saved all the labeled screenshots in a folder for students to access just in case.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;prepare-bingo-calls&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.3&lt;/span&gt; Prepare bingo calls&lt;/h2&gt;
+&lt;p&gt;I wanted the ability to test students’ recall using both visual cues (e.g. an arrow pointing in a particular anatomical direction) and verbal cues (e.g. a description of a brain region’s key functions). The simplest way I found to do this was to create a Google Slides presentation, where each slide contained a recall cue for one key term. For anatomical directions, imaging slice orientations, and lobes of the cerebrum, I made picture cues. For other brain structures/regions, including subcortical structures, I wrote a short one-sentence description of that region’s definition/function based on what students would have seen in the textbook.&lt;/p&gt;
+&lt;p&gt;I made these slides in sensible order just to make it easier for me to catalogue all the terms I was adding. To randomize them for bingo presentation, I downloaded the &lt;a href=&#34;https://workspace.google.com/marketplace/app/slides_randomizer/464683408022&#34;&gt;Slides Randomizer&lt;/a&gt; Google Slides plugin and followed its instructions to randomize the order of all slides (excluding the first slide, on which I typed some instructions). After randomizing, I manually re-ordered a few slides so that there wouldn’t be large chunks of consecutive picture cues or verbal cues.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;prepare-computer-for-streaming&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.4&lt;/span&gt; Prepare computer for streaming&lt;/h2&gt;
+&lt;div id=&#34;streaming-destination-configure-youtube-live&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.4.1&lt;/span&gt; Streaming destination: configure YouTube Live&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&#34;streaming-source-configure-streamlabs-app&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.4.2&lt;/span&gt; Streaming source: configure StreamLabs app&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;run-the-activity&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.5&lt;/span&gt; Run the activity&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    </item>
     
     <item>
       <title>How to prepare and teach an R lesson</title>
@@ -17,7 +86,301 @@
       <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>/posts/2020-08-15-prepare-teach-r-lesson/</guid>
-      <description>1 Notes for readers 2 Why this talk? 3 Objectives 4 Lesson construction using backward design  4.1 What is backward design? 4.2 Define outcomes 4.3 Define evidence of learning  4.3.1 Formative assessment: more smaller tests 4.3.2 Tidy formative assessments 4.3.3 Multiple choice check-ins scale pretty well  4.4 Build lesson  5 Deliver the lesson 6 In summary   1 Notes for readers This blog post contains a written version of my speaker notes for my 20-minute 2020 NYC R conference talk.</description>
+      <description>1 Notes for readers 2 Why this talk? 3 Objectives 4 Lesson construction using backward design 4.1 What is backward design? 4.2 Define outcomes 4.3 Define evidence of learning 4.3.1 Formative assessment: more smaller tests 4.3.2 Tidy formative assessments 4.3.3 Multiple choice check-ins scale pretty well  4.4 Build lesson  5 Deliver the lesson 6 In summary   1 Notes for readers This blog post contains a written version of my speaker notes for my 20-minute 2020 NYC R conference talk.</description>
+      <content>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#notes-for-readers&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Notes for readers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#why-this-talk&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Why this talk?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#objectives&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Objectives&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#lesson-construction-using-backward-design&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; Lesson construction using backward design&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#what-is-backward-design&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.1&lt;/span&gt; What is backward design?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#define-outcomes&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.2&lt;/span&gt; Define outcomes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#define-evidence-of-learning&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.3&lt;/span&gt; Define evidence of learning&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#formative-assessment-more-smaller-tests&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.3.1&lt;/span&gt; Formative assessment: more smaller tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tidy-formative-assessments&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.3.2&lt;/span&gt; Tidy formative assessments&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#multiple-choice-check-ins-scale-pretty-well&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.3.3&lt;/span&gt; Multiple choice check-ins scale pretty well&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#build-lesson&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.4&lt;/span&gt; Build lesson&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#deliver-the-lesson&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;5&lt;/span&gt; Deliver the lesson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#in-summary&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;6&lt;/span&gt; In summary&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;notes-for-readers&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; Notes for readers&lt;/h1&gt;
+&lt;p&gt;This blog post contains a written version of my speaker notes for my 20-minute 2020 NYC R conference talk. Since the talk time is on the shorter side, I trimmed a few things out of the talk that I would have liked to include with more time. The speaker notes for the unabridged version are included here for your reference.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;why-this-talk&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Why this talk?&lt;/h1&gt;
+&lt;p&gt;Nobody is born knowing how to code. All programmers must start somewhere, and we’re all constantly learning. If you &lt;em&gt;ever&lt;/em&gt; find yourself entrusted with the responsibility to train others to program, from informal tutoring all the way up to running a workshop, you and your learners will benefit from you knowing how to teach.&lt;/p&gt;
+&lt;p&gt;Teaching well promotes equity as well. While we have a long way to go toward equal access and representation in technical professions, any chance you get to teach well is a chance to level one of the many uneven playing fields people may encounter on the way to a career in data science or scientific computing. Teach effectively and lower those barriers.&lt;/p&gt;
+&lt;p&gt;So let’s get into it!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;objectives&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Objectives&lt;/h1&gt;
+&lt;p&gt;By the end of my talk, you will be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Compare principles of &lt;em&gt;backward lesson design&lt;/em&gt; to principles of good coding&lt;/li&gt;
+&lt;li&gt;Apply backward design to outline objectives, tests, and content of an R lesson&lt;/li&gt;
+&lt;li&gt;Implement formative coding assessments to check learner understanding&lt;/li&gt;
+&lt;li&gt;Describe benefits of narrated live-coding&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lesson-construction-using-backward-design&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; Lesson construction using backward design&lt;/h1&gt;
+&lt;div id=&#34;what-is-backward-design&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.1&lt;/span&gt; What is backward design?&lt;/h2&gt;
+&lt;p&gt;When writing code, be it a helper function, a data processing script, or a whole package, there’s a common logical order we follow.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Define function output&lt;/li&gt;
+&lt;li&gt;Write unit test&lt;/li&gt;
+&lt;li&gt;Write function code&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Writing the code itself ideally comes &lt;em&gt;last.&lt;/em&gt; We can only write the code once we know what it’s supposed to do, and how we’ll verify that. If you started writing code before you decided what it was supposed to do, the code would go nowhere!&lt;/p&gt;
+&lt;p&gt;Backward design takes that same logic and applies it to teaching. The “usual” method of planning lessons starting from activities and demonstrations can be referred to as “forward design.” If planning lessons starting from activities is “forward design”, then &lt;strong&gt;backward design&lt;/strong&gt; involves the following steps:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Define learning outcomes&lt;/li&gt;
+&lt;li&gt;Define evidence of learning&lt;/li&gt;
+&lt;li&gt;Build lesson&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This looks a lot like the logical process of coding. Both coding logic and backward lesson design aim to answer the following questions, in order:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;What should code/learners be able to do?&lt;/li&gt;
+&lt;li&gt;How will we know code/learners can do that?&lt;/li&gt;
+&lt;li&gt;How will we equip code/learners with the ability to do that?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You already know this logic! Lesson planning is conceptually similar to writing code. You don’t need to acquire a whole new knowledge base from scratch to be able to plan R lessons. You only need to learn how to relate concepts from coding logic to backward lesson design, and that’s exactly what we’re going to do.&lt;/p&gt;
+&lt;p&gt;Next, we’ll dig more into each of these three steps of backward design as they might manifest in an R coding lesson.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;define-outcomes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; Define outcomes&lt;/h2&gt;
+&lt;p&gt;Defining the learning outcome, or objective (used interchangeably from here on out), is conceptually similar to defining the output of a function, script, or entire package that one might write. It’s the answer to the following question:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What will learners be able to &lt;em&gt;do&lt;/em&gt; when the lesson is finished?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You have to be &lt;em&gt;specific&lt;/em&gt; when spelling out learning goals for them to be most effective. Just like it’s harder to write a function when you haven’t delineated what you want it to do, it’s harder to prepare a lesson when you haven’t outlined what you want it to teach.&lt;/p&gt;
+&lt;p&gt;Less specific (worse):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Learners will understand how tidyr, dplyr, and ggplot2 help them clean and explore their data&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;More specific (better):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Learners will be able to:
+- use tidyr’s pivot_wider() and pivot_longer() to reshape data for easier analysis
+- use dplyr’s group_by(), count(), and summarize() functions to generate summary statistics
+- use ggplot2 to generate exploratory scatterplots of data&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A few tips on making your R lesson objectives more specific and effective:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use active verbs. “Learners will be able to use … to …” is a good starter&lt;/li&gt;
+&lt;li&gt;If you’re focusing on a specific package, name that package&lt;/li&gt;
+&lt;li&gt;If you’re focusing on specific functions, name those functions&lt;/li&gt;
+&lt;li&gt;Make it more verbose (but don’t go overboard!)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note: Most learning goals in lessons about R will be to “use” or “implement” certain functions or techniques. However, depending on the topic, the goal may be something lower, like to “recognize” or “recall” which function does what, or something higher, like to “evaluate” or “critique” code for style and speed. If you’re interested in reading more about the different types of learning goals one might set for a lesson, and which one best fits the level of learning you want, &lt;a href=&#34;https://www.celt.iastate.edu/teaching/effective-teaching-practices/revised-blooms-taxonomy/&#34;&gt;Bloom’s Revised Taxonomy&lt;/a&gt; is a helpful framework.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;define-evidence-of-learning&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.3&lt;/span&gt; Define evidence of learning&lt;/h2&gt;
+&lt;p&gt;Once you’ve outlined your desired learning objectives, the next step is to define &lt;em&gt;acceptable evidence of learning.&lt;/em&gt; How will you determine that learners can indeed accomplish what the learning objective says they can?&lt;/p&gt;
+&lt;p&gt;Again, in programming and teaching, we must &lt;em&gt;test&lt;/em&gt; to confirm that our code (or our learners) have accomplished the objective.&lt;/p&gt;
+&lt;p&gt;In coding, this can be as simple as running your code multiple times under different conditions to make sure the output looks right, or as elaborate as a full unit testing system (we’ll touch on this later!).&lt;/p&gt;
+&lt;p&gt;In a semester-long programming course, this would be the final assignment or exam. In a 5-minute tutoring session, this might involve watching your colleague write code that solves the problem they came to you for. In every case, the only way we can know that learners have reached the objective is by &lt;em&gt;testing their ability to demonstrate it.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Note: the final assessment example below was omitted from the talk for time.&lt;/p&gt;
+&lt;p&gt;For example, the final test for a lesson with the learning objectives shown above might be:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Orange dataset in R’s datasets package contains data for the ages (in days) and circumferences (in mm) of several orange trees, each measured at different timepoints.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Use the appropriate pivot (_wider or _longer) function to pivot the data to have one row for each measurement, one column for the age of each tree, and one column for the circumference of each tree.&lt;/li&gt;
+&lt;li&gt;Using the long form of the data, generate a dataframe showing the number of measurements for each tree.&lt;/li&gt;
+&lt;li&gt;Using the long form of the data, generate a dataframe showing the minimum and maximum age and circumference for each tree.&lt;/li&gt;
+&lt;li&gt;Using appropriate ggplot2 functions, generate a scatterplot of tree circumference by age. Plot lines connecting the observations for each tree. The points and lines for each tree should be different colors. Add an informative title and axis labels.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;There doesn’t have to be one test question for each objective, but it’s a good place to start to make sure you have appropriate coverage. Just like you want high code coverage when testing your own code, you want high objective coverage with your final assessment, to ensure that you’re testing learners’ ability to execute every objective that you want them to accomplish. No matter how many prompts you include in your assessment, make sure that tests are written specifically enough that a learner who has reached the objective would be able to answer every question acceptably. Vague prompts don’t “give away the answer,” they give enough information for learners to get to the answer.&lt;/p&gt;
+&lt;p&gt;There can (and often should) be a back-and-forth process between defining learning outcomes and defining tests of learning. Sometimes, you might find that your test isn’t testing exactly what you think learners should be able to do. You might add more to your test, or change what’s already in it, so that it better fits the learning outcome. Other times, you might have a sense that the test itself correctly expresses what you want learners to come away with. In those cases, you might re-write the learning outcome so that it better fits the test. The key is to plan with intention either way.&lt;/p&gt;
+&lt;div id=&#34;formative-assessment-more-smaller-tests&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.3.1&lt;/span&gt; Formative assessment: more smaller tests&lt;/h3&gt;
+&lt;p&gt;The final assessment is of course essential to determining whether learners have met your objective. But, by design, it happens at the &lt;em&gt;end&lt;/em&gt; of the lesson. What if learners make critical mistakes on the final assessment, showing that they haven’t actually reached the objective? At that point, the lesson is over, and you don’t have any time remaining to get learners back on track. :(&lt;/p&gt;
+&lt;p&gt;Enter formative assessment! When teaching, you have many chances to assess learning &lt;em&gt;before you get to the end of the lesson.&lt;/em&gt; &lt;strong&gt;Formative assessments&lt;/strong&gt; are &lt;em&gt;frequent&lt;/em&gt; and &lt;em&gt;specific&lt;/em&gt; tests of learner understanding &lt;em&gt;during teaching.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;cmu.edu/teaching/assessment/basics/formative-summative.html&#34;&gt;Formative assessments&lt;/a&gt; in teaching are like &lt;a href=&#34;https://r-pkgs.org/tests.html&#34;&gt;unit tests&lt;/a&gt; in coding:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;both identify bugs in learner understanding/code functionality&lt;/li&gt;
+&lt;li&gt;both are built-in to the teaching/development process&lt;/li&gt;
+&lt;li&gt;both enable in-the-moment remediation/debugging&lt;/li&gt;
+&lt;li&gt;both encourage more effective lesson/code style (more on this later)&lt;/li&gt;
+&lt;li&gt;if learners/code fail, it’s on the road to getting it right next time!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;How do you implement formative assessments? Consider the example lesson we’ve started mocking up. In this lesson, to teach toward the second objective, we might calculate means and standard deviations of petal/sepal lengths and widths in the &lt;code&gt;iris&lt;/code&gt; dataset. We would live-code this chunk and learners would follow along. The final code, and its finished output, might look something like below:&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;iris %&amp;gt;%
+  rename_with(tolower) %&amp;gt;% 
+  pivot_longer(cols = -species,
+               names_to = c(&amp;quot;part&amp;quot;, &amp;quot;.value&amp;quot;),
+               names_sep = &amp;quot;\\.&amp;quot;) %&amp;gt;% 
+  group_by(species, part) %&amp;gt;% 
+  summarize(across(everything(), list(mean = mean, sd = sd)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` has grouped output by &amp;#39;species&amp;#39;. You can override using the `.groups` argument.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 6
+## # Groups:   species [3]
+##   species    part  length_mean length_sd width_mean width_sd
+##   &amp;lt;fct&amp;gt;      &amp;lt;chr&amp;gt;       &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
+## 1 setosa     petal        1.46     0.174      0.246    0.105
+## 2 setosa     sepal        5.01     0.352      3.43     0.379
+## 3 versicolor petal        4.26     0.470      1.33     0.198
+## 4 versicolor sepal        5.94     0.516      2.77     0.314
+## 5 virginica  petal        5.55     0.552      2.03     0.275
+## 6 virginica  sepal        6.59     0.636      2.97     0.322&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The pipe chain above contains four functions. If a learner makes an error in calling any one of these functions, the entire pipe chain would fail. Thus, when we ask learners to write the whole block of code only once at the end of the module, it’s less obvious where an error might come from, both to instructors and learners.&lt;/p&gt;
+&lt;p&gt;For example, if a learner wrote the following answer:&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;iris %&amp;gt;%
+  rename_with(tolower) %&amp;gt;% 
+  pivot_longer(cols = -species,
+               names_to = c(&amp;quot;part&amp;quot;, &amp;quot;.value&amp;quot;),
+               names_sep = &amp;quot;\\.&amp;quot;) %&amp;gt;% 
+  group_by(Species, part) %&amp;gt;% 
+  summarize(across(everything(), list(mean = mean, sd = sd)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Error: Must group by variables found in `.data`.
+## * Column `Species` is not found.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An experienced instructor can read the error message and deduce that the error occurs inside of &lt;code&gt;group_by()&lt;/code&gt;, and is likely to be a misspelling bug (or, perhaps more likely, was carried over from a version of the code where the column names were not coerced to lowercase). However, this error message may be opaque to the learner, and does little to help them identify their mistake themselves.&lt;/p&gt;
+&lt;p&gt;Further, this test requires the instructor to exert extra effort to trace the error. If multiple learners make unique errors in writing this block of code, the instructor must now take even more time to correct each learner’s unique mistake. Learners must also spend time waiting for the instructor, instead of progressing.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tidy-formative-assessments&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.3.2&lt;/span&gt; Tidy formative assessments&lt;/h3&gt;
+&lt;p&gt;The function chains encouraged by tidyverse style lend themselves to regular formative assessments. Formative assessment check-ins can built in to the lesson after every function in the pipe chain is introduced.&lt;/p&gt;
+&lt;p&gt;We can reformat the code chunk above to have a formative assessment check-in for each verb. For example, here’s a couple ways we might test learners’ understanding of what named functions do inside of &lt;code&gt;summarize(across())&lt;/code&gt;. We start with the block of code that learners will have already successfully written and run:&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;iris_long &amp;lt;- iris %&amp;gt;% 
+  rename_with(tolower) %&amp;gt;% 
+  pivot_longer(cols = -species,
+               names_to = c(&amp;quot;part&amp;quot;, &amp;quot;.value&amp;quot;),
+               names_sep = &amp;quot;\\.&amp;quot;) %&amp;gt;% 
+  group_by(species, part)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then, we might give specific instructions to write one additional line of code from scratch to summarize &lt;code&gt;iris_long&lt;/code&gt; in a particular way.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Using &lt;code&gt;across()&lt;/code&gt; inside &lt;code&gt;summarize()&lt;/code&gt;, write a line of code to summarize the mean and SD of all possible measurements (length and width) for each iris species and anatomical part. Your output should have summary columns with “mean” or “sd” appended to them depending on what metric they are.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;# CODE GOES HERE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Alternatively, we might provide sample code that learners can modify in a specific way to demonstrate learning of a bite-size concept. While this requires learners to generate less code from scratch, it can be faster during a lesson.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Change the &lt;code&gt;summarize()&lt;/code&gt; call on line 104 so the mean outputs have the suffix &#34;_avg&#34; instead of &#34;_mean&#34;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;iris_long %&amp;gt;% 
+  summarize(across(everything(), list(mean = mean, sd = sd)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` has grouped output by &amp;#39;species&amp;#39;. You can override using the `.groups` argument.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 6
+## # Groups:   species [3]
+##   species    part  length_mean length_sd width_mean width_sd
+##   &amp;lt;fct&amp;gt;      &amp;lt;chr&amp;gt;       &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
+## 1 setosa     petal        1.46     0.174      0.246    0.105
+## 2 setosa     sepal        5.01     0.352      3.43     0.379
+## 3 versicolor petal        4.26     0.470      1.33     0.198
+## 4 versicolor sepal        5.94     0.516      2.77     0.314
+## 5 virginica  petal        5.55     0.552      2.03     0.275
+## 6 virginica  sepal        6.59     0.636      2.97     0.322&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Checking for understanding after each new verb in the pipe chain has a few benefits:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learners get a natural pause after each new concept is introduced, to solidify understanding before adding more info&lt;/li&gt;
+&lt;li&gt;When fewer lines of code are tested at once, learners’ misconceptions/mistakes are more likely to overlap, allowing the instructor to address confusions with the whole group, instead of one-on-one&lt;/li&gt;
+&lt;li&gt;Each check-in can be repeated until 100% of learners pass, ensuring that when the next function is introduced, learners will all be caught up&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;multiple-choice-check-ins-scale-pretty-well&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.3.3&lt;/span&gt; Multiple choice check-ins scale pretty well&lt;/h3&gt;
+&lt;p&gt;The above check-in is written as a free-response prompt to “write code that does the job”. In small learner groups, this is the most flexible way to check for understanding. If they can write working code, then they’ve met the learning objective! However, this does require that the instructor either trust that everyone’s code works, or visually check each learner’s work to confirm the code behaves as intended. This can be time-consuming for larger groups.&lt;/p&gt;
+&lt;p&gt;There are other methods of formative assessment check-in that, while less comprehensive, scale much better to large groups of learners. My favorite of these are multiple choice questions:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Which of the chunks below will correctly return summarized mean and SD outputs, where the mean columns have the suffix &#34;_avg&#34;?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;iris_long %&amp;gt;% 
+  summarize(across(everything(), list(mean = avg, sd = sd)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;iris_long %&amp;gt;% 
+  summarize(across(everything(), list(avg = mean, sd = sd)))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;These can be implemented by copying screenshots or code text into an audience-response system like Poll Everywhere or Socrative (those two I know about because they’re geared to educators, but any polling app works!). Then, the instructor can quickly look at poll responses and gauge how many learners are choosing the correct answer.&lt;/p&gt;
+&lt;p&gt;Further, the &lt;a href=&#34;https://validatedlearning.co/the-logic-behind-outstanding-multiple-choice-questions-for-formative-evaluation/&#34;&gt;distractor (incorrect) answers&lt;/a&gt; can also reveal specific misconceptions nearly as well as free-response check-ins. Write distractor answers to look &lt;em&gt;plausible,&lt;/em&gt; featuring common mistakes. (Perhaps a mistake you once made when you were learning how to use this function!)&lt;/p&gt;
+&lt;p&gt;In this way, you know that learners are choosing the correct answer because they believe it is the right answer, and not because they believe all the other answers must be wrong. (In the second scenario, a learner might pass a check-in without actually learning the concept at hand!)&lt;/p&gt;
+&lt;p&gt;Additionally, to the previous point, do not write “trick” distractor answers, particularly those where &lt;em&gt;you have not yet shown learners why such a mistake is incorrect.&lt;/em&gt; Testing learners on skills/concepts you haven’t taught them is a waste of testing time for you, and a waste of effort for learners.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;build-lesson&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.4&lt;/span&gt; Build lesson&lt;/h2&gt;
+&lt;p&gt;The beauty of backwards design is that once you’ve spelled out your learning objectives, and the tests you’ll use to verify that learners have reached those objectives, the lesson itself is nearly done. Ideally, once you’ve laid out your assessments, you will be able to see exactly what you need to demonstrate and explain to equip learners with enough knowledge to complete those assessments.&lt;/p&gt;
+&lt;p&gt;The core principle I try to rely on when crafting lessons is to &lt;strong&gt;teach what you need to teach: no more and no less.&lt;/strong&gt; What does this mean? This encompasses several things, including:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Calibrate to learners’ incoming skill level.&lt;/em&gt; What do you expect learners to be able to do already before they start your lesson? Start where learners currently are (don’t re-teach), and teach &lt;em&gt;everything&lt;/em&gt; new that learners need to know to reach the objective (think through all the pre-reqs!).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Allow your formative assessments to break the lesson into manageable chunks.&lt;/em&gt; If you have implemented the right number and scope of checkpoints, each check-in question should serve as the end to a bite-sized (5-10 min) piece of lesson. These bites are a good size for you, because you get to take breaks from speaking and survey learners’ progress, and a good size for learners, because they get to take a breather from new information and use the check-in question to practice what they’ve just learned.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Teach less than you think you have time for.&lt;/em&gt; An instructor teaching a particular lesson for the first time is likely to find that the lesson simply takes way longer than originally planned. Running out of time before you’ve finished the lesson guarantees that learners won’t reach the objective! Plan for less time than you’ll actually have. The first time I teach a new lesson, I plan it for 2/3 of the allotted class time, and it usually comes out right.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Teach &lt;strong&gt;one&lt;/strong&gt; way to do things.&lt;/em&gt; One of the great (and terrible) features of R is that there’s often many, many different ways to solve a problem. While some might be less verbose, more generalizable, etc., than others, ultimately sometimes you get to two different techniques that differ only on personal taste. For example, there might be two different ways to teach the &lt;code&gt;pivot_longer()&lt;/code&gt; technique demonstrated earlier.&lt;/p&gt;
+&lt;p&gt;Using &lt;code&gt;names_sep&lt;/code&gt; to break up column names:&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;iris %&amp;gt;% 
+  rename_with(tolower) %&amp;gt;% 
+  pivot_longer(cols = -species,
+               names_to = c(&amp;quot;part&amp;quot;, &amp;quot;.value&amp;quot;),
+               names_sep = &amp;quot;\\.&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 300 x 4
+##    species part  length width
+##    &amp;lt;fct&amp;gt;   &amp;lt;chr&amp;gt;  &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+##  1 setosa  sepal    5.1   3.5
+##  2 setosa  petal    1.4   0.2
+##  3 setosa  sepal    4.9   3  
+##  4 setosa  petal    1.4   0.2
+##  5 setosa  sepal    4.7   3.2
+##  6 setosa  petal    1.3   0.2
+##  7 setosa  sepal    4.6   3.1
+##  8 setosa  petal    1.5   0.2
+##  9 setosa  sepal    5     3.6
+## 10 setosa  petal    1.4   0.2
+## # … with 290 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Using &lt;code&gt;names_pattern&lt;/code&gt; to break up column names:&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;iris %&amp;gt;% 
+  rename_with(tolower) %&amp;gt;% 
+  pivot_longer(cols = -species,
+               names_to = c(&amp;quot;part&amp;quot;, &amp;quot;.value&amp;quot;),
+               names_pattern = &amp;quot;(.*)\\.(.*)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 300 x 4
+##    species part  length width
+##    &amp;lt;fct&amp;gt;   &amp;lt;chr&amp;gt;  &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+##  1 setosa  sepal    5.1   3.5
+##  2 setosa  petal    1.4   0.2
+##  3 setosa  sepal    4.9   3  
+##  4 setosa  petal    1.4   0.2
+##  5 setosa  sepal    4.7   3.2
+##  6 setosa  petal    1.3   0.2
+##  7 setosa  sepal    4.6   3.1
+##  8 setosa  petal    1.5   0.2
+##  9 setosa  sepal    5     3.6
+## 10 setosa  petal    1.4   0.2
+## # … with 290 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In practice, there are valid arguments for using either method. Using &lt;code&gt;names_sep&lt;/code&gt; to split along the period is less verbose, but is theoretically less flexible than spelling out the capture groups with &lt;code&gt;names_pattern&lt;/code&gt;, in case there are future columns in the data that delimit with periods AND underscores.&lt;/p&gt;
+&lt;p&gt;What is the learning goal here? If indeed a primary objective of the lesson is to be able to pivot many different arrangements of data, then students do need to learn about the similarities and differences between using &lt;code&gt;names_sep&lt;/code&gt; and &lt;code&gt;names_pattern&lt;/code&gt; to break up column names in service of the objective. However, if the objective is solely to be able to pivot data with multiple value columns using the &lt;code&gt;&#34;.value&#34;&lt;/code&gt; placeholder, then being able to compare, contrast, and choose between &lt;code&gt;names_sep&lt;/code&gt; and &lt;code&gt;names_pattern&lt;/code&gt; &lt;em&gt;is not part of the learning goal.&lt;/em&gt; In this case, you as the instructor need to decide which technique you would rather students come away using, and &lt;em&gt;teach only that technique.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Related to this point: &lt;em&gt;don’t teach first principles unless the learning goal is first principles.&lt;/em&gt; I was guilty of this for a while! For example, when I used to teach vectorized operations like &lt;code&gt;apply()&lt;/code&gt;, and later &lt;code&gt;map()&lt;/code&gt;, I would lead with a whole section on for loops and why they were slow and unwieldy. When I learned how to take full advantage of R’s vectorized functions, I felt like I had woken up from a fog of for loops. I assumed this experience generalized to other people, and so when I taught those functions I would spend a lot of time making for loops sound like the black-and-white “before” section of an infomercial before the life-changing new product is revealed. However, I eventually received feedback that learners didn’t understand why I was spending so much time talking about for loops when I didn’t teach them, and some learners didn’t even know what for loops were before I mentioned them, so they were getting confused.&lt;/p&gt;
+&lt;p&gt;While it is true that a first-principles comparison of for loops and vectorized functions is important to a full understanding of when vectorizing is and isn’t the best solution to a code problem, &lt;em&gt;understanding first-principles isn’t necessary to be able to correctly use a vectorized function.&lt;/em&gt; Once I realized this, I was able to let go of a lesson module that was more nostalgic to me than instructive to learners.&lt;/p&gt;
+&lt;p&gt;(I actually heard the above from Hadley Wickham! At Columbia I was lucky to be able to take Dr. Andrew Gelman’s Communicating Data course, where we heard from guest speakers like Hadley.)&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;deliver-the-lesson&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Deliver the lesson&lt;/h1&gt;
+&lt;p&gt;All right, so you’ve sketched out your lesson objectives, checks for understanding, and lecture content. Time to teach! Most likely, you’ll teach via live-coding. You demonstrate the code example, and then learners apply what they’ve just seen you do. Occasionally you might find yourself using slides, but live-coding will cover most code instruction scenarios.&lt;/p&gt;
+&lt;p&gt;Coding for an audience is a little different than coding for yourself. You gotta be intentional about it! Even when the audience is just one co-worker with their computer next to yours, intentional live-coding can spell the difference between following along with you vs not understanding. The single biggest tip I can give is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Narrate &lt;em&gt;everything&lt;/em&gt; you click or type.&lt;/strong&gt; I mean everything. Every word you type. Every () and &#34;&#34;. Every hotkey shortcut. If you’re clicking, describe exactly what you’re clicking and where it is on screen. This helps in many respects, like:
+&lt;ul&gt;
+&lt;li&gt;it helps learners orient themselves in a program where they may not be super familiar with what buttons do&lt;/li&gt;
+&lt;li&gt;it helps slow your pace down so that learners can keep up with you as they code along&lt;/li&gt;
+&lt;li&gt;it helps model coding technique. If you use certain hotkeys to make your life easier, you can pass that along to students. And when you make typos (as we all do!), narrating when you catch and fix typos helps learners with one of the biggest implicit objectives of learning to code: to be able to troubleshoot.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With the above, remember the lesson-building tip to &lt;em&gt;calibrate to learners’ existing skill level.&lt;/em&gt; I encourage you to narrate less while typing code or demonstrating techniques that you know that your learners already have experience with. For example, when I’m working with less experienced learners, and I want to check a function’s documentation, I will announce that I am clicking over to the Help tab in the bottom-right pane of the RStudio window. With more experienced learners, I might just say “let’s check the function’s arguments in the docs” while clicking over to search the function’s docs in the Help tab.&lt;/p&gt;
+&lt;p&gt;If you do find yourself teaching a group through live-coding, where your screen setup is projected or screen-shared so the whole group can see it, you’ll need to consider a few more things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Keep an eye on the time.&lt;/strong&gt; Check regularly to see how much time and how much lesson has elapsed, and calibrate accordingly.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Make your screen setup readable to learners.&lt;/strong&gt; Zoom in enough, and check your color theme. With total novice learners, you may want to change your color theme back to the default, so that your screen looks more like theirs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No copying and pasting code!&lt;/strong&gt; You can (and often should) code along with notes you’ve already written, but learners have to type it out, so you do too.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note: &lt;a href=&#34;https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006023&#34;&gt;This paper&lt;/a&gt; is a great reference for additional lesson delivery tips when teaching a proper programming course.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;in-summary&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;6&lt;/span&gt; In summary&lt;/h1&gt;
+&lt;p&gt;I hope that you are now able to accomplish the &lt;a href=&#34;#objectives&#34;&gt;objectives&lt;/a&gt; I set out at the beginning of this talk. Go forth and &lt;em&gt;effectively&lt;/em&gt; train others in R!&lt;/p&gt;
+&lt;/div&gt;
+</content>
     </item>
     
     <item>
@@ -26,7 +389,1265 @@
       <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>/posts/2020-04-08-tidy-multilevel/</guid>
-      <description>1 Learning goals 2 Notes for instructors 3 Lesson body  3.1 A brief intro to multilevel structure: It’s everywhere! 3.2 Introducing the data 3.3 Reading in the data 3.4 Inspecting the data  3.4.1 Quick graphs 3.4.2 Basic summary statistics  3.5 Nesting the data  3.5.1 Intro to nest(), unnest(), and tibble list-columns  3.6 Going vectorize crazy  3.6.1 Vectorizing: it’s like a for loop, but not 3.</description>
+      <description>1 Learning goals 2 Notes for instructors 3 Lesson body 3.1 A brief intro to multilevel structure: It’s everywhere! 3.2 Introducing the data 3.3 Reading in the data 3.4 Inspecting the data 3.4.1 Quick graphs 3.4.2 Basic summary statistics  3.5 Nesting the data 3.5.1 Intro to nest(), unnest(), and tibble list-columns  3.6 Going vectorize crazy 3.6.1 Vectorizing: it’s like a for loop, but not 3.6.2 Tidy vectorizing 3.</description>
+      <content>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#learning-goals&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Learning goals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#notes-for-instructors&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Notes for instructors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#lesson-body&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Lesson body&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#a-brief-intro-to-multilevel-structure-its-everywhere&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.1&lt;/span&gt; A brief intro to multilevel structure: It’s everywhere!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#introducing-the-data&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.2&lt;/span&gt; Introducing the data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#reading-in-the-data&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.3&lt;/span&gt; Reading in the data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#inspecting-the-data&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.4&lt;/span&gt; Inspecting the data&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#quick-graphs&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.4.1&lt;/span&gt; Quick graphs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#basic-summary-statistics&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.4.2&lt;/span&gt; Basic summary statistics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#nesting-the-data&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.5&lt;/span&gt; Nesting the data&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#intro-to-nest-unnest-and-tibble-list-columns&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.5.1&lt;/span&gt; Intro to nest(), unnest(), and tibble list-columns&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#going-vectorize-crazy&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.6&lt;/span&gt; Going vectorize crazy&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#vectorizing-its-like-a-for-loop-but-not&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.6.1&lt;/span&gt; Vectorizing: it’s like a for loop, but not&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tidy-vectorizing&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.6.2&lt;/span&gt; Tidy vectorizing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#a-caveat-when-not-to-vectorize&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.6.3&lt;/span&gt; A caveat: When not to vectorize&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#hella-models&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.7&lt;/span&gt; Hella models&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#fitting-many-models&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.7.1&lt;/span&gt; Fitting many models&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#extracting-statistics-from-models&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.7.2&lt;/span&gt; Extracting statistics from models&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#visualizing-many-statistics&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.7.3&lt;/span&gt; Visualizing many statistics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#bonus-example-bootstrapping&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.8&lt;/span&gt; Bonus example: bootstrapping&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#in-closing&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; In closing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This is the narrative lesson plan for my 2-hour R workshop, &lt;strong&gt;Wrangling Multilevel Data in the R Tidyverse.&lt;/strong&gt;&lt;/p&gt;
+&lt;div id=&#34;learning-goals&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; Learning goals&lt;/h1&gt;
+&lt;p&gt;By the end of this lesson, learners will be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“fold” and “unfold” tibble list-columns with &lt;code&gt;tidyr::nest()&lt;/code&gt;/&lt;code&gt;unnest()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;use &lt;code&gt;purrr::map()&lt;/code&gt; to flexibly perform vectorized operations on nested data&lt;/li&gt;
+&lt;li&gt;more specifically, fit a single model to each subset of a multilevel dataset&lt;/li&gt;
+&lt;li&gt;visualize subset-model summary statistics all together with &lt;code&gt;ggplot2&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Learners will also review the following skills:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;reading in tabular data with &lt;code&gt;readr&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;using the pipe &lt;code&gt;%&amp;gt;%&lt;/code&gt; to construct human-readable chains of functions&lt;/li&gt;
+&lt;li&gt;inspecting data and diagnosing any necessary data cleaning&lt;/li&gt;
+&lt;li&gt;calculating summary statistics on observation-level data with &lt;code&gt;group_by()&lt;/code&gt; and &lt;code&gt;summarize()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fit a multiple regression using &lt;code&gt;lm()&lt;/code&gt; and interpret coefficient values&lt;/li&gt;
+&lt;li&gt;generalizing statistical techniques to data collected on different topics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This tutorial is not written as an exhaustive walkthrough of &lt;em&gt;all&lt;/em&gt; of the use cases and capabilities of these functions/packages. Rather, it is written as a bite-size tour of an example data analysis from start to finish*.&lt;/p&gt;
+&lt;p&gt;For more exhaustive documentation, you can visit the online reference pages for your package of interest. For more in-depth self-teaching, please refer to the &lt;a href=&#34;http://r4ds.had.co.nz/&#34;&gt;R for Data Science online textbook&lt;/a&gt; by Garrett Grolemund and Hadley Wickham.&lt;/p&gt;
+&lt;p&gt;*The analyses demonstrated here are by no means the final analyses you might do with these data! There is just only so much that can be covered within the scope of this tutorial.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;notes-for-instructors&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Notes for instructors&lt;/h1&gt;
+&lt;p&gt;This lesson is written to be usable as a standalone, follow-along-at-home tutorial. For those wishing to use this as a lesson plan for live instruction, please refer to the following.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Do not copy and paste code from the lesson document into console/your live-coding document.&lt;/strong&gt; Please feel free to follow the code line by line with the lesson. However, I consider it critical for you to &lt;em&gt;live-code every piece of code you can;&lt;/em&gt; that is, type &lt;em&gt;everything&lt;/em&gt; out by hand and narrate, piece by piece, out loud as you do so. This has two main benefits:
+&lt;ul&gt;
+&lt;li&gt;Requires you, the instructor, to digest and explain each piece of code you type&lt;/li&gt;
+&lt;li&gt;Paces your typing so that learners can keep up as they type along with you&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Do ad-lib on the plain-text lecture notes.&lt;/strong&gt; What I have is not exhaustive. If you want to spend more or less time explaining something than I’ve allotted, it’s your call.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I have some useful asides written throughout the tutorial marked as &lt;strong&gt;instructor’s notes.&lt;/strong&gt; If you’re following along with this tutorial at home, you may find these notes useful as supplementary information. Usually, these notes will occur in locations where I have deliberately &lt;em&gt;omitted&lt;/em&gt; teaching a particular concept or technique. I’ve tried to summarize what I’m omitting from the primary lesson plan and why I’m doing so, with links for additional exploration for those at home who do want to jump further in.&lt;/p&gt;
+&lt;p&gt;And now, the feature presentation:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lesson-body&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Lesson body&lt;/h1&gt;
+&lt;div id=&#34;a-brief-intro-to-multilevel-structure-its-everywhere&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.1&lt;/span&gt; A brief intro to multilevel structure: It’s everywhere!&lt;/h2&gt;
+&lt;p&gt;Chances are, you’ve dealt with multilevel data before.&lt;/p&gt;
+&lt;p&gt;In the more micro-scale experimental sciences, data take multilevel structure every time you take multiple measurements per research unit, repeated for multiple research units. In psychology research like mine, this means multiple measurements per participant, repeated for multiple participants. This holds true for any set of multiple measurements out of multiple lab setups (petri dishes, vacuum chambers, whatever you use). Observations can be &lt;em&gt;grouped&lt;/em&gt; in all of these cases, by whichever participant/lab apparatus/otherwise that they were collected from.&lt;/p&gt;
+&lt;p&gt;In the macro-scale observational (and more often social) sciences, you might have multiple measurements per city, state, or country, repeated for multiple cities/states/countries. Again, this yields data that can be grouped by the locale from which they were collected.&lt;/p&gt;
+&lt;p&gt;And in any research, if you have a collaborative project across multiple labs where each lab is collecting the same data at their home location, the data now have multilevel structure because they can be grouped by the lab at which they were collected.&lt;/p&gt;
+&lt;p&gt;When you have multiple measurements per group, across many grouping units, you have &lt;strong&gt;multilevel data!&lt;/strong&gt; It’s important when you do have multilevel data to characterize patterns in the data both &lt;em&gt;within&lt;/em&gt; and &lt;em&gt;between units.&lt;/em&gt; This is important to do for deep statistical reasons, but for today, these reasons can be summarized by the following:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;In general, any two observations from the same units are more likely to have something in common with one another than any two observations from different units.&lt;/em&gt; We thus benefit from accounting for the fact that variance within a unit is not equivalent to variance between units.&lt;/p&gt;
+&lt;p&gt;Here’s an extreme example of cases where the within-unit and between-unit patterns are actively at odds with one another:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2020-04-08-tidy-multilevel/index_files/figure-html/example-multilevel-data-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;If you had data that took this structure, where the slope within units was positive, but the overall values between units are scattered in such a way that the slope across units was negative, failing to examine the unit-level relationships before jumping into the overall data analysis might lead you to draw erroneous conclusions!&lt;/p&gt;
+&lt;p&gt;More generally, a particular relationship that holds within the observations of a single unit might look different in another unit, and eyeballing the possible similarities/differences in these relationships is the first step to accounting for them statistically in the future. &lt;strong&gt;In this tutorial, we’ll be practicing using tidyverse techniques to do this eyeballing cleanly and efficiently.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The content of this tutorial is technically not statistical in nature, but the motivation behind it is inherently statistical, so that’s why I want to take the time to introduce the statistical reasoning, at least conceptually, before we jump into the R.&lt;/p&gt;
+&lt;p&gt;And importantly, the techniques we practice today are useful for &lt;em&gt;any&lt;/em&gt; data analysis you want to repeat over many identically-structured sub-datasets. I’ll demonstrate another one of these applications, bootstrap resampling analysis, at &lt;a href=&#34;#bonus-example-bootstrapping&#34;&gt;the end of this tutorial&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Instructor’s note:&lt;/strong&gt; A full exploration of the motivations behind multilevel data analysis is beyond the scope of this tutorial. Today, we will be focusing on data wrangling tools you can use to explore the multilevel-ness of your data, which can lend useful insights no matter how you ultimately decide to analyze your data.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div id=&#34;introducing-the-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.2&lt;/span&gt; Introducing the data&lt;/h2&gt;
+&lt;p&gt;In this tutorial, we’ll be exploring grocery store sales data of millenials’ favorite fruit: avocados!&lt;/p&gt;
+&lt;p&gt;
+  &lt;figure class=&#34;center&#34; &gt;
+    &lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Avocado_open_side_by_side.jpg/640px-Avocado_open_side_by_side.jpg&#34;   /&gt;
+    
+      &lt;figcaption class=&#34;center&#34; &gt;The fruit that launched a thousand guacamoles?&lt;/figcaption&gt;
+    
+  &lt;/figure&gt;
+
+&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.kaggle.com/neuromusic/avocado-prices/data&#34;&gt;These data&lt;/a&gt; originally come from the Hass Avocado board, via Justin Kiggins on Kaggle. (I downloaded the local copy of these data on 2020-03-25.)&lt;/p&gt;
+&lt;p&gt;The data come from many weekly measures of avocado sales over a few years, collected in many metropolitan areas of the United States. Intuitively, we might expect that avocado sale data might differ based on which region the avocados were sold in. For example, all regions of the US might show similar patterns of avocado sales, but at different levels depending on the average cost of living in that region. Avocados probably sell for cheaper in Dallas, TX, where I grew up, than in New York City, where I live currently, and I’d like to group avocado sales by region so that region-specific avocado prices don’t influence the patterns I see in the data.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;A brief note:&lt;/p&gt;
+&lt;p&gt;Unless you specifically do research on grocery store avocado prices, it’s unlikely that these data map directly onto the data you deal with in your own research, and &lt;em&gt;that’s okay.&lt;/em&gt; It’s important to practice abstracting data cleaning/manipulation and statistical techniques &lt;em&gt;away from the specific data you’re practicing them on,&lt;/em&gt; so that you can learn from techniques demonstrated in other disciplines, figure out how they might help you with your own data, and then apply those techniques. Psychologists can learn from economists can learn from biologists, and vice versa. :)&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reading-in-the-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.3&lt;/span&gt; Reading in the data&lt;/h2&gt;
+&lt;p&gt;This blog post’s local copy of the avocado sales CSV can be found in the static website files &lt;a href=&#34;avocado.csv&#34;&gt;here&lt;/a&gt;. You should be able to download the CSV from that link by right-clicking and downloading a copy to your computer, or if your computer is actively connected to the internet, you can use the URL as the path to data in a &lt;code&gt;readr::read_csv()&lt;/code&gt; call.&lt;/p&gt;
+&lt;p&gt;In this post, I can use a relative path because the .Rmd this web page is generated from is saved in the same folder as the avocado data. You will need to use the appropriate URL or path to a local copy of the data when you &lt;code&gt;read_csv()&lt;/code&gt; on your own machine, so be aware that copying and pasting the code out of this chunk will probably not work out of the box.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avocado_raw &amp;lt;- read_csv(&amp;quot;avocado.csv&amp;quot;) %&amp;gt;%
+  # When I want to rename columns, I try to leave the raw data UNTOUCHED
+  # to improve reproducibility in case someone else were to download the data
+  # directly from the source I did
+  # as such, all renaming is done on the tibble after I&amp;#39;ve read it into R
+  rename(row_num = &amp;quot;X1&amp;quot;,
+         date = &amp;quot;Date&amp;quot;,
+         avg_price = &amp;quot;AveragePrice&amp;quot;,
+         total_volume = &amp;quot;Total Volume&amp;quot;,
+         PLU4046_sold = &amp;quot;4046&amp;quot;,
+         PLU4225_sold = &amp;quot;4225&amp;quot;,
+         PLU4770_sold = &amp;quot;4770&amp;quot;,
+         total_bags = &amp;quot;Total Bags&amp;quot;,
+         small_bags = &amp;quot;Small Bags&amp;quot;,
+         large_bags = &amp;quot;Large Bags&amp;quot;,
+         xlarge_bags = &amp;quot;XLarge Bags&amp;quot;) %&amp;gt;%
+  # There&amp;#39;s a row numbers column written out in the raw csv.
+  # I don&amp;#39;t think we need this so I&amp;#39;ll select that column out
+  select(-row_num) %&amp;gt;%
+  # For efficiency, I&amp;#39;ll store the year as integer
+  mutate(year = lubridate::year(date) %&amp;gt;% as.integer())&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s take a peek at the first few rows of the data.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avocado_raw&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 18,249 x 13
+##    date       avg_price total_volume PLU4046_sold PLU4225_sold PLU4770_sold
+##    &amp;lt;date&amp;gt;         &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt;
+##  1 2015-12-27      1.33       64237.        1037.       54455.         48.2
+##  2 2015-12-20      1.35       54877.         674.       44639.         58.3
+##  3 2015-12-13      0.93      118220.         795.      109150.        130. 
+##  4 2015-12-06      1.08       78992.        1132        71976.         72.6
+##  5 2015-11-29      1.28       51040.         941.       43838.         75.8
+##  6 2015-11-22      1.26       55980.        1184.       48068.         43.6
+##  7 2015-11-15      0.99       83454.        1369.       73673.         93.3
+##  8 2015-11-08      0.98      109428.         704.      101815.         80  
+##  9 2015-11-01      1.02       99811.        1022.       87316.         85.3
+## 10 2015-10-25      1.07       74339.         842.       64757.        113  
+## # … with 18,239 more rows, and 7 more variables: total_bags &amp;lt;dbl&amp;gt;,
+## #   small_bags &amp;lt;dbl&amp;gt;, large_bags &amp;lt;dbl&amp;gt;, xlarge_bags &amp;lt;dbl&amp;gt;, type &amp;lt;chr&amp;gt;,
+## #   year &amp;lt;int&amp;gt;, region &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can get a partial codebook of what data these columns contain from Justin Kiggins, the uploader of the original Kaggle dataset:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Some relevant columns in the dataset:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;date&lt;/code&gt; - The date of the observation&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;avg_price&lt;/code&gt; - the average price of a single avocado&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;type&lt;/code&gt; - conventional or organic&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;year&lt;/code&gt; - the year&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;region&lt;/code&gt; - the city or region of the observation&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;total_volume&lt;/code&gt; - Total number of avocados sold&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PLUXXXX_sold&lt;/code&gt; - Total number of avocados with PLU XXXX sold&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Finally, we can assume that the &lt;code&gt;*_bags&lt;/code&gt; columns measure the total number of variously sized bags of avocados in a given week.&lt;/p&gt;
+&lt;p&gt;Going forward, we’ll treat &lt;code&gt;region&lt;/code&gt; as the unit grouping variable. What all regions are there?&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;unique(avocado_raw$region)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;Albany&amp;quot;              &amp;quot;Atlanta&amp;quot;             &amp;quot;BaltimoreWashington&amp;quot;
+##  [4] &amp;quot;Boise&amp;quot;               &amp;quot;Boston&amp;quot;              &amp;quot;BuffaloRochester&amp;quot;   
+##  [7] &amp;quot;California&amp;quot;          &amp;quot;Charlotte&amp;quot;           &amp;quot;Chicago&amp;quot;            
+## [10] &amp;quot;CincinnatiDayton&amp;quot;    &amp;quot;Columbus&amp;quot;            &amp;quot;DallasFtWorth&amp;quot;      
+## [13] &amp;quot;Denver&amp;quot;              &amp;quot;Detroit&amp;quot;             &amp;quot;GrandRapids&amp;quot;        
+## [16] &amp;quot;GreatLakes&amp;quot;          &amp;quot;HarrisburgScranton&amp;quot;  &amp;quot;HartfordSpringfield&amp;quot;
+## [19] &amp;quot;Houston&amp;quot;             &amp;quot;Indianapolis&amp;quot;        &amp;quot;Jacksonville&amp;quot;       
+## [22] &amp;quot;LasVegas&amp;quot;            &amp;quot;LosAngeles&amp;quot;          &amp;quot;Louisville&amp;quot;         
+## [25] &amp;quot;MiamiFtLauderdale&amp;quot;   &amp;quot;Midsouth&amp;quot;            &amp;quot;Nashville&amp;quot;          
+## [28] &amp;quot;NewOrleansMobile&amp;quot;    &amp;quot;NewYork&amp;quot;             &amp;quot;Northeast&amp;quot;          
+## [31] &amp;quot;NorthernNewEngland&amp;quot;  &amp;quot;Orlando&amp;quot;             &amp;quot;Philadelphia&amp;quot;       
+## [34] &amp;quot;PhoenixTucson&amp;quot;       &amp;quot;Pittsburgh&amp;quot;          &amp;quot;Plains&amp;quot;             
+## [37] &amp;quot;Portland&amp;quot;            &amp;quot;RaleighGreensboro&amp;quot;   &amp;quot;RichmondNorfolk&amp;quot;    
+## [40] &amp;quot;Roanoke&amp;quot;             &amp;quot;Sacramento&amp;quot;          &amp;quot;SanDiego&amp;quot;           
+## [43] &amp;quot;SanFrancisco&amp;quot;        &amp;quot;Seattle&amp;quot;             &amp;quot;SouthCarolina&amp;quot;      
+## [46] &amp;quot;SouthCentral&amp;quot;        &amp;quot;Southeast&amp;quot;           &amp;quot;Spokane&amp;quot;            
+## [49] &amp;quot;StLouis&amp;quot;             &amp;quot;Syracuse&amp;quot;            &amp;quot;Tampa&amp;quot;              
+## [52] &amp;quot;TotalUS&amp;quot;             &amp;quot;West&amp;quot;                &amp;quot;WestTexNewMexico&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Most of these regions appear to correspond to specific metropolitan areas. However, I do see some regions in this data that look like supersets of other regions. &lt;code&gt;&#34;TotalUS&#34;&lt;/code&gt; ought to be a superset of all of the individual metropolitan regions, and, for example, &lt;code&gt;&#34;California&#34;&lt;/code&gt; should encompass &lt;code&gt;c(&#34;LosAngeles&#34;, &#34;Sacramento&#34;, &#34;SanDiego&#34;, &#34;SanFrancisco&#34;)&lt;/code&gt;. I’m going to go ahead and &lt;code&gt;filter()&lt;/code&gt; out all the data that are for multi-metropolitan regions so we can do our best to avoid double-counting.&lt;/p&gt;
+&lt;p&gt;I’m also going to &lt;code&gt;select()&lt;/code&gt; out the &lt;code&gt;*_bags&lt;/code&gt; columns and the &lt;code&gt;PLU*_sold&lt;/code&gt; columns, as I don’t plan to be doing any stats on the numbers of variously sized avocado bags sold per week, or avocado sales by avocado size (the different PLU values correspond to small, large, and extra large avocados). I think we can get most of the useful information in this data from the remaining columns.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;# Note that I&amp;#39;m not removing GreatLakes, NorthernNewEngland, or WestTexNewMexico
+# because I think those are counting large regions that don&amp;#39;t have a big city
+# so they&amp;#39;re not double-counting the other cities
+avocado &amp;lt;- avocado_raw %&amp;gt;%
+  filter(!(region %in% c(&amp;quot;California&amp;quot;,
+                         &amp;quot;Midsouth&amp;quot;,
+                         &amp;quot;Northeast&amp;quot;,
+                         &amp;quot;Plains&amp;quot;,
+                         &amp;quot;SouthCentral&amp;quot;,
+                         &amp;quot;Southeast&amp;quot;,
+                         &amp;quot;TotalUS&amp;quot;,
+                         &amp;quot;West&amp;quot;))) %&amp;gt;%
+  select(-ends_with(&amp;quot;bags&amp;quot;), -starts_with(&amp;quot;PLU&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A latent benefit of removing unwanted columns in the data is that when we print the tibble to console to inspect the first several rows, we can see more columns that were originally pushed off to the side.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avocado&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 15,545 x 6
+##    date       avg_price total_volume type          year region
+##    &amp;lt;date&amp;gt;         &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;        &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt; 
+##  1 2015-12-27      1.33       64237. conventional  2015 Albany
+##  2 2015-12-20      1.35       54877. conventional  2015 Albany
+##  3 2015-12-13      0.93      118220. conventional  2015 Albany
+##  4 2015-12-06      1.08       78992. conventional  2015 Albany
+##  5 2015-11-29      1.28       51040. conventional  2015 Albany
+##  6 2015-11-22      1.26       55980. conventional  2015 Albany
+##  7 2015-11-15      0.99       83454. conventional  2015 Albany
+##  8 2015-11-08      0.98      109428. conventional  2015 Albany
+##  9 2015-11-01      1.02       99811. conventional  2015 Albany
+## 10 2015-10-25      1.07       74339. conventional  2015 Albany
+## # … with 15,535 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Instructor’s note:&lt;/strong&gt; If you wish, you can set tibble printing options to print preview values for all columns of a tibble, irrespective of whether those additional columns spill over to the next row of print output. You can do it temporarily by explicitly calling &lt;code&gt;print(my_tibble, width = Inf)&lt;/code&gt; to override the default console-width-detecting behavior, or by setting your R instance’s global options with &lt;code&gt;options(tibble.width = Inf)&lt;/code&gt; to print all columns for all tibbles. However, I personally like the width-restricting behavior of default tibble printing. I’ll take the clean console output.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div id=&#34;inspecting-the-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.4&lt;/span&gt; Inspecting the data&lt;/h2&gt;
+&lt;p&gt;Today’s explorations will focus around the following diffuse research question: &lt;strong&gt;Do avocado buyers prefer buying conventional or organic avocados? By how much? How do these patterns differ from region to region?&lt;/strong&gt; For a variety of reasons (pick your favorite), it might be interesting to try to quantify grocery shoppers’ relative preference for conventional vs. organic avocados, as it probably tracks with regional variations in supply chain access, and/or psychological attitudes about health and environmentalism.&lt;/p&gt;
+&lt;p&gt;(We won’t be able to get into those more complex variables because they aren’t present in the avocado data we have, but just an inspiration!)&lt;/p&gt;
+&lt;p&gt;Even before we get into looking for more complex statistics within each region, we can use simpler tidyverse tools to generate and inspect single-value summary statistics, both visually and numerically, for each metropolitan area present in the data.&lt;/p&gt;
+&lt;div id=&#34;quick-graphs&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.4.1&lt;/span&gt; Quick graphs&lt;/h3&gt;
+&lt;p&gt;We can use built-in grouping features of &lt;code&gt;ggplot2&lt;/code&gt; to inspect the data visually without having to pre-manipulate it much.&lt;/p&gt;
+&lt;p&gt;First, let’s look at a histogram of weekly avocado sales, across all weeks, and all metropolitan areas. How many avocados are people buying in a given week? I’m also going to split this histogram to get two different filled histograms for conventional and organic avocado sales so we can see those sales separately. I’ll set the colors to… ah, avocado-themed.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_colors = c(&amp;quot;sienna4&amp;quot;, &amp;quot;olivedrab2&amp;quot;)
+
+plot_hist_avo_total_volume &amp;lt;- avocado %&amp;gt;%
+  ggplot(aes(x = total_volume, fill = type)) +
+  geom_histogram(position = &amp;quot;identity&amp;quot;, bins = 25, alpha = 0.5) +
+  scale_fill_manual(values = avo_colors) +
+  theme_bw()
+
+plot_hist_avo_total_volume&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-vol-hist-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Ooh, yikes, the weekly total avocados sold looks super gamma-skewed. Most weeks it’s maybe a few tens of thousands of avocados sold, but in some weeks and some regions it gets into the millions of avocados sold (that’s a lot of avocados in a week!), so we would probably do well to log-transform the data to try to get it to take a more normal-ish distribution.&lt;/p&gt;
+&lt;p&gt;Right now, we can use one of &lt;code&gt;ggplot2&lt;/code&gt;’s scale helper functions to set the scale to be on log-10 units.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;plot_hist_avo_total_volume +
+  scale_x_log10()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-vol-hist-scaled-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;That looks much better! Now we can proceed.&lt;/p&gt;
+&lt;p&gt;Next, let’s break up the graph by region, so we can see the sub-histograms of total avocados sold for each metropolitan area. A super-fast way to break up your graph by each grouping unit is to &lt;em&gt;facet&lt;/em&gt; your ggplot, or to break it up into small multiples. I like to use &lt;code&gt;facet_wrap(~ grouping_unit)&lt;/code&gt; to break a single plot up, so that the data for each metro area is displayed on its own sub-plot, or facet. The “wrap” part of &lt;code&gt;facet_wrap()&lt;/code&gt; tries to arrange the facets in “reading” order, from left-to-right and then top-to-bottom to fill the plot area as efficiently as possible.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;plot_hist_avo_total_volume +
+  # let&amp;#39;s not forget to log-scale the x-axis!
+  scale_x_log10() +
+  facet_wrap(~ region)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-vol-hist-faceted-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Incidentally, graphing data at first can be a great way of identifying important variables in the data that need to be considered. For example, what if I had forgotten to break up the sales data by conventional vs. organic avocado type?&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avocado %&amp;gt;%
+  # Notice that I&amp;#39;ve removed the fill aesthetic
+  # so now it&amp;#39;s not splitting by avo type
+  ggplot(aes(x = total_volume)) +
+  geom_histogram(position = &amp;quot;identity&amp;quot;, bins = 25, alpha = 0.5) +
+  scale_x_log10() +
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-vol-hist-bad-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;I might see a bimodal histogram and say “huh, that’s funny.” If I weren’t so careful, I might continue my business without accounting for this bimodality. But optimally I’d stop and think “what additional variable might be driving this bimodality?” and after some exploration, realize that I need to consider conventional vs. organic avocado type when looking at avocado sales in order to properly characterize the data. Always keep an eye out!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;basic-summary-statistics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.4.2&lt;/span&gt; Basic summary statistics&lt;/h3&gt;
+&lt;p&gt;In addition to graphs, we can generate simple one-shot summary statistics using &lt;code&gt;group_by()&lt;/code&gt; and &lt;code&gt;summarize()&lt;/code&gt; from the &lt;code&gt;dplyr&lt;/code&gt; package.&lt;/p&gt;
+&lt;p&gt;As a companion to the exploratory graphs of &lt;code&gt;total_volume&lt;/code&gt; we just generated, we can calculate numerical summaries of the weekly number of avocados sold as a quick metric of the difference in buying patterns for conventional and organic avocados. Before we calculate these summaries, though, we should create a new column for log-10-transformed &lt;code&gt;total_volume&lt;/code&gt;, as we saw earlier in our graphs that it’s massively right-tailed and needs to be log-transformed to look more normal.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;# The double-sided assignment pipe %&amp;lt;&amp;gt;%, from magrittr
+# you can use this by library()-ing magrittr
+# in addition to library(tidyverse)
+# avocado %&amp;lt;&amp;gt;% ... does the same thing as:
+# avocado &amp;lt;- avocado %&amp;gt;% ...
+# so it gives us a shortcut to pipe an object into some calls,
+# and then re-save the new result back into the old variable name
+# let&amp;#39;s save total_volume_log10 into avocado because we&amp;#39;ll need it
+# many times in the future
+avocado %&amp;lt;&amp;gt;%
+  mutate(total_volume_log10 = log10(total_volume))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avocado %&amp;gt;%
+  group_by(region, type) %&amp;gt;%
+  summarize(mean_total_volume = mean(total_volume_log10),
+            sd_total_volume = sd(total_volume_log10))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `summarise()` has grouped output by &amp;#39;region&amp;#39;. You can override using the `.groups` argument.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 92 x 4
+## # Groups:   region [46]
+##    region              type         mean_total_volume sd_total_volume
+##    &amp;lt;chr&amp;gt;               &amp;lt;chr&amp;gt;                    &amp;lt;dbl&amp;gt;           &amp;lt;dbl&amp;gt;
+##  1 Albany              conventional              4.95          0.140 
+##  2 Albany              organic                   3.29          0.205 
+##  3 Atlanta             conventional              5.70          0.0899
+##  4 Atlanta             organic                   4.00          0.236 
+##  5 BaltimoreWashington conventional              5.88          0.0722
+##  6 BaltimoreWashington organic                   4.31          0.225 
+##  7 Boise               conventional              4.91          0.0987
+##  8 Boise               organic                   3.34          0.209 
+##  9 Boston              conventional              5.74          0.0811
+## 10 Boston              organic                   4.03          0.359 
+## # … with 82 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Above, we &lt;code&gt;group_by()&lt;/code&gt; both &lt;code&gt;region&lt;/code&gt; and &lt;code&gt;type&lt;/code&gt; to get two separate means and SDs of weekly avocados sold in each region, one value each for conventional and organic avocados.&lt;/p&gt;
+&lt;p&gt;We can &lt;code&gt;pivot_wider()&lt;/code&gt; our observation-level data, to get &lt;code&gt;total_volume&lt;/code&gt; into two columns, one for the conventional avocados and one for the organic avocados, for each week. Thus, instead of two rows per week per metro region, one for each avocado type, we’ll have one row per week per metro region, with the relevant values for each avocado type in their own columns.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avocado %&amp;gt;%
+  # Here, selecting the id_cols and the ONE values_from column I want to pivot out
+  select(year, date, region, type, total_volume_log10) %&amp;gt;%
+  pivot_wider(names_from = type,
+              values_from = total_volume_log10,
+              names_prefix = &amp;quot;total_volume_&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 7,774 x 5
+##     year date       region total_volume_conventional total_volume_organic
+##    &amp;lt;int&amp;gt; &amp;lt;date&amp;gt;     &amp;lt;chr&amp;gt;                      &amp;lt;dbl&amp;gt;                &amp;lt;dbl&amp;gt;
+##  1  2015 2015-12-27 Albany                      4.81                 3.00
+##  2  2015 2015-12-20 Albany                      4.74                 3.07
+##  3  2015 2015-12-13 Albany                      5.07                 3.00
+##  4  2015 2015-12-06 Albany                      4.90                 3.06
+##  5  2015 2015-11-29 Albany                      4.71                 2.92
+##  6  2015 2015-11-22 Albany                      4.75                 2.93
+##  7  2015 2015-11-15 Albany                      4.92                 3.08
+##  8  2015 2015-11-08 Albany                      5.04                 3.12
+##  9  2015 2015-11-01 Albany                      5.00                 3.01
+## 10  2015 2015-10-25 Albany                      4.87                 3.07
+## # … with 7,764 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Instructor’s note:&lt;/strong&gt; Above, I’ve &lt;code&gt;select()&lt;/code&gt;-ed to remove all the other outcome columns other than &lt;code&gt;total_volume&lt;/code&gt; before pivoting my dataframe. If you wanted to pivot &lt;em&gt;all&lt;/em&gt; outcome columns in the data by &lt;code&gt;type&lt;/code&gt;, you could, as of &lt;code&gt;tidyr &amp;gt;=1.0.0&lt;/code&gt;. The least verbose way to do this would be to feed a negative column name vector into the &lt;code&gt;values_from&lt;/code&gt; argument to exclude ID columns from the set of columns to pivot, like so:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avocado %&amp;gt;%
+  pivot_wider(names_from = type, values_from = -c(year, date, region))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 7,774 x 11
+##    date        year region avg_price_conve… avg_price_organ… total_volume_co…
+##    &amp;lt;date&amp;gt;     &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;             &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
+##  1 2015-12-27  2015 Albany             1.33             1.83           64237.
+##  2 2015-12-20  2015 Albany             1.35             1.89           54877.
+##  3 2015-12-13  2015 Albany             0.93             1.85          118220.
+##  4 2015-12-06  2015 Albany             1.08             1.84           78992.
+##  5 2015-11-29  2015 Albany             1.28             1.94           51040.
+##  6 2015-11-22  2015 Albany             1.26             1.94           55980.
+##  7 2015-11-15  2015 Albany             0.99             1.89           83454.
+##  8 2015-11-08  2015 Albany             0.98             1.88          109428.
+##  9 2015-11-01  2015 Albany             1.02             1.88           99811.
+## 10 2015-10-25  2015 Albany             1.07             1.83           74339.
+## # … with 7,764 more rows, and 5 more variables: total_volume_organic &amp;lt;dbl&amp;gt;,
+## #   type_conventional &amp;lt;chr&amp;gt;, type_organic &amp;lt;chr&amp;gt;,
+## #   total_volume_log10_conventional &amp;lt;dbl&amp;gt;, total_volume_log10_organic &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Then, by default, since there are multiple &lt;code&gt;values_from&lt;/code&gt; columns, each of them has the relevant level of &lt;code&gt;names_from&lt;/code&gt; (here, avocado &lt;code&gt;type&lt;/code&gt;) appended to the end of the column name with the &lt;code&gt;names_sep&lt;/code&gt; separator.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Once the data is pivoted, we can now use &lt;code&gt;mutate()&lt;/code&gt; to subtract the organic total dollars spent from the conventional total dollars spent. Then, we can generate similar mean/SD summaries as we did before. Finally, we can make the little tibble print preview a bit more informative by using &lt;code&gt;arrange()&lt;/code&gt; to sort the data such that the metro areas with highest conventional - organic sales volume differences get sorted to the top of the tibble.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avocado %&amp;gt;%
+  select(year, date, region, type, total_volume_log10) %&amp;gt;%
+  pivot_wider(names_from = type,
+              values_from = total_volume_log10,
+              names_prefix = &amp;quot;total_volume_&amp;quot;) %&amp;gt;%
+  mutate(total_volume_diff = total_volume_conventional - total_volume_organic) %&amp;gt;%
+  group_by(region) %&amp;gt;%
+  summarize(mean_volume_diff = mean(total_volume_diff),
+            sd_volume_diff = sd(total_volume_diff)) %&amp;gt;%
+  arrange(desc(mean_volume_diff))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 46 x 3
+##    region            mean_volume_diff sd_volume_diff
+##    &amp;lt;chr&amp;gt;                        &amp;lt;dbl&amp;gt;          &amp;lt;dbl&amp;gt;
+##  1 MiamiFtLauderdale             2.25          0.285
+##  2 Tampa                         2.01          0.228
+##  3 PhoenixTucson                 1.99          0.134
+##  4 NewOrleansMobile              1.91          0.247
+##  5 GrandRapids                   1.84          0.390
+##  6 Orlando                       1.84          0.170
+##  7 DallasFtWorth                 1.80          0.177
+##  8 Houston                       1.76          0.235
+##  9 Sacramento                    1.76          0.149
+## 10 Jacksonville                  1.74          0.171
+## # … with 36 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Huh, cities in Florida appear to be over-represented in the top several metro areas in buying more conventional than organic avocados. I wonder what’s going on there? We can’t rule out that this is driven by Florida having waaaay cheaper conventional avocados, and relatively more expensive organic avocados, which could be driving Floridian shoppers to choose conventional. We probably want to take this into account in later analyses, so that any effects of conventional vs. organic we see on the volume of avocados sold aren’t driven by a huge price premium for organic avocados. &lt;a href=&#34;#hella-models&#34;&gt;(Stay tuned!)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We can get a fair amount of mileage out of these initial visualizations and summaries, and there’s nothing wrong with using these summaries as a first pass. I do so all the time! However, when you &lt;em&gt;want&lt;/em&gt; (or need) to be able to calculate more complex statistics on the weekly data for each metro area, you’ll need more complex tools.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;nesting-the-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.5&lt;/span&gt; Nesting the data&lt;/h2&gt;
+&lt;p&gt;Nearly all of the tidyverse features we’ll be working through in the rest of this tutorial rely on two key features of R to make their magic happen: &lt;strong&gt;list-columns&lt;/strong&gt; and &lt;strong&gt;flexible vectorizing functions.&lt;/strong&gt;&lt;/p&gt;
+&lt;div id=&#34;intro-to-nest-unnest-and-tibble-list-columns&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.5.1&lt;/span&gt; Intro to nest(), unnest(), and tibble list-columns&lt;/h3&gt;
+&lt;p&gt;A df is composed of columns, each of which is a vector of identical length. But nobody ever said the columns of a df all have to be atomic vectors! &lt;strong&gt;A df column can be a list vector,&lt;/strong&gt; where each element of said list-column can contain objects of different data types and lengths. While each element of list-column &lt;em&gt;can&lt;/em&gt; contain objects of various and sundry types/lengths, list-columns gain a lot of power when they contain objects of &lt;em&gt;consistent&lt;/em&gt; type. (When this is true, you can apply a single function to every row of a list-column, and get a single column of consistent output–this is where we’re headed.)&lt;/p&gt;
+&lt;p&gt;In this way, a list-column allows you to store multiple observations per unit wrapped up in such a way that the main df still has one row per unit, but you retain the observation-level data because you haven’t actually collapsed across any variables.&lt;/p&gt;
+&lt;p&gt;First, we’ll create a new variable by folding our observation-level data into a new shape, using &lt;code&gt;nest()&lt;/code&gt; from the &lt;code&gt;tidyr&lt;/code&gt; package. This is going to package the long-form avocado data into &lt;em&gt;nested&lt;/em&gt; form, which is somewhere between long data (one row per observation) and wide data (one row per grouping unit).&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region &amp;lt;- avocado %&amp;gt;%
+  nest(sales = -region)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A nested dataframe like the one we just created has two main column types: key columns and list-columns of sub-dataframes.&lt;/p&gt;
+&lt;p&gt;Key columns are the columns you might &lt;code&gt;group_by()&lt;/code&gt; before, say, generating summary statistics with &lt;code&gt;summarize()&lt;/code&gt;. They act as a label for the data contained in that row’s list-columns. List-columns do not contain a single atomic element in each row, but instead _a whole sub-data frame containing all the observation-level data corresponding to that key level.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Instructor’s note:&lt;/strong&gt; A deeper exploration of the uses for and behaviors of list-columns is beyond the scope of the current tutorial. This tutorial assumes learners have never intentionally worked with non-dataframe list objects, and demonstrates only the case of list-columns containing data nested from an original “normal” dataframe. &lt;a href=&#34;https://r4ds.had.co.nz/many-models.html#list-columns-1&#34;&gt;R for Data Science’s section on dataframe list-columns&lt;/a&gt; is a useful reference for more information on list-columns.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Now, for list-columns, instead of actually printing the content of the vector, tibble output gives us a blurb about the object contained inside of each list element.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 46 x 2
+##    region              sales             
+##    &amp;lt;chr&amp;gt;               &amp;lt;list&amp;gt;            
+##  1 Albany              &amp;lt;tibble [338 × 6]&amp;gt;
+##  2 Atlanta             &amp;lt;tibble [338 × 6]&amp;gt;
+##  3 BaltimoreWashington &amp;lt;tibble [338 × 6]&amp;gt;
+##  4 Boise               &amp;lt;tibble [338 × 6]&amp;gt;
+##  5 Boston              &amp;lt;tibble [338 × 6]&amp;gt;
+##  6 BuffaloRochester    &amp;lt;tibble [338 × 6]&amp;gt;
+##  7 Charlotte           &amp;lt;tibble [338 × 6]&amp;gt;
+##  8 Chicago             &amp;lt;tibble [338 × 6]&amp;gt;
+##  9 CincinnatiDayton    &amp;lt;tibble [338 × 6]&amp;gt;
+## 10 Columbus            &amp;lt;tibble [338 × 6]&amp;gt;
+## # … with 36 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can see here that each row of &lt;code&gt;sales&lt;/code&gt;, the list-column generated by nesting the data, contains a sub-tibble with 338 rows of the other 6 columns of data corresponding to each level of &lt;code&gt;region&lt;/code&gt;. The data is still there, safe and sound!&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;nest()&lt;/code&gt; creates list-columns with the general argument format &lt;code&gt;list_col = cols_to_put_into_list_col&lt;/code&gt;. Importantly, the columns you wish to put into the list-column can be specified using &lt;code&gt;select()&lt;/code&gt; syntax. We can harness this to use the &lt;code&gt;-&lt;/code&gt; to &lt;em&gt;exclude&lt;/em&gt; specific key columns, and put &lt;em&gt;all other non-key columns into the list-column.&lt;/em&gt; For example, if you wanted to hold out multiple key columns, for example, both &lt;code&gt;region&lt;/code&gt; and &lt;code&gt;type&lt;/code&gt; to split up the sub-data by conventional and organic:&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avocado %&amp;gt;%
+  nest(sales = -c(region, type))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 92 x 3
+##    type         region              sales             
+##    &amp;lt;chr&amp;gt;        &amp;lt;chr&amp;gt;               &amp;lt;list&amp;gt;            
+##  1 conventional Albany              &amp;lt;tibble [169 × 5]&amp;gt;
+##  2 conventional Atlanta             &amp;lt;tibble [169 × 5]&amp;gt;
+##  3 conventional BaltimoreWashington &amp;lt;tibble [169 × 5]&amp;gt;
+##  4 conventional Boise               &amp;lt;tibble [169 × 5]&amp;gt;
+##  5 conventional Boston              &amp;lt;tibble [169 × 5]&amp;gt;
+##  6 conventional BuffaloRochester    &amp;lt;tibble [169 × 5]&amp;gt;
+##  7 conventional Charlotte           &amp;lt;tibble [169 × 5]&amp;gt;
+##  8 conventional Chicago             &amp;lt;tibble [169 × 5]&amp;gt;
+##  9 conventional CincinnatiDayton    &amp;lt;tibble [169 × 5]&amp;gt;
+## 10 conventional Columbus            &amp;lt;tibble [169 × 5]&amp;gt;
+## # … with 82 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In this way, you can flexibly choose which columns of data to fold into your list-column, and which key-columns you want to fold by.&lt;/p&gt;
+&lt;p&gt;When you want to unnest the data and go back to original long form, you might not be surprised to hear that the function we’ll need is &lt;code&gt;unnest()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region %&amp;gt;%
+  unnest(sales)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 15,545 x 7
+##    region date       avg_price total_volume type          year total_volume_log…
+##    &amp;lt;chr&amp;gt;  &amp;lt;date&amp;gt;         &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;        &amp;lt;int&amp;gt;             &amp;lt;dbl&amp;gt;
+##  1 Albany 2015-12-27      1.33       64237. conventional  2015              4.81
+##  2 Albany 2015-12-20      1.35       54877. conventional  2015              4.74
+##  3 Albany 2015-12-13      0.93      118220. conventional  2015              5.07
+##  4 Albany 2015-12-06      1.08       78992. conventional  2015              4.90
+##  5 Albany 2015-11-29      1.28       51040. conventional  2015              4.71
+##  6 Albany 2015-11-22      1.26       55980. conventional  2015              4.75
+##  7 Albany 2015-11-15      0.99       83454. conventional  2015              4.92
+##  8 Albany 2015-11-08      0.98      109428. conventional  2015              5.04
+##  9 Albany 2015-11-01      1.02       99811. conventional  2015              5.00
+## 10 Albany 2015-10-25      1.07       74339. conventional  2015              4.87
+## # … with 15,535 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;unnest()&lt;/code&gt; takes as its argument the list-column you wish to unnest, and then thy will be done, it takes the data back into long form for you. Notice that the key column, in this case &lt;code&gt;region&lt;/code&gt;, is now once again repeated for every row in the data belonging to that key level.&lt;/p&gt;
+&lt;p&gt;To inspect the contents of a single element of a list-column, we have to index &lt;em&gt;into&lt;/em&gt; the list-column. The tidyverse function to index single columns, equivalent to dollar-sign &lt;code&gt;$&lt;/code&gt; indexing dataframe columns in base R, is &lt;code&gt;pull()&lt;/code&gt;. &lt;code&gt;pull()&lt;/code&gt; is pipe-safe, meaning it takes a tibble/dataframe as its first argument, so we can pipe said dataframe into the function. Then, the second argument that we specify inside of the parentheses is the column name we want to index, “naked”, without quotation marks, as with other tidyverse functions.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region %&amp;gt;%
+  pull(region)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;Albany&amp;quot;              &amp;quot;Atlanta&amp;quot;             &amp;quot;BaltimoreWashington&amp;quot;
+##  [4] &amp;quot;Boise&amp;quot;               &amp;quot;Boston&amp;quot;              &amp;quot;BuffaloRochester&amp;quot;   
+##  [7] &amp;quot;Charlotte&amp;quot;           &amp;quot;Chicago&amp;quot;             &amp;quot;CincinnatiDayton&amp;quot;   
+## [10] &amp;quot;Columbus&amp;quot;            &amp;quot;DallasFtWorth&amp;quot;       &amp;quot;Denver&amp;quot;             
+## [13] &amp;quot;Detroit&amp;quot;             &amp;quot;GrandRapids&amp;quot;         &amp;quot;GreatLakes&amp;quot;         
+## [16] &amp;quot;HarrisburgScranton&amp;quot;  &amp;quot;HartfordSpringfield&amp;quot; &amp;quot;Houston&amp;quot;            
+## [19] &amp;quot;Indianapolis&amp;quot;        &amp;quot;Jacksonville&amp;quot;        &amp;quot;LasVegas&amp;quot;           
+## [22] &amp;quot;LosAngeles&amp;quot;          &amp;quot;Louisville&amp;quot;          &amp;quot;MiamiFtLauderdale&amp;quot;  
+## [25] &amp;quot;Nashville&amp;quot;           &amp;quot;NewOrleansMobile&amp;quot;    &amp;quot;NewYork&amp;quot;            
+## [28] &amp;quot;NorthernNewEngland&amp;quot;  &amp;quot;Orlando&amp;quot;             &amp;quot;Philadelphia&amp;quot;       
+## [31] &amp;quot;PhoenixTucson&amp;quot;       &amp;quot;Pittsburgh&amp;quot;          &amp;quot;Portland&amp;quot;           
+## [34] &amp;quot;RaleighGreensboro&amp;quot;   &amp;quot;RichmondNorfolk&amp;quot;     &amp;quot;Roanoke&amp;quot;            
+## [37] &amp;quot;Sacramento&amp;quot;          &amp;quot;SanDiego&amp;quot;            &amp;quot;SanFrancisco&amp;quot;       
+## [40] &amp;quot;Seattle&amp;quot;             &amp;quot;SouthCarolina&amp;quot;       &amp;quot;Spokane&amp;quot;            
+## [43] &amp;quot;StLouis&amp;quot;             &amp;quot;Syracuse&amp;quot;            &amp;quot;Tampa&amp;quot;              
+## [46] &amp;quot;WestTexNewMexico&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can see below that base R &lt;code&gt;$&lt;/code&gt; indexing yields the same result:&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region$region&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;Albany&amp;quot;              &amp;quot;Atlanta&amp;quot;             &amp;quot;BaltimoreWashington&amp;quot;
+##  [4] &amp;quot;Boise&amp;quot;               &amp;quot;Boston&amp;quot;              &amp;quot;BuffaloRochester&amp;quot;   
+##  [7] &amp;quot;Charlotte&amp;quot;           &amp;quot;Chicago&amp;quot;             &amp;quot;CincinnatiDayton&amp;quot;   
+## [10] &amp;quot;Columbus&amp;quot;            &amp;quot;DallasFtWorth&amp;quot;       &amp;quot;Denver&amp;quot;             
+## [13] &amp;quot;Detroit&amp;quot;             &amp;quot;GrandRapids&amp;quot;         &amp;quot;GreatLakes&amp;quot;         
+## [16] &amp;quot;HarrisburgScranton&amp;quot;  &amp;quot;HartfordSpringfield&amp;quot; &amp;quot;Houston&amp;quot;            
+## [19] &amp;quot;Indianapolis&amp;quot;        &amp;quot;Jacksonville&amp;quot;        &amp;quot;LasVegas&amp;quot;           
+## [22] &amp;quot;LosAngeles&amp;quot;          &amp;quot;Louisville&amp;quot;          &amp;quot;MiamiFtLauderdale&amp;quot;  
+## [25] &amp;quot;Nashville&amp;quot;           &amp;quot;NewOrleansMobile&amp;quot;    &amp;quot;NewYork&amp;quot;            
+## [28] &amp;quot;NorthernNewEngland&amp;quot;  &amp;quot;Orlando&amp;quot;             &amp;quot;Philadelphia&amp;quot;       
+## [31] &amp;quot;PhoenixTucson&amp;quot;       &amp;quot;Pittsburgh&amp;quot;          &amp;quot;Portland&amp;quot;           
+## [34] &amp;quot;RaleighGreensboro&amp;quot;   &amp;quot;RichmondNorfolk&amp;quot;     &amp;quot;Roanoke&amp;quot;            
+## [37] &amp;quot;Sacramento&amp;quot;          &amp;quot;SanDiego&amp;quot;            &amp;quot;SanFrancisco&amp;quot;       
+## [40] &amp;quot;Seattle&amp;quot;             &amp;quot;SouthCarolina&amp;quot;       &amp;quot;Spokane&amp;quot;            
+## [43] &amp;quot;StLouis&amp;quot;             &amp;quot;Syracuse&amp;quot;            &amp;quot;Tampa&amp;quot;              
+## [46] &amp;quot;WestTexNewMexico&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There are definitely still instances where &lt;code&gt;$&lt;/code&gt; indexing columns is the cleanest way to index. However, in this tutorial we’ll be using pipe-safe tidyverse indexing functions moving forward so that we can stick with the &lt;code&gt;%&amp;gt;%&lt;/code&gt; pipe for consistency.&lt;/p&gt;
+&lt;p&gt;Once we’ve used &lt;code&gt;pull()&lt;/code&gt; to index a single column, we can use another tidyverse pipe-safe helper function, &lt;code&gt;pluck()&lt;/code&gt;, this time for indexing elements of a vector. As a rule of thumb, &lt;code&gt;pull()&lt;/code&gt; does what &lt;code&gt;$&lt;/code&gt; indexing does, and &lt;code&gt;pluck()&lt;/code&gt; does what &lt;code&gt;[]&lt;/code&gt; indexing does. Thus, the below code indexes the &lt;code&gt;sales&lt;/code&gt; column, and then specifically the first element in that column vector.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region %&amp;gt;%
+  pull(sales) %&amp;gt;%
+  pluck(1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 338 x 6
+##    date       avg_price total_volume type          year total_volume_log10
+##    &amp;lt;date&amp;gt;         &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;        &amp;lt;int&amp;gt;              &amp;lt;dbl&amp;gt;
+##  1 2015-12-27      1.33       64237. conventional  2015               4.81
+##  2 2015-12-20      1.35       54877. conventional  2015               4.74
+##  3 2015-12-13      0.93      118220. conventional  2015               5.07
+##  4 2015-12-06      1.08       78992. conventional  2015               4.90
+##  5 2015-11-29      1.28       51040. conventional  2015               4.71
+##  6 2015-11-22      1.26       55980. conventional  2015               4.75
+##  7 2015-11-15      0.99       83454. conventional  2015               4.92
+##  8 2015-11-08      0.98      109428. conventional  2015               5.04
+##  9 2015-11-01      1.02       99811. conventional  2015               5.00
+## 10 2015-10-25      1.07       74339. conventional  2015               4.87
+## # … with 328 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can also use the &lt;code&gt;dplyr&lt;/code&gt; tools we already know to subset &lt;code&gt;avo_by_region()&lt;/code&gt; to &lt;code&gt;pluck()&lt;/code&gt; the data belonging to a particular region.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region %&amp;gt;%
+  # This should give us a one-row dataframe
+  # so we know the first element is the one we want
+  filter(region == &amp;quot;NewYork&amp;quot;) %&amp;gt;%
+  pull(sales) %&amp;gt;%
+  pluck(1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 338 x 6
+##    date       avg_price total_volume type          year total_volume_log10
+##    &amp;lt;date&amp;gt;         &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;        &amp;lt;int&amp;gt;              &amp;lt;dbl&amp;gt;
+##  1 2015-12-27      1.17     1129876. conventional  2015               6.05
+##  2 2015-12-20      1.23     1139348. conventional  2015               6.06
+##  3 2015-12-13      1.12     1254805. conventional  2015               6.10
+##  4 2015-12-06      1.2      1068972. conventional  2015               6.03
+##  5 2015-11-29      1.16      999170. conventional  2015               6.00
+##  6 2015-11-22      1.14     1111803. conventional  2015               6.05
+##  7 2015-11-15      1.04     1357393. conventional  2015               6.13
+##  8 2015-11-08      1.13     1406262. conventional  2015               6.15
+##  9 2015-11-01      1.06     2180520. conventional  2015               6.34
+## 10 2015-10-25      1.23     1048046. conventional  2015               6.02
+## # … with 328 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice that once you’ve got only one row in a nested dataframe, &lt;code&gt;pluck()&lt;/code&gt;-ing to unlist the data in the list-column is equivalent to using &lt;code&gt;unnest()&lt;/code&gt; to unfold all rows of the list-column.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region %&amp;gt;%
+  filter(region == &amp;quot;NewYork&amp;quot;) %&amp;gt;%
+  unnest(sales)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 338 x 7
+##    region  date       avg_price total_volume type         year total_volume_log…
+##    &amp;lt;chr&amp;gt;   &amp;lt;date&amp;gt;         &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;       &amp;lt;int&amp;gt;             &amp;lt;dbl&amp;gt;
+##  1 NewYork 2015-12-27      1.17     1129876. convention…  2015              6.05
+##  2 NewYork 2015-12-20      1.23     1139348. convention…  2015              6.06
+##  3 NewYork 2015-12-13      1.12     1254805. convention…  2015              6.10
+##  4 NewYork 2015-12-06      1.2      1068972. convention…  2015              6.03
+##  5 NewYork 2015-11-29      1.16      999170. convention…  2015              6.00
+##  6 NewYork 2015-11-22      1.14     1111803. convention…  2015              6.05
+##  7 NewYork 2015-11-15      1.04     1357393. convention…  2015              6.13
+##  8 NewYork 2015-11-08      1.13     1406262. convention…  2015              6.15
+##  9 NewYork 2015-11-01      1.06     2180520. convention…  2015              6.34
+## 10 NewYork 2015-10-25      1.23     1048046. convention…  2015              6.02
+## # … with 328 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Instructor’s note:&lt;/strong&gt; To use exclusively base R to index into list-columns, you have to be careful when you want to use single-bracket indexing (e.g. to conditional-index based in values in another column of the df) versus double-bracket indexing (to actually expose the value of the list-column for printing to console or otherwise manipulation). For a more in-depth exploration of base R indexing into lists, please visit the &lt;a href=&#34;https://r4ds.had.co.nz/vectors.html#lists&#34;&gt;relevant R for Data Science chapter&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;going-vectorize-crazy&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.6&lt;/span&gt; Going vectorize crazy&lt;/h2&gt;
+&lt;p&gt;Next, we’ll review vectorizing: this is a feature of R that you probably use all the time and don’t even know it! We’ll learn a little more about what vectorized functions do and how you can vectorize any function you wish.&lt;/p&gt;
+&lt;p&gt;To read more in-depth about vectorized functions in R, check out Noam Ross’s handy &lt;a href=&#34;http://www.noamross.net/blog/2014/4/16/vectorization-in-r--why.html&#34;&gt;blog post&lt;/a&gt;. We won’t be getting deep into the nuts and bolts of how vectorization works in R today. We’ll just be discussing it at a high level that should orient you enough to be able to make quick use of vectorizing helper functions.&lt;/p&gt;
+&lt;div id=&#34;vectorizing-its-like-a-for-loop-but-not&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.6.1&lt;/span&gt; Vectorizing: it’s like a for loop, but not&lt;/h3&gt;
+&lt;p&gt;As you’ve likely experienced, much data processing requires writing code to perform a particular action, and then wrapping it in other code to repeat that action many times over many objects. In R, this usually means doing the same operation to every element in a vector or every row in a df column.&lt;/p&gt;
+&lt;p&gt;In most computing languages, the most sensible way to do one thing a bunch of times is to use a for loop, which (I know you know this but I’ll spell it out just to be extra) repeats the code inside the loop once for every element of a vector that’s specified at the beginning of the loop code.&lt;/p&gt;
+&lt;p&gt;To use a for loop to apply some function to every element of a df column, you might write something like:&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;for (i in 1:nrow(df)) {
+  df$new_col[i] = my_function(df$old_col[i])
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and that would do the trick. In this case, the vector you iterate along contains the row indices of your df, which means that on every iteration of your loop you’re calling &lt;code&gt;my_function()&lt;/code&gt; on the next row of data until you get to the end of your df.&lt;/p&gt;
+&lt;p&gt;This is a perfectly functional way to write code! Today, I’ll argue that it’s prone to typos that might cause you big headaches. Specifically, these typos may cause your code to &lt;strong&gt;fail silently&lt;/strong&gt; (ominous organ riff), or do something unintended without throwing an error. This means you wouldn’t find out that something was wrong unless you visually inspected the output, which you can’t always do after every command (I getcha). Thus, there’s a risk of inducing mistakes in the data that you don’t catch until it’s too late.&lt;/p&gt;
+&lt;p&gt;For example, once I wrote a for loop just like the above, to perform some functions on every row of a df column, but I wrote &lt;code&gt;df$old_col[1]&lt;/code&gt; instead of &lt;code&gt;df$old_col[i]&lt;/code&gt;. I accidentally produced the same value in every element of &lt;code&gt;df$new_col&lt;/code&gt;, because even though the for loop was iterating as usual, on every iteration of the loop it was calling the same value. I didn’t discover my typo until weeks later. No bueno!&lt;/p&gt;
+&lt;p&gt;Enter… vectorizing.&lt;/p&gt;
+&lt;p&gt;It turns out that R has built-in optimized functionality for repeating functions along every element of a vector, just waiting for you to harness!&lt;/p&gt;
+&lt;p&gt;Generally, any vectorized function:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;takes a vector as input&lt;/li&gt;
+&lt;li&gt;does the &lt;em&gt;same&lt;/em&gt; thing to &lt;em&gt;every&lt;/em&gt; element of that vector&lt;/li&gt;
+&lt;li&gt;returns a vector of the &lt;em&gt;same&lt;/em&gt; length as output&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Plenty of functions are already vectorized, and you likely already use them as such, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;math operators (R assumes element-wise math as the default, and element-wise == vectorized here)
+&lt;ul&gt;
+&lt;li&gt;arithmetic operators: &lt;code&gt;+&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;, and the like&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;round()&lt;/code&gt;, for example&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;string manipulation functions
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;paste()&lt;/code&gt; always returns a vector equal to the longest input vector&lt;/li&gt;
+&lt;li&gt;pattern matching functions like &lt;code&gt;grep()&lt;/code&gt;, &lt;code&gt;grepl()&lt;/code&gt;, and such&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;statistical distribution functions
+&lt;ul&gt;
+&lt;li&gt;the &lt;code&gt;d*()&lt;/code&gt;, &lt;code&gt;p*()&lt;/code&gt;, and &lt;code&gt;q*()&lt;/code&gt; statistical distribution functions (e.g. &lt;code&gt;qnorm()&lt;/code&gt;) are all vectorized along their main input arguments&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;other stuff too!
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;base::ifelse()&lt;/code&gt; is vectorized, as it determines true/false for each pair of elements in the two vector arguments element-wise&lt;/li&gt;
+&lt;li&gt;and MANY more&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In general, it’s worth always checking to see if the function you plan to call on a vector is vectorized, and then you can use it on your vector or dataframe column without needing any additional looping.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tidy-vectorizing&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.6.2&lt;/span&gt; Tidy vectorizing&lt;/h3&gt;
+&lt;p&gt;If you use &lt;code&gt;mutate()&lt;/code&gt; for your everyday column-wise data manipulation needs, using vectorized functions is smooth. In fact, &lt;code&gt;mutate()&lt;/code&gt; is built to encourage you to use vectorized functions for column manipulation.&lt;/p&gt;
+&lt;p&gt;If we go back to the Hass avocado sale data, we can see this at work. For example, let’s take another look at the code we used earlier to create a new column for the weekly total number of avocados sold, but log-10 transformed. Earlier, we saw order-of-magnitude differences in avocado sales between different regions, so we log-transformed the data to get it to be more normally distributed.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avocado %&amp;gt;%
+  mutate(total_volume_log10 = log10(total_volume)) %&amp;gt;%
+  select(region, date, total_volume, total_volume_log10)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 15,545 x 4
+##    region date       total_volume total_volume_log10
+##    &amp;lt;chr&amp;gt;  &amp;lt;date&amp;gt;            &amp;lt;dbl&amp;gt;              &amp;lt;dbl&amp;gt;
+##  1 Albany 2015-12-27       64237.               4.81
+##  2 Albany 2015-12-20       54877.               4.74
+##  3 Albany 2015-12-13      118220.               5.07
+##  4 Albany 2015-12-06       78992.               4.90
+##  5 Albany 2015-11-29       51040.               4.71
+##  6 Albany 2015-11-22       55980.               4.75
+##  7 Albany 2015-11-15       83454.               4.92
+##  8 Albany 2015-11-08      109428.               5.04
+##  9 Albany 2015-11-01       99811.               5.00
+## 10 Albany 2015-10-25       74339.               4.87
+## # … with 15,535 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can write this in one call, without needing to wrap it in a loop, because &lt;code&gt;log10()&lt;/code&gt; is vectorized, and returns a vector the same length as the input vector. Neat! You can use any vectorized functions “naked” (without any extra looping code) to create new dataframe columns inside of &lt;code&gt;mutate()&lt;/code&gt; with no problem.&lt;/p&gt;
+&lt;p&gt;But what about functions that aren’t already vectorized? Can we use R magic to make them vectorized, if we so wish? Why yes, we can!&lt;/p&gt;
+&lt;div id=&#34;intro-to-map-anything-is-vectorized-if-you-want&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.6.2.1&lt;/span&gt; Intro to &lt;code&gt;map()&lt;/code&gt;: Anything is vectorized if you want&lt;/h4&gt;
+&lt;p&gt;At their root, vectorizing helper functions do &lt;em&gt;very nearly what a for loop does,&lt;/em&gt; but with a little more specificity in their syntax that can help protect you from tricky typos. With a vectorizing function, you still specify the two main code components that you’d specify in a for loop:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;The vector you want to iterate along&lt;/li&gt;
+&lt;li&gt;The code you want to run on every element of that vector&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The nice thing about using a vectorizer function is that it’s &lt;em&gt;designed to return a vector of the same length as the input vector,&lt;/em&gt; so it’s perfect for data manipulation on columns in a dataframe. For loops are more flexible in that they can run any code a bunch of times, and don’t necessarily need to return a vector. If your goal is to return an output vector of the same length as your input vector, then vectorizer functions can do the trick with less work!&lt;/p&gt;
+&lt;p&gt;The basic tidyverse vectorizer function is &lt;code&gt;purrr::map()&lt;/code&gt;. (The &lt;code&gt;purrr&lt;/code&gt; package is so named because its helper functions can make your code purr with contentment, hah.) It takes the two arguments you’d expect: an input vector, and the code to run on each element of the input vector.&lt;/p&gt;
+&lt;p&gt;The main situation where vectorizer functions come in really handy is to vectorize functions to run along every element of a non-atomic list vector. R’s default vectorized functions are all intended for atomic vectors, and not necessarily list vectors. To vectorize arguments along a list, we need a little help.&lt;/p&gt;
+&lt;p&gt;To illustrate this briefly, we’ll use &lt;code&gt;map()&lt;/code&gt; to vectorize an operation that isn’t vectorized by default and run it on every element of a list. We can use &lt;code&gt;pull()&lt;/code&gt; to index the &lt;code&gt;sales&lt;/code&gt; list-column of our nested avocado data. Indexing this list-column gives us …just… a list, where each element is a dataframe. We can then use &lt;code&gt;map()&lt;/code&gt; to compute a single operation for every value in the list. Here, since every element in the list is a dataframe, we can use &lt;code&gt;nrow()&lt;/code&gt; to count the number of rows of every list element.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region %&amp;gt;%
+  # Here, I&amp;#39;m using slice() to get only the first 10 rows of the tibble
+  # to shorten the eventual output. Otherwise it would output the nrows
+  # for every single region in the avocado data
+  slice(1:10) %&amp;gt;%
+  pull(sales) %&amp;gt;%
+  map(~nrow(.x))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [[1]]
+## [1] 338
+## 
+## [[2]]
+## [1] 338
+## 
+## [[3]]
+## [1] 338
+## 
+## [[4]]
+## [1] 338
+## 
+## [[5]]
+## [1] 338
+## 
+## [[6]]
+## [1] 338
+## 
+## [[7]]
+## [1] 338
+## 
+## [[8]]
+## [1] 338
+## 
+## [[9]]
+## [1] 338
+## 
+## [[10]]
+## [1] 338&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Aha! We see the same numbers of rows per sub-dataframe that we saw earlier in R’s automatic tibble output. (Notice that this output looks a little different than a normal atomic vector, what with the &lt;code&gt;[[]]&lt;/code&gt; double bracket indices and all… we’ll address this very soon.)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;map()&lt;/code&gt;, like the vast majority of tidyverse functions, is pipe-safe, so the first argument is the vector to be iterated along. (Notice that the first argument is expected to be a &lt;em&gt;vector,&lt;/em&gt; not an &lt;em&gt;entire dataframe,&lt;/em&gt; but otherwise pipe-safe.)&lt;/p&gt;
+&lt;p&gt;The second argument clearly looks like the code that you want run on each element of that vector, but the syntax is a little different than if you were to just call &lt;code&gt;nrow(avocado$sales[[1]])&lt;/code&gt; or something. This particular syntax is how tidyverse functions allow you to specify functions inside other functions without confusing R about what code to run where. Let’s unpack this a little bit:&lt;/p&gt;
+&lt;p&gt;The code you put in the second argument is preceded with a tilde &lt;code&gt;~&lt;/code&gt;, which you may recognize from model formula syntax, or other functions like &lt;code&gt;dplyr::case_when()&lt;/code&gt;. The tilde essentially tells R not to try to evaluate that code immediately, because it’s wrapped in a vectorizer. &lt;em&gt;Don’t forget this tilde!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The special variable &lt;code&gt;.x&lt;/code&gt; that you see inside of &lt;code&gt;nrow(.x)&lt;/code&gt; is a placeholder that tells &lt;code&gt;map()&lt;/code&gt; how to feed your input vector into your looping code. Whenever you see &lt;code&gt;.x&lt;/code&gt; (sometimes abbreviated further as just a period &lt;code&gt;.&lt;/code&gt;) inside of tidyverse code, you can refer it as “the element I’m currently working with” in your mental pseudo-code. In this case, you can interpret the &lt;code&gt;map()&lt;/code&gt; call as doing the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Take the list &lt;code&gt;sales&lt;/code&gt;, which is a column in &lt;code&gt;avo_by_region&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;With every element in that list:
+&lt;ul&gt;
+&lt;li&gt;Calculate the number of rows of the dataframe held inside that list element&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Return another list where the nth element contains the nrows of the nth element of &lt;code&gt;sales&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this way, you can see how similar the pseudo-code of &lt;code&gt;map()&lt;/code&gt; is to the pseudo-code of a for loop. Not so intimidating, hopefully!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Instructor’s note:&lt;/strong&gt; Please note that this is not the only valid syntax for feeding functions into &lt;code&gt;map()&lt;/code&gt;. There are subtle reasons to prefer tilde &lt;code&gt;~&lt;/code&gt; formula-style anonymous functions in some cases, and bare function names as objects in others, and full &lt;code&gt;function (x) {...}&lt;/code&gt; anonymous functions in other cases still. As long as you’re consistent about it, &lt;em&gt;for non-advanced learners, pick one syntax and teach that one only.&lt;/em&gt; Avoiding confusion is more important than a comprehensive explanation at this level.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div id=&#34;special-versions-of-map&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.6.2.2&lt;/span&gt; Special versions of &lt;code&gt;map()&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;It’s important to remember this: &lt;strong&gt;&lt;code&gt;map()&lt;/code&gt; &lt;em&gt;always&lt;/em&gt; returns a list.&lt;/strong&gt; Even if each element of the output list contains an element of the same atomic type, and length 1, &lt;code&gt;map()&lt;/code&gt; is not going to try to guess anything and turn your output into an atomic vector. The philosophy of the tidyverse is to be conservative, and avoid guessing data types of output, lest it be wrong.&lt;/p&gt;
+&lt;p&gt;If you, the coder, know &lt;em&gt;exactly&lt;/em&gt; the data type you expect in your output vector, you can use a specialized version of &lt;code&gt;map()&lt;/code&gt; that will return an atomic output vector of your desired data type, or else throw an error (at which point you would go and fix the offending code). These are all called &lt;code&gt;map_*()&lt;/code&gt;, where the suffix indicates the expected data type of your output.&lt;/p&gt;
+&lt;p&gt;For example, in the code chunk we used earlier where we used &lt;code&gt;map()&lt;/code&gt; to calculate &lt;code&gt;nrow()&lt;/code&gt; for every sub-dataframe of the &lt;code&gt;sales&lt;/code&gt; column of &lt;code&gt;avo_by_region()&lt;/code&gt;, every single value of &lt;code&gt;nrow()&lt;/code&gt; was a number. More specifically, each one was an integer (makes sense, you can only have a integer number of rows in a dataframe), so if we use &lt;code&gt;map_int()&lt;/code&gt; in place of &lt;code&gt;map()&lt;/code&gt;, R will automatically unwrap our output into an atomic integer vector.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region %&amp;gt;%
+  slice(1:10) %&amp;gt;%
+  pull(sales) %&amp;gt;%
+  map_int(~nrow(.x))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] 338 338 338 338 338 338 338 338 338 338&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There’s a version of &lt;code&gt;map_*()&lt;/code&gt; for every possible atomic vector data type.&lt;/p&gt;
+&lt;p&gt;Added benefit: these functions will also will not coerce any output data types without your knowledge. If you pick the wrong &lt;code&gt;map_*()&lt;/code&gt; function for your output data type, or the code inside &lt;code&gt;map_*()&lt;/code&gt; doesn’t actually return the data type you thought it would, you’ll get an R error that should remind you to go back and fix the offending code.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;using-map-on-list-columns-inside-a-df&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.6.2.3&lt;/span&gt; Using &lt;code&gt;map()&lt;/code&gt; on list-columns inside a df&lt;/h4&gt;
+&lt;p&gt;Remember from before when we learned about creating nested dataframes, that nesting creates a &lt;strong&gt;list-column&lt;/strong&gt; where each list element contains another, smaller dataframe pertaining to just the data from that row’s record. What if we wanted to manipulate the data contained inside each sub-dataframe? Since the column of nested data is a list, we should be able to use &lt;code&gt;map()&lt;/code&gt; to operate on it.&lt;/p&gt;
+&lt;p&gt;Here, we’ll see how we can use &lt;code&gt;map()&lt;/code&gt; to calculate subject-level summary statistics without discarding observation-level data from the dataframe.&lt;/p&gt;
+&lt;p&gt;First, let’s re-nest our observation-level avocado data, but this time, we’ll do it by region and by avocado type (conventional vs organic).&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region_type &amp;lt;- avocado %&amp;gt;%
+  # Notice the -c() select() syntax to exclude TWO key columns
+  # from the list-column
+  nest(sales = -c(region, type))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, to see what the new, nested df looks like:&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region_type&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 92 x 3
+##    type         region              sales             
+##    &amp;lt;chr&amp;gt;        &amp;lt;chr&amp;gt;               &amp;lt;list&amp;gt;            
+##  1 conventional Albany              &amp;lt;tibble [169 × 5]&amp;gt;
+##  2 conventional Atlanta             &amp;lt;tibble [169 × 5]&amp;gt;
+##  3 conventional BaltimoreWashington &amp;lt;tibble [169 × 5]&amp;gt;
+##  4 conventional Boise               &amp;lt;tibble [169 × 5]&amp;gt;
+##  5 conventional Boston              &amp;lt;tibble [169 × 5]&amp;gt;
+##  6 conventional BuffaloRochester    &amp;lt;tibble [169 × 5]&amp;gt;
+##  7 conventional Charlotte           &amp;lt;tibble [169 × 5]&amp;gt;
+##  8 conventional Chicago             &amp;lt;tibble [169 × 5]&amp;gt;
+##  9 conventional CincinnatiDayton    &amp;lt;tibble [169 × 5]&amp;gt;
+## 10 conventional Columbus            &amp;lt;tibble [169 × 5]&amp;gt;
+## # … with 82 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And to verify that the observation-level sales data for the first region and avocado type is safe and sound in the first row of the list-column &lt;code&gt;sales&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region_type %&amp;gt;%
+  pull(sales) %&amp;gt;%
+  pluck(1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 169 x 5
+##    date       avg_price total_volume  year total_volume_log10
+##    &amp;lt;date&amp;gt;         &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt;              &amp;lt;dbl&amp;gt;
+##  1 2015-12-27      1.33       64237.  2015               4.81
+##  2 2015-12-20      1.35       54877.  2015               4.74
+##  3 2015-12-13      0.93      118220.  2015               5.07
+##  4 2015-12-06      1.08       78992.  2015               4.90
+##  5 2015-11-29      1.28       51040.  2015               4.71
+##  6 2015-11-22      1.26       55980.  2015               4.75
+##  7 2015-11-15      0.99       83454.  2015               4.92
+##  8 2015-11-08      0.98      109428.  2015               5.04
+##  9 2015-11-01      1.02       99811.  2015               5.00
+## 10 2015-10-25      1.07       74339.  2015               4.87
+## # … with 159 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, because our nested df has one row per region x type, it’s perfectly set up to contain some additional columns with summary statistics in them. We just need to be able to access the observation-level data inside of the &lt;code&gt;sales&lt;/code&gt; column in order to compute these summary stats.&lt;/p&gt;
+&lt;p&gt;We can use &lt;code&gt;mutate()&lt;/code&gt; to create a new column in our dataframe as per usual. However, this time, we’ll call &lt;code&gt;map()&lt;/code&gt; &lt;em&gt;inside of&lt;/em&gt; &lt;code&gt;mutate()&lt;/code&gt; to create our own vectorized function that can operate on a list-column.&lt;/p&gt;
+&lt;p&gt;For our first summary statistic, let’s calculate the average avocado price across all weeks for each metropolitan area, separately for the two avocado types. We’ll do this by using &lt;code&gt;map()&lt;/code&gt; to create a function that will call &lt;code&gt;mean()&lt;/code&gt; on every element in the &lt;code&gt;sales&lt;/code&gt; list-column, and we’ll wrap all of this inside &lt;code&gt;mutate()&lt;/code&gt; so we can work inside of our main nested dataframe.&lt;/p&gt;
+&lt;p&gt;Below is the full function call, so you can see the output first:&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region_type %&amp;gt;%
+  mutate(overall_avg_price = map_dbl(sales, ~.x %&amp;gt;%
+                                       pull(avg_price) %&amp;gt;%
+                                       mean()
+                                     )
+         )&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 92 x 4
+##    type         region              sales              overall_avg_price
+##    &amp;lt;chr&amp;gt;        &amp;lt;chr&amp;gt;               &amp;lt;list&amp;gt;                         &amp;lt;dbl&amp;gt;
+##  1 conventional Albany              &amp;lt;tibble [169 × 5]&amp;gt;              1.35
+##  2 conventional Atlanta             &amp;lt;tibble [169 × 5]&amp;gt;              1.07
+##  3 conventional BaltimoreWashington &amp;lt;tibble [169 × 5]&amp;gt;              1.34
+##  4 conventional Boise               &amp;lt;tibble [169 × 5]&amp;gt;              1.08
+##  5 conventional Boston              &amp;lt;tibble [169 × 5]&amp;gt;              1.30
+##  6 conventional BuffaloRochester    &amp;lt;tibble [169 × 5]&amp;gt;              1.38
+##  7 conventional Charlotte           &amp;lt;tibble [169 × 5]&amp;gt;              1.28
+##  8 conventional Chicago             &amp;lt;tibble [169 × 5]&amp;gt;              1.37
+##  9 conventional CincinnatiDayton    &amp;lt;tibble [169 × 5]&amp;gt;              1.02
+## 10 conventional Columbus            &amp;lt;tibble [169 × 5]&amp;gt;              1.07
+## # … with 82 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now to unpack the pieces of this function call:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Inside of &lt;code&gt;mutate()&lt;/code&gt;, we follow the same usual syntax of &lt;code&gt;new_col = function(old_col)&lt;/code&gt;, but this time the function we call is &lt;code&gt;map()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The first argument of &lt;code&gt;map()&lt;/code&gt; is the column whose elements we wish to iterate over, in this case &lt;code&gt;sales&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The second argument of &lt;code&gt;map()&lt;/code&gt; is what we wish to do to each element of &lt;code&gt;sales&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;the function call is preceded by a tilde &lt;code&gt;~&lt;/code&gt; per &lt;code&gt;map()&lt;/code&gt;’s expected syntax&lt;/li&gt;
+&lt;li&gt;we first call &lt;code&gt;.x&lt;/code&gt;, which refers to whatever’s contained in each element of &lt;code&gt;sales&lt;/code&gt;. In this case, &lt;code&gt;.x&lt;/code&gt; refers to a dataframe&lt;/li&gt;
+&lt;li&gt;we then use &lt;code&gt;%&amp;gt;%&lt;/code&gt; to pipe &lt;code&gt;.x&lt;/code&gt; into the next operation we wish to use on it, &lt;em&gt;as you would use the pipe in normal usage outside of &lt;code&gt;map()&lt;/code&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;we pipe into &lt;code&gt;pull()&lt;/code&gt; to choose only the column &lt;code&gt;avg_price&lt;/code&gt; that’s &lt;em&gt;contained inside&lt;/em&gt; each sub-dataframe of the &lt;code&gt;sales&lt;/code&gt; list-column&lt;/li&gt;
+&lt;li&gt;we pipe the &lt;code&gt;avg_price&lt;/code&gt; column into &lt;code&gt;mean()&lt;/code&gt; to take the mean of that column&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;We actually call &lt;code&gt;map_dbl()&lt;/code&gt; instead of just &lt;code&gt;map()&lt;/code&gt; because we expect each vector element to be a double with length 1, and so we use &lt;code&gt;map_dbl()&lt;/code&gt; to safely unwrap the output vector into an atomic double vector&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You can use the same general strategy to calculate additional summary statistics, each with their own column created by using &lt;code&gt;map()&lt;/code&gt; or one of its atomic output cousins on a list-column of dataframes.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region_type %&amp;gt;%
+  # I&amp;#39;m indenting the close parentheses and such this way
+  # to use the indentation levels to visually cue
+  # which chunk of code lives in which level
+  # because we are pretty deep here!
+  mutate(overall_avg_price = map_dbl(sales,
+                                     ~.x %&amp;gt;%
+                                       pull(avg_price) %&amp;gt;%
+                                       mean()
+                                     ),
+         avg_total_volume = map_dbl(sales,
+                                    ~.x %&amp;gt;%
+                                      pull(total_volume) %&amp;gt;%
+                                      mean()
+                                    )
+         )&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 92 x 5
+##    type        region           sales          overall_avg_pri… avg_total_volume
+##    &amp;lt;chr&amp;gt;       &amp;lt;chr&amp;gt;            &amp;lt;list&amp;gt;                    &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
+##  1 convention… Albany           &amp;lt;tibble [169 …             1.35           92903.
+##  2 convention… Atlanta          &amp;lt;tibble [169 …             1.07          512789.
+##  3 convention… BaltimoreWashin… &amp;lt;tibble [169 …             1.34          773642.
+##  4 convention… Boise            &amp;lt;tibble [169 …             1.08           82843.
+##  5 convention… Boston           &amp;lt;tibble [169 …             1.30          561541.
+##  6 convention… BuffaloRochester &amp;lt;tibble [169 …             1.38          130410.
+##  7 convention… Charlotte        &amp;lt;tibble [169 …             1.28          203331.
+##  8 convention… Chicago          &amp;lt;tibble [169 …             1.37          759816.
+##  9 convention… CincinnatiDayton &amp;lt;tibble [169 …             1.02          247835.
+## 10 convention… Columbus         &amp;lt;tibble [169 …             1.07          169268.
+## # … with 82 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will get you to roughly the same place as using &lt;code&gt;group_by()&lt;/code&gt; and &lt;code&gt;summarize()&lt;/code&gt; to calculate summary statistics on an unnested dataframe, and saving those summary stats into a second dataframe. The reason I like the list-column-plus-summaries setup is that I can keep all of my information in a single master dataframe and avoid proliferation of objects across my workspace. Keeping the data organized in a master dataframe also helps you avoid pitfalls like accidentally changing the order of rows in one of your dataframes with &lt;code&gt;arrange()&lt;/code&gt;, then breaking an assumption in later code that’s based on the row index of a particular piece of data (that’s now pulling from different data than you thought!). If you keep your data yoked together as columns in a single dataframe, it saves you from misaligning your data with wayward row sorting.&lt;/p&gt;
+&lt;p&gt;Ultimately, it’s a matter of personal taste, but if you find that you like managing your observation-level data and your unit-level summary data in this way, then you can use these techniques as you like!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;a-caveat-when-not-to-vectorize&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.6.3&lt;/span&gt; A caveat: When not to vectorize&lt;/h3&gt;
+&lt;p&gt;Ultimately, I love vectorizing functions like &lt;code&gt;map()&lt;/code&gt;–they’ve helped me keep a lot more of my data processing inside of tidyverse functions, and often saved me from copying and pasting code. There are, of course, cases when writing your code to work inside of vectorizing helpers isn’t necessarily optimal. Here are a couple that I’ve run into:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you need to recursively reference earlier vector elements while looping
+&lt;ul&gt;
+&lt;li&gt;Vectorizer functions run every iteration of your vectorizing loop &lt;em&gt;independently,&lt;/em&gt; which means that the nth iteration cannot access the output of the (n-1)th iteration or any previous ones. If you need to be able to access previous loop content in later iterations, a for loop is the way to go.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;If you &lt;em&gt;really&lt;/em&gt; need a progress bar to print to console, for iterating over &lt;em&gt;looooong&lt;/em&gt; vectors
+&lt;ul&gt;
+&lt;li&gt;True console-based progress bars with must recursively access the console to create a progress bar that stays on one line from 0% to 100%, so they work best inside for loops&lt;/li&gt;
+&lt;li&gt;The good folks at RStudio who maintain &lt;code&gt;purrr&lt;/code&gt; are still &lt;a href=&#34;https://github.com/tidyverse/purrr/issues/149&#34;&gt;working on building automatic progress bars&lt;/a&gt; for &lt;code&gt;map()&lt;/code&gt;, but as of publishing they’re not implemented&lt;/li&gt;
+&lt;li&gt;Check out the &lt;a href=&#34;https://github.com/r-lib/progress&#34;&gt;&lt;code&gt;progress&lt;/code&gt;&lt;/a&gt; package, which contains helper functions that work inside for loops to make your own progress bars&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;hella-models&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.7&lt;/span&gt; Hella models&lt;/h2&gt;
+&lt;p&gt;Now that we’ve demonstrated its functionality through a simpler example, we can get into the the real star of using &lt;code&gt;map()&lt;/code&gt; inside &lt;code&gt;mutate()&lt;/code&gt; to work with list-columns in a dataframe. If each element of a list can contain &lt;em&gt;any&lt;/em&gt; R object that could otherwise be stored in its own variable, then a list should be able to hold model objects in it. And we can create each model object in that list-column of models by using &lt;code&gt;map()&lt;/code&gt; to fit a model to every sub-dataframe in a list-column of dataframes. Then, if we produce a list-column where each element is a model object with the same values in it, because it’s the same model fit to different data, we can use &lt;code&gt;map()&lt;/code&gt; again to extract model coefficients from each model in the list into their own list-column. In this way, we can generate more complex (and hopefully more informative) statistics about each of the grouping units in our multilevel data.&lt;/p&gt;
+&lt;p&gt;Let’s get back to the question driving our earlier data exploration, before we did a dive into list-columns and &lt;code&gt;map()&lt;/code&gt;: &lt;strong&gt;Do avocado buyers prefer buying conventional or organic avocados? By how much? How do these patterns differ from region to region?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The most obvious number that might be informative is the difference in &lt;code&gt;total_volume&lt;/code&gt;, the total number of avocados sold in any given week, for &lt;code&gt;type == &#34;organic&#34;&lt;/code&gt; vs &lt;code&gt;type == &#34;conventional&#34;&lt;/code&gt;. If people buy more conventional avocados than organic avocados, we can assume they prefer the conventional avocados. But we know that the organic avocados are generally more expensive than conventional avocados in any given week. We can look at a plot of weekly prices, with the prices split for the two avocado types, to see that the price line for organic avocados is almost always more expensive.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avocado %&amp;gt;%
+  ggplot(aes(x = date, y = avg_price, color = type)) +
+  geom_line() +
+  scale_color_manual(values = avo_colors) +
+  facet_wrap(~ region) +
+  labs(y = &amp;quot;Average price (dollars per avocado)&amp;quot;,
+       title = &amp;quot;Weekly prices per avocado, by organic vs. conventional&amp;quot;) +
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-price-timeseries-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Grocery shoppers might be less likely to buy as many conventional avocados at all just because of the price. How can we take into account that organic avocados are more expensive when estimating the difference in volume of avocados purchased, to make our analysis more robust?&lt;/p&gt;
+&lt;p&gt;If we can adjust for the usual premium price on organic avocados, we can estimate the difference in total volume of avocados purchased, over and above that which you would expect when one type of avocado is cheaper. That might be able to tell us something like the following: &lt;strong&gt;if conventional and organic avocados were the same price, what is the estimated difference in volume of avocados purchased?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This sounds like a job for &lt;strong&gt;linear regression!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In the most basic case, we might consider doing a paired t-test between the weekly volume of conventional vs. organic avocados sold, and that could tell us whether those weekly volumes are “different”, but this t-test would be less informative than an equivalent linear regression (which estimates the same difference). Further, the linear regression allows us to create a multiple regression that lets us estimate that difference in volume of avocados sold, but adjusted for another variable–in this case, the average avocado price.&lt;/p&gt;
+&lt;p&gt;The model formula would look something like this:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;total_volume ~ type + avg_price&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;We’ll want to use &lt;code&gt;lm()&lt;/code&gt; to fit this model to each &lt;code&gt;region&lt;/code&gt; separately, so that we can see the variation in avocado buying preference across each metropolitan area. An incidental benefit of running a multiple regression that adjusts for &lt;code&gt;avg_price&lt;/code&gt; is that it helps adjust for differences in avocado prices across regions that are likely due to differences in cost of living from place to place.&lt;/p&gt;
+&lt;div id=&#34;fitting-many-models&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.7.1&lt;/span&gt; Fitting many models&lt;/h3&gt;
+&lt;p&gt;We can use dataframe list-columns, manipulated with &lt;code&gt;map()&lt;/code&gt; inside &lt;code&gt;mutate()&lt;/code&gt;, to fit this particular model to the avocado sales data from every metropolitan area. Since &lt;code&gt;mutate()&lt;/code&gt; is amenable to defining a flexible number of columns, we can first do some light data preprocessing on the observation-level data contained in the &lt;code&gt;sales&lt;/code&gt; column, and then in the next command, within &lt;code&gt;mutate()&lt;/code&gt;, create a new list-column using &lt;code&gt;map()&lt;/code&gt; to fit an &lt;code&gt;lm()&lt;/code&gt; model to each row’s data in &lt;code&gt;sales&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;# Again, the double-sided pipe in magrittr
+# to overwrite the old value of avo_by_region with the new value
+# with all the new columns in it
+avo_by_region %&amp;lt;&amp;gt;%
+  mutate(sales = map(sales,
+                     # Yes that&amp;#39;s right folks, we are about to use
+                     # mutate() inside map() inside mutate()
+                     ~.x %&amp;gt;%
+                       # Here, let&amp;#39;s roughly re-center avg_price
+                       # so the &amp;quot;baseline&amp;quot;, or 0 point, is set at $1.00/avocado
+                       # we already calculate total_volume_log10 earlier
+                       # so we should be good there
+                       mutate(avg_price_shift1 = avg_price - 1)
+                     ),
+         # Now that we&amp;#39;ve preprocesed our columns
+         # we can fit our multiple regression
+         # using lm() inside of map()
+         model = map(sales,
+                     ~lm(total_volume_log10 ~ type + avg_price_shift1, data = .x)
+                     )
+         )&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Instructor’s note:&lt;/strong&gt; You might be tempted to mean-center and perhaps z-score the &lt;code&gt;avg_price&lt;/code&gt; column, so that it’s in units of standard deviations of avocado prices. However, you need to be careful &lt;em&gt;how your data is grouped/nested&lt;/em&gt; when you center or z-score data, to know whether you’re centering your data &lt;em&gt;within&lt;/em&gt; grouping unit or &lt;em&gt;across&lt;/em&gt; grouping units. That is, are you centering/scaling by a mean/SD calculated separately for each grouping unit, or for all observations across units? In some cases, centering/scaling data within unit can be dangerous, because you might accidentally be scaling away the effect of interest. Scaling data across units retains between-unit differences of interest, so it’s fine in this case. You would need to unnest your observation-level data to make sure your operations are not implicitly grouped before doing any mean-centering/SD-scaling operations.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Now that we’ve created the &lt;code&gt;model&lt;/code&gt; column to hold each of our &lt;code&gt;lm&lt;/code&gt; objects, let’s quickly see what the whole dataframe looks like:&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 46 x 3
+##    region              sales              model 
+##    &amp;lt;chr&amp;gt;               &amp;lt;list&amp;gt;             &amp;lt;list&amp;gt;
+##  1 Albany              &amp;lt;tibble [338 × 7]&amp;gt; &amp;lt;lm&amp;gt;  
+##  2 Atlanta             &amp;lt;tibble [338 × 7]&amp;gt; &amp;lt;lm&amp;gt;  
+##  3 BaltimoreWashington &amp;lt;tibble [338 × 7]&amp;gt; &amp;lt;lm&amp;gt;  
+##  4 Boise               &amp;lt;tibble [338 × 7]&amp;gt; &amp;lt;lm&amp;gt;  
+##  5 Boston              &amp;lt;tibble [338 × 7]&amp;gt; &amp;lt;lm&amp;gt;  
+##  6 BuffaloRochester    &amp;lt;tibble [338 × 7]&amp;gt; &amp;lt;lm&amp;gt;  
+##  7 Charlotte           &amp;lt;tibble [338 × 7]&amp;gt; &amp;lt;lm&amp;gt;  
+##  8 Chicago             &amp;lt;tibble [338 × 7]&amp;gt; &amp;lt;lm&amp;gt;  
+##  9 CincinnatiDayton    &amp;lt;tibble [338 × 7]&amp;gt; &amp;lt;lm&amp;gt;  
+## 10 Columbus            &amp;lt;tibble [338 × 7]&amp;gt; &amp;lt;lm&amp;gt;  
+## # … with 36 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Aha! We see that in the list-column &lt;code&gt;model&lt;/code&gt;, each of the top rows contains an &lt;code&gt;lm&lt;/code&gt; object. Each of these &lt;code&gt;lm&lt;/code&gt; objects individually can be operated on like any linear regression object stored in its own variable.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region %&amp;gt;%
+  pull(model) %&amp;gt;%
+  pluck(1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = total_volume_log10 ~ type + avg_price_shift1, data = .x)
+## 
+## Coefficients:
+##      (Intercept)       typeorganic  avg_price_shift1  
+##           5.0298           -1.5590           -0.2388&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can even &lt;code&gt;%&amp;gt;%&lt;/code&gt; this further into &lt;code&gt;summary()&lt;/code&gt; to generate the whole regression output table:&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region %&amp;gt;%
+  pull(model) %&amp;gt;%
+  pluck(1) %&amp;gt;%
+  summary()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = total_volume_log10 ~ type + avg_price_shift1, data = .x)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.42005 -0.10962  0.00827  0.10662  0.51076 
+## 
+## Coefficients:
+##                  Estimate Std. Error t value Pr(&amp;gt;|t|)    
+## (Intercept)       5.02979    0.02068 243.168  &amp;lt; 2e-16 ***
+## typeorganic      -1.55898    0.02687 -58.023  &amp;lt; 2e-16 ***
+## avg_price_shift1 -0.23883    0.04608  -5.183 3.78e-07 ***
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## Residual standard error: 0.1693 on 335 degrees of freedom
+## Multiple R-squared:  0.9605, Adjusted R-squared:  0.9603 
+## F-statistic:  4077 on 2 and 335 DF,  p-value: &amp;lt; 2.2e-16&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;While this is not in spirit a multiple regression tutorial, we are doing a multiple regression, so now’s a handy time to review interpreting multiple regression coefficients:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;Intercept&lt;/code&gt;&lt;/strong&gt;: This tells us the estimated log-10-transformed volume of &lt;em&gt;conventional&lt;/em&gt; avocados sold in a hypothetical week where conventional avocados cost $1.00 each
+&lt;ul&gt;
+&lt;li&gt;By default the &lt;code&gt;type&lt;/code&gt; is dummy-coded so the baseline level is the first alphabetical level, and C comes before O, so the intercept assumes the baseline level is conventional avocados. Fine by me!&lt;/li&gt;
+&lt;li&gt;This is why we created &lt;code&gt;avg_price_shift1&lt;/code&gt; earlier. If we hadn’t shifted the 0 point of &lt;code&gt;avg_price&lt;/code&gt;, the intercept would be estimated for a week where conventional avocados cost $0.00 each. I’m assuming avocados are never free (otherwise we millenials would be able to afford mortgages), so shifting the baseline can make the regression coefficient estimates easier to interpret.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;typeorganic&lt;/code&gt;&lt;/strong&gt;: This tells us the estimated log-10-transformed difference in volume of avocados sold, between conventional and organic avocados, in a hypothetical week where &lt;em&gt;both&lt;/em&gt; avocado types cost $1.00 each&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;avg_price_shift1&lt;/code&gt;&lt;/strong&gt;: This tells us the expected difference in volume of avocados sold between a week where avocados cost $1.00 each and a week where avocados are one price unit, or one dollar, more expensive ($2.00 each)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Importantly, because this is a multiple regression, the &lt;code&gt;typeorganic&lt;/code&gt; term tells us the estimate difference in volume of avocados sold with price “held constant”, or &lt;em&gt;if both conventional and organic avocados cost the same in a hypothetical week.&lt;/em&gt; If we can estimate the difference volume sold when the two avocado types cost the same, and people are STILL buying more conventional avocados, there must be an extenuating reason why people don’t buy organic avocados even if they’re not more expensive.&lt;/p&gt;
+&lt;p&gt;The console output that you get from calling &lt;code&gt;summary()&lt;/code&gt; on a single &lt;code&gt;lm&lt;/code&gt; object is great for visual inspection, but there’s a whole lot of output here that is not the most efficient to parse programmatically with code. As such, we won’t be using &lt;code&gt;map()&lt;/code&gt; inside &lt;code&gt;mutate()&lt;/code&gt; to call &lt;code&gt;summary()&lt;/code&gt; on every single model object in the &lt;code&gt;model&lt;/code&gt; column. There are other functions we can use to give us cleaner, more ready-to-use output, that we’ll explore next.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;extracting-statistics-from-models&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.7.2&lt;/span&gt; Extracting statistics from models&lt;/h3&gt;
+&lt;p&gt;In order to programmatically extract coefficients, standard errors, and other statistics of interest from each model object in the &lt;code&gt;model&lt;/code&gt; column of &lt;code&gt;avo_by_region&lt;/code&gt;, our nested avocado sale data, we are going to use the &lt;code&gt;tidy()&lt;/code&gt; helper function in the &lt;code&gt;broom&lt;/code&gt; R package. &lt;code&gt;broom&lt;/code&gt; is designed for generating tidyverse-safe versions of statistical analysis objects to get you from models to plots &amp;amp; interpretation with as little hacking as possible.&lt;/p&gt;
+&lt;p&gt;First, to demonstrate the output of &lt;code&gt;broom::tidy()&lt;/code&gt;, we can call it just on the first model element of the &lt;code&gt;model&lt;/code&gt; column of &lt;code&gt;avo_by_region&lt;/code&gt; just as we called &lt;code&gt;summary()&lt;/code&gt; on it above.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region %&amp;gt;%
+  pull(model) %&amp;gt;%
+  pluck(1) %&amp;gt;%
+  # The only thing that&amp;#39;s different is here,
+  # the last command we call after we&amp;#39;ve plucked a single lm object:
+  broom::tidy()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 5
+##   term             estimate std.error statistic   p.value
+##   &amp;lt;chr&amp;gt;               &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;
+## 1 (Intercept)         5.03     0.0207    243.   0.       
+## 2 typeorganic        -1.56     0.0269    -58.0  7.89e-177
+## 3 avg_price_shift1   -0.239    0.0461     -5.18 3.78e-  7&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that I am using the &lt;code&gt;::&lt;/code&gt; to call &lt;code&gt;tidy()&lt;/code&gt; directly out of the &lt;code&gt;broom&lt;/code&gt; package namespace without &lt;code&gt;library()&lt;/code&gt;-ing the package. I prefer to use this syntax when I’m only using a single function from a package in a particular analysis document, to avoid loading too many function names into my session. (sometimes functions in different packages have overlapping names so you want to be careful!)&lt;/p&gt;
+&lt;p&gt;Calling &lt;code&gt;tidy()&lt;/code&gt; on a single &lt;code&gt;lm&lt;/code&gt; object gives us a tibble, with a column for each statistic of interest in the regression table, and a row for each term from the multiple regression. This has the same numbers as the core table output we got from calling &lt;code&gt;summary()&lt;/code&gt; on the same object, but now with all the added benefits of a tibble. We can use &lt;code&gt;select()&lt;/code&gt; to choose specific columns of statistics, &lt;code&gt;filter()&lt;/code&gt; to choose specific rows corresponding to particular coefficients, &lt;code&gt;mutate()&lt;/code&gt; to calculate new statistics from the ones we already have, and all that good stuff!&lt;/p&gt;
+&lt;p&gt;Another huge benefit of &lt;code&gt;tidy()&lt;/code&gt; returning a tibble of model output for each model is that if we use &lt;code&gt;tidy()&lt;/code&gt; inside &lt;code&gt;map()&lt;/code&gt; inside &lt;code&gt;mutate()&lt;/code&gt; to create a list-column of coefficients tibbles, we can create a list-column of tibble dataframes, which has specific tidyverse abilities.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_by_region %&amp;lt;&amp;gt;%
+  mutate(coefs = map(model, ~broom::tidy(.x)))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The biggest tidyverse ability is that the resulting &lt;code&gt;coefs&lt;/code&gt; list-column of coefficients dataframes can then be pulled out into long form with &lt;code&gt;unnest()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;# Storing this long dataframe into its own object
+# so we can feed it into ggplot2 calls more quickly later!
+avo_coefs &amp;lt;- avo_by_region %&amp;gt;%
+  # See the note below for why we&amp;#39;re using select()
+  # to retain only these two columns
+  select(region, coefs) %&amp;gt;%
+  unnest(coefs)
+
+avo_coefs&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 138 x 6
+##    region              term             estimate std.error statistic   p.value
+##    &amp;lt;chr&amp;gt;               &amp;lt;chr&amp;gt;               &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1 Albany              (Intercept)         5.03     0.0207    243.   0.       
+##  2 Albany              typeorganic        -1.56     0.0269    -58.0  7.89e-177
+##  3 Albany              avg_price_shift1   -0.239    0.0461     -5.18 3.78e-  7
+##  4 Atlanta             (Intercept)         5.72     0.0128    446.   0.       
+##  5 Atlanta             typeorganic        -1.57     0.0243    -64.8  1.67e-191
+##  6 Atlanta             avg_price_shift1   -0.240    0.0305     -7.88 4.64e- 14
+##  7 BaltimoreWashington (Intercept)         5.94     0.0182    327.   0.       
+##  8 BaltimoreWashington typeorganic        -1.51     0.0229    -65.9  6.99e-194
+##  9 BaltimoreWashington avg_price_shift1   -0.165    0.0383     -4.31 2.14e-  5
+## 10 Boise               (Intercept)         4.93     0.0107    460.   0.       
+## # … with 128 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And here we are, a long dataframe with a row for each coefficient from the multiple regression, and a chunk of rows for the coefficients from the model fit to a particular metro area. Usefully, this long dataframe can then be fed into a &lt;code&gt;ggplot2&lt;/code&gt; plotting call, to visualize all the model outputs from each region together. That’s what we’ll get to next!&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Notice that as of &lt;code&gt;tidyr &amp;gt;=1.0.0&lt;/code&gt;, &lt;code&gt;unnest()&lt;/code&gt;’s default behavior is to retain any other list-columns present in the df that aren’t getting unnested. If you unnested a list-column of dataframes that each had multiple rows, e.g. the &lt;code&gt;coefs&lt;/code&gt; column, where each sub-dataframe has a row for each coefficient, the other list-column(s) getting retained would have their values &lt;em&gt;repeated&lt;/em&gt; for each of the new rows created by unnesting the other column. Sometimes you might want that, but sometimes you might not want to increase your df’s memory footprint so much. In those cases, you should use &lt;code&gt;select()&lt;/code&gt; to remove list-columns that you don’t want repeated before unnesting.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;visualizing-many-statistics&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.7.3&lt;/span&gt; Visualizing many statistics&lt;/h3&gt;
+&lt;p&gt;Now that we have our model coefficients in a long form dataframe, with a chunk of rows for each metropolitan area, let’s plot the model estimates for each region!&lt;/p&gt;
+&lt;p&gt;Here, we’ll focus on plotting the values of the &lt;code&gt;typeorganic&lt;/code&gt; term, as this will index each region’s relative buying preference (or anti-preference?) for organic relative to conventional avocados. This estimate will conveniently also be adjusted for average avocado price across regions, so it should &lt;em&gt;not&lt;/em&gt; be affected by general differences in avocado prices (and cost of living) from region to region.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_coefplot &amp;lt;- avo_coefs %&amp;gt;%
+  filter(term == &amp;quot;typeorganic&amp;quot;) %&amp;gt;%
+  # Here, using fct_reorder() from the forcats pkg of the tidyverse
+  # which provides a bunch of nice factor manipulating functions
+  # super DUPER handy for reordering factor levels on a plot
+  # this reorders the regions in order from highest to lowest estimate
+  ggplot(aes(x = fct_reorder(region, desc(estimate)), y = estimate)) +
+  # I like to put error bars before, aka UNDERNEATH, the points
+  geom_errorbar(aes(ymin = estimate - std.error,
+                    ymax = estimate + std.error),
+                width = 0) +
+  geom_point() +
+  # let&amp;#39;s annotate
+  # to add guides to remind us how to interpret the log-10 scale
+  # that stuff is brain-bendy!
+  geom_hline(yintercept = c(-1, -2), linetype = 3) +
+  annotate(&amp;quot;text&amp;quot;, x = 8, y = -1.05, hjust = 0,
+           label = &amp;quot;-1 on log10 = 10% as many&amp;quot;, color = &amp;quot;black&amp;quot;) +
+  annotate(&amp;quot;text&amp;quot;, x = 8, y = -1.95, hjust = 0,
+           label = &amp;quot;-2 on log10 = 1% as many&amp;quot;, color = &amp;quot;black&amp;quot;) +
+  labs(x = &amp;quot;Metro area&amp;quot;,
+       y = &amp;quot;Log-10 diff in volume of organic avos sold&amp;quot;,
+       title = &amp;quot;People really do not buy organic avocados&amp;quot;,
+       subtitle = &amp;quot;especially not people in Florida&amp;quot;) +
+  theme_bw() +
+  # since the region names are long and would otherwise overlap on the plot,
+  # right-justifying each of them and tilting them to 45 degrees
+  # will make them all stick off the plot on an angle
+  theme(axis.text.x = element_text(hjust = 1, angle = 45))
+
+avo_coefplot&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-raw-coefplot-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;On this plot, metro areas on the &lt;em&gt;left&lt;/em&gt; of the plot are areas that buy a &lt;em&gt;greater&lt;/em&gt; percentage of organic avocados relative to conventional, and metro areas on the &lt;em&gt;right&lt;/em&gt; of the plot are areas that buy a &lt;em&gt;lower&lt;/em&gt; percentage of avocados relative to conventional.&lt;/p&gt;
+&lt;p&gt;Be mindful of the log scale when reading these numbers off the plot–thinking on the log scale can be tricky! Since we’re using log-10 scaling here, a log-10 difference of -1 corresponds to a real difference of 10&lt;sup&gt;-1&lt;/sup&gt;, or a 10% reduction in number. Similarly, a log-10 difference of -2 corresponds to a real difference of 10&lt;sup&gt;-2&lt;/sup&gt;, or a 1% reduction in number. (A log-10 difference of -1.5 is not as intuitive, we’re all better off just calculating 10&lt;sup&gt;1.5&lt;/sup&gt;)&lt;/p&gt;
+&lt;p&gt;So in Seattle, we estimate that when the price premium for organic avocados is taken into account, people buy approximately 10% as many organic avocados as they do conventional avocados. Meanwhile, in Miami &amp;amp; Fort Lauderdale, we estimate that people buy less than 1% as many organic avocados as they do conventional avocados. A log-10 difference of 1 is a whole order of magnitude different in raw avocado units!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Instructor’s note:&lt;/strong&gt; The following plot takes a bit of fiddling to set up, and requires chaining together many pieces of data wrangling logic. If learners have never made a model-estimate-plus-raw-data plot like this before, this may be a bit beyond scope to live-code. In that case, I recommend taking a couple minutes for learners to brainstorm possible strategies for extending the basic coefficient plot shown above, and then showing a fully rendered copy of the plot below as an example extension plot, qualitatively describing the added layers and annotations.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_raw_diffs &amp;lt;- avocado %&amp;gt;%
+  # first, prepare to calculate the raw difference in weekly volume
+  # of organic - conventional avocados bought
+  # (must be that direction bc conventional is baseline in the regression)
+  select(region, date, type, total_volume_log10) %&amp;gt;%
+  pivot_wider(names_from = type,
+              values_from = total_volume_log10) %&amp;gt;%
+  mutate(diff_raw = organic - conventional) %&amp;gt;%
+  # WestTextNewMexico has some weeks with no organic avocado sales
+  # so we need to filter out some NA rows of diff_raw
+  filter(!is.na(diff_raw)) %&amp;gt;%
+  # for each region, calculate the mean and SE of the mean
+  # of this difference
+  group_by(region) %&amp;gt;%
+  summarize(diff_mean = mean(diff_raw),
+            diff_se = sd(diff_raw)/sqrt(length(diff_raw))) %&amp;gt;% 
+  # in order for the plot to work
+  # (for the regions to be ordered by the model estimate)
+  # the model estimates need to be bound on to the raw diffs
+  left_join(avo_coefs %&amp;gt;% filter(term == &amp;quot;typeorganic&amp;quot;),
+            by = &amp;quot;region&amp;quot;)
+
+avo_coefplot +
+  # error bars and points for the raw data
+  # notice that we use the data argument to feed in different data
+  geom_errorbar(aes(y = diff_mean,
+                    ymin = diff_mean - diff_se,
+                    ymax = diff_mean + diff_se),
+                data = avo_raw_diffs,
+                color = &amp;quot;olivedrab4&amp;quot;,
+                width = 0) +
+  geom_point(aes(y = diff_mean),
+             data = avo_raw_diffs,
+             color = &amp;quot;olivedrab4&amp;quot;) +
+  # hand-adding a legend
+  annotate(&amp;quot;text&amp;quot;, x = 45, y = -1.2, hjust = 1,
+           label = &amp;quot;black = model-estimated&amp;quot;, color = &amp;quot;black&amp;quot;) +
+  annotate(&amp;quot;text&amp;quot;, x = 45, y = -1.3, hjust = 1,
+           label = &amp;quot;green = raw&amp;quot;, color = &amp;quot;olivedrab4&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-raw-coefplot-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;I think we’ve gotten pretty close to an answer (not THE answer, but AN answer) to our earlier research question: &lt;strong&gt;Do avocado buyers prefer buying conventional or organic avocados? By how much? How do these patterns differ from region to region?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Avocado buyers across the US appear to prefer buying conventional avocados over organic avocados; that is, they buy many more conventional avocados than organic avocados in a given week. This holds even when you adjust for the fact that organic avocados are usually more expensive. The magnitude of this buying preference against organic avocados varies across the country–the Pacific Northwest appears to avoid organic avocados much less than the rest of the country, and Florida appears to avoid organic avocados much more than the rest of the country.&lt;/p&gt;
+&lt;p&gt;That concludes the core analysis of this tutorial! If you like, continue following along for a rapid-fire demonstration of another use case of &lt;code&gt;map()&lt;/code&gt; inside &lt;code&gt;mutate()&lt;/code&gt; with nested dataframes to repeat analysis across many datasets containing similarly structured data.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bonus-example-bootstrapping&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.8&lt;/span&gt; Bonus example: bootstrapping&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Instructor’s note:&lt;/strong&gt; This section is designed as a demonstration of features rather than a live how-to. The main body of the code-along lesson concludes after generating a summary graph of model statistics for each &lt;code&gt;region&lt;/code&gt;. The lesson teaches one example case of using &lt;code&gt;map()&lt;/code&gt; inside &lt;code&gt;mutate()&lt;/code&gt; to fit a model to a bunch of sub-dataframes in a nested master dataframe, but there are other analysis contexts where this strategy comes in handy.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Another situation where you might fit the same model to a bunch of different datasets is &lt;strong&gt;bootstrapping.&lt;/strong&gt; When bootstrapping a statistic, you would:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;resample your observations &lt;em&gt;with replacement&lt;/em&gt; to yield a resampled dataset with the same N as your original dataset&lt;/li&gt;
+&lt;li&gt;do that resampling for many iterations to yield many resampled datasets&lt;/li&gt;
+&lt;li&gt;do your original analysis on every resampled dataset&lt;/li&gt;
+&lt;li&gt;extract the statistic of interest&lt;/li&gt;
+&lt;li&gt;use the distribution of that statistic across your bootstrapping iterations as the error distribution around the original value of the statistic calculated on the raw data&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Fitting many models and extracting key statistics using &lt;code&gt;map()&lt;/code&gt; inside &lt;code&gt;mutate()&lt;/code&gt; lends itself well to bootstrapping, which requires repeating the modeling operation of interest over many resampled datasets. If you had a nested dataframe, with a list-column of resampled datasets, you could absolutely use &lt;code&gt;map()&lt;/code&gt; inside &lt;code&gt;mutate()&lt;/code&gt; to fit a model to each resampled dataset, extract statistics, and get those statistics back into a long-form dataframe with a row for each bootstrap iteration, which you could then visualize with, say, a histogram or density plot to examine the distribution.&lt;/p&gt;
+&lt;p&gt;The one new technique I’ll demonstrate here is the &lt;code&gt;bootstraps&lt;/code&gt; function from the &lt;a href=&#34;https://tidymodels.github.io/rsample/&#34;&gt;&lt;code&gt;rsample&lt;/code&gt; package&lt;/a&gt; in the extended tidyverse. &lt;code&gt;rsample&lt;/code&gt; contains functions for sampling data for things like cross-validation and holding out testing data to test model predictions. In our case, we’ll be using a single function, &lt;code&gt;bootstraps()&lt;/code&gt;, which as you might guess generates bootstrap resamples of a dataset. &lt;code&gt;bootstraps()&lt;/code&gt; and other sampling functions in &lt;code&gt;rsample&lt;/code&gt; have the added benefit of using special tools under the hood to reduce the size of resampled datasets in memory, which helps reduce stress on your R session.&lt;/p&gt;
+&lt;p&gt;In this demonstration, I’ll bootstrap the error distribution on New York’s model estimate for the avocado &lt;code&gt;volume ~ type + price&lt;/code&gt; multiple regression we ran earlier. First, I’ll pull out New York’s raw data, and then feed it into &lt;code&gt;bootstraps()&lt;/code&gt; to create a dataframe with a row for every bootstrap iteration, and a list-column containing that iteration’s resampled dataset.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_nyc_boot &amp;lt;- avo_by_region %&amp;gt;%
+  filter(region == &amp;quot;NewYork&amp;quot;) %&amp;gt;%
+  # Mustn&amp;#39;t forget to select() only the group id column
+  # and the list-column we wish to unnest
+  # lest we accidentally replicate all the extra columns
+  # in this case, we want the column containing the RAW data
+  select(region, sales) %&amp;gt;%
+  # unnesting will give us a long dataframe with just New York&amp;#39;s weekly data
+  unnest(sales) %&amp;gt;%
+  # this WHOLE dataframe get fed in as the first argument of bootstraps
+  # the times argument sets the # of bootstrap iterations
+  rsample::bootstraps(times = 200)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s see what the dataframe output of &lt;code&gt;bootstraps()&lt;/code&gt; looks like:&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_nyc_boot&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # Bootstrap sampling 
+## # A tibble: 200 x 2
+##    splits            id          
+##    &amp;lt;list&amp;gt;            &amp;lt;chr&amp;gt;       
+##  1 &amp;lt;split [338/123]&amp;gt; Bootstrap001
+##  2 &amp;lt;split [338/118]&amp;gt; Bootstrap002
+##  3 &amp;lt;split [338/124]&amp;gt; Bootstrap003
+##  4 &amp;lt;split [338/124]&amp;gt; Bootstrap004
+##  5 &amp;lt;split [338/137]&amp;gt; Bootstrap005
+##  6 &amp;lt;split [338/126]&amp;gt; Bootstrap006
+##  7 &amp;lt;split [338/125]&amp;gt; Bootstrap007
+##  8 &amp;lt;split [338/138]&amp;gt; Bootstrap008
+##  9 &amp;lt;split [338/118]&amp;gt; Bootstrap009
+## 10 &amp;lt;split [338/124]&amp;gt; Bootstrap010
+## # … with 190 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;bootstraps()&lt;/code&gt; returns a dataframe with a character column called &lt;code&gt;id&lt;/code&gt; which labels each iteration, and a list column called &lt;code&gt;splits&lt;/code&gt; where each element houses metadata for a resampled dataset. I say metadata because part of the trick that &lt;code&gt;bootstraps()&lt;/code&gt; uses is that the native &lt;code&gt;split&lt;/code&gt; object type doesn’t actually contain any data on its own:&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_nyc_boot %&amp;gt;%
+  pull(splits) %&amp;gt;%
+  pluck(1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## &amp;lt;Analysis/Assess/Total&amp;gt;
+## &amp;lt;338/123/338&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;These numbers aren’t really designed for human consumption on their own. The real magic happens when you call &lt;code&gt;as.data.frame()&lt;/code&gt; on a &lt;code&gt;split&lt;/code&gt; object, which triggers it to actually do the resampling and give you a tibble of data.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_nyc_boot %&amp;gt;%
+  pull(splits) %&amp;gt;%
+  pluck(1) %&amp;gt;%
+  as.data.frame()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 338 x 8
+##    region date       avg_price total_volume type   year total_volume_lo…
+##    &amp;lt;chr&amp;gt;  &amp;lt;date&amp;gt;         &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt;            &amp;lt;dbl&amp;gt;
+##  1 NewYo… 2017-05-28      2.38       76002. orga…  2017             4.88
+##  2 NewYo… 2015-08-02      2.12       13852. orga…  2015             4.14
+##  3 NewYo… 2016-08-21      2.16       30583. orga…  2016             4.49
+##  4 NewYo… 2016-09-04      1.47     1278749. conv…  2016             6.11
+##  5 NewYo… 2017-08-20      1.85      107275. orga…  2017             5.03
+##  6 NewYo… 2016-12-11      2.22       32659. orga…  2016             4.51
+##  7 NewYo… 2015-02-01      1.36     1433763. conv…  2015             6.16
+##  8 NewYo… 2016-07-31      2.41       24048. orga…  2016             4.38
+##  9 NewYo… 2017-02-12      1.19     1955395. conv…  2017             6.29
+## 10 NewYo… 2015-08-23      2.28       15343. orga…  2015             4.19
+## # … with 328 more rows, and 1 more variable: avg_price_shift1 &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To double-check that the data were actually resampled with replacement, we can look in this first resampled tibble to make sure that at least some of the rows appear multiple times in the data.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_nyc_boot %&amp;gt;%
+  pull(splits) %&amp;gt;%
+  pluck(1) %&amp;gt;%
+  as.data.frame() %&amp;gt;%
+  count(date) %&amp;gt;%
+  arrange(desc(n))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 143 x 2
+##    date           n
+##    &amp;lt;date&amp;gt;     &amp;lt;int&amp;gt;
+##  1 2016-12-18     6
+##  2 2015-05-24     5
+##  3 2015-12-27     5
+##  4 2016-06-19     5
+##  5 2016-09-18     5
+##  6 2016-12-11     5
+##  7 2017-05-14     5
+##  8 2017-05-28     5
+##  9 2015-02-22     4
+## 10 2015-04-19     4
+## # … with 133 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Looks resampled to me! Now, we can use the same strategy we used before, but instead of operating on the raw data for each &lt;code&gt;region&lt;/code&gt; contained in the &lt;code&gt;sales&lt;/code&gt; column of &lt;code&gt;avo_by_region&lt;/code&gt;, we’ll operate on the resampled data for each bootstrap &lt;code&gt;id&lt;/code&gt; contained in the &lt;code&gt;splits&lt;/code&gt; column of &lt;code&gt;avo_nyc_boot&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_nyc_boot %&amp;lt;&amp;gt;%
+  # Note that here, I&amp;#39;m not saving the models into their own column
+  # but instead piping the model result of lm()
+  # DIRECTLY into broom::tidy() to go directly to the coefficients tibble
+  mutate(coefs_boot = map(splits,
+                          ~.x %&amp;gt;%
+                            # we need to call this first
+                            # to turn the splits object into data 
+                            as.data.frame() %&amp;gt;%
+                            # now we may proceed as usual
+                            lm(total_volume_log10 ~ type + avg_price_shift1, data = .) %&amp;gt;%
+                            broom::tidy()
+                          )
+         ) %&amp;gt;%
+  # again, use select to remove any columns we don&amp;#39;t want repeated
+  # when unnesting
+  select(-splits) %&amp;gt;%
+  unnest(coefs_boot)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If we inspect the long-form unnested content of &lt;code&gt;avo_nyc_boot&lt;/code&gt; after we’ve pulled out the bootstrapped coefficients, it looks pretty similar to the unnested coefficients in &lt;code&gt;avo_coefs&lt;/code&gt;, but this time instead of coefficients by &lt;code&gt;region&lt;/code&gt;, we’ve got coefficients by bootstrap &lt;code&gt;id&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_nyc_boot&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 600 x 6
+##    id           term             estimate std.error statistic   p.value
+##    &amp;lt;chr&amp;gt;        &amp;lt;chr&amp;gt;               &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;
+##  1 Bootstrap001 (Intercept)         6.22     0.0281    221.   0.       
+##  2 Bootstrap001 typeorganic        -1.42     0.0449    -31.6  1.37e-102
+##  3 Bootstrap001 avg_price_shift1   -0.239    0.0559     -4.28 2.40e-  5
+##  4 Bootstrap002 (Intercept)         6.29     0.0284    221.   0.       
+##  5 Bootstrap002 typeorganic        -1.31     0.0441    -29.7  7.42e- 96
+##  6 Bootstrap002 avg_price_shift1   -0.384    0.0565     -6.80 4.90e- 11
+##  7 Bootstrap003 (Intercept)         6.29     0.0290    217.   0.       
+##  8 Bootstrap003 typeorganic        -1.28     0.0408    -31.5  4.19e-102
+##  9 Bootstrap003 avg_price_shift1   -0.394    0.0539     -7.32 1.91e- 12
+## 10 Bootstrap004 (Intercept)         6.24     0.0278    224.   0.       
+## # … with 590 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;These coefficients are now ready to feed into a &lt;code&gt;ggplot2&lt;/code&gt; histogram. I’ll just inspect the bootstrapped error distribution for &lt;code&gt;typeorganic&lt;/code&gt;, the coefficient for the weekly difference in (log-10) volume of organic avocados sold relative to conventional avocados.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_nyc_boot %&amp;gt;%
+  filter(term == &amp;quot;typeorganic&amp;quot;) %&amp;gt;%
+  ggplot(aes(x = estimate)) +
+  geom_histogram() +
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-boot-hist-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We can see that this error distribution shows high kurtosis; that is, that the tails are short and the center of distribution is thick. This means we probably don’t want to use the standard deviation of this distribution as the standard error of the estimate, since the error distribution isn’t normal. Instead, we can use percentiles to report error intervals non-parametrically.&lt;/p&gt;
+&lt;p&gt;For the last plot I’ll show in this demo, I’ll do a bit more data manipulation to join the bootstrapped standard error data and the “raw” &lt;code&gt;lm()&lt;/code&gt;-estimated standard error data for the original New York avocado sales model, to produce a plot comparing the standard errors from the model estimate and from bootstrapping. This way we can see how much more conservative (how much larger) the bootstrapped standard error is relative to the &lt;code&gt;lm()&lt;/code&gt;-estimated error.&lt;/p&gt;
+&lt;pre class=&#34;language-r&#34;&gt;&lt;code class=&#34;language-r&#34;&gt;avo_nyc_boot %&amp;gt;%
+  # for each term in the model, over all bootstrap iterations,
+  group_by(term) %&amp;gt;%
+  # calculate its mean, SD,
+  # and the 16th and 84th percentiles
+  # to correspond with estimate +- 1 SE
+  # bc percentiles are non-parametric
+  # so, safe for non-normal distribution
+  summarize(estimate_boot = mean(estimate),
+            se_boot = sd(estimate),
+            q16_boot = quantile(estimate, .16),
+            q84_boot = quantile(estimate, .84)) %&amp;gt;%
+  # now, horizontally join on the coefs from the raw data
+  left_join(avo_coefs %&amp;gt;%
+              filter(region == &amp;quot;NewYork&amp;quot;) %&amp;gt;%
+              select(term, estimate_raw = estimate, se_raw = std.error) %&amp;gt;%
+              # assuming a normal distribution,
+              # rough-calculate the expected 16th and 84th percentiles
+              # to go along with the values in the bootstrapped coefs
+              mutate(q16_raw = estimate_raw - se_raw,
+                     q84_raw = estimate_raw + se_raw),
+            by = &amp;quot;term&amp;quot;) %&amp;gt;%
+  # use pivot_longer to get all the cols other than term,
+  # which are duplicated for the boot and raw coefs,
+  # into long form with a column indicating boot vs. raw
+  pivot_longer(cols = -term,
+               names_to = c(&amp;quot;.value&amp;quot;, &amp;quot;model_type&amp;quot;),
+               # see the pivot_longer docs for more info on this argument!
+               names_pattern = &amp;quot;(.*)_(.*)&amp;quot;) %&amp;gt;%
+  # again, just plotting the coefs for typeorganic
+  filter(term == &amp;quot;typeorganic&amp;quot;) %&amp;gt;%
+  ggplot(aes(x = estimate, y = model_type)) +
+  geom_errorbarh(aes(xmin = q16,
+                     xmax = q84),
+                 height = 0) +
+  geom_point() +
+  labs(x = &amp;quot;Estimate +- 1 &amp;#39;standard error&amp;#39;&amp;quot;,
+       y = &amp;quot;error type&amp;quot;,
+       title = &amp;quot;Bootstrap vs. &amp;#39;raw&amp;#39; errors for the New York avocado sale volume regression&amp;quot;,
+       subtitle = &amp;quot;The bootstrapped error is more conservative&amp;quot;) +
+  theme_bw()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/posts/2020-04-08-tidy-multilevel/index_files/figure-html/avo-boot-coefplot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Yep, it looks like the error bounds on the bootstrapped data are wider than the equivalent standard error from the &lt;code&gt;lm&lt;/code&gt; fit to the raw data. This will usually be the case! Perhaps a good argument to use bootstrapped standard errors more often, to be conservative with our statistics.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;in-closing&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; In closing&lt;/h1&gt;
+&lt;p&gt;I hope from this tutorial you’ve become comfortable exploring multilevel data by using &lt;code&gt;nest()&lt;/code&gt; and &lt;code&gt;unnest()&lt;/code&gt; to work with list-columns of sub-dataframes, and by using &lt;code&gt;map()&lt;/code&gt; inside &lt;code&gt;mutate()&lt;/code&gt; to calculate all manner of summary statistics for each grouping unit in your data. The tools and techniques we’ve practiced here may prove useful to you for all sorts of other data wrangling and sense-making tasks, so keep an eye out for contexts with similarly structured data where you might be able to use these tools.&lt;/p&gt;
+&lt;p&gt;Happy analyzing!&lt;/p&gt;
+&lt;/div&gt;
+</content>
     </item>
     
   </channel>
