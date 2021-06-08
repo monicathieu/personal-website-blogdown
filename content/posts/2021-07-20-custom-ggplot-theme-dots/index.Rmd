@@ -1,0 +1,187 @@
+---
+title: "Using dots (...) to make your own flexible ggplot2 theme"
+date: 2021-07-20
+description: "Instructions for running a brain bingo activity in class suitable for intro-psych level students."
+tags: ["tutorial", "R"]
+output:
+  blogdown::html_page
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(tidyverse)
+```
+
+## ggplot2 themes
+
+```{r}
+dep_delay_by_top_airlines <- nycflights13::flights %>% 
+  left_join(nycflights13::airlines, by = "carrier") %>% 
+  group_by(name) %>% 
+  filter(n() > 30000) %>% 
+  ungroup() %>% 
+  filter(dep_delay > 10) %>% 
+  ggplot(aes(x = dep_delay, fill = name)) +
+  geom_histogram(position = "identity", alpha = 0.4, bins = 100) +
+  scale_x_log10() +
+  labs(title = "Departure delays of flights out of NYC in 2013",
+       subtitle = "by carrier, for airlines with >30000 flights",
+       x = "Departure delay (minutes)",
+       y = "# of flights")
+```
+
+```{r}
+dep_delay_by_top_airlines
+```
+
+
+### The defaults
+
+ggplot2 comes with a great [pre-packaged set of themes](https://ggplot2.tidyverse.org/reference/ggtheme.html) you can use in place of the default gray theme.
+
+Each of these themes is implemented as a helper function that you can apply to a ggplot object using the `+`.
+
+I usually use the black-and-white theme:
+
+```{r}
+dep_delay_by_top_airlines +
+  theme_bw()
+```
+
+And here's one that looks more like base R:
+
+```{r}
+dep_delay_by_top_airlines +
+  theme_classic()
+```
+
+### Making your own theme with a function
+
+These blog posts--[1](https://bbc.github.io/rcookbook/#how_to_create_bbc_style_graphics), [2](https://rpubs.com/mclaire19/ggplot2-custom-themes), [3](https://emanuelaf.github.io/own-ggplot-theme.html)--all show good examples of doing this.
+
+## A highly abbreviated introduction to ... (dots)
+
+You've most likely seen ..., or "dots," before in R functions before, but maybe not thought too much about what exactly they do. (Yes, I know the grammatical term is called an ellipsis, but Hadley refers to them as "dot-dot-dot" or "dots" in his Advanced R textbook, so that's what I'm going with here!)
+
+When dots appear in the argument list of a function, they have one overarching purpose: **The dots argument is a placeholder for potentially unlimited additional arguments beyond those specified by the function.**
+
+Since we're talking ggplot2, we can take a look at the `aes()` function as an example:
+
+```{r, eval = FALSE}
+# Usage example from docs
+aes(x, y, ...)
+```
+
+Beyond the initial `x` and `y` arguments, `aes()` can take _any number of additional arguments._ If you want geom color or fill to vary along another variable, you can specify a value for `color` or `fill` respectively. If you want to plot endpoints for error bars, you can specify values for `ymin` and `ymax`. The `...` argument means that somewhere under the hood, `aes()` knows what to do for a great many possible arguments, but there are so many that it doesn't make sense to document them all under `aes()`.
+
+- `...` are usually the _last_ argument, and sometimes the first argument, but almost never the middle argument
+- `...` must usually be named arguments (`argument = value`)
+- `...` can be
+
+How can you use dots in a function you wrote yourself?
+
+Dots may be handled in many different ways in functions, the scope of which is beyond this post, but for user-defined functions there's one particular straightforward method of using dots that I'm going to show you here.
+
+You can use dots to capture a flexible set of arguments and pass them directly into a function inside.
+
+We'll write a wrapper function around `mean()` that outputs a message to console before calculating a mean. The function will take an additional argument, `name`, that lets us specify the name of the person calculating the mean.
+
+```{r}
+mean_loud <- function (x, na.rm = FALSE, name = "Monica") {
+  message(name, " calculated this mean for you!")
+  # Once we're inside the function,
+  # arguments get treated sort of like variables in the environment
+  return(mean(x = x, na.rm = na.rm))
+}
+```
+
+We can specify only the first argument, `x`, without naming it and R will assume we're referring to `x`  because it's the first one:
+
+```{r}
+mean_loud(rnorm(100))
+```
+
+We can also change later arguments like `name` if we name them:
+
+```{r}
+mean_loud(rnorm(100), name = "Uncle Joe")
+```
+
+Normally, when passing arguments from the first level of a function into a function within, you can pass named arguments in as shown below, passing the name of the argument in as the value for the next function.
+
+PS: the outer-level function arguments do not have to have the same names as the inner-level function arguments to be passed correctly. This would have the exact same results:
+
+```{r, eval = FALSE}
+mean_loud <- function (x, na_rm = FALSE, name = "Monica") {
+  message(name, " calculated this mean for you!")
+  return(mean(x = x, na.rm = na_rm))
+}
+```
+
+Dots can be passed down in a manner that looks like this. **If an inner-level function takes dots, you can pass dots directly down from the outer-level function into the inner level.**
+
+For example, let's consider `tibble::tibble()`, the tidyverse's workhorse tibble-creating function. The docs for `tibble()` have a lot of information, most of which isn't necessary for regular users. Importantly, we see that the first argument of `tibble()` is `...`, which is what allows you to specify names and values for whatever columns you want in your tibble. (Base R's `data.frame()` similarly takes `...` as the first argument so you can specify columns and row values flexibly.)
+
+What if we wanted to write a slightly modified version of `tibble()` that printed a little message before creating a tibble? We can use similar syntax as we used before to write a wrapper function that takes a new argument, `name`, as well as the all-important `...` that goes down into `tibble()`:
+
+```{r}
+tibble_loud <- function (name = "Monica", ...) {
+  message(name, " made this tibble for you!")
+  return(tibble(...))
+}
+```
+
+Now, I can call `tibble_loud()` like I call `tibble`, with whatever columns I want:
+
+```{r}
+tibble_loud(x = 1:10,
+            y = rnorm(10),
+            z = runif(10))
+```
+
+And if I want to change the `name` printed in the message, I can specify that first argument:
+
+```{r}
+tibble_loud(name = "Uncle Joe",
+            x = 1:10,
+            y = rnorm(10),
+            z = runif(10))
+```
+
+And there we go! We can set `...` in the arguments of our user-defined function to pass a flexible set of arguments down into an inner-level function that itself understands dots.
+
+There are a couple important things here for casual use of `...`.
+
+First, when taking `...` in a user-defined function, it's safest to set `...` as the _last_ argument so that dots arguments don't get confused with actual named arguments in the function. When dots are allowed in a function's arguments, R basically guesses which arguments in a function call match up with named arguments and which should get packaged into the dots. Setting `...` as the last argument makes it less likely for R to confuse named arguments with dots arguments.
+
+Second, `...` should be fed as-is into an inner function that takes dots as an argument. Dots cannot easily be broken apart so that some arguments get fed to one inner-level function and some get fed to another inner-level function.
+
+You can check out [the Advanced R textbook](https://adv-r.hadley.nz/functions.html?q=...#fun-dot-dot-dot) for a much deeper exploration of what dots can do and how you can use them in user-defined functions.
+
+## Making a custom theme that takes flexible arguments
+
+Now, we can write a custom theme function that actually takes more arguments.
+
+This relies on a couple abilities.
+
+1. Pick our base theme & pass size & font family arguments down into it
+2. Set custom theme specifics
+3. Pass flexible theme specifics in with `...`
+
+```{r}
+theme_ours <- function (base_size = 11,
+                        base_family = "",
+                        base_line_size = base_size/22,
+                        base_rect_size = base_size/22,
+                        ...) {
+  theme_out <- theme_bw(base_size = base_size,
+                        base_family = base_family,
+                        base_line_size = base_line_size,
+                        base_rect_size = base_rect_size) +
+    theme() +
+    theme(...)
+  
+  return (theme_out)
+}
+```
+
