@@ -834,15 +834,17 @@ avo_coefplot <- avo_coefs %>%
            label = "-1 on log10 = 10% as many", color = "black") +
   annotate("text", x = 8, y = -1.95, hjust = 0,
            label = "-2 on log10 = 1% as many", color = "black") +
+  # since the region names are long and would otherwise overlap on the plot,
+  # tilting them to 45 degrees will make them all stick off the plot on an angle
+  # the new helper function guide_axis() takes care of specifics
+  # when called within scale_x_discrete() as below (since we have discrete labels)
+  # (as of ggplot2 v3.3.0)
+  scale_x_discrete(guide = guide_axis(angle = 45)) +
   labs(x = "Metro area",
        y = "Log-10 diff in volume of organic avos sold",
        title = "People really do not buy organic avocados",
        subtitle = "especially not people in Florida") +
-  theme_bw() +
-  # since the region names are long and would otherwise overlap on the plot,
-  # right-justifying each of them and tilting them to 45 degrees
-  # will make them all stick off the plot on an angle
-  theme(axis.text.x = element_text(hjust = 1, angle = 45))
+  theme_bw()
 
 avo_coefplot
 ```
