@@ -1,0 +1,167 @@
+---
+title: CV
+name: Monica
+surname: Thieu
+position: "PhD student"
+address: "Dept of Psychology, Columbia University in the City of New York"
+www: monicathieu.com
+email: "monica.thieu@columbia.edu"
+twitter: monica_too_
+github: monicathieu
+date: "`r format(Sys.time(), '%B %Y')`"
+aboutme: "Marie is a Polish and naturalized-French physicist and chemist who conducts pioneering research on radioactivity."
+output: 
+  vitae::markdowncv:
+    theme: davewhipp
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+require(tidyverse)
+require(vitae)
+```
+
+## About me
+
+In my PhD research, I use behavioral and fMRI research methods to investigate how people perceive and categorize various social (others' facial age and gender) and emotional (elicited experiences) stimuli.
+
+In my teaching (so far), I particularly enjoy working with learners in introductory-level courses to in content (introductory psychology) and in methods (coding for behavioral sciences).
+
+* Method competencies:
+  * Functional neuroimaging: **Intermediate** in nipype, SPM, FSL, **proficient** in fmriprep
+  * Behavioral tasks: **Advanced** in Gorilla and Qualtrics; **proficient** in PsychoPy
+  * Data management tools: **Intermediate** in REDCap
+  * Coding: **Advanced** in R; **proficient** in Python, JavaScript, Stan, Matlab, shell
+
+## Education
+
+```{r}
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "PhD in Psychology", "expected 2022", "Columbia University", "New York, NY, USA",
+  "BA with honors in Psychology", "2015", "Stanford University", "Palo Alto, CA, USA"
+) %>% 
+  # flipped Where and Institution to get the institution to be bolded
+  detailed_entries(Degree, Year, Where, Institution)
+```
+
+## Awards and honors
+
+### Research
+
+```{r}
+tribble(
+  ~Year, ~Award, ~Desc,
+  "2019", "Honorable mention", "[NSF GRFP](https://nsfgrfp.org)",
+  "May 2015", "Honors thesis: Chronic media multitasking and distraction: Neural substrates and mnemonic consequences", "Advisors: Dr. Melina Uncapher, Dr. Anthony Wagner",
+  "June 2015", "Firestone Medal for Excellence in Undergraduate Research", "Stanford Vice Provost for Undergraduate Education",
+  "Summer 2014", "Undergraduate Summer Research Award grant", "Stanford Bio-X",
+  "Summer 2013", "Best Presentation", "Stanford Psych-Summer",	
+  "Summer 2013", "Undergraduate research grant", "Stanford Psych-Summer",
+  
+) %>% 
+  brief_entries(
+    Award,
+    Year, 
+    Desc
+  )
+```
+
+### Teaching
+
+```{r}
+tribble(
+  ~Year, ~Award, ~Desc,
+  "Spring 2021", "Grant to Enhance Remote Learning and Teaching", "Columbia Center for the History and Ethics of Public Health",
+  "Spring 2020", "[Curricular Innovation Fellow](https://rcfoundations.research.columbia.edu/content/foundations-curriculum-innovation-grant-program)", "Columbia Libraries",
+  "June 2015", "Zimbardo Teaching Prize", "Stanford Psych One",		
+) %>% 
+  brief_entries(
+    Award,
+    Year, 
+    Desc
+  )
+```
+
+### Other
+
+```{r}
+tribble(
+  ~Year, ~Award, ~Desc,
+  "Mar 2019", "Second place runner-up (team)", "Jeopardy! All-Star Games",
+  "May 2016", "Contestant", "500 Questions",
+  "Feb 2013", "Quarterfinalist", "Jeopardy! Tournament of Champions",
+  "Feb 2012", "First place winner", "Jeopardy! College Championship",
+  "Winter 2013", "Excellence Award", "Stanford Introductory Seminars",
+) %>% 
+  brief_entries(
+    Award,
+    Year, 
+    Desc
+  )
+```
+
+## Publications
+
+```{r}
+bibliography_entries("publications.bib") %>% 
+  arrange(desc(issued))
+```
+
+## Talks and workshops
+
+```{r}
+tribble(
+  ~Year, ~Talk, ~Conference,
+  "July 2020", "How to Prepare and Teach an R Lesson", "[NYC R Conference](https://rstats.ai/nyr/#speakers)",
+  "Nov 2020", "Exploring the NYPD Civilian Complaint Database", "Columbia Foundations for Research Computing workshop",
+  "Apr 2020", "Wrangling Multilevel Data in the Tidyverse", "Columbia Foundations for Research Computing workshop",
+) %>% 
+  brief_entries(
+    Talk,
+    Year, 
+    Conference
+  )
+```
+
+
+## Conference posters
+
+```{r}
+bibliography_entries("presentations.bib") %>% 
+  arrange(desc(issued))
+```
+
+## Teaching experience
+
+```{r}
+tribble(
+  ~ Position, ~ Year, ~ Course, ~ Where,
+  "Assistant curriculum developer, TA, & guest lecturer", "Sp2021", "PSYC 1021: Science of Psychology: Explorations & Applications", "Columbia Dept of Psychology",
+  "Guest lecturer", "Fa2019", "[Intro to Psychology](https://www.outlier.org/products/intro-to-psychology)", "Outlier.org",
+  "[Carpentries](https://carpentries.org/)-certified instructor", "Fa2019-", "Introductory coding bootcamps", "[Columbia Foundations for Research Computing](https://rcfoundations.research.columbia.edu/)",
+  "TA & guest lecturer", "Sp2019, Sp2020", "B8144: Intro to Programming in R", "Columbia Business School",
+  "TA & section leader", "Fa2018, Fa2019", "PSYC 1490: Research Methods", "Columbia Dept of Psychology",
+  "Curriculum developer & instructor", "Sp2018-", "[Intro to Programming for Social Scientists](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/workshop/)", "Columbia Dept of Psychology",
+  "TA & guest lecturer", "Fa2017", "PSYC 1001: Science of Psychology", "Columbia Dept of Psychology",
+  "Teaching fellow", "Fa2014-Sp2015", "Psych One", "Stanford Dept of Psychology",
+  "Instructor", "Su2011, Su2012", "7th and 8th grade physics", "Breakthrough Fort Worth"
+) %>% 
+  # flipped Where and Institution to get the institution to be bolded
+  detailed_entries(Course, Year, Where, Position)
+```
+
+## Workshops & summer schools attended
+
+```{r}
+tribble(
+  ~Year, ~Workshop, ~Desc,
+  "2019", "[Kavli Summer Institute in Cognitive Neuroscience](https://sicn.cmb.ucdavis.edu/)", "University of California, Santa Barbara",
+  "2018", "São Paulo School of Advanced Sciences on Social & Affective Neuroscience", "Mackenzie Presbyterian University"
+) %>% 
+  brief_entries(
+    Workshop,
+    Year, 
+    Desc
+  )
+```

@@ -22,54 +22,8 @@ After graduation in 2015, I transitioned into a full-time lab manager + research
 
 # A snapshot of my CV.
 
-## Awards and honors
+(Click [here](/cv/) for the full-page version. Made with the [vitae](https://pkg.mitchelloharawild.com/vitae/index.html) package!)
 
-[Curricular Innovation Fellow](https://rcfoundations.research.columbia.edu/content/foundations-curriculum-innovation-grant-program), Foundations for Research Computing, Columbia University, spring 2020
+<iframe src="/cv/index.html" width="100%" height="500px" title="Monica Thieu's CV"></iframe>
 
-Fellow, [Kavli Summer Institute in Cognitive Neuroscience](https://sicn.cmb.ucdavis.edu/), 2019
 
-Honorable Mention, NSF Graduate Research Fellowship Program, 2019
-
-Firestone Medal for Excellence in Undergraduate Research, Stanford University, 2015
-
-Zimbardo Teaching Prize, Psych One, Stanford University, 2015
-
-## Teaching experience
-
-Curriculum developer & teaching assistant, Science of Psychology: Explorations & Applications, Columbia University, spring 2021
-
-[Carpentries](https://carpentries.org/)-certified coding instructor, [Foundations for Research Computing](https://rcfoundations.research.columbia.edu/), Columbia University, fall 2019 -
-
-Guest lecturer, [Intro to Psychology](https://www.outlier.org/products/intro-to-psychology), Outlier.org, released fall 2019
-
-Teaching assistant & guest lecturer, Intro to Programming in R, Columbia Business School, spring 2019 + spring 2020
-
-Section leader, Experimental Methods in Psychology, Columbia University, fall 2018 + fall 2019
-
-Instructor & curriculum developer, [Intro to Programming for Social Scientists](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/workshop/), Columbia University, spring 2018 -
-
-Teaching assistant & guest lecturer, Science of Psychology, Columbia University, fall 2017
-
-Teaching fellow & section leader, Psych One, Stanford University, fall 2014 - spring 2015
-
-## Publications and presentations
-
-How to Prepare and Teach an R Lesson. Talk presented at [NYC R Conference](https://rstats.ai/nyr/#speakers) (online), 2020.
-
-Cholinergic modulation of hippocampally mediated attention and perception. Ruiz, N. A.\*, **Thieu, M. K.**\*, & Aly, M. (\* co-first author). _Behavioral Neuroscience,_ accepted. [biorXiv link](https://www.biorxiv.org/content/10.1101/2020.05.19.104497v2) [code](https://github.com/alylab/artMuseNicotine)
-
-Trelle, A. N., Carr, V. A., Guerin, S. A., **Thieu, M. K.,** Jayakumar, M., Guo, W., Nadiadwala, A., Corso, N. K., Hunt, M. P., Litovsky, C. P., Tanner, N. J., Deutsch, G. K., Bernstein, J. D., Harrison, M. B., Khazenzon, A. M., Jiang, J., Sha, S. J., Fredericks, C. A., Rutt, B. K., Mormino, E. C., Kerchner, G. A., & Wagner, A. D. (2020). Hippocampal and cortical mechanisms at retrieval explain variability in episodic remembering in older adults. _eLife,_ 9:e55335. [link](https://elifesciences.org/articles/55335)
-
-Investigating the neural pattern structure of mixed emotion. **Thieu, M.** & Ochsner, K. N. (2020). Poster presented at Society for Affective Science Meeting (online), 2020. [link](https://society-for-affective-science.org/list-of-sas-virtual-posters-2020/entry/5196/?gvid=7225)
-
-Psychometric estimation of emotion reporting thresholds. **Thieu, M.** & Ochsner, K. N. (2019). Poster presented at Society for Affective Science Meeting (Boston, MA), 2019. [link](https://osf.io/ubxtm/)
-
-Uncapher, M. R., **Thieu, M. K.,** & Wagner, A. D. (2016). Media multitasking and memory: Differences in working memory and long-term memory. _Psychonomic Bulletin and Review,_ 1-8. [link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4733435/)
-
-Chronic media multitasking and distraction: Neural substrates and mnemonic consequences. **Thieu, M.,** Uncapher, M. R., & Wagner, A. D. (2015). Talk presented at UCLA Psychology Undergraduate Research Conference (Los Angeles, CA), 2015.
-
-Chronic media multitasking and distraction: Neural substrates and mnemonic consequences. Uncapher, M. R. **Thieu, M.,** & Wagner, A. D. (2015). Poster presented at Cognitive Neuroscience Society Meeting (San Francisco, CA), 2015.
-
-Reduced working memory predicts impaired long-term memory in chronic media multitaskers. **Thieu, M.,** Uncapher, M. R., & Wagner, A. D. Poster presented at Bay Area Memory Meeting (Stanford, CA) and Bio-X Interdisciplinary Initiatives Symposium (Stanford, CA), 2014.
-
-Effects of media multitasking on working and long-term memory. **Thieu, M.,** Uncapher, M. R., & Wagner, A. D. (2013). Poster presented at Psych-Summer Poster Session (Stanford, CA), 2013.
