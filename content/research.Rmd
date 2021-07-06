@@ -40,8 +40,9 @@ blogdown::shortcode(.name = "figure",
                     captionPosition="center")
 ```
 
+Check out the "poster" video below for preliminary results on how the brain patterns of younger participants (in their 20s) change when judging faces based on their age vs. gender, or using binary vs. slider judgments.
 
-Preliminary results indicate that younger participants (say, in their 20s) tend to label the middle faces as “young”, but older participants (say, in their 60s) tend to label the middle faces as “old”. These results are exciting, and we hope to understand them better soon!
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cv1ejXoJS38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Measurement of emotion self-reporting
 
