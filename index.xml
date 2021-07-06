@@ -1924,18 +1924,15 @@ avo_coefplot +
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>Where I’m at. Some of my code. A snapshot of my CV. Awards and honors Teaching experience Publications and presentations    Where I’m at. I’m currently a PhD student in Dr. Kevin Ochsner’s Social Cognitive &amp;amp; Affective Neuroscience Lab at Columbia University, where I began in fall 2017. While I’m not working on research (and often while I am), I’m probably drinking from a very large cup of tea.</description>
+      <description>Where I’m at. Some of my code. A snapshot of my CV.   Where I’m at. I’m currently a PhD student in Dr. Kevin Ochsner’s Social Cognitive &amp;amp; Affective Neuroscience Lab at Columbia University, where I began in fall 2017. While I’m not working on research (and often while I am), I’m probably drinking from a very large cup of tea. I also co-manage an informal R users club in the department, and help to organize a semesterly coding bootcamp and bi-weekly meetings/workshops to enrich our collective R experience.</description>
       <content>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#where-im-at.&#34;&gt;Where I’m at.&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#some-of-my-code.&#34;&gt;Some of my code.&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#a-snapshot-of-my-cv.&#34;&gt;A snapshot of my CV.&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#awards-and-honors&#34;&gt;Awards and honors&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#teaching-experience&#34;&gt;Teaching experience&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#publications-and-presentations&#34;&gt;Publications and presentations&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#a-snapshot-of-my-cv.&#34;&gt;A snapshot of my CV.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -1953,38 +1950,9 @@ avo_coefplot +
 &lt;/div&gt;
 &lt;div id=&#34;a-snapshot-of-my-cv.&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;A snapshot of my CV.&lt;/h1&gt;
-&lt;div id=&#34;awards-and-honors&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Awards and honors&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://rcfoundations.research.columbia.edu/content/foundations-curriculum-innovation-grant-program&#34;&gt;Curricular Innovation Fellow&lt;/a&gt;, Foundations for Research Computing, Columbia University, spring 2020&lt;/p&gt;
-&lt;p&gt;Fellow, &lt;a href=&#34;https://sicn.cmb.ucdavis.edu/&#34;&gt;Kavli Summer Institute in Cognitive Neuroscience&lt;/a&gt;, 2019&lt;/p&gt;
-&lt;p&gt;Honorable Mention, NSF Graduate Research Fellowship Program, 2019&lt;/p&gt;
-&lt;p&gt;Firestone Medal for Excellence in Undergraduate Research, Stanford University, 2015&lt;/p&gt;
-&lt;p&gt;Zimbardo Teaching Prize, Psych One, Stanford University, 2015&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;teaching-experience&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Teaching experience&lt;/h2&gt;
-&lt;p&gt;Curriculum developer &amp;amp; teaching assistant, Science of Psychology: Explorations &amp;amp; Applications, Columbia University, spring 2021&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://carpentries.org/&#34;&gt;Carpentries&lt;/a&gt;-certified coding instructor, &lt;a href=&#34;https://rcfoundations.research.columbia.edu/&#34;&gt;Foundations for Research Computing&lt;/a&gt;, Columbia University, fall 2019 -&lt;/p&gt;
-&lt;p&gt;Guest lecturer, &lt;a href=&#34;https://www.outlier.org/products/intro-to-psychology&#34;&gt;Intro to Psychology&lt;/a&gt;, Outlier.org, released fall 2019&lt;/p&gt;
-&lt;p&gt;Teaching assistant &amp;amp; guest lecturer, Intro to Programming in R, Columbia Business School, spring 2019 + spring 2020&lt;/p&gt;
-&lt;p&gt;Section leader, Experimental Methods in Psychology, Columbia University, fall 2018 + fall 2019&lt;/p&gt;
-&lt;p&gt;Instructor &amp;amp; curriculum developer, &lt;a href=&#34;https://cu-psych-computing.github.io/cu-psych-comp-tutorial/workshop/&#34;&gt;Intro to Programming for Social Scientists&lt;/a&gt;, Columbia University, spring 2018 -&lt;/p&gt;
-&lt;p&gt;Teaching assistant &amp;amp; guest lecturer, Science of Psychology, Columbia University, fall 2017&lt;/p&gt;
-&lt;p&gt;Teaching fellow &amp;amp; section leader, Psych One, Stanford University, fall 2014 - spring 2015&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;publications-and-presentations&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Publications and presentations&lt;/h2&gt;
-&lt;p&gt;How to Prepare and Teach an R Lesson. Talk presented at &lt;a href=&#34;https://rstats.ai/nyr/#speakers&#34;&gt;NYC R Conference&lt;/a&gt; (online), 2020.&lt;/p&gt;
-&lt;p&gt;Cholinergic modulation of hippocampally mediated attention and perception. Ruiz, N. A.*, &lt;strong&gt;Thieu, M. K.&lt;/strong&gt;*, &amp;amp; Aly, M. (* co-first author). &lt;em&gt;Behavioral Neuroscience,&lt;/em&gt; accepted. &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2020.05.19.104497v2&#34;&gt;biorXiv link&lt;/a&gt; &lt;a href=&#34;https://github.com/alylab/artMuseNicotine&#34;&gt;code&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Trelle, A. N., Carr, V. A., Guerin, S. A., &lt;strong&gt;Thieu, M. K.,&lt;/strong&gt; Jayakumar, M., Guo, W., Nadiadwala, A., Corso, N. K., Hunt, M. P., Litovsky, C. P., Tanner, N. J., Deutsch, G. K., Bernstein, J. D., Harrison, M. B., Khazenzon, A. M., Jiang, J., Sha, S. J., Fredericks, C. A., Rutt, B. K., Mormino, E. C., Kerchner, G. A., &amp;amp; Wagner, A. D. (2020). Hippocampal and cortical mechanisms at retrieval explain variability in episodic remembering in older adults. &lt;em&gt;eLife,&lt;/em&gt; 9:e55335. &lt;a href=&#34;https://elifesciences.org/articles/55335&#34;&gt;link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Investigating the neural pattern structure of mixed emotion. &lt;strong&gt;Thieu, M.&lt;/strong&gt; &amp;amp; Ochsner, K. N. (2020). Poster presented at Society for Affective Science Meeting (online), 2020. &lt;a href=&#34;https://society-for-affective-science.org/list-of-sas-virtual-posters-2020/entry/5196/?gvid=7225&#34;&gt;link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Psychometric estimation of emotion reporting thresholds. &lt;strong&gt;Thieu, M.&lt;/strong&gt; &amp;amp; Ochsner, K. N. (2019). Poster presented at Society for Affective Science Meeting (Boston, MA), 2019. &lt;a href=&#34;https://osf.io/ubxtm/&#34;&gt;link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Uncapher, M. R., &lt;strong&gt;Thieu, M. K.,&lt;/strong&gt; &amp;amp; Wagner, A. D. (2016). Media multitasking and memory: Differences in working memory and long-term memory. &lt;em&gt;Psychonomic Bulletin and Review,&lt;/em&gt; 1-8. &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4733435/&#34;&gt;link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Chronic media multitasking and distraction: Neural substrates and mnemonic consequences. &lt;strong&gt;Thieu, M.,&lt;/strong&gt; Uncapher, M. R., &amp;amp; Wagner, A. D. (2015). Talk presented at UCLA Psychology Undergraduate Research Conference (Los Angeles, CA), 2015.&lt;/p&gt;
-&lt;p&gt;Chronic media multitasking and distraction: Neural substrates and mnemonic consequences. Uncapher, M. R. &lt;strong&gt;Thieu, M.,&lt;/strong&gt; &amp;amp; Wagner, A. D. (2015). Poster presented at Cognitive Neuroscience Society Meeting (San Francisco, CA), 2015.&lt;/p&gt;
-&lt;p&gt;Reduced working memory predicts impaired long-term memory in chronic media multitaskers. &lt;strong&gt;Thieu, M.,&lt;/strong&gt; Uncapher, M. R., &amp;amp; Wagner, A. D. Poster presented at Bay Area Memory Meeting (Stanford, CA) and Bio-X Interdisciplinary Initiatives Symposium (Stanford, CA), 2014.&lt;/p&gt;
-&lt;p&gt;Effects of media multitasking on working and long-term memory. &lt;strong&gt;Thieu, M.,&lt;/strong&gt; Uncapher, M. R., &amp;amp; Wagner, A. D. (2013). Poster presented at Psych-Summer Poster Session (Stanford, CA), 2013.&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;(Click &lt;a href=&#34;/cv/&#34;&gt;here&lt;/a&gt; for the full-page version. Made with the &lt;a href=&#34;https://pkg.mitchelloharawild.com/vitae/index.html&#34;&gt;vitae&lt;/a&gt; package!)&lt;/p&gt;
+&lt;iframe src=&#34;/cv/index.html&#34; width=&#34;100%&#34; height=&#34;500px&#34; title=&#34;Monica Thieu&amp;#39;s CV&#34;&gt;
+&lt;/iframe&gt;
 &lt;/div&gt;
 </content>
     </item>
@@ -2208,21 +2176,25 @@ When I was little, instead of doing normal kid things, I would read piles upon p
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/research/</guid>
-      <description>Participating in research studies Tools for conducting research Recruiting online participants Running behavioral tasks online  My active projects Individual differences in age perception Measurement of emotion self-reporting  Previous projects Attention, memory, and media multitasking Healthy aging and associative memory    Participating in research studies In accordance with my IRB protocols, I do not advertise my own research studies on my website. However, if you’re interested in participating in research in general there are many other studies you can take part in.</description>
+      <description>Participating in research studies Tools for conducting research  Recruiting online participants Running behavioral tasks online  My active projects  Individual differences in age perception Measurement of emotion self-reporting  Previous projects  Attention, memory, and media multitasking Healthy aging and associative memory    Participating in research studies In accordance with my IRB protocols, I do not advertise my own research studies on my website.</description>
       <content>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#participating-in-research-studies&#34;&gt;Participating in research studies&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tools-for-conducting-research&#34;&gt;Tools for conducting research&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#tools-for-conducting-research&#34;&gt;Tools for conducting research&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#recruiting-online-participants&#34;&gt;Recruiting online participants&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#running-behavioral-tasks-online&#34;&gt;Running behavioral tasks online&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#my-active-projects&#34;&gt;My active projects&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#my-active-projects&#34;&gt;My active projects&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#individual-differences-in-age-perception&#34;&gt;Individual differences in age perception&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#measurement-of-emotion-self-reporting&#34;&gt;Measurement of emotion self-reporting&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#previous-projects&#34;&gt;Previous projects&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#previous-projects&#34;&gt;Previous projects&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#attention-memory-and-media-multitasking&#34;&gt;Attention, memory, and media multitasking&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#healthy-aging-and-associative-memory&#34;&gt;Healthy aging and associative memory&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -2260,7 +2232,9 @@ When I was little, instead of doing normal kid things, I would read piles upon p
   &lt;/figure&gt;
 
 &lt;/p&gt;
-&lt;p&gt;Preliminary results indicate that younger participants (say, in their 20s) tend to label the middle faces as “young”, but older participants (say, in their 60s) tend to label the middle faces as “old”. These results are exciting, and we hope to understand them better soon!&lt;/p&gt;
+&lt;p&gt;Check out the “poster” video below for preliminary results on how the brain patterns of younger participants (in their 20s) change when judging faces based on their age vs. gender, or using binary vs. slider judgments.&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/cv1ejXoJS38&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;div id=&#34;measurement-of-emotion-self-reporting&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Measurement of emotion self-reporting&lt;/h2&gt;
