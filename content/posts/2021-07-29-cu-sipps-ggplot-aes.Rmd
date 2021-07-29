@@ -4,7 +4,8 @@ date: 2021-07-29
 description: "A learnr interactive tutorial to practice adjusting aesthetics of ggplot2 plots."
 tags: ["tutorial", "R", "plotting", "interactive"]
 output:
-  blogdown::html_page
+  blogdown::html_page:
+    toc: false
 ---
 
 ```{r setup, include=FALSE}
