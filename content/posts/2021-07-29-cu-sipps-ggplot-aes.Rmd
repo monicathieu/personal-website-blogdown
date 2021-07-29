@@ -1,0 +1,24 @@
+---
+title: "Practice ggplot2 aesthetics with learnr"
+date: 2021-07-29
+description: "A learnr interactive tutorial to practice adjusting aesthetics of ggplot2 plots."
+tags: ["tutorial", "R", "plotting", "interactive"]
+output:
+  blogdown::html_page
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Do you or early-intermediate R users you know want to practice beautifying your `ggplot2` plots for attractiveness and intelligibility? Would you like to do this using interactive exercises that don't require you to download anything or even open RStudio? Have I got the tutorials for you!
+
+I made these interactive worksheets for the Columbia Dept of Psychology's [Summer Internship Program in Psychological Science](https://columbia-sipps.github.io), a fantastic trainee-led pilot program supporting structured summer research assistantships in the department. Since summer 2021 is the first summer this program has gone live with participants from assorted labs, several grad students have volunteered to contribute new teaching materials for sessions that haven't already been taught elsewhere in the department.
+
+Both worksheets are **interactive** [`learnr`](https://rstudio.github.io/learnr/index.html) tutorials that allow you to run your own code snippets for each plot adjustment exercise, and check your answers using [`gradethis`](https://pkgs.rstudio.com/gradethis/index.html). Please check them out and pass them along to learners who might be interested!
+
+Small note: The tutorials are hosted on my free [shinyapps.io](https://www.shinyapps.io) account, which has a decent but frugal processing limit. If lots of people happen to have the page open, you may experience timeouts, but it's pretty unlikely unless these blow up online somehow!
+
+### [**Worksheet 1: Axes, labeling, and color mapping**](https://monicathieu.shinyapps.io/cu-sipps-ggplot-aes-1/)
+
+### [**Worksheet 2: Annotation and theme elements**](https://monicathieu.shinyapps.io/cu-sipps-ggplot-aes-2/)
