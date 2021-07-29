@@ -13,17 +13,11 @@
       <pubDate>Thu, 29 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>/posts/2021-07-29-cu-sipps-ggplot-aes/</guid>
-      <description>Worksheet 1: Axes, labeling, and color mapping Worksheet 2: Annotation and theme elements   Do you or early-intermediate R users you know want to practice beautifying your ggplot2 plots for attractiveness and intelligibility? Would you like to do this using interactive exercises that don’t require you to download anything or even open RStudio? Have I got the tutorials for you!
+      <description>Do you or early-intermediate R users you know want to practice beautifying your ggplot2 plots for attractiveness and intelligibility? Would you like to do this using interactive exercises that don’t require you to download anything or even open RStudio? Have I got the tutorials for you!
 I made these interactive worksheets for the Columbia Dept of Psychology’s Summer Internship Program in Psychological Science, a fantastic trainee-led pilot program supporting structured summer research assistantships in the department.</description>
       <content>
 &lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#worksheet-1-axes-labeling-and-color-mapping&#34;&gt;&lt;span&gt;&lt;strong&gt;Worksheet 1: Axes, labeling, and color mapping&lt;/strong&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#worksheet-2-annotation-and-theme-elements&#34;&gt;&lt;span&gt;&lt;strong&gt;Worksheet 2: Annotation and theme elements&lt;/strong&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Do you or early-intermediate R users you know want to practice beautifying your &lt;code&gt;ggplot2&lt;/code&gt; plots for attractiveness and intelligibility? Would you like to do this using interactive exercises that don’t require you to download anything or even open RStudio? Have I got the tutorials for you!&lt;/p&gt;
 &lt;p&gt;I made these interactive worksheets for the Columbia Dept of Psychology’s &lt;a href=&#34;https://columbia-sipps.github.io&#34;&gt;Summer Internship Program in Psychological Science&lt;/a&gt;, a fantastic trainee-led pilot program supporting structured summer research assistantships in the department. Since summer 2021 is the first summer this program has gone live with participants from assorted labs, several grad students have volunteered to contribute new teaching materials for sessions that haven’t already been taught elsewhere in the department.&lt;/p&gt;
