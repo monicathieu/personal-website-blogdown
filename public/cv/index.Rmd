@@ -142,7 +142,7 @@ tribble(
   "[Carpentries](https://carpentries.org/)-certified instructor", "Fa2019-", "Introductory coding bootcamps", "[Columbia Foundations for Research Computing](https://rcfoundations.research.columbia.edu/)",
   "TA & guest lecturer", "Sp2019, Sp2020", "B8144: Intro to Programming in R", "Columbia Business School",
   "TA & section leader", "Fa2018, Fa2019", "PSYC 1490: Research Methods", "Columbia Dept of Psychology",
-  "Curriculum developer & instructor", "Sp2018-", "[Intro to Programming for Social Scientists](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/workshop/)", "Columbia Dept of Psychology",
+  "Curriculum developer & instructor", "Sp2018-Fa2021", "[Intro to Programming for Social Scientists](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/workshop/)", "Columbia Dept of Psychology",
   "TA & guest lecturer", "Fa2017", "PSYC 1001: Science of Psychology", "Columbia Dept of Psychology",
   "Teaching fellow", "Fa2014-Sp2015", "Psych One", "Stanford Dept of Psychology",
   "Instructor", "Su2011, Su2012", "7th and 8th grade physics", "Breakthrough Fort Worth"
