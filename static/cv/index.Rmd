@@ -25,7 +25,7 @@ require(vitae)
 
 In my PhD research, I use behavioral and fMRI research methods to investigate how people perceive and categorize various social (others' facial age and gender) and emotional (elicited experiences) stimuli.
 
-In my teaching (so far), I particularly enjoy working with learners in introductory-level courses to in content (introductory psychology) and in methods (coding for behavioral sciences).
+In my teaching (so far), I particularly enjoy working with learners in introductory-level courses in content (introductory psychology) and in methods (coding for behavioral sciences).
 
 * Method competencies:
   * Functional neuroimaging: **Intermediate** in nipype, SPM, FSL, **proficient** in fmriprep
@@ -140,9 +140,9 @@ tribble(
   "Assistant curriculum developer, TA, & guest lecturer", "Sp2021", "PSYC 1021: Science of Psychology: Explorations & Applications", "Columbia Dept of Psychology",
   "Guest lecturer", "Fa2019", "[Intro to Psychology](https://www.outlier.org/products/intro-to-psychology)", "Outlier.org",
   "[Carpentries](https://carpentries.org/)-certified instructor", "Fa2019-", "Introductory coding bootcamps", "[Columbia Foundations for Research Computing](https://rcfoundations.research.columbia.edu/)",
-  "TA & guest lecturer", "Sp2019, Sp2020", "B8144: Intro to Programming in R", "Columbia Business School",
+  "TA & guest lecturer", "Sp2019, Sp2020, Fa2021", "B8144: Intro to Programming in R", "Columbia Business School",
   "TA & section leader", "Fa2018, Fa2019", "PSYC 1490: Research Methods", "Columbia Dept of Psychology",
-  "Curriculum developer & instructor", "Sp2018-", "[Intro to Programming for Social Scientists](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/workshop/)", "Columbia Dept of Psychology",
+  "Curriculum developer & instructor", "Sp2018-Fa2021", "[Intro to Programming for Social Scientists](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/workshop/)", "Columbia Dept of Psychology",
   "TA & guest lecturer", "Fa2017", "PSYC 1001: Science of Psychology", "Columbia Dept of Psychology",
   "Teaching fellow", "Fa2014-Sp2015", "Psych One", "Stanford Dept of Psychology",
   "Instructor", "Su2011, Su2012", "7th and 8th grade physics", "Breakthrough Fort Worth"
