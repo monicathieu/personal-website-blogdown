@@ -108,14 +108,16 @@ bibliography_entries("publications.bib") %>%
   arrange(desc(issued))
 ```
 
-## Talks and workshops
+## Talks, workshops, and media
 
 ```{r}
 tribble(
   ~Year, ~Talk, ~Conference,
+  "July 2020", "[Podcast guest (science)](https://www.marketplace.org/shows/this-is-uncomfortable-reema-khrais/money-makes-me-sick/)", "This is Uncomfortable by Marketplace",
   "July 2020", "How to Prepare and Teach an R Lesson", "[NYC R Conference](https://rstats.ai/nyr/#speakers)",
   "Nov 2020", "Exploring the NYPD Civilian Complaint Database", "Columbia Foundations for Research Computing workshop",
   "Apr 2020", "Wrangling Multilevel Data in the Tidyverse", "Columbia Foundations for Research Computing workshop",
+  "July 2019", "[Podcast guest (trivia, statistics)](https://www.npr.org/transcripts/722198188)", "Planet Money by NPR"
 ) %>% 
   brief_entries(
     Talk,
