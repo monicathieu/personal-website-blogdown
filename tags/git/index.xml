@@ -13,14 +13,16 @@
       <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>/posts/2020-11-12-nypd-ccrb-data/</guid>
-      <description>The NYPD Misconduct Complaint Database Our slides Source code Hosting the slides to this website  A non-exhaustive list of related reports   My cohort-mate and fellow R wonk, Paul Bloom, and I presented these slides for Columbia Foundations for Research Computing. Our presentation focused on cleaning and plotting data on civilian allegations of NYPD misconduct from the New York Civil Liberties Union.
+      <description>The NYPD Misconduct Complaint Database Our slides  Source code Hosting the slides to this website  A non-exhaustive list of related reports   My cohort-mate and fellow R wonk, Paul Bloom, and I presented these slides for Columbia Foundations for Research Computing. Our presentation focused on cleaning and plotting data on civilian allegations of NYPD misconduct from the New York Civil Liberties Union.
 The NYPD Misconduct Complaint Database From the NYCLU:</description>
       <content>
+&lt;script src=&#34;/posts/2020-11-12-nypd-ccrb-data/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#the-nypd-misconduct-complaint-database&#34;&gt;The NYPD Misconduct Complaint Database&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#our-slides&#34;&gt;Our slides&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#our-slides&#34;&gt;Our slides&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#source-code&#34;&gt;Source code&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#hosting-the-slides-to-this-website&#34;&gt;Hosting the slides to this website&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;

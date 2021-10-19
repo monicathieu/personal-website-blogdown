@@ -13,24 +13,28 @@
       <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
       
       <guid>/posts/2021-05-28-intro-psych-brain-bingo/</guid>
-      <description>1 What’s the activity 2 Why this activity 3 Materials 4 What I did: Step by step methods 4.1 Choose key terms 4.2 Prepare bingo cards 4.3 Prepare bingo calls 4.4 Prepare computer for streaming 4.4.1 Streaming destination: configure YouTube Live 4.4.2 Streaming source: configure StreamLabs app 4.4.3 Connecting the source to the destination  4.5 Run the activity 4.5.1 Prep students 4.5.2 Start the stream!     This post will show you my motivation and methods for designing and running a game of Zoom bingo, but for basic neuroanatomy!</description>
+      <description>1 What’s the activity 2 Why this activity 3 Materials 4 What I did: Step by step methods  4.1 Choose key terms 4.2 Prepare bingo cards 4.3 Prepare bingo calls 4.4 Prepare computer for streaming  4.4.1 Streaming destination: configure YouTube Live 4.4.2 Streaming source: configure StreamLabs app 4.4.3 Connecting the source to the destination  4.5 Run the activity  4.5.1 Prep students 4.5.2 Start the stream!</description>
       <content>
+&lt;script src=&#34;/posts/2021-05-28-intro-psych-brain-bingo/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#whats-the-activity&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; What’s the activity&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#why-this-activity&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Why this activity&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#materials&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Materials&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#what-i-did-step-by-step-methods&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; What I did: Step by step methods&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#what-i-did-step-by-step-methods&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; What I did: Step by step methods&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#choose-key-terms&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.1&lt;/span&gt; Choose key terms&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#prepare-bingo-cards&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.2&lt;/span&gt; Prepare bingo cards&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#prepare-bingo-calls&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.3&lt;/span&gt; Prepare bingo calls&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#prepare-computer-for-streaming&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.4&lt;/span&gt; Prepare computer for streaming&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#prepare-computer-for-streaming&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.4&lt;/span&gt; Prepare computer for streaming&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#streaming-destination-configure-youtube-live&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.4.1&lt;/span&gt; Streaming destination: configure YouTube Live&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#streaming-source-configure-streamlabs-app&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.4.2&lt;/span&gt; Streaming source: configure StreamLabs app&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#connecting-the-source-to-the-destination&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.4.3&lt;/span&gt; Connecting the source to the destination&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#run-the-activity&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.5&lt;/span&gt; Run the activity&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#run-the-activity&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.5&lt;/span&gt; Run the activity&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#prep-students&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.5.1&lt;/span&gt; Prep students&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#start-the-stream&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.5.2&lt;/span&gt; Start the stream!&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -39,26 +43,26 @@
 &lt;/div&gt;
 
 &lt;p&gt;This post will show you my motivation and methods for designing and running a game of Zoom bingo, but for basic neuroanatomy! This activity would be appropriate for an introductory psychology or neuroscience class. The instructions below are specific to an online class (the activity was run in the spring 2021 semester), but can be simplified to run in-person. (You can skip all the streaming stuff; that’s the most complicated part anyway.)&lt;/p&gt;
-&lt;div id=&#34;whats-the-activity&#34; class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;whats-the-activity&#34; class=&#34;section level1&#34; number=&#34;1&#34;&gt;
 &lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; What’s the activity&lt;/h1&gt;
 &lt;p&gt;It does what it says on the box, pretty much! Each player gets a bingo board with a series of key neuroanatomical terms on it instead of traditional bingo numbers. Instead of calling numbers from a giant rotating cage of balls, the bingo announcer (instructor) shows a series of pictures or verbal descriptions of those key terms. Players must match the picture/definition shown on the screen to the key term on their board, and mark that key term off. Once they mark off a straight line of key terms, that’s BRAIN BINGO!&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;why-this-activity&#34; class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;why-this-activity&#34; class=&#34;section level1&#34; number=&#34;2&#34;&gt;
 &lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Why this activity&lt;/h1&gt;
 &lt;p&gt;Paired associations between names and definitions (visual and verbal) are a great candidate for gamification in the classroom to reward successful learning with fun. Bingo works well because students need to correctly remember term-definition pairings in order to play the game, but the object of the game is not specifically “who can identify the most key terms”, which hopefully reduces a little bit of stress on students.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Important: We didn’t include a game for the sake of a game, we included a game because we thought it was the best way to test memory for neuroanatomical terms.&lt;/strong&gt; A game happened to fit the bill well here, and I’m glad it did, but a game isn’t always the best activity for a particular learning objective!&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;materials&#34; class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;materials&#34; class=&#34;section level1&#34; number=&#34;3&#34;&gt;
 &lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Materials&lt;/h1&gt;
 &lt;/div&gt;
-&lt;div id=&#34;what-i-did-step-by-step-methods&#34; class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;what-i-did-step-by-step-methods&#34; class=&#34;section level1&#34; number=&#34;4&#34;&gt;
 &lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; What I did: Step by step methods&lt;/h1&gt;
-&lt;div id=&#34;choose-key-terms&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;choose-key-terms&#34; class=&#34;section level2&#34; number=&#34;4.1&#34;&gt;
 &lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.1&lt;/span&gt; Choose key terms&lt;/h2&gt;
 &lt;p&gt;In some way, this is the most important part of the activity. By choosing the key terms to quiz in bingo, &lt;em&gt;you are deciding which key terms you want students to know.&lt;/em&gt; Don’t take this lightly! (&lt;a href=&#34;https://cft.vanderbilt.edu/guides-sub-pages/understanding-by-design/&#34;&gt;Backward design&lt;/a&gt; is everywhere.) I kept this in mind when deciding which terms to omit. Intro-level students don’t need to be neuroanatomy experts; they only need to know enough to be able to orient themselves when we discuss cognitive neuroscience research in class.&lt;/p&gt;
 &lt;p&gt;Four our class, we ended up selecting a combination of the key terms presented in the Brain chapter of our course’s &lt;a href=&#34;https://catalog.flatworldknowledge.com/catalog/editions/intropsych_bpg-5-1&#34;&gt;textbook&lt;/a&gt;, and a few more based on the judgment of the teaching team (like MRI slice orientations).&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;prepare-bingo-cards&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;prepare-bingo-cards&#34; class=&#34;section level2&#34; number=&#34;4.2&#34;&gt;
 &lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; Prepare bingo cards&lt;/h2&gt;
 &lt;p&gt;Columbia has a subscription to the G Suite for Education, which means we have access to &lt;a href=&#34;https://jamboard.google.com&#34;&gt;Jamboard&lt;/a&gt;, Google’s interactive whiteboard app. A whiteboard app like Jamboard isn’t strictly necessary for an activity like this, but it is useful. We could send students a link to the Jamboard file and direct them to their respective bingo cards on the large whiteboard document, which we could also have open to monitor their progress as they used built-in whiteboard features to mark bingo spots as “called”.&lt;/p&gt;
 &lt;p&gt;Ultimately, Jamboard or not, students just need unique bingo cards that they can annotate somehow to mark when key terms have been called. Bingo cards can even be static screenshot images, with which students would use a markup tool on their own device or mark corresponding locations on a 4x4 grid on a sheet of paper.&lt;/p&gt;
@@ -67,33 +71,33 @@
 &lt;p&gt;To create additional unique bingo cards, I duplicated an existing bingo card, replaced some key terms with other key terms (to ensure that not every bingo card had the exact same items, and so students can’t assume every key term appears on their card), and manually shuffled the sticky notes again.&lt;/p&gt;
 &lt;p&gt;Finally, just in case students encountered Jamboard access issues, I screenshotted every unique bingo card and saved all the labeled screenshots in a folder for students to access just in case.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;prepare-bingo-calls&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;prepare-bingo-calls&#34; class=&#34;section level2&#34; number=&#34;4.3&#34;&gt;
 &lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.3&lt;/span&gt; Prepare bingo calls&lt;/h2&gt;
 &lt;p&gt;I wanted the ability to test students’ recall using both visual cues (e.g. an arrow pointing in a particular anatomical direction) and verbal cues (e.g. a description of a brain region’s key functions). The simplest way I found to do this was to create a Google Slides presentation (&lt;a href=&#34;brain_bingo_calls.pdf&#34;&gt;PDF export here&lt;/a&gt;, &lt;a href=&#34;contact&#34;&gt;contact me&lt;/a&gt; for the Google Slides themselves), where each slide contained a recall cue for one key term. For anatomical directions, imaging slice orientations, and lobes of the cerebrum, I made picture cues. For other brain structures/regions, including subcortical structures, I wrote a short one-sentence description of that region’s definition/function based on what students would have seen in the textbook. Each key term had only one cue slide associated with it.&lt;/p&gt;
 &lt;p&gt;I made these slides in sensible order just to make it easier for me to catalogue all the terms I was adding. To randomize them for bingo presentation, I downloaded the &lt;a href=&#34;https://workspace.google.com/marketplace/app/slides_randomizer/464683408022&#34;&gt;Slides Randomizer&lt;/a&gt; Google Slides plugin and followed its instructions to randomize the order of all slides (excluding the first slide, on which I typed some instructions). After randomizing, I manually re-ordered a few slides so that there wouldn’t be large chunks of consecutive picture cues or verbal cues.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;prepare-computer-for-streaming&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;prepare-computer-for-streaming&#34; class=&#34;section level2&#34; number=&#34;4.4&#34;&gt;
 &lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.4&lt;/span&gt; Prepare computer for streaming&lt;/h2&gt;
 &lt;p&gt;We (the teaching team) had previously decided to run the activity in bingo teams of approximately 4 students. We did this both to allow students to assist each other within teams, and to acclimate students to group work in the class before they were assigned to semester-long project groups the next week of class.&lt;/p&gt;
 &lt;p&gt;Ordinarily, running an activity like this would only require the instructor screen-sharing into Zoom and students filling out their bingo cards in a separate browser window. However, because we wanted students to work in &lt;em&gt;teams,&lt;/em&gt; we had to figure out an alternative that allowed students to &lt;em&gt;see a screen share while in breakout rooms.&lt;/em&gt; We settled on me streaming my screen to a web link that students could have open while they were in breakout rooms.&lt;/p&gt;
 &lt;p&gt;For the entire semester, I Zoomed into class from my (2017) iMac desktop in my office. (Per our lab’s COVID protocols, only one person was allowed in each office at a time. I would book the office for class time twice a week and leave other times of the week for others to work there.) The iMac provided two main benefits over joining class from my laptop in my apartment: &lt;strong&gt;gigabit wired internet on campus&lt;/strong&gt; and &lt;strong&gt;a really big screen&lt;/strong&gt;. Both of these features proved key to streaming brain bingo successfully. The internet speed helped ensure the stream wouldn’t be patchy, and the large screen allowed me to tile more windows on screen so I could maintain a “control board” for all the programs I needed to keep an eye on.&lt;/p&gt;
-&lt;div id=&#34;streaming-destination-configure-youtube-live&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;streaming-destination-configure-youtube-live&#34; class=&#34;section level3&#34; number=&#34;4.4.1&#34;&gt;
 &lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.4.1&lt;/span&gt; Streaming destination: configure YouTube Live&lt;/h3&gt;
 &lt;p&gt;Between all the different streaming sites I could use, I figured YouTube Live would be the easiest. I already had a YouTube account associated with my Columbia Gmail, and it would be easy enough to send the link to students to view without needing to log in themselves.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;streaming-source-configure-streamlabs-app&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;streaming-source-configure-streamlabs-app&#34; class=&#34;section level3&#34; number=&#34;4.4.2&#34;&gt;
 &lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.4.2&lt;/span&gt; Streaming source: configure StreamLabs app&lt;/h3&gt;
 &lt;p&gt;Having never streamed anything before, I didn’t realize you can’t just share your screen and webcam directly to a stream. You can stream just your webcam, but not with a screen share. Zoom makes it look so easy! I needed to download an &lt;em&gt;encoder,&lt;/em&gt; or a tool that would construct a feed from multiple sources that could be sent into a stream. (When Zoom talks with webcam/sceen share are livestreamed to something like YouTube Live, Zoom itself acts as the encoder in this instance.) Based on the &lt;a href=&#34;https://support.google.com/youtube/answer/2907883?hl=en&amp;amp;ref_topic=9257984#zippy=%2Csoftware-encoders&#34;&gt;relevant YouTube support page&lt;/a&gt;, I decided to try the Streamlabs app.&lt;/p&gt;
 &lt;p&gt;Following &lt;a href=&#34;https://blog.streamlabs.com/streamlabs-is-live-on-mac-ff543b7f4a35&#34;&gt;Streamlabs’s basic setup guide for Mac&lt;/a&gt;, I added my YouTube login info to authenticate my future stream, and then did the absolute bare minimum to setup a stream that would show two sources: me on webcam/audio (the default), and a Window Capture of my Google Slides presentation with the brain cue slides.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;connecting-the-source-to-the-destination&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;connecting-the-source-to-the-destination&#34; class=&#34;section level3&#34; number=&#34;4.4.3&#34;&gt;
 &lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.4.3&lt;/span&gt; Connecting the source to the destination&lt;/h3&gt;
 &lt;p&gt;The last thing I needed to do to hook Streamlabs up to my YouTube Live account was plug in the stream key and stream URL. Following a combination of Streamlabs’s guide and &lt;a href=&#34;https://support.google.com/youtube/answer/2907883?hl=en&amp;amp;ref_topic=9257984#zippy=%2Cschedule-a-live-stream&#34;&gt;YouTube’s instructions&lt;/a&gt; to stream from an encoder to a scheduled stream, I copied both pieces of information from the YouTube Live admin editing page for the stream and pasted them into Streamlabs. Clicking “Go Live” in Streamlabs made all my stuff start showing up in YouTube! Wow!!!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;run-the-activity&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;run-the-activity&#34; class=&#34;section level2&#34; number=&#34;4.5&#34;&gt;
 &lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.5&lt;/span&gt; Run the activity&lt;/h2&gt;
-&lt;div id=&#34;prep-students&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;prep-students&#34; class=&#34;section level3&#34; number=&#34;4.5.1&#34;&gt;
 &lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.5.1&lt;/span&gt; Prep students&lt;/h3&gt;
 &lt;p&gt;While students were in the main Zoom (and we could reach everyone using the chat), we introduced the review game and sent the links they would need in their breakout rooms:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
@@ -103,7 +107,7 @@
 &lt;/ol&gt;
 &lt;p&gt;Then, when everyone was ready, we used Zoom’s random breakout room assignment feature to send students to team breakout rooms. (Our instructor and the other TA stayed in the main Zoom in case of troubleshooting.)&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;start-the-stream&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;start-the-stream&#34; class=&#34;section level3&#34; number=&#34;4.5.2&#34;&gt;
 &lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.5.2&lt;/span&gt; Start the stream!&lt;/h3&gt;
 &lt;p&gt;Starting the stream would prevent me from using my desktop webcam for Zoom &lt;em&gt;and&lt;/em&gt; streaming, so I had to either join the class Zoom on another device to keep an eye on it, or just leave and hope people could communicate with me through the stream chat. I happened to have my laptop with me in my office, so I managed to join the class Zoom on my laptop while closing out of Zoom on my work desktop to start up the stream. I hit “Go Live” on Streamlabs (since I’d already configured the stream link and Streamlabs connection on YouTube Live before class) and we were rolling!&lt;/p&gt;
 &lt;p&gt;Once on the stream, I introduced the instructions, answered any questions that came in through the stream chat or from the rest of the teaching team in the main Zoom, and then started bingo! I allowed 30 seconds per bingo call–hopefully long enough to give students sufficient time to identify the associated key term, but fast enough to keep the activity moving.&lt;/p&gt;
@@ -124,18 +128,21 @@
       <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>/posts/2020-08-15-prepare-teach-r-lesson/</guid>
-      <description>1 Notes for readers 2 Why this talk? 3 Objectives 4 Lesson construction using backward design 4.1 What is backward design? 4.2 Define outcomes 4.3 Define evidence of learning 4.3.1 Formative assessment: more smaller tests 4.3.2 Tidy formative assessments 4.3.3 Multiple choice check-ins scale pretty well  4.4 Build lesson  5 Deliver the lesson 6 In summary   1 Notes for readers This blog post contains a written version of my speaker notes for my 20-minute 2020 NYC R conference talk.</description>
+      <description>1 Notes for readers 2 Why this talk? 3 Objectives 4 Lesson construction using backward design  4.1 What is backward design? 4.2 Define outcomes 4.3 Define evidence of learning  4.3.1 Formative assessment: more smaller tests 4.3.2 Tidy formative assessments 4.3.3 Multiple choice check-ins scale pretty well  4.4 Build lesson  5 Deliver the lesson 6 In summary   1 Notes for readers This blog post contains a written version of my speaker notes for my 20-minute 2020 NYC R conference talk.</description>
       <content>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#notes-for-readers&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Notes for readers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#why-this-talk&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Why this talk?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#objectives&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Objectives&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#lesson-construction-using-backward-design&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; Lesson construction using backward design&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#lesson-construction-using-backward-design&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; Lesson construction using backward design&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#what-is-backward-design&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.1&lt;/span&gt; What is backward design?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#define-outcomes&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.2&lt;/span&gt; Define outcomes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#define-evidence-of-learning&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.3&lt;/span&gt; Define evidence of learning&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#define-evidence-of-learning&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.3&lt;/span&gt; Define evidence of learning&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#formative-assessment-more-smaller-tests&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.3.1&lt;/span&gt; Formative assessment: more smaller tests&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#tidy-formative-assessments&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.3.2&lt;/span&gt; Tidy formative assessments&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#multiple-choice-check-ins-scale-pretty-well&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4.3.3&lt;/span&gt; Multiple choice check-ins scale pretty well&lt;/a&gt;&lt;/li&gt;
@@ -147,17 +154,17 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;notes-for-readers&#34; class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;notes-for-readers&#34; class=&#34;section level1&#34; number=&#34;1&#34;&gt;
 &lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; Notes for readers&lt;/h1&gt;
 &lt;p&gt;This blog post contains a written version of my speaker notes for my 20-minute 2020 NYC R conference talk. Since the talk time is on the shorter side, I trimmed a few things out of the talk that I would have liked to include with more time. The speaker notes for the unabridged version are included here for your reference.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;why-this-talk&#34; class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;why-this-talk&#34; class=&#34;section level1&#34; number=&#34;2&#34;&gt;
 &lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Why this talk?&lt;/h1&gt;
 &lt;p&gt;Nobody is born knowing how to code. All programmers must start somewhere, and we’re all constantly learning. If you &lt;em&gt;ever&lt;/em&gt; find yourself entrusted with the responsibility to train others to program, from informal tutoring all the way up to running a workshop, you and your learners will benefit from you knowing how to teach.&lt;/p&gt;
 &lt;p&gt;Teaching well promotes equity as well. While we have a long way to go toward equal access and representation in technical professions, any chance you get to teach well is a chance to level one of the many uneven playing fields people may encounter on the way to a career in data science or scientific computing. Teach effectively and lower those barriers.&lt;/p&gt;
 &lt;p&gt;So let’s get into it!&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;objectives&#34; class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;objectives&#34; class=&#34;section level1&#34; number=&#34;3&#34;&gt;
 &lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Objectives&lt;/h1&gt;
 &lt;p&gt;By the end of my talk, you will be able to:&lt;/p&gt;
 &lt;ul&gt;
@@ -167,9 +174,9 @@
 &lt;li&gt;Describe benefits of narrated live-coding&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;lesson-construction-using-backward-design&#34; class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;lesson-construction-using-backward-design&#34; class=&#34;section level1&#34; number=&#34;4&#34;&gt;
 &lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; Lesson construction using backward design&lt;/h1&gt;
-&lt;div id=&#34;what-is-backward-design&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;what-is-backward-design&#34; class=&#34;section level2&#34; number=&#34;4.1&#34;&gt;
 &lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.1&lt;/span&gt; What is backward design?&lt;/h2&gt;
 &lt;p&gt;When writing code, be it a helper function, a data processing script, or a whole package, there’s a common logical order we follow.&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
@@ -193,7 +200,7 @@
 &lt;p&gt;You already know this logic! Lesson planning is conceptually similar to writing code. You don’t need to acquire a whole new knowledge base from scratch to be able to plan R lessons. You only need to learn how to relate concepts from coding logic to backward lesson design, and that’s exactly what we’re going to do.&lt;/p&gt;
 &lt;p&gt;Next, we’ll dig more into each of these three steps of backward design as they might manifest in an R coding lesson.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;define-outcomes&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;define-outcomes&#34; class=&#34;section level2&#34; number=&#34;4.2&#34;&gt;
 &lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.2&lt;/span&gt; Define outcomes&lt;/h2&gt;
 &lt;p&gt;Defining the learning outcome, or objective (used interchangeably from here on out), is conceptually similar to defining the output of a function, script, or entire package that one might write. It’s the answer to the following question:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;What will learners be able to &lt;em&gt;do&lt;/em&gt; when the lesson is finished?&lt;/strong&gt;&lt;/p&gt;
@@ -218,7 +225,7 @@
 &lt;/ul&gt;
 &lt;p&gt;Note: Most learning goals in lessons about R will be to “use” or “implement” certain functions or techniques. However, depending on the topic, the goal may be something lower, like to “recognize” or “recall” which function does what, or something higher, like to “evaluate” or “critique” code for style and speed. If you’re interested in reading more about the different types of learning goals one might set for a lesson, and which one best fits the level of learning you want, &lt;a href=&#34;https://www.celt.iastate.edu/teaching/effective-teaching-practices/revised-blooms-taxonomy/&#34;&gt;Bloom’s Revised Taxonomy&lt;/a&gt; is a helpful framework.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;define-evidence-of-learning&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;define-evidence-of-learning&#34; class=&#34;section level2&#34; number=&#34;4.3&#34;&gt;
 &lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.3&lt;/span&gt; Define evidence of learning&lt;/h2&gt;
 &lt;p&gt;Once you’ve outlined your desired learning objectives, the next step is to define &lt;em&gt;acceptable evidence of learning.&lt;/em&gt; How will you determine that learners can indeed accomplish what the learning objective says they can?&lt;/p&gt;
 &lt;p&gt;Again, in programming and teaching, we must &lt;em&gt;test&lt;/em&gt; to confirm that our code (or our learners) have accomplished the objective.&lt;/p&gt;
@@ -237,7 +244,7 @@
 &lt;/blockquote&gt;
 &lt;p&gt;There doesn’t have to be one test question for each objective, but it’s a good place to start to make sure you have appropriate coverage. Just like you want high code coverage when testing your own code, you want high objective coverage with your final assessment, to ensure that you’re testing learners’ ability to execute every objective that you want them to accomplish. No matter how many prompts you include in your assessment, make sure that tests are written specifically enough that a learner who has reached the objective would be able to answer every question acceptably. Vague prompts don’t “give away the answer,” they give enough information for learners to get to the answer.&lt;/p&gt;
 &lt;p&gt;There can (and often should) be a back-and-forth process between defining learning outcomes and defining tests of learning. Sometimes, you might find that your test isn’t testing exactly what you think learners should be able to do. You might add more to your test, or change what’s already in it, so that it better fits the learning outcome. Other times, you might have a sense that the test itself correctly expresses what you want learners to come away with. In those cases, you might re-write the learning outcome so that it better fits the test. The key is to plan with intention either way.&lt;/p&gt;
-&lt;div id=&#34;formative-assessment-more-smaller-tests&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;formative-assessment-more-smaller-tests&#34; class=&#34;section level3&#34; number=&#34;4.3.1&#34;&gt;
 &lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.3.1&lt;/span&gt; Formative assessment: more smaller tests&lt;/h3&gt;
 &lt;p&gt;The final assessment is of course essential to determining whether learners have met your objective. But, by design, it happens at the &lt;em&gt;end&lt;/em&gt; of the lesson. What if learners make critical mistakes on the final assessment, showing that they haven’t actually reached the objective? At that point, the lesson is over, and you don’t have any time remaining to get learners back on track. :(&lt;/p&gt;
 &lt;p&gt;Enter formative assessment! When teaching, you have many chances to assess learning &lt;em&gt;before you get to the end of the lesson.&lt;/em&gt; &lt;strong&gt;Formative assessments&lt;/strong&gt; are &lt;em&gt;frequent&lt;/em&gt; and &lt;em&gt;specific&lt;/em&gt; tests of learner understanding &lt;em&gt;during teaching.&lt;/em&gt;&lt;/p&gt;
@@ -282,7 +289,7 @@
 &lt;p&gt;An experienced instructor can read the error message and deduce that the error occurs inside of &lt;code&gt;group_by()&lt;/code&gt;, and is likely to be a misspelling bug (or, perhaps more likely, was carried over from a version of the code where the column names were not coerced to lowercase). However, this error message may be opaque to the learner, and does little to help them identify their mistake themselves.&lt;/p&gt;
 &lt;p&gt;Further, this test requires the instructor to exert extra effort to trace the error. If multiple learners make unique errors in writing this block of code, the instructor must now take even more time to correct each learner’s unique mistake. Learners must also spend time waiting for the instructor, instead of progressing.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;tidy-formative-assessments&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;tidy-formative-assessments&#34; class=&#34;section level3&#34; number=&#34;4.3.2&#34;&gt;
 &lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.3.2&lt;/span&gt; Tidy formative assessments&lt;/h3&gt;
 &lt;p&gt;The function chains encouraged by tidyverse style lend themselves to regular formative assessments. Formative assessment check-ins can built in to the lesson after every function in the pipe chain is introduced.&lt;/p&gt;
 &lt;p&gt;We can reformat the code chunk above to have a formative assessment check-in for each verb. For example, here’s a couple ways we might test learners’ understanding of what named functions do inside of &lt;code&gt;summarize(across())&lt;/code&gt;. We start with the block of code that learners will have already successfully written and run:&lt;/p&gt;
@@ -321,7 +328,7 @@
 &lt;li&gt;Each check-in can be repeated until 100% of learners pass, ensuring that when the next function is introduced, learners will all be caught up&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;multiple-choice-check-ins-scale-pretty-well&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;multiple-choice-check-ins-scale-pretty-well&#34; class=&#34;section level3&#34; number=&#34;4.3.3&#34;&gt;
 &lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.3.3&lt;/span&gt; Multiple choice check-ins scale pretty well&lt;/h3&gt;
 &lt;p&gt;The above check-in is written as a free-response prompt to “write code that does the job”. In small learner groups, this is the most flexible way to check for understanding. If they can write working code, then they’ve met the learning objective! However, this does require that the instructor either trust that everyone’s code works, or visually check each learner’s work to confirm the code behaves as intended. This can be time-consuming for larger groups.&lt;/p&gt;
 &lt;p&gt;There are other methods of formative assessment check-in that, while less comprehensive, scale much better to large groups of learners. My favorite of these are multiple choice questions:&lt;/p&gt;
@@ -338,7 +345,7 @@
 &lt;p&gt;Additionally, to the previous point, do not write “trick” distractor answers, particularly those where &lt;em&gt;you have not yet shown learners why such a mistake is incorrect.&lt;/em&gt; Testing learners on skills/concepts you haven’t taught them is a waste of testing time for you, and a waste of effort for learners.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;build-lesson&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;build-lesson&#34; class=&#34;section level2&#34; number=&#34;4.4&#34;&gt;
 &lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;4.4&lt;/span&gt; Build lesson&lt;/h2&gt;
 &lt;p&gt;The beauty of backwards design is that once you’ve spelled out your learning objectives, and the tests you’ll use to verify that learners have reached those objectives, the lesson itself is nearly done. Ideally, once you’ve laid out your assessments, you will be able to see exactly what you need to demonstrate and explain to equip learners with enough knowledge to complete those assessments.&lt;/p&gt;
 &lt;p&gt;The core principle I try to rely on when crafting lessons is to &lt;strong&gt;teach what you need to teach: no more and no less.&lt;/strong&gt; What does this mean? This encompasses several things, including:&lt;/p&gt;
@@ -393,7 +400,7 @@
 &lt;p&gt;(I actually heard the above from Hadley Wickham! At Columbia I was lucky to be able to take Dr. Andrew Gelman’s Communicating Data course, where we heard from guest speakers like Hadley.)&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;deliver-the-lesson&#34; class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;deliver-the-lesson&#34; class=&#34;section level1&#34; number=&#34;5&#34;&gt;
 &lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Deliver the lesson&lt;/h1&gt;
 &lt;p&gt;All right, so you’ve sketched out your lesson objectives, checks for understanding, and lecture content. Time to teach! Most likely, you’ll teach via live-coding. You demonstrate the code example, and then learners apply what they’ve just seen you do. Occasionally you might find yourself using slides, but live-coding will cover most code instruction scenarios.&lt;/p&gt;
 &lt;p&gt;Coding for an audience is a little different than coding for yourself. You gotta be intentional about it! Even when the audience is just one co-worker with their computer next to yours, intentional live-coding can spell the difference between following along with you vs not understanding. The single biggest tip I can give is:&lt;/p&gt;
@@ -414,7 +421,7 @@
 &lt;/ul&gt;
 &lt;p&gt;Note: &lt;a href=&#34;https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006023&#34;&gt;This paper&lt;/a&gt; is a great reference for additional lesson delivery tips when teaching a proper programming course.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;in-summary&#34; class=&#34;section level1&#34;&gt;
+&lt;div id=&#34;in-summary&#34; class=&#34;section level1&#34; number=&#34;6&#34;&gt;
 &lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;6&lt;/span&gt; In summary&lt;/h1&gt;
 &lt;p&gt;I hope that you are now able to accomplish the &lt;a href=&#34;#objectives&#34;&gt;objectives&lt;/a&gt; I set out at the beginning of this talk. Go forth and &lt;em&gt;effectively&lt;/em&gt; train others in R!&lt;/p&gt;
 &lt;/div&gt;
