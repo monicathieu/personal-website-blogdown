@@ -1,8 +1,8 @@
 ---
 title: "Using dots (...) to make your own flexible ggplot2 theme"
 date: 2021-07-20
-description: "Instructions for running a brain bingo activity in class suitable for intro-psych level students."
-tags: ["tutorial", "R"]
+description: "Instructions for writing a custom ggplot2 theme function that also passes through additional theme modifications."
+tags: ["tutorial", "R", "plotting"]
 output:
   blogdown::html_page
 ---
@@ -12,7 +12,23 @@ knitr::opts_chunk$set(echo = TRUE)
 require(tidyverse)
 ```
 
-## ggplot2 themes
+When I define my own custom \`ggplot2
+
+# Tutorial goals
+
+By the end of this post, readers will be able to:
+
+-   Write a function for a `ggplot2` custom theme that handles additional arguments to `theme()`
+
+-   Pass `…` from a user-defined wrapper function into a pre-existing function that takes dots
+
+This post assumes that readers already know how to:
+
+-   Generate a usable graph with `ggplot2`'s default aesthetics
+
+-   Write and use a user-defined function that takes arguments
+
+# ggplot2 themes
 
 ```{r}
 dep_delay_by_top_airlines <- nycflights13::flights %>% 
@@ -34,8 +50,7 @@ dep_delay_by_top_airlines <- nycflights13::flights %>%
 dep_delay_by_top_airlines
 ```
 
-
-### The defaults
+## The defaults (included with the package)
 
 ggplot2 comes with a great [pre-packaged set of themes](https://ggplot2.tidyverse.org/reference/ggtheme.html) you can use in place of the default gray theme.
 
@@ -55,11 +70,11 @@ dep_delay_by_top_airlines +
   theme_classic()
 ```
 
-### Making your own theme with a function
+## Making your own theme with a function
 
 These blog posts--[1](https://bbc.github.io/rcookbook/#how_to_create_bbc_style_graphics), [2](https://rpubs.com/mclaire19/ggplot2-custom-themes), [3](https://emanuelaf.github.io/own-ggplot-theme.html)--all show good examples of doing this.
 
-## A highly abbreviated introduction to ... (dots)
+# A highly abbreviated introduction to ... (dots)
 
 You've most likely seen ..., or "dots," before in R functions before, but maybe not thought too much about what exactly they do. (Yes, I know the grammatical term is called an ellipsis, but Hadley refers to them as "dot-dot-dot" or "dots" in his Advanced R textbook, so that's what I'm going with here!)
 
@@ -72,11 +87,11 @@ Since we're talking ggplot2, we can take a look at the `aes()` function as an ex
 aes(x, y, ...)
 ```
 
-Beyond the initial `x` and `y` arguments, `aes()` can take _any number of additional arguments._ If you want geom color or fill to vary along another variable, you can specify a value for `color` or `fill` respectively. If you want to plot endpoints for error bars, you can specify values for `ymin` and `ymax`. The `...` argument means that somewhere under the hood, `aes()` knows what to do for a great many possible arguments, but there are so many that it doesn't make sense to document them all under `aes()`.
+Beyond the initial `x` and `y` arguments, `aes()` can take *any number of additional arguments.* If you want geom color or fill to vary along another variable, you can specify a value for `color` or `fill` respectively. If you want to plot endpoints for error bars, you can specify values for `ymin` and `ymax`. The `...` argument means that somewhere under the hood, `aes()` knows what to do for a great many possible arguments, but there are so many that it doesn't make sense to document them all under `aes()`.
 
-- `...` are usually the _last_ argument, and sometimes the first argument, but almost never the middle argument
-- `...` must usually be named arguments (`argument = value`)
-- `...` can be
+-   `...` are usually the *last* argument, and sometimes the first argument, but almost never the middle argument
+-   `...` must usually be named arguments (`argument = value`)
+-   `...` can be
 
 How can you use dots in a function you wrote yourself?
 
@@ -95,7 +110,7 @@ mean_loud <- function (x, na.rm = FALSE, name = "Monica") {
 }
 ```
 
-We can specify only the first argument, `x`, without naming it and R will assume we're referring to `x`  because it's the first one:
+We can specify only the first argument, `x`, without naming it and R will assume we're referring to `x` because it's the first one:
 
 ```{r}
 mean_loud(rnorm(100))
@@ -152,28 +167,33 @@ And there we go! We can set `...` in the arguments of our user-defined function 
 
 There are a couple important things here for casual use of `...`.
 
-First, when taking `...` in a user-defined function, it's safest to set `...` as the _last_ argument so that dots arguments don't get confused with actual named arguments in the function. When dots are allowed in a function's arguments, R basically guesses which arguments in a function call match up with named arguments and which should get packaged into the dots. Setting `...` as the last argument makes it less likely for R to confuse named arguments with dots arguments.
+First, when taking `...` in a user-defined function, it's safest to set `...` as the *last* argument so that dots arguments don't get confused with actual named arguments in the function. When dots are allowed in a function's arguments, R basically guesses which arguments in a function call match up with named arguments and which should get packaged into the dots. Setting `...` as the last argument makes it less likely for R to confuse named arguments with dots arguments.
 
 Second, `...` should be fed as-is into an inner function that takes dots as an argument. Dots cannot easily be broken apart so that some arguments get fed to one inner-level function and some get fed to another inner-level function.
 
 You can check out [the Advanced R textbook](https://adv-r.hadley.nz/functions.html?q=...#fun-dot-dot-dot) for a much deeper exploration of what dots can do and how you can use them in user-defined functions.
 
-## Making a custom theme that takes flexible arguments
+# Putting it all together
 
 Now, we can write a custom theme function that actually takes more arguments.
 
 This relies on a couple abilities.
 
-1. Pick our base theme & pass size & font family arguments down into it
-2. Set custom theme specifics
-3. Pass flexible theme specifics in with `...`
+1.  Pick our base theme & pass size & font family arguments down into it
+2.  Set custom theme specifics
+3.  Pass flexible theme specifics in with `...`
 
 ```{r}
+# The default settings for the first four arguments
+# are the same as the defaults for other ggplot2 themes
+# so you can leave them fully default if you wish
+
 theme_ours <- function (base_size = 11,
                         base_family = "",
                         base_line_size = base_size/22,
                         base_rect_size = base_size/22,
                         ...) {
+  # using theme_bw() here sets this as the base theme that we'll style on
   theme_out <- theme_bw(base_size = base_size,
                         base_family = base_family,
                         base_line_size = base_line_size,
@@ -185,3 +205,4 @@ theme_ours <- function (base_size = 11,
 }
 ```
 
+# 

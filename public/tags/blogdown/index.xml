@@ -13,28 +13,34 @@
       <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>/posts/2020-08-10-setting-up-this-website/</guid>
-      <description>Setting up a blogdown repository Blogdown-ing with a different Hugo theme Overriding one or two layouts of a git submodule theme Making a new homepage template Understanding Hugo’s expected structure  Adding pages to the menu bar  Hooking it into the interwebs Setting public as the GitHub Pages root directory Re-pointing my old Squarespace domain name Pointing Squarespace DNS to GitHub Pages URL Get GitHub Pages URL to use new domain   Adding a photo gallery into the theme Fixing code syntax highlighting Prism.</description>
+      <description>Setting up a blogdown repository Blogdown-ing with a different Hugo theme  Overriding one or two layouts of a git submodule theme Making a new homepage template  Understanding Hugo’s expected structure  Adding pages to the menu bar  Hooking it into the interwebs  Setting public as the GitHub Pages root directory Re-pointing my old Squarespace domain name  Pointing Squarespace DNS to GitHub Pages URL Get GitHub Pages URL to use new domain   Adding a photo gallery into the theme Fixing code syntax highlighting  Prism.</description>
       <content>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#setting-up-a-blogdown-repository&#34;&gt;Setting up a blogdown repository&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#blogdown-ing-with-a-different-hugo-theme&#34;&gt;Blogdown-ing with a different Hugo theme&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#blogdown-ing-with-a-different-hugo-theme&#34;&gt;Blogdown-ing with a different Hugo theme&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#overriding-one-or-two-layouts-of-a-git-submodule-theme&#34;&gt;Overriding one or two layouts of a git submodule theme&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#making-a-new-homepage-template&#34;&gt;Making a new homepage template&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#making-a-new-homepage-template&#34;&gt;Making a new homepage template&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#understanding-hugos-expected-structure&#34;&gt;Understanding Hugo’s expected structure&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#adding-pages-to-the-menu-bar&#34;&gt;Adding pages to the menu bar&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#hooking-it-into-the-interwebs&#34;&gt;Hooking it into the interwebs&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#hooking-it-into-the-interwebs&#34;&gt;Hooking it into the interwebs&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#setting-public-as-the-github-pages-root-directory&#34;&gt;Setting &lt;code&gt;public&lt;/code&gt; as the GitHub Pages root directory&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#re-pointing-my-old-squarespace-domain-name&#34;&gt;Re-pointing my old Squarespace domain name&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#re-pointing-my-old-squarespace-domain-name&#34;&gt;Re-pointing my old Squarespace domain name&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#pointing-squarespace-dns-to-github-pages-url&#34;&gt;Pointing Squarespace DNS to GitHub Pages URL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#get-github-pages-url-to-use-new-domain&#34;&gt;Get GitHub Pages URL to use new domain&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#adding-a-photo-gallery-into-the-theme&#34;&gt;Adding a photo gallery into the theme&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#fixing-code-syntax-highlighting&#34;&gt;Fixing code syntax highlighting&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#fixing-code-syntax-highlighting&#34;&gt;Fixing code syntax highlighting&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#prism.js-and-the-mysterious-case-of-pre-vs-code-classes&#34;&gt;Prism.js, and the mysterious case of pre vs code classes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#lua-filters-for-pandoc&#34;&gt;Lua filters for pandoc&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#updating-rstudios-pandoc-installation&#34;&gt;Updating RStudio’s pandoc installation&lt;/a&gt;&lt;/li&gt;
