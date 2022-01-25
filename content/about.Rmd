@@ -6,7 +6,7 @@ author: " "
 
 # Where I'm at.
 
-I'm currently a PhD student in Dr. Kevin Ochsner's [Social Cognitive & Affective Neuroscience Lab](http://www.ochsnerscanlab.org) at Columbia University, where I began in fall 2017. While I'm not working on research (and often while I am), I'm probably drinking from a very large cup of tea. I also co-manage an informal R users club in the department, and help to organize a semesterly coding bootcamp and bi-weekly meetings/workshops to enrich our collective R experience.
+I'm currently a PhD candidate in Dr. Kevin Ochsner's [Social Cognitive & Affective Neuroscience Lab](http://www.ochsnerscanlab.org) at Columbia University, where I began in fall 2017. While I'm not working on research (and often while I am), I'm probably drinking from a very large cup of tea. From 2017-2019, I co-managed an informal R users club in the department, where I helped to organize a yearly coding bootcamp and bi-weekly meetings/workshops to enrich our collective R experience.
 
 **Previously:**
 
@@ -16,9 +16,7 @@ After graduation in 2015, I transitioned into a full-time lab manager + research
 
 # Some of my code.
 
-[The Columbia Psychology coding tutorial collection](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/), which I co-maintain.
-
-[cuPsychRTools](https://github.com/cu-psych-r-users/cuPsychRTools), a petite R package of [`tidyverse`](https://www.tidyverse.org/)-safe helper functions I've assembled.
+Check out [my GitHub](https://github.com/monicathieu) to see the code projects I've contributed to.
 
 # A snapshot of my CV.
 
