@@ -103,8 +103,9 @@ tribble(
 ## Publications
 
 ```{r}
-bibliography_entries("publications.bib") %>% 
-  arrange(desc(issued))
+bibliography_entries("publications.bib") # %>% 
+# appears not to work when there are null date papers...?
+  # arrange(desc(issued))
 ```
 
 ## Talks, workshops, and media
