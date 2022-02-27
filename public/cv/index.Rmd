@@ -38,7 +38,7 @@ In my teaching (so far), I particularly enjoy working with learners in introduct
 ```{r}
 tribble(
   ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
-  "PhD in Psychology", "expected 2022", "Columbia University", "New York, NY, USA", c("Proposed dissertation: 'Exploring perception and categorization of social and affective stimuli'", "Advisor: Dr. Kevin Ochsner"),
+  "PhD in Psychology", "expected 2022", "Columbia University", "New York, NY, USA", c("Proposed dissertation: 'Exploring perception and categorization of social and affective stimuli'", "Advisor: Dr. Kevin Ochsner", "Sep 2017 - completion expected May 2022"),
   "BA with honors in Psychology", "2015", "Stanford University", "Palo Alto, CA, USA", c("Honors thesis: 'Chronic media multitasking and distraction: Neural substrates and mnemonic consequences'", "Advisors: Dr. Melina  Uncapher, Dr. Anthony Wagner")
 ) %>% 
   # flipped Where and Institution to get the institution to be bolded
