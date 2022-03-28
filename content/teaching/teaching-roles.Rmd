@@ -1,0 +1,144 @@
+---
+title: "Teaching roles and responsibilities"
+weight: 3
+description: "A summary of the teaching positions I've held."
+output: 
+  blogdown::html_page:
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Curriculum developer and co-instructor
+
+## The Science of Psychology: Explorations and Applications
+
+- Term: spring 2021
+- Lead instructor: [Caroline Marvin](mailto:cbm2118@columbia.edu)
+
+### Course details
+
+- Intro-level undergraduate class, satisfies core science requirement for non-majors
+- Approximately 30 students, with learning teams of approximately 4 students each
+
+### Instructional responsibilities
+
+- Developed curriculum, in conjunction with lead instructor
+  - Defined learning objectives
+  - Evaluated and selected readings
+  - Wrote lesson plans, pre-class quizzes, and assignment prompts
+  - Created teaching materials: slides, activity materials, mini-lecture videos
+- Guest lecturing (approximately 1/4 of instructional modules)
+- Graded writing assignments
+  - Detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics
+- Held weekly office hours
+
+---
+
+## Psychology department coding bootcamp
+
+- Terms: spring 2018, fall 2018, fall 2019, fall 2020, fall 2021
+
+### Course details
+
+- Unofficial open-enrollment workshop for psychology students at the undergrad level and above
+- 5-20 students per session, depending on the semester
+
+### Instructional responsibilities
+
+- Curriculum development
+  - Drafted lessons for 2 half-day sessions
+  - Peer-reviewed 1 session lesson drafted by another co-instructor
+- Lecture: Live-code lectured some or all of the lessons I prepared (depending on the semester)
+
+---
+
+# Section leader
+
+## Research Methods in Psychology
+
+- Terms: fall 2018, fall 2019
+- Lead instructor: [Katherine Fox-Glassman](mailto:kjt2111@columbia.edu)
+
+### Course details
+
+- Upper-level undergraduate class, required for the psychology major
+- Approximately 70 students in the entire class, with lab sections of approximately 15 students
+
+### Instructional responsibilities
+
+- Updated course materials
+  - Wrote 2 new R lesson plans and 2 new associated problem sets
+  - Updated and annotated existing lesson plan outlines for each lab class
+  - Created slide decks for each lab class
+- Taught lab section
+- Graded assignments
+  - Exam short-answer questions (for all students)
+  - Methods problem sets in R (for students in my section)
+  - Science writing assignments and projects (for students in my section)
+  - Individual and group presentations (for students in my section)
+- Held weekly office hours
+- Wrote short-answer exam questions
+
+---
+
+# Bootcamp instructor
+
+## Foundations for Research Computing coding bootcamp
+
+- Terms: fall 2019, spring 2020, winter 2022
+- Coordinator: [Patrick Smyth](mailto:website@pbsmyth.com)
+
+### Course details
+
+- Open-enrollment workshop hosted by Columbia Libraries for graduate students and postdocs across the university
+- 30 students per session (in-person), 50 students per session (online)
+- Associated with The Carpentries
+
+### Instructional responsibilities
+
+- Delivered live-code lecture sessions introducing students to basic file navigation commands in Unix shell (1 3-hour session per workshop)
+
+---
+
+# Teaching assistant
+
+## Intro to Programming in R
+
+- Terms: spring 2019, spring 2020, fall 2021
+- Lead instructor: [Jared Lander](mailto:jaredlander@caa.columbia.edu)
+
+### Course details
+
+- Master’s level half-semester elective course in the business school
+- Lecture class with 40-70 students depending on the term
+
+### Instructional responsibilities
+
+- Updated course materials
+  - Revised existing problem sets to align objectives with lecture content
+  - Re-implemented problem sets using learnr for students to complete exercises online
+- Graded and gave written feedback on R problem sets
+- Held weekly office hours
+- Supported students’ work over email
+
+---
+
+## Science of Psychology
+
+- Term: fall 2017
+- Lead instructor: [Kathleen Taylor](mailto:ktaylor@barnard.edu)
+
+### Course details
+
+- Intro-level undergraduate class, satisfies core science requirement for non-majors
+- Approximately 100 students
+
+### Instructional responsibilities
+
+- Graded exam essays
+- Wrote multiple-choice and essay exam questions
+- Held weekly office hours
+- Delivered guest lecture on memory

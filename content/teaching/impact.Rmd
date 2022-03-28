@@ -1,0 +1,58 @@
+---
+title: "Teaching impact"
+weight: 2
+description: "A summary of feedback about my teaching."
+output: blogdown::html_page
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+Collected below are a series of free-form testimonials about my teaching effectiveness. For my official teaching assistantships, I have excerpted comments about various aspects of my teaching from official TA-specific teaching evaluations (original documents available upon request). I note that for my coding boot camp instructorships, students were not prompted to give instructor-specific feedback, so I have fewer student comments from those teaching experiences, but I have included a few testimonials that I do have, where relevant.
+
+Comments are organized into three themes: my skills in breaking down complex topics, my energy in the classroom, and my clear, prompt, and actionable formative written feedback on assignments.
+
+# Selected feedback
+
+## Clear handling of complex topics
+
+> I was very impressed how [she was] able to keep an eye on the chat, walk through the material, and switch to focusing on areas students were struggling, and in an absolutely relaxed way, which given that the material was new to people, was the perfect approach for a positive learning environment. _(Supervisor comment, Foundations for Research Computing bootcamp, Winter 2022)_
+>
+> Overall, Monica’s pacing was superb. She explained every step in great detail without lingering too long on any one point. Because she explained everything she typed, it was very easy not only to understand how the results were attained, but also why each step was chosen over any other option. Such clear explanations help students retain the information and, hopefully, make similar connections for themselves in their future projects. _(Teaching observation, Wrangling Multilevel Data in the Tidyverse coding workshop, Spring 2022)_
+>
+> Monica's teaching and discussion leading skills are great. She was very friendly and facilitated really fun and interactive class activities to introduce some of the topics we were discussing and was also great at helping to explain concepts when asked about them in class. _(Science of Psychology: Explorations & Applications, Spring 2021)_
+>
+> Monica was a great TA: very approachable, clearly walked us through assignment requirements and expectations, taught us to code R in a straightforward and helpful manner, and maintained a positive and enthusiastic attitude throughout. _(Research Methods, Fall 2019)_
+>
+> She also took on the daunting job of teaching non-CompSci students the basics of coding in R, and did it very well. I actually ended up enjoying the coding parts of the lab sections. _(Research Methods, Fall 2018)_
+>
+> Monica Thieu is a fantastic instructor, I never felt like I didn't understand something or couldn't do an assignment for class because Monica was great at explaining the material and finding new ways of understanding the material. _(Research Methods, Fall 2018)_
+>
+> Monica was a wonderful TA. She was very knowledgeable and good at explaining things, and was very available to provide help that was indeed helpful. She was also engaging in terms of leading discussions. _(Research Methods, Fall 2018)_
+
+## Energy and enthusiasm
+
+> Monica kept my enthusiasm up by validating how I felt about programming environments while also conveying information in a way that encouraged asking questions and problem-solving. _(Foundations for Research Computing bootcamp, Winter 2022)_
+>
+> Monica was a very clear speaker, and she had a very uplifting and upbeat energy. _(Science of Psychology: Explorations & Applications, Spring 2021)_
+>
+> She's an amazing leader and teacher. She takes charge and I can definitely see her becoming a teacher one day, she just has the natural instincts of one. _(Science of Psychology: Explorations & Applications, Spring 2021)_
+>
+> Monica is such a fun and knowledgeable TA, I anticipate she will be a great teacher if she chooses to do so. She is very organized and manages to provide prompt feedback on assignments and foster a fun and engaging classroom environment. _(Science of Psychology: Explorations & Applications, Spring 2021)_
+>
+> Monica is a natural teacher and it's VERY apparent that she has a passion for research. She's absolutely fantastic! _(Research Methods, Fall 2019)_
+>
+> Monica is the best TA I've ever had! She's easygoing, was super passionate about the topic (which I don't think is common in a Research Methods TA), and was always well prepared for leading sections. _(Research Methods, Fall 2018)_
+
+## Clear and prompt written feedback
+
+> Always helpful and a quick grader as well. Her feedback was also very helpful _(Science of Psychology: Explorations & Applications, Spring 2021)_
+>
+> Monica’s feedback has always been very informative and helpful in terms of knowing what you might’ve missed/haven’t understood in the assignments. _(Science of Psychology: Explorations & Applications, Spring 2021)_
+>
+> Her feedback on my assignments was always helpful and clear. _(Research Methods, Fall 2019)_
+>
+>She returned assignments promptly and was fair in her grading, explaining any deductions. _(Research Methods, Fall 2018)_
