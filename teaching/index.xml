@@ -337,8 +337,14 @@ My overarching goal in designing this syllabus was to lower barriers to student 
 &lt;li&gt;&lt;strong&gt;Equipment:&lt;/strong&gt; Reinforcing that students should not self-select out of the class for not having the “right” computer, or a sufficiently expensive one&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Communication:&lt;/strong&gt; Spelling out what students should include in help request emails to help them think through their code issue and help me identify their problem quickly&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe src=&#34;https://sleepy-wing-5b36af.netlify.app/&#34; width=&#34;100%&#34; height=&#34;500px&#34; title=&#34;Intro to Programming for Behavioral Scientists syllabus&#34;&gt;
-&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&#34;https://sleepy-wing-5b36af.netlify.app/&#34;&gt;Syllabus website&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;figure class=&#34;left&#34; &gt;
+    &lt;img src=&#34;icds_syllabus_screenshot.png&#34;  alt=&#34;Intro to Programming for Behavioral Scientists syllabus&#34;   /&gt;
+    
+  &lt;/figure&gt;
+
+&lt;/p&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lesson-plan&#34; class=&#34;section level1&#34;&gt;
@@ -353,8 +359,11 @@ My overarching goal in designing this syllabus was to lower barriers to student 
 &lt;h1&gt;Mini-lecture video&lt;/h1&gt;
 &lt;p&gt;This is a mini-lecture video for Science of Psychology: Explorations and Applications, a semi-flipped class taught in the Columbia psychology department. When we taught the class online in spring 2021, 29 students were enrolled in the class.&lt;/p&gt;
 &lt;p&gt;This video, which illustrates how the brain processes visual information, was assigned along with pre-class readings on visual perception. I included this lesson plan to illustrate how I work with the affordances offered by the teaching environment when creating learning content. I created this animated video to teach a highly visual topic (illustrating neuroanatomy and examples of perceptual information) using visual tools better suited to asynchronous video than synchronous lecture. Students enjoyed watching the video, found the concepts clear (as demonstrated in subsequent reading quizzes and in-class activities), and appreciated being able to pause and replay them at their own pace.&lt;/p&gt;
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/5wZRip70pV0&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
-&lt;/iframe&gt;
+&lt;p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/5wZRip70pV0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;problem-set&#34; class=&#34;section level1&#34;&gt;
