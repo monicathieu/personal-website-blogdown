@@ -12,12 +12,16 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/teaching/teaching-statement/</guid>
-      <description>Test</description>
+      <description>As a graduate teacher-scholar, my teaching development has been intertwined with my development as a researcher. In particular, I have learned about the ways in which effective research and teaching do not come from “eureka” moments of intellectual brilliance, but, instead, depend on thoughtful planning and structures that support success from the bottom up. Just as rigorous study design and statistical analysis are necessary to answer a research question, positive early experiences and supportive course structures are necessary for students to enter a discipline and thrive within it.</description>
       <content>
 &lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;Test&lt;/p&gt;
+&lt;p&gt;As a graduate teacher-scholar, my teaching development has been intertwined with my development as a researcher. In particular, I have learned about the ways in which effective research and teaching do not come from “eureka” moments of intellectual brilliance, but, instead, depend on thoughtful planning and structures that support success from the bottom up. Just as rigorous study design and statistical analysis are necessary to answer a research question, positive early experiences and supportive course structures are necessary for students to enter a discipline and thrive within it. I focus on designing and teaching &lt;em&gt;introductory classes,&lt;/em&gt; where I can inspire new students to study psychology and scientific computing. In those classes, I implement &lt;em&gt;accessible course policies&lt;/em&gt; to sustain student success throughout the semester. Finally, I maintain &lt;em&gt;comprehensive course materials&lt;/em&gt; to standardize my pedagogy and share those materials to support my peers’ teaching.&lt;/p&gt;
+&lt;p&gt;I strive to nurture novice scientists’ critical thinking skills in introductory courses. Intro-level instructors have the privilege and responsibility of serving as the welcome committee for students entering a new academic discipline. Psychology in particular can serve as a gateway to STEM for students curious about human behavior, and as a core college STEM experience for students fulfilling breadth requirements. I am committed to balancing the needs of these two groups of students through intro psych classes that are rigorous yet accessible. For example, I collaborated with Dr. Caroline Marvin in developing a new team-based introductory psychology course taught for the first time in Spring 2021. I helped select readings, develop lesson plans, and draft assignments, paying special attention to craft learning objectives that were simultaneously appropriate for prospective psychology/neuroscience majors and for general-education students. For instance, I wrote the course objective “Evaluate the accuracy of popular news reports about empirical research and the appropriateness of graphs and other visualizations of data” with an eye towards the fact that all students, irrespective of major, would encounter science and data in the news, and would thus benefit from learning to evaluate such reports. By the end of the class, many of our students reported being inspired to consider a psychology major, while others reflected positively on the skills and content they planned to apply back to their work in other majors.&lt;/p&gt;
+&lt;p&gt;Going beyond content, I build accessibility into my course policies to sustain student success. For example, students juggle work from multiple classes along with demands from outside the classroom. Students making a good-faith effort should not have to choose between well-being and submitting assignments on time if they have to choose between finishing a paper and studying for an exam that are due on the same day, or they get sick, or they encounter any other unexpected obstacle. As a teaching assistant, I have proposed and developed late assignment policies that allow students flexibility in managing their own deadlines, without burdening the teaching team. For example, as TA for Intro to Programming in R in the Columbia Business School in spring 2019, I designed a two-tiered deadline system where each homework assignment had an on-time deadline and a late submission deadline one week later. A student’s first late assignment would be graded equivalent to an on-time submission, and subsequent late submissions would be marked with a small deduction increasing with the number of late submissions (5%, 10%, …). I designed this structure to allow students one penalty-free late submission to take at their convenience, without having to seek approval from the teaching team. At the same time, the late submission deadline allowed me to structure my grading schedule knowing that all submissions for a given assignment would be ready to grade by a set date. Students reported that they appreciated the built-in flexibility–from what they told me, some students used their late submission for illness, some for emergency travel, and some for conflicting assignment deadlines. Further, students entering the course with no programming experience were able to use the two-tiered deadline system for extra time and assistance on assignments to help them stay on top of course concepts. In this way, I was able to leverage course logistics to support student learning, especially for a quantitative course where students might bring insecurity about their own abilities into the classroom.&lt;/p&gt;
+&lt;p&gt;Finally, in order to codify effective teaching practices and make them repeatable across semesters and instructors, I create and refine detailed teaching materials that persist and evolve after my involvement with a course. For example, as a section leader for research methods in the psychology department in fall 2018 and fall 2019, I created new lesson plan documents and homework assignments for a crash course in R taught over the first two labs of the semester. For subsequent labs in the semester, I also expanded existing bullet-pointed lab outlines into full lesson plans and slide decks with detailed instructions, recommended module timing, and pedagogical tips for first-time section leaders. Many of those teaching tips came from discussions in weekly teaching team meetings that I recorded to ensure that we (and subsequent teaching teams) wouldn’t have to reinvent the wheel every semester. Indeed, more recent research methods section leaders have reported that those lesson plans saved them time in lesson prep and supported their success as first-time section leaders.&lt;/p&gt;
+&lt;p&gt;In summary, I work to make the discipline I love interesting and accessible to students through introductory psychology courses, research methods courses, and introductory programming workshops. I design those classes not only to inspire students through content but to set them up for success through supportive course policies. In those courses, I support my own and my peers’ future teaching by creating, maintaining, and documenting teaching materials that save time, keep record of successful teaching strategies, and support future innovation.&lt;/p&gt;
 </content>
     </item>
     
@@ -27,12 +31,62 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/teaching/impact/</guid>
-      <description>Test</description>
+      <description>Introduction Selected feedback  Clear handling of complex topics Energy and enthusiasm Clear and prompt written feedback    Introduction Collected below are a series of free-form testimonials about my teaching effectiveness. For my official teaching assistantships, I have excerpted comments about various aspects of my teaching from official TA-specific teaching evaluations (original documents available upon request). I note that for my coding boot camp instructorships, students were not prompted to give instructor-specific feedback, so I have fewer student comments from those teaching experiences, but I have included a few testimonials that I do have, where relevant.</description>
       <content>
 &lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#selected-feedback&#34;&gt;Selected feedback&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#clear-handling-of-complex-topics&#34;&gt;Clear handling of complex topics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#energy-and-enthusiasm&#34;&gt;Energy and enthusiasm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#clear-and-prompt-written-feedback&#34;&gt;Clear and prompt written feedback&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 
-&lt;p&gt;Test&lt;/p&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Collected below are a series of free-form testimonials about my teaching effectiveness. For my official teaching assistantships, I have excerpted comments about various aspects of my teaching from official TA-specific teaching evaluations (original documents available upon request). I note that for my coding boot camp instructorships, students were not prompted to give instructor-specific feedback, so I have fewer student comments from those teaching experiences, but I have included a few testimonials that I do have, where relevant.&lt;/p&gt;
+&lt;p&gt;Comments are organized into three themes: my skills in breaking down complex topics, my energy in the classroom, and my clear, prompt, and actionable formative written feedback on assignments.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;selected-feedback&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Selected feedback&lt;/h1&gt;
+&lt;div id=&#34;clear-handling-of-complex-topics&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clear handling of complex topics&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I was very impressed how [she was] able to keep an eye on the chat, walk through the material, and switch to focusing on areas students were struggling, and in an absolutely relaxed way, which given that the material was new to people, was the perfect approach for a positive learning environment. &lt;em&gt;(Supervisor comment, Foundations for Research Computing bootcamp, Winter 2022)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Overall, Monica’s pacing was superb. She explained every step in great detail without lingering too long on any one point. Because she explained everything she typed, it was very easy not only to understand how the results were attained, but also why each step was chosen over any other option. Such clear explanations help students retain the information and, hopefully, make similar connections for themselves in their future projects. &lt;em&gt;(Teaching observation, Wrangling Multilevel Data in the Tidyverse coding workshop, Spring 2022)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Monica’s teaching and discussion leading skills are great. She was very friendly and facilitated really fun and interactive class activities to introduce some of the topics we were discussing and was also great at helping to explain concepts when asked about them in class. &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Spring 2021)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Monica was a great TA: very approachable, clearly walked us through assignment requirements and expectations, taught us to code R in a straightforward and helpful manner, and maintained a positive and enthusiastic attitude throughout. &lt;em&gt;(Research Methods, Fall 2019)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;She also took on the daunting job of teaching non-CompSci students the basics of coding in R, and did it very well. I actually ended up enjoying the coding parts of the lab sections. &lt;em&gt;(Research Methods, Fall 2018)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Monica Thieu is a fantastic instructor, I never felt like I didn’t understand something or couldn’t do an assignment for class because Monica was great at explaining the material and finding new ways of understanding the material. &lt;em&gt;(Research Methods, Fall 2018)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Monica was a wonderful TA. She was very knowledgeable and good at explaining things, and was very available to provide help that was indeed helpful. She was also engaging in terms of leading discussions. &lt;em&gt;(Research Methods, Fall 2018)&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div id=&#34;energy-and-enthusiasm&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Energy and enthusiasm&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Monica kept my enthusiasm up by validating how I felt about programming environments while also conveying information in a way that encouraged asking questions and problem-solving. &lt;em&gt;(Foundations for Research Computing bootcamp, Winter 2022)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Monica was a very clear speaker, and she had a very uplifting and upbeat energy. &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Spring 2021)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;She’s an amazing leader and teacher. She takes charge and I can definitely see her becoming a teacher one day, she just has the natural instincts of one. &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Spring 2021)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Monica is such a fun and knowledgeable TA, I anticipate she will be a great teacher if she chooses to do so. She is very organized and manages to provide prompt feedback on assignments and foster a fun and engaging classroom environment. &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Spring 2021)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Monica is a natural teacher and it’s VERY apparent that she has a passion for research. She’s absolutely fantastic! &lt;em&gt;(Research Methods, Fall 2019)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Monica is the best TA I’ve ever had! She’s easygoing, was super passionate about the topic (which I don’t think is common in a Research Methods TA), and was always well prepared for leading sections. &lt;em&gt;(Research Methods, Fall 2018)&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clear-and-prompt-written-feedback&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clear and prompt written feedback&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Always helpful and a quick grader as well. Her feedback was also very helpful &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Spring 2021)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Monica’s feedback has always been very informative and helpful in terms of knowing what you might’ve missed/haven’t understood in the assignments. &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Spring 2021)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Her feedback on my assignments was always helpful and clear. &lt;em&gt;(Research Methods, Fall 2019)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;She returned assignments promptly and was fair in her grading, explaining any deductions. &lt;em&gt;(Research Methods, Fall 2018)&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </content>
     </item>
     
@@ -42,117 +96,210 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/teaching/teaching-roles/</guid>
-      <description>PSYC 1021  Course details Instructional responsibilities Materials I prepared for the class that are still in use  Jared’s class  Course details Instructional responsibilities Materials I prepared for the class that are still in use  PSYC 1490  Course details Instructional responsibilities Materials I prepared for the class that are still in use  Psych coding bootcamp  Course details Instructional responsibilities Materials I prepared for the class that are still in use    PSYC 1021 Course details Intro-level undergraduate class, satisfies core science requirement for non-majors</description>
+      <description>   Curriculum developer and co-instructor  The Science of Psychology: Explorations and Applications Psychology department coding bootcamp  Section leader  Research Methods in Psychology  Bootcamp instructor  Foundations for Research Computing coding bootcamp  Teaching assistant  Intro to Programming in R Science of Psychology    Curriculum developer and co-instructor The Science of Psychology: Explorations and Applications  Term: spring 2021 Lead instructor: Caroline Marvin  Course details  Intro-level undergraduate class, satisfies core science requirement for non-majors Approximately 30 students, with learning teams of approximately 4 students each   Instructional responsibilities  Developed curriculum, in conjunction with lead instructor  Defined learning objectives Evaluated and selected readings Wrote lesson plans, pre-class quizzes, and assignment prompts Created teaching materials: slides, activity materials, mini-lecture videos  Guest lecturing (approximately 1/4 of instructional modules) Graded writing assignments  Detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics  Held weekly office hours    Psychology department coding bootcamp  Terms: spring 2018, fall 2018, fall 2019, fall 2020, fall 2021  Course details  Unofficial open-enrollment workshop for psychology students at the undergrad level and above 5-20 students per session, depending on the semester   Instructional responsibilities  Curriculum development  Drafted lessons for 2 half-day sessions Peer-reviewed 1 session lesson drafted by another co-instructor  Lecture: Live-code lectured some or all of the lessons I prepared (depending on the semester)     Section leader Research Methods in Psychology  Terms: fall 2018, fall 2019 Lead instructor: Katherine Fox-Glassman  Course details  Upper-level undergraduate class, required for the psychology major Approximately 70 students in the entire class, with lab sections of approximately 15 students   Instructional responsibilities  Updated course materials  Wrote 2 new R lesson plans and 2 new associated problem sets Updated and annotated existing lesson plan outlines for each lab class Created slide decks for each lab class  Taught lab section Graded assignments  Exam short-answer questions (for all students) Methods problem sets in R (for students in my section) Science writing assignments and projects (for students in my section) Individual and group presentations (for students in my section)  Held weekly office hours Wrote short-answer exam questions     Bootcamp instructor Foundations for Research Computing coding bootcamp  Terms: fall 2019, spring 2020, winter 2022 Coordinator: Patrick Smyth  Course details  Open-enrollment workshop hosted by Columbia Libraries for graduate students and postdocs across the university 30 students per session (in-person), 50 students per session (online) Associated with The Carpentries   Instructional responsibilities  Delivered live-code lecture sessions introducing students to basic file navigation commands in Unix shell (1 3-hour session per workshop)     Teaching assistant Intro to Programming in R  Terms: spring 2019, spring 2020, fall 2021 Lead instructor: Jared Lander  Course details  Master’s level half-semester elective course in the business school Lecture class with 40-70 students depending on the term   Instructional responsibilities  Updated course materials  Revised existing problem sets to align objectives with lecture content Re-implemented problem sets using learnr for students to complete exercises online  Graded and gave written feedback on R problem sets Held weekly office hours Supported students’ work over email    Science of Psychology  Term: fall 2017 Lead instructor: Kathleen Taylor  Course details  Intro-level undergraduate class, satisfies core science requirement for non-majors Approximately 100 students   Instructional responsibilities  Graded exam essays Wrote multiple-choice and essay exam questions Held weekly office hours Delivered guest lecture on memory     </description>
       <content>
 &lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#psyc-1021&#34;&gt;PSYC 1021&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#curriculum-developer-and-co-instructor&#34;&gt;Curriculum developer and co-instructor&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#course-details&#34;&gt;Course details&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#instructional-responsibilities&#34;&gt;Instructional responsibilities&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#materials-i-prepared-for-the-class-that-are-still-in-use&#34;&gt;Materials I prepared for the class that are still in use&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-science-of-psychology-explorations-and-applications&#34;&gt;The Science of Psychology: Explorations and Applications&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#psychology-department-coding-bootcamp&#34;&gt;Psychology department coding bootcamp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#jareds-class&#34;&gt;Jared’s class&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#section-leader&#34;&gt;Section leader&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#course-details-1&#34;&gt;Course details&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#instructional-responsibilities-1&#34;&gt;Instructional responsibilities&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#materials-i-prepared-for-the-class-that-are-still-in-use-1&#34;&gt;Materials I prepared for the class that are still in use&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#research-methods-in-psychology&#34;&gt;Research Methods in Psychology&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#psyc-1490&#34;&gt;PSYC 1490&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#bootcamp-instructor&#34;&gt;Bootcamp instructor&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#course-details-2&#34;&gt;Course details&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#instructional-responsibilities-2&#34;&gt;Instructional responsibilities&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#materials-i-prepared-for-the-class-that-are-still-in-use-2&#34;&gt;Materials I prepared for the class that are still in use&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#foundations-for-research-computing-coding-bootcamp&#34;&gt;Foundations for Research Computing coding bootcamp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#psych-coding-bootcamp&#34;&gt;Psych coding bootcamp&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#teaching-assistant&#34;&gt;Teaching assistant&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#course-details-3&#34;&gt;Course details&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#instructional-responsibilities-3&#34;&gt;Instructional responsibilities&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#materials-i-prepared-for-the-class-that-are-still-in-use-3&#34;&gt;Materials I prepared for the class that are still in use&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#intro-to-programming-in-r&#34;&gt;Intro to Programming in R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#science-of-psychology&#34;&gt;Science of Psychology&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;psyc-1021&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;PSYC 1021&lt;/h2&gt;
+&lt;div id=&#34;curriculum-developer-and-co-instructor&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Curriculum developer and co-instructor&lt;/h1&gt;
+&lt;div id=&#34;the-science-of-psychology-explorations-and-applications&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The Science of Psychology: Explorations and Applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Term: spring 2021&lt;/li&gt;
+&lt;li&gt;Lead instructor: &lt;a href=&#34;mailto:cbm2118@columbia.edu&#34;&gt;Caroline Marvin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div id=&#34;course-details&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Course details&lt;/h3&gt;
-&lt;p&gt;Intro-level undergraduate class, satisfies core science requirement for non-majors&lt;/p&gt;
-&lt;p&gt;Approximately 30 students, with learning teams of approximately 4 students each&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Intro-level undergraduate class, satisfies core science requirement for non-majors&lt;/li&gt;
+&lt;li&gt;Approximately 30 students, with learning teams of approximately 4 students each&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;instructional-responsibilities&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
-&lt;p&gt;Guest lecturing&lt;/p&gt;
-&lt;p&gt;Grading&lt;/p&gt;
-&lt;p&gt;Detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics&lt;/p&gt;
-&lt;p&gt;Weekly office hours&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Developed curriculum, in conjunction with lead instructor
+&lt;ul&gt;
+&lt;li&gt;Defined learning objectives&lt;/li&gt;
+&lt;li&gt;Evaluated and selected readings&lt;/li&gt;
+&lt;li&gt;Wrote lesson plans, pre-class quizzes, and assignment prompts&lt;/li&gt;
+&lt;li&gt;Created teaching materials: slides, activity materials, mini-lecture videos&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Guest lecturing (approximately 1/4 of instructional modules)&lt;/li&gt;
+&lt;li&gt;Graded writing assignments
+&lt;ul&gt;
+&lt;li&gt;Detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Held weekly office hours&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
 &lt;/div&gt;
-&lt;div id=&#34;materials-i-prepared-for-the-class-that-are-still-in-use&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Materials I prepared for the class that are still in use&lt;/h3&gt;
-&lt;p&gt;A bunch of mini-lecture videos, slides, and activity components&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;jareds-class&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Jared’s class&lt;/h2&gt;
+&lt;div id=&#34;psychology-department-coding-bootcamp&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Psychology department coding bootcamp&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Terms: spring 2018, fall 2018, fall 2019, fall 2020, fall 2021&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div id=&#34;course-details-1&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Course details&lt;/h3&gt;
-&lt;p&gt;Master’s level half-semester elective course in the business school&lt;/p&gt;
-&lt;p&gt;Lecture class with 40-70 students depending on the term&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unofficial open-enrollment workshop for psychology students at the undergrad level and above&lt;/li&gt;
+&lt;li&gt;5-20 students per session, depending on the semester&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;instructional-responsibilities-1&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
-&lt;p&gt;Grading R problem sets&lt;/p&gt;
-&lt;p&gt;Weekly office hours&lt;/p&gt;
-&lt;p&gt;Supporting students’ work over email&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Curriculum development
+&lt;ul&gt;
+&lt;li&gt;Drafted lessons for 2 half-day sessions&lt;/li&gt;
+&lt;li&gt;Peer-reviewed 1 session lesson drafted by another co-instructor&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Lecture: Live-code lectured some or all of the lessons I prepared (depending on the semester)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
 &lt;/div&gt;
-&lt;div id=&#34;materials-i-prepared-for-the-class-that-are-still-in-use-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Materials I prepared for the class that are still in use&lt;/h3&gt;
-&lt;p&gt;Revised existing problem sets to align objectives with lecture content&lt;/p&gt;
-&lt;p&gt;Re-implemented problem sets using learnr for students to complete exercises online&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;psyc-1490&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;PSYC 1490&lt;/h2&gt;
+&lt;div id=&#34;section-leader&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Section leader&lt;/h1&gt;
+&lt;div id=&#34;research-methods-in-psychology&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Research Methods in Psychology&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Terms: fall 2018, fall 2019&lt;/li&gt;
+&lt;li&gt;Lead instructor: &lt;a href=&#34;mailto:kjt2111@columbia.edu&#34;&gt;Katherine Fox-Glassman&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div id=&#34;course-details-2&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Course details&lt;/h3&gt;
-&lt;p&gt;Upper-level undergraduate class, required for the psychology major&lt;/p&gt;
-&lt;p&gt;Approximately 70 students in the entire class, with lab sections of approximately 15 students&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Upper-level undergraduate class, required for the psychology major&lt;/li&gt;
+&lt;li&gt;Approximately 70 students in the entire class, with lab sections of approximately 15 students&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;instructional-responsibilities-2&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
-&lt;p&gt;Teaching lab section&lt;/p&gt;
-&lt;p&gt;Grading&lt;/p&gt;
-&lt;p&gt;Exam short-answer questions (for all students)&lt;/p&gt;
-&lt;p&gt;Methods problem sets in R (for students in my section)&lt;/p&gt;
-&lt;p&gt;Science writing assignments and projects (for students in my section)&lt;/p&gt;
-&lt;p&gt;Individual and group presentations (for students in my section)&lt;/p&gt;
-&lt;p&gt;Weekly office hours&lt;/p&gt;
-&lt;p&gt;Writing exam questions&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Updated course materials
+&lt;ul&gt;
+&lt;li&gt;Wrote 2 new R lesson plans and 2 new associated problem sets&lt;/li&gt;
+&lt;li&gt;Updated and annotated existing lesson plan outlines for each lab class&lt;/li&gt;
+&lt;li&gt;Created slide decks for each lab class&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Taught lab section&lt;/li&gt;
+&lt;li&gt;Graded assignments
+&lt;ul&gt;
+&lt;li&gt;Exam short-answer questions (for all students)&lt;/li&gt;
+&lt;li&gt;Methods problem sets in R (for students in my section)&lt;/li&gt;
+&lt;li&gt;Science writing assignments and projects (for students in my section)&lt;/li&gt;
+&lt;li&gt;Individual and group presentations (for students in my section)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Held weekly office hours&lt;/li&gt;
+&lt;li&gt;Wrote short-answer exam questions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
 &lt;/div&gt;
-&lt;div id=&#34;materials-i-prepared-for-the-class-that-are-still-in-use-2&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Materials I prepared for the class that are still in use&lt;/h3&gt;
-&lt;p&gt;R lesson plans and problem sets&lt;/p&gt;
-&lt;p&gt;Annotated lesson plans for each lab class&lt;/p&gt;
-&lt;p&gt;Slide decks for each lab class&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;psych-coding-bootcamp&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Psych coding bootcamp&lt;/h2&gt;
+&lt;div id=&#34;bootcamp-instructor&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Bootcamp instructor&lt;/h1&gt;
+&lt;div id=&#34;foundations-for-research-computing-coding-bootcamp&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Foundations for Research Computing coding bootcamp&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Terms: fall 2019, spring 2020, winter 2022&lt;/li&gt;
+&lt;li&gt;Coordinator: &lt;a href=&#34;mailto:website@pbsmyth.com&#34;&gt;Patrick Smyth&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div id=&#34;course-details-3&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Course details&lt;/h3&gt;
-&lt;p&gt;Unofficial open-enrollment workshop for psychology students at the undergrad level and above&lt;/p&gt;
-&lt;p&gt;5-20 students per session, depending on the semester&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open-enrollment workshop hosted by Columbia Libraries for graduate students and postdocs across the university&lt;/li&gt;
+&lt;li&gt;30 students per session (in-person), 50 students per session (online)&lt;/li&gt;
+&lt;li&gt;Associated with The Carpentries&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;instructional-responsibilities-3&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
-&lt;p&gt;Curriculum development: Prepared 1 day of lessons (approx 5 hours of lecture), peer reviewed 3 hours of lessons prepped by another co-instructor&lt;/p&gt;
-&lt;p&gt;Lecture: Live-code lectured some or all of the lessons I prepared (depending on the semester)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Delivered live-code lecture sessions introducing students to basic file navigation commands in Unix shell (1 3-hour session per workshop)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
 &lt;/div&gt;
-&lt;div id=&#34;materials-i-prepared-for-the-class-that-are-still-in-use-3&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Materials I prepared for the class that are still in use&lt;/h3&gt;
-&lt;p&gt;Lesson plans referenced above&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;teaching-assistant&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Teaching assistant&lt;/h1&gt;
+&lt;div id=&#34;intro-to-programming-in-r&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Intro to Programming in R&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Terms: spring 2019, spring 2020, fall 2021&lt;/li&gt;
+&lt;li&gt;Lead instructor: &lt;a href=&#34;mailto:jaredlander@caa.columbia.edu&#34;&gt;Jared Lander&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;course-details-4&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Course details&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Master’s level half-semester elective course in the business school&lt;/li&gt;
+&lt;li&gt;Lecture class with 40-70 students depending on the term&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;instructional-responsibilities-4&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Updated course materials
+&lt;ul&gt;
+&lt;li&gt;Revised existing problem sets to align objectives with lecture content&lt;/li&gt;
+&lt;li&gt;Re-implemented problem sets using learnr for students to complete exercises online&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Graded and gave written feedback on R problem sets&lt;/li&gt;
+&lt;li&gt;Held weekly office hours&lt;/li&gt;
+&lt;li&gt;Supported students’ work over email&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;science-of-psychology&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Science of Psychology&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Term: fall 2017&lt;/li&gt;
+&lt;li&gt;Lead instructor: &lt;a href=&#34;mailto:ktaylor@barnard.edu&#34;&gt;Kathleen Taylor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;course-details-5&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Course details&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Intro-level undergraduate class, satisfies core science requirement for non-majors&lt;/li&gt;
+&lt;li&gt;Approximately 100 students&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;instructional-responsibilities-5&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Graded exam essays&lt;/li&gt;
+&lt;li&gt;Wrote multiple-choice and essay exam questions&lt;/li&gt;
+&lt;li&gt;Held weekly office hours&lt;/li&gt;
+&lt;li&gt;Delivered guest lecture on memory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
@@ -164,26 +311,60 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/teaching/materials/</guid>
-      <description>Test
-Second material
- Quote of grading policy
-Second line
-Third line
- Third material</description>
+      <description>Syllabus Lesson plan Mini-lecture video Problem set   Syllabus This is a prototype syllabus for Intro to Programming for Behavioral Scientists that I designed as part of the Columbia Center for Teaching and Learning’s Innovative Course Design Seminar. The class has not yet been taught and I have not prepared curriculum for it, but I would like to offer it in the future!
+My overarching goal in designing this syllabus was to lower barriers to student learning, and publicize that goal to students.</description>
       <content>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/teaching/materials/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#syllabus&#34;&gt;Syllabus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#lesson-plan&#34;&gt;Lesson plan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#mini-lecture-video&#34;&gt;Mini-lecture video&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#problem-set&#34;&gt;Problem set&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 
-&lt;p&gt;Test&lt;/p&gt;
 &lt;hr /&gt;
-&lt;p&gt;Second material&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Quote of grading policy&lt;/p&gt;
-&lt;p&gt;Second line&lt;/p&gt;
-&lt;p&gt;Third line&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div id=&#34;syllabus&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Syllabus&lt;/h1&gt;
+&lt;p&gt;This is a prototype syllabus for &lt;em&gt;Intro to Programming for Behavioral Scientists&lt;/em&gt; that I designed as part of the Columbia Center for Teaching and Learning’s Innovative Course Design Seminar. The class has not yet been taught and I have not prepared curriculum for it, but I would like to offer it in the future!&lt;/p&gt;
+&lt;p&gt;My overarching goal in designing this syllabus was to lower barriers to student learning, and publicize that goal to students. I expect students to enter my class with no coding experience, and likely an aversion to math &amp;amp; programming topics. I want students to come away from the class believing that programming tools, when wielded properly, are key to producing strong psychological science, and that anyone can produce strong psychological science because anyone can program. While the syllabus definitely won’t achieve all of these goals on its own, it can help set an inclusive tone. I decided to format the syllabus as a website because I felt that would make it visually enticing and readable, and because the website format facilitates posting of R code lecture notes into the same site, allowing the site to be a one-stop reference shop for course info.&lt;/p&gt;
+&lt;p&gt;I tried to use an informal but informative tone while writing up course policies to keep those policies clear to all students, irrespective of English language background. In describing those policies, I tried to mention my rationale behind those policies where possible, so that students would understand that all policies, including those that might seem punitive (like not accepting late assignments without prior claiming of a deadline extension), are designed to support student learning.&lt;/p&gt;
+&lt;p&gt;I also paid special attention to crafting the following policies:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Grading:&lt;/strong&gt; Encouraging students to improve their work based on feedback, and use tokens to manage their own deadline extension needs, no questions asked&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Equipment:&lt;/strong&gt; Reinforcing that students should not self-select out of the class for not having the “right” computer, or a sufficiently expensive one&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Communication:&lt;/strong&gt; Spelling out what students should include in help request emails to help them think through their code issue and help me identify their problem quickly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe src=&#34;https://sleepy-wing-5b36af.netlify.app/&#34; width=&#34;100%&#34; height=&#34;500px&#34; title=&#34;Intro to Programming for Behavioral Scientists syllabus&#34;&gt;
+&lt;/iframe&gt;
 &lt;hr /&gt;
-&lt;p&gt;Third material&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lesson-plan&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Lesson plan&lt;/h1&gt;
+&lt;p&gt;This is a lesson plan for the lab course associated with Research Methods in Psychology, taught in the Columbia psychology department. Approximately 13-17 students are typically enrolled in each lab section. This particular lesson is taught in week 6 of the 13-week semester.&lt;/p&gt;
+&lt;p&gt;When I TA’d this class in fall 2019, I expanded all lab outlines from basic bullet-point lists of procedural guidelines into full objective-driven lesson plans. I included this lesson plan to illustrate my lesson plan design style. I strive to make lesson plans &lt;strong&gt;comprehensive,&lt;/strong&gt; like a cross between a textbook and a stage manager’s run sheet. In addition to a distinct learning objective, each lab module in the lesson has a timestamp with a suggested run time (and sub-timestamps for longer modules), as well as point-by-point instructions on how to run the module. My junior PhD student colleagues who TA’d the class after me reported using my lesson plans like a textbook, allowing them to quickly parse lab objectives, understand why activities were structured and timed the way they were, and glean procedural tips on how to run the activities. The lessons served not only to structure my own teaching, but also to train the TAs who came after me and to standardize instruction across their sections.&lt;/p&gt;
+&lt;iframe src=&#34;1490 Lab 05 Outline.pdf&#34; width=&#34;100%&#34; height=&#34;500px&#34; title=&#34;Research Methods Lab 05 Outline&#34;&gt;
+&lt;/iframe&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mini-lecture-video&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Mini-lecture video&lt;/h1&gt;
+&lt;p&gt;This is a mini-lecture video for Science of Psychology: Explorations and Applications, a semi-flipped class taught in the Columbia psychology department. When we taught the class online in spring 2021, 29 students were enrolled in the class.&lt;/p&gt;
+&lt;p&gt;This video, which illustrates how the brain processes visual information, was assigned along with pre-class readings on visual perception. I included this lesson plan to illustrate how I work with the affordances offered by the teaching environment when creating learning content. I created this animated video to teach a highly visual topic (illustrating neuroanatomy and examples of perceptual information) using visual tools better suited to asynchronous video than synchronous lecture. Students enjoyed watching the video, found the concepts clear (as demonstrated in subsequent reading quizzes and in-class activities), and appreciated being able to pause and replay them at their own pace.&lt;/p&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/5wZRip70pV0&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;problem-set&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Problem set&lt;/h1&gt;
+&lt;p&gt;This is an interactive R problem set for Intro to Programming in R, taught in the Columbia business school. Approximately 40-50 students are typically enrolled in the class. This particular assignment is assigned week 2 and due week 3 of the 6-week half-semester term.&lt;/p&gt;
+&lt;p&gt;When I TA’d this class in fall 2021, I rewrote weeks 1-3’s assignments to run as interactive browser-based R exercises using the learnr package, instead of their previous form as R Markdown assignments. The key difference between the new and old assignment format is that in their old R Markdown form, students needed to correctly specify a number of technically unrelated code commands (loading packages, document metadata parameters, etc) and correctly implement programming syntax (spelling function and variable names correctly, initializing variables before they are called later, etc.) in order for their documents to render for submission. If there was a syntax error in one answer, the entire document would not render, even if the other answers were correct. In previous semesters of the class, I found that students became frustrated and demoralized when they could not render their homework documents because of such syntax errors, especially when it turned out that one error blocked the entire document from rendering. I realized that familiarity with programming syntax principles was unreasonable to expect students to have mastered that early in the class (and honestly, likely to take many months, if not years, to truly master!). I wanted to rework the first three assignments to run using an engine that would ease their dependence on syntax.&lt;/p&gt;
+&lt;p&gt;There are two main benefits to the new assignment engine. First, each question runs individually, so a syntax error in one question does not block finishing the rest of the assignment. Second, package loading and other programming setup are handled under the hood, so students no longer have to specify those in order to submit their assignments. Later assignments in the term are still administered as R Markdown documents, so students are assessed on those skills after they have had more experience. However, by removing earlier assignments’ dependence on those skills, I brought the assignments more in line with the expected temporal progression toward course learning objectives.&lt;/p&gt;
+&lt;iframe src=&#34;https://monicathieu.shinyapps.io/cbs-b8144-hw2/&#34; width=&#34;100%&#34; height=&#34;500px&#34; title=&#34;Intro to Programming in R Interactive Problem Set&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
 </content>
     </item>
     
