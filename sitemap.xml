@@ -3,6 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/teaching/teaching-statement/</loc>
+  </url>
+  
+  <url>
+    <loc>/teaching/impact/</loc>
+  </url>
+  
+  <url>
+    <loc>/teaching/teaching-roles/</loc>
+  </url>
+  
+  <url>
+    <loc>/teaching/materials/</loc>
+  </url>
+  
+  <url>
     <loc>/</loc>
     <lastmod>2021-07-29T00:00:00+00:00</lastmod>
   </url>
@@ -130,6 +146,10 @@
   
   <url>
     <loc>/research/</loc>
+  </url>
+  
+  <url>
+    <loc>/teaching/</loc>
   </url>
   
 </urlset>
