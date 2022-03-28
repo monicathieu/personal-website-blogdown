@@ -6,7 +6,7 @@ output: blogdown::html_page
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ---
@@ -25,8 +25,16 @@ I also paid special attention to crafting the following policies:
 - **Equipment:** Reinforcing that students should not self-select out of the class for not having the “right” computer, or a sufficiently expensive one
 - **Communication:** Spelling out what students should include in help request emails to help them think through their code issue and help me identify their problem quickly
 
+[Syllabus website](https://sleepy-wing-5b36af.netlify.app/)
 
-<iframe src="https://sleepy-wing-5b36af.netlify.app/" width="100%" height="500px" title="Intro to Programming for Behavioral Scientists syllabus"></iframe>
+```{r}
+blogdown::shortcode("figure",
+                    src = "icds_syllabus_screenshot.png",
+                    link = "https://sleepy-wing-5b36af.netlify.app/",
+                    target = "https://sleepy-wing-5b36af.netlify.app/",
+                    alt = "Intro to Programming for Behavioral Scientists syllabus",
+                    width = "100%")
+```
 
 ---
 
@@ -46,7 +54,11 @@ This is a mini-lecture video for Science of Psychology: Explorations and Applica
 
 This video, which illustrates how the brain processes visual information, was assigned along with pre-class readings on visual perception. I included this lesson plan to illustrate how I work with the affordances offered by the teaching environment when creating learning content. I created this animated video to teach a highly visual topic (illustrating neuroanatomy and examples of perceptual information) using visual tools better suited to asynchronous video than synchronous lecture. Students enjoyed watching the video, found the concepts clear (as demonstrated in subsequent reading quizzes and in-class activities), and appreciated being able to pause and replay them at their own pace.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5wZRip70pV0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```{r}
+blogdown::shortcode("youtube",
+                    id = "5wZRip70pV0",
+                    title = "A tour of the visual system video")
+```
 
 ---
 
