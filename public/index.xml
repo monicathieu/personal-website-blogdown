@@ -2343,7 +2343,9 @@ avo_coefplot +
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>Where I’m at. Some of my code. A snapshot of my CV.   Where I’m at. I’m currently a PhD candidate in Dr. Kevin Ochsner’s Social Cognitive &amp;amp; Affective Neuroscience Lab at Columbia University, where I began in fall 2017. While I’m not working on research (and often while I am), I’m probably drinking from a very large cup of tea. From 2017-2019, I co-managed an informal R users club in the department, where I helped to organize a yearly coding bootcamp and bi-weekly meetings/workshops to enrich our collective R experience.</description>
+      <description>Where I’m at. Some of my code. A snapshot of my CV.   Where I’m at. During my first post-PhD summer (2022), I’m teaching The Science of Psychology: Explorations and Applications, a class I originally co-designed with Dr. Caroline Marvin, at Columbia. At any given moment, I’m probably drinking from a very large cup of tea.
+Previously:
+In 2013 I started working as a research assistant on a media multitasking &amp;amp; cognition project with Dr.</description>
       <content>
 &lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
@@ -2357,10 +2359,11 @@ avo_coefplot +
 
 &lt;div id=&#34;where-im-at.&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Where I’m at.&lt;/h1&gt;
-&lt;p&gt;I’m currently a PhD candidate in Dr. Kevin Ochsner’s &lt;a href=&#34;http://www.ochsnerscanlab.org&#34;&gt;Social Cognitive &amp;amp; Affective Neuroscience Lab&lt;/a&gt; at Columbia University, where I began in fall 2017. While I’m not working on research (and often while I am), I’m probably drinking from a very large cup of tea. From 2017-2019, I co-managed an informal R users club in the department, where I helped to organize a yearly coding bootcamp and bi-weekly meetings/workshops to enrich our collective R experience.&lt;/p&gt;
+&lt;p&gt;During my first post-PhD summer (2022), I’m teaching &lt;em&gt;The Science of Psychology: Explorations and Applications,&lt;/em&gt; a class I originally co-designed with Dr. Caroline Marvin, at Columbia. At any given moment, I’m probably drinking from a very large cup of tea.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Previously:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;In 2013 I started working as a research assistant on a media multitasking &amp;amp; cognition project with Dr. Melina Uncapher, then a research associate in Dr. Anthony Wagner’s &lt;a href=&#34;https://memorylab.stanford.edu&#34;&gt;Memory Lab&lt;/a&gt;, during my freshman year at Stanford University. She couldn’t get rid of me, and I continued working with her in the lab throughout undergrad, earning two undergraduate summer fellowships through Stanford (PsychSummer and Bio-X) so I would literally never have to leave. I completed my bachelor’s degree in three years, serving as an undergraduate Teaching Fellow for &lt;a href=&#34;http://psych-one.weebly.com&#34;&gt;Psych One&lt;/a&gt;, Stanford’s introductory psychology course, during my third year, while also completing an honors thesis under Drs. Uncapher and Wagner.&lt;/p&gt;
 &lt;p&gt;After graduation in 2015, I transitioned into a full-time lab manager + research assistant position in the Memory Lab. As lab manager/RA, I served as a jack-of-most-trades, handling various arms of data collection and analysis for our healthy aging study, maintaining lab needs both tangible (office supplies, copies, uncomfortable amounts of coffee) and intangible (IRB protocols, software licenses, moral support), and defusing tense meetings with horrible jokes. I also spent some time assisting Dr. Uncapher with data processing and statistics for her &lt;a href=&#34;https://neuroscape.ucsf.edu/education/&#34;&gt;educational neuroscience projects&lt;/a&gt; with the Neuroscape group at UC San Francisco.&lt;/p&gt;
+&lt;p&gt;In fall 2017, I began working on my PhD in Dr. Kevin Ochsner’s &lt;a href=&#34;http://www.ochsnerscanlab.org&#34;&gt;Social Cognitive &amp;amp; Affective Neuroscience Lab&lt;/a&gt; at Columbia University, which I completed in spring 2022. From 2017-2019, I co-managed an informal R users club in the department, where I helped to organize a yearly coding bootcamp and bi-weekly meetings/workshops to enrich our collective R experience.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;some-of-my-code.&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Some of my code.&lt;/h1&gt;
