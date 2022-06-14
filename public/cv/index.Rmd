@@ -38,7 +38,7 @@ In my teaching, I particularly enjoy working with learners in introductory-level
 ```{r}
 tribble(
   ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
-  "PhD in Psychology", "2022", "Columbia University", "New York, NY, USA", c("Proposed dissertation: 'Exploring perception and categorization of social and affective stimuli'", "Advisor: Dr. Kevin Ochsner", "Sep 2017 - May 2022"),
+  "PhD in Psychology", "2022", "Columbia University", "New York, NY, USA", c("Dissertation: 'Exploring perception and categorization of social and affective stimuli'", "Advisor: Dr. Kevin Ochsner", "Sep 2017 - May 2022"),
   "BA with honors in Psychology", "2015", "Stanford University", "Palo Alto, CA, USA", c("Honors thesis: 'Chronic media multitasking and distraction: Neural substrates and mnemonic consequences'", "Advisors: Dr. Melina  Uncapher, Dr. Anthony Wagner")
 ) %>% 
   # flipped Where and Institution to get the institution to be bolded
@@ -114,6 +114,7 @@ bibliography_entries("publications.bib") # %>%
 ```{r}
 tribble(
   ~Year, ~Talk, ~Conference,
+  "Nov 2021", "[Video guest (science)](https://youtu.be/VTvJOb2hJ6k)", "Wired 5 Levels: Memory",
   "Sept 2021", "[Interview subject (teaching)](https://explaineverything.com/psychology-whiteboard-video-lessons-with-monica-thieu/)", "Explain Everything",
   "July 2020", "[Podcast guest (science)](https://www.marketplace.org/shows/this-is-uncomfortable-reema-khrais/money-makes-me-sick/)", "This is Uncomfortable by Marketplace",
   "July 2020", "How to Prepare and Teach an R Lesson", "[NYC R Conference](https://rstats.ai/nyr/#speakers)",
@@ -156,6 +157,21 @@ tribble(
   # flipped Where and Institution to get the institution to be bolded
   detailed_entries(Course, Year, Where, Position)
 ```
+
+## Mentoring
+
+```{r}
+tribble(
+  ~ Name, ~ Year, ~ Position,
+  "Lauren Wilkins", "2020-22", "Undergraduate research assistant & honors thesis student"
+) %>% 
+  brief_entries(
+    what = Name,
+    when = Year,
+    with = Position
+  )
+```
+
 
 ## Workshops & summer schools attended
 
