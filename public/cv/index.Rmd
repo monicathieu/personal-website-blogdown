@@ -162,14 +162,10 @@ tribble(
 
 ```{r}
 tribble(
-  ~ Name, ~ Year, ~ Position,
-  "Lauren Wilkins", "2020-22", "Undergraduate research assistant & honors thesis student"
+  ~ Name, ~ Year, ~ Where, ~ Position, ~ Awards,
+  "Lauren Wilkins", "2020-22", "Columbia University", "Undergraduate research assistant & honors thesis student", "Class of 1939 Summer Research Fellowship, summer 2020"
 ) %>% 
-  brief_entries(
-    what = Name,
-    when = Year,
-    with = Position
-  )
+  detailed_entries(Position, Year, Where, Name, Awards)
 ```
 
 
