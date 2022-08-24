@@ -6,7 +6,7 @@ author: " "
 
 # Where I'm at.
 
-During my first post-PhD summer (2022), I'm teaching _The Science of Psychology: Explorations and Applications,_ a class I originally co-designed with Dr. Caroline Marvin, at Columbia. At any given moment, I'm probably drinking from a very large cup of tea.
+I'm currently a [FIRST](https://med.emory.edu/education/postdoctoral-training/first/index.html)-funded postdoctoral fellow working in Dr. Phil Kragel's [ECCO Lab](https://www.ecco-lab.org) at Emory University. In my research, I plan to incorporate deep learning models along with behavior and neuroimaging to investigate how people experience _mixed_ emotions. In my teaching, I plan to develop courses on the foundations of those computational techniques for junior behavioral scientists. At any given moment, I'm probably drinking from a very large cup of tea.
 
 **Previously:**
 
@@ -14,7 +14,7 @@ In 2013 I started working as a research assistant on a media multitasking & cogn
 
 After graduation in 2015, I transitioned into a full-time lab manager + research assistant position in the Memory Lab. As lab manager/RA, I served as a jack-of-most-trades, handling various arms of data collection and analysis for our healthy aging study, maintaining lab needs both tangible (office supplies, copies, uncomfortable amounts of coffee) and intangible (IRB protocols, software licenses, moral support), and defusing tense meetings with horrible jokes. I also spent some time assisting Dr. Uncapher with data processing and statistics for her [educational neuroscience projects](https://neuroscape.ucsf.edu/education/) with the Neuroscape group at UC San Francisco.
 
-In fall 2017, I began working on my PhD in Dr. Kevin Ochsner's [Social Cognitive & Affective Neuroscience Lab](http://www.ochsnerscanlab.org) at Columbia University, which I completed in spring 2022. From 2017-2019, I co-managed an informal R users club in the department, where I helped to organize a yearly coding bootcamp and bi-weekly meetings/workshops to enrich our collective R experience.
+In fall 2017, I began working on my PhD in Dr. Kevin Ochsner's [Social Cognitive & Affective Neuroscience Lab](http://www.ochsnerscanlab.org) at Columbia University, which I completed in spring 2022. From 2017-2019, I co-managed an informal R users club in the department, where I helped to organize a yearly coding bootcamp and bi-weekly meetings/workshops to enrich our collective R experience. During my first post-PhD summer, I taught _The Science of Psychology: Explorations and Applications,_ a class I originally co-designed with Dr. Caroline Marvin, at Columbia.
 
 # Some of my code.
 

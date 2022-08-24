@@ -3,7 +3,7 @@ title: "A gentlewoman and a scholar?"
 cover: img/top_of_the_rock_hipstamatic.jpg
 ---
 
-I just completed my PhD in psychology at **Columbia University,** studying how we perceive and categorize social and emotional phenomena.
+I am a postdoctoral fellow at **Emory University,** studying how we process and conceptualize different types of emotional experiences.
 
 I use primarily **R** for my own data analysis and teach R so others might use it as well.
 
