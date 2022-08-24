@@ -2,10 +2,10 @@
 title: CV
 name: Monica
 surname: Thieu
-position: "Summer lecturer"
-address: "Dept of Psychology, Columbia University in the City of New York"
+position: "Postdoctoral scholar"
+address: "Dept of Psychology, Emory University"
 www: monicathieu.com
-email: "monica.thieu@columbia.edu"
+email: "mthieu@emory.edu"
 twitter: monica_too_
 github: monicathieu
 date: "`r format(Sys.time(), '%B %Y')`"
@@ -23,7 +23,9 @@ require(vitae)
 
 ## About me
 
-In my research, I use behavioral and fMRI research methods to investigate how people perceive and categorize various social (others' facial age and gender) and emotional (elicited experiences) stimuli.
+In my postdoctoral research, I use behavioral, modeling, and fMRI research methods to characterize how people experience positive, negative, and mixed affect.
+
+In my PhD research, I used behavioral and fMRI research methods to investigate how people perceive and categorize various social (others' facial age and gender) and emotional (elicited experiences) stimuli.
 
 In my teaching, I particularly enjoy working with learners in introductory-level courses in content (introductory psychology) and in methods (coding for behavioral sciences).
 
@@ -71,6 +73,7 @@ tribble(
 ```{r}
 tribble(
   ~Year, ~Award, ~Desc,
+  "Spring 2022", "Teaching Development Program Advanced Track completion", "Columbia Center for Teaching and Learning",
   "Spring 2022", "Presidential Graduate Teaching Award finalist", "Columbia Office of the Provost",
   "Spring 2021", "Grant to Enhance Remote Learning and Teaching", "Columbia Center for the History and Ethics of Public Health",
   "Spring 2020", "[Curricular Innovation Fellow](https://rcfoundations.research.columbia.edu/content/foundations-curriculum-innovation-grant-program)", "Columbia Libraries",
@@ -174,6 +177,7 @@ tribble(
 ```{r}
 tribble(
   ~Year, ~Workshop, ~Desc,
+  "2022", "[Neurohackademy](https://neurohackademy.org)", "University of Washington",
   "2019", "[Kavli Summer Institute in Cognitive Neuroscience](https://sicn.cmb.ucdavis.edu/)", "University of California, Santa Barbara",
   "2018", "São Paulo School of Advanced Sciences on Social & Affective Neuroscience", "Mackenzie Presbyterian University"
 ) %>% 
