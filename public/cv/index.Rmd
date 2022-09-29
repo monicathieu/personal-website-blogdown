@@ -54,6 +54,7 @@ tribble(
 ```{r}
 tribble(
   ~Year, ~Award, ~Desc,
+  "2022-26", "[FIRST NIH IRACDA postdoctoral fellowship](https://med.emory.edu/education/postdoctoral-training/first/index.html)", "Emory School of Medicine",
   "2019", "Honorable mention", "[NSF GRFP](https://nsfgrfp.org)",
   "June 2015", "Firestone Medal for Excellence in Undergraduate Research", "Stanford Vice Provost for Undergraduate Education",
   "Summer 2014", "Undergraduate Summer Research Award grant", "Stanford Bio-X",
@@ -117,6 +118,7 @@ bibliography_entries("publications.bib") # %>%
 ```{r}
 tribble(
   ~Year, ~Talk, ~Conference,
+  "June 2022", "Remote brain bingo: Running group games on Zoom", "Psych One Conference",
   "Nov 2021", "[Video guest (science)](https://youtu.be/VTvJOb2hJ6k)", "Wired 5 Levels: Memory",
   "Sept 2021", "[Interview subject (teaching)](https://explaineverything.com/psychology-whiteboard-video-lessons-with-monica-thieu/)", "Explain Everything",
   "July 2020", "[Podcast guest (science)](https://www.marketplace.org/shows/this-is-uncomfortable-reema-khrais/money-makes-me-sick/)", "This is Uncomfortable by Marketplace",
@@ -136,7 +138,7 @@ tribble(
 ## Conference posters
 
 ```{r}
-bibliography_entries("presentations.bib") %>% 
+bibliography_entries("posters.bib") %>% 
   arrange(desc(issued))
 ```
 
