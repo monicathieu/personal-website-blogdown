@@ -30,7 +30,13 @@ I use [gorilla.sc](https://gorilla.sc/?utm_medium=referral&utm_source=monicathie
 
 ### Human affective responses to looming motion
 
-Rapidly approaching objects, like incoming predators or projectiles, are often dangerous. Many species of animals can detect and avoid the specific patterns of **looming** visual motion associated with such objects, using quite similar neural mechanisms. For example, mammals encode looming motion in the superior colliculus, a region of the midbrain that coordinates rapid reorienting to salient signals in the environment. In this project, I am using computational models from nonhuman animal research (for example, fruit flies!) to investigate how _humans_ respond to looming motion:
+Rapidly approaching objects, like incoming predators or projectiles, are often dangerous. Many species of animals can detect and avoid the specific patterns of **looming** visual motion associated with such objects, using quite similar neural mechanisms.
+
+Experience some looming motion with this video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mxstorhyzd0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+For example, mammals encode looming motion in the superior colliculus, a region of the midbrain that coordinates rapid reorienting to salient signals in the environment. In this project, I am using computational models from nonhuman animal research (for example, fruit flies!) to investigate how _humans_ respond to looming motion:
 
 **How does looming motion in videos predict people's emotional responses to those videos?** Preliminary results suggest that the "loominess" of short, emotionally evocative videos can predict how people label their emotional responses to those videos (choices like "fear", "joy", "anxiety", "excitement", etc.). Specifically, patterns of looming-predicted emotional responses look like responses made based on subjective _arousal,_ or how "activated" people feel when watching the videos.
 
