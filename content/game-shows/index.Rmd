@@ -22,7 +22,7 @@ blogdown::shortcode(.name = "image",
 
 ---
 
-When I was little, instead of doing normal kid things, I would read piles upon piles of nonfiction books about history and science. Somehow, a lot of this academic detritus has collected and stuck in my head over the years (hopefully useful for a PhD student?), and when combined with embarrassing volumes of angsty mid-2000s pop-punk lyrics, it turns out I know a lot of random stuff. Eventually I had the bright (and foolish) idea to try to make something of this. Here you can see what I've gotten away with so far...
+When I was little, instead of doing normal kid things, I would read piles upon piles of nonfiction books about history and science. Somehow, a lot of this academic detritus has collected and stuck in my head over the years (hopefully useful for an academic?), and when combined with embarrassing volumes of angsty mid-2000s pop-punk lyrics, it turns out I know a lot of random stuff. Eventually I had the bright (and foolish) idea to try to make something of this. Here you can see what I've gotten away with so far...
 
 # (2012) Jeopardy! College Championship
 
