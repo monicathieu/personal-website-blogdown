@@ -2343,21 +2343,21 @@ avo_coefplot +
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>Where I’m at. Some of my code. A snapshot of my CV. Where I’m at. I’m currently a FIRST-funded postdoctoral fellow working in Dr. Phil Kragel’s ECCO Lab at Emory University. In my research, I plan to incorporate deep learning models along with behavior and neuroimaging to investigate how people experience mixed emotions. In my teaching, I plan to develop courses on the foundations of those computational techniques for junior behavioral scientists.</description>
+      <description>Where I’m at. Some of my code. A snapshot of my CV. Where I’m at. I’m currently a FIRST-funded postdoctoral fellow working in Dr. Phil Kragel’s ECCO Lab at Emory University. In my research, I apply deep learning models to behavior and neuroimaging to investigate how people experience emotions from the things they see. In my teaching, I develop courses on the foundations of those computational techniques for junior behavioral scientists.</description>
       <content>
 &lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#where-im-at.&#34;&gt;Where I’m at.&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#some-of-my-code.&#34;&gt;Some of my code.&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#a-snapshot-of-my-cv.&#34;&gt;A snapshot of my CV.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#where-im-at.&#34; id=&#34;toc-where-im-at.&#34;&gt;Where I’m at.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#some-of-my-code.&#34; id=&#34;toc-some-of-my-code.&#34;&gt;Some of my code.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#a-snapshot-of-my-cv.&#34; id=&#34;toc-a-snapshot-of-my-cv.&#34;&gt;A snapshot of my CV.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;where-im-at.&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Where I’m at.&lt;/h1&gt;
-&lt;p&gt;I’m currently a &lt;a href=&#34;https://med.emory.edu/education/postdoctoral-training/first/index.html&#34;&gt;FIRST&lt;/a&gt;-funded postdoctoral fellow working in Dr. Phil Kragel’s &lt;a href=&#34;https://www.ecco-lab.org&#34;&gt;ECCO Lab&lt;/a&gt; at Emory University. In my research, I plan to incorporate deep learning models along with behavior and neuroimaging to investigate how people experience &lt;em&gt;mixed&lt;/em&gt; emotions. In my teaching, I plan to develop courses on the foundations of those computational techniques for junior behavioral scientists. At any given moment, I’m probably drinking from a very large cup of tea.&lt;/p&gt;
+&lt;p&gt;I’m currently a &lt;a href=&#34;https://med.emory.edu/education/postdoctoral-training/first/index.html&#34;&gt;FIRST&lt;/a&gt;-funded postdoctoral fellow working in Dr. Phil Kragel’s &lt;a href=&#34;https://www.ecco-lab.org&#34;&gt;ECCO Lab&lt;/a&gt; at Emory University. In my research, I apply deep learning models to behavior and neuroimaging to investigate how people experience emotions from the things they see. In my teaching, I develop courses on the foundations of those computational techniques for junior behavioral scientists. At any given moment, I’m probably drinking from a very large cup of tea.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Previously:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;In 2013 I started working as a research assistant on a media multitasking &amp;amp; cognition project with Dr. Melina Uncapher, then a research associate in Dr. Anthony Wagner’s &lt;a href=&#34;https://memorylab.stanford.edu&#34;&gt;Memory Lab&lt;/a&gt;, during my freshman year at Stanford University. She couldn’t get rid of me, and I continued working with her in the lab throughout undergrad, earning two undergraduate summer fellowships through Stanford (PsychSummer and Bio-X) so I would literally never have to leave. I completed my bachelor’s degree in three years, serving as an undergraduate Teaching Fellow for &lt;a href=&#34;http://psych-one.weebly.com&#34;&gt;Psych One&lt;/a&gt;, Stanford’s introductory psychology course, during my third year, while also completing an honors thesis under Drs. Uncapher and Wagner.&lt;/p&gt;
 &lt;p&gt;After graduation in 2015, I transitioned into a full-time lab manager + research assistant position in the Memory Lab. As lab manager/RA, I served as a jack-of-most-trades, handling various arms of data collection and analysis for our healthy aging study, maintaining lab needs both tangible (office supplies, copies, uncomfortable amounts of coffee) and intangible (IRB protocols, software licenses, moral support), and defusing tense meetings with horrible jokes. I also spent some time assisting Dr. Uncapher with data processing and statistics for her &lt;a href=&#34;https://neuroscape.ucsf.edu/education/&#34;&gt;educational neuroscience projects&lt;/a&gt; with the Neuroscape group at UC San Francisco.&lt;/p&gt;
@@ -2384,7 +2384,7 @@ avo_coefplot +
       <guid>/contact/</guid>
       <description>Email For professional (academic or consulting) and media inquiries you can reach me at mthieu -at- emory -dot- edu.
 Unfortunately I cannot respond to fan mail, but I appreciate the thought!
-Twitter I post and interact about stats/science on occasion @monica_too_.</description>
+Twitter I used to post about stats/science on occasion @monica_too_, but I have stepped away from Twitter since it was taken private. :(</description>
       <content>
 &lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
@@ -2396,7 +2396,7 @@ Twitter I post and interact about stats/science on occasion @monica_too_.</descr
 &lt;/div&gt;
 &lt;div id=&#34;twitter&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Twitter&lt;/h1&gt;
-&lt;p&gt;I post and interact about stats/science on occasion @&lt;a href=&#34;https://twitter.com/monica_too_&#34;&gt;monica_too_&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I used to post about stats/science on occasion @&lt;a href=&#34;https://twitter.com/monica_too_&#34;&gt;monica_too_&lt;/a&gt;, but I have stepped away from Twitter since it was taken private. :(&lt;/p&gt;
 &lt;/div&gt;
 </content>
     </item>
@@ -2415,22 +2415,22 @@ When I was little, instead of doing normal kid things, I would read piles upon p
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#jeopardy-college-championship&#34;&gt;(2012) Jeopardy! College Championship&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#jeopardy-tournament-of-champions&#34;&gt;(2013) Jeopardy! Tournament of Champions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#questions-season-2&#34;&gt;(2016) 500 Questions, season 2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#jeopardy-all-star-games&#34;&gt;(2019) Jeopardy! All-Star Games&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#photos-poorly-organized-sorry&#34;&gt;Photos (poorly organized, sorry!)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#jeopardy-college-championship&#34; id=&#34;toc-jeopardy-college-championship&#34;&gt;(2012) Jeopardy! College Championship&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#jeopardy-tournament-of-champions&#34; id=&#34;toc-jeopardy-tournament-of-champions&#34;&gt;(2013) Jeopardy! Tournament of Champions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#questions-season-2&#34; id=&#34;toc-questions-season-2&#34;&gt;(2016) 500 Questions, season 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#jeopardy-all-star-games&#34; id=&#34;toc-jeopardy-all-star-games&#34;&gt;(2019) Jeopardy! All-Star Games&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#photos-poorly-organized-sorry&#34; id=&#34;toc-photos-poorly-organized-sorry&#34;&gt;Photos (poorly organized, sorry!)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;p&gt;First things first…&lt;/p&gt;
-&lt;p&gt;
+
   &lt;img src=&#34;teamken_lightpen_blue.png&#34;  alt=&#34;Team Ken light-pen writing sticker badge&#34;  class=&#34;left&#34;  /&gt;
 
-&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;Buy a Team Ken shirt or other swag &lt;a href=&#34;https://teespring.com/team-ken-4ever&#34;&gt;here&lt;/a&gt; to represent/embarrass Ken Jennings, &lt;em&gt;the&lt;/em&gt; GOAT.&lt;/strong&gt; All profits donated to the &lt;a href=&#34;https://pancan.org&#34;&gt;Pancreatic Cancer Action Network&lt;/a&gt; in honor of Alex Trebek.&lt;/p&gt;
 &lt;hr /&gt;
-&lt;p&gt;When I was little, instead of doing normal kid things, I would read piles upon piles of nonfiction books about history and science. Somehow, a lot of this academic detritus has collected and stuck in my head over the years (hopefully useful for a PhD student?), and when combined with embarrassing volumes of angsty mid-2000s pop-punk lyrics, it turns out I know a lot of random stuff. Eventually I had the bright (and foolish) idea to try to make something of this. Here you can see what I’ve gotten away with so far…&lt;/p&gt;
+&lt;p&gt;When I was little, instead of doing normal kid things, I would read piles upon piles of nonfiction books about history and science. Somehow, a lot of this academic detritus has collected and stuck in my head over the years (hopefully useful for an academic?), and when combined with embarrassing volumes of angsty mid-2000s pop-punk lyrics, it turns out I know a lot of random stuff. Eventually I had the bright (and foolish) idea to try to make something of this. Here you can see what I’ve gotten away with so far…&lt;/p&gt;
 &lt;div id=&#34;jeopardy-college-championship&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;(2012) Jeopardy! College Championship&lt;/h1&gt;
 &lt;p&gt;In 2012, I was selected to represent the University of North Texas in the Jeopardy! College Championship. At the time, I was a senior at the &lt;a href=&#34;https://tams.unt.edu&#34;&gt;Texas Academy of Math and Science&lt;/a&gt;, a program for high school juniors and seniors to enroll at UNT, live in a dedicated dorm, and take two years of college courses. I was a UNT sophomore by credits, so I was &lt;em&gt;technically&lt;/em&gt; a college undergraduate. If it’s good enough for Jeopardy!, it’s good enough for me!&lt;/p&gt;
@@ -2452,7 +2452,7 @@ When I was little, instead of doing normal kid things, I would read piles upon p
 &lt;div id=&#34;photos-poorly-organized-sorry&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Photos (poorly organized, sorry!)&lt;/h1&gt;
 &lt;p&gt;This photo gallery is under construction.&lt;/p&gt;
-&lt;p&gt;
+
 
   &lt;div class=&#34;gallery&#34; itemscope itemtype=&#34;http://schema.org/ImageGallery&#34;&gt;
   
@@ -2585,7 +2585,7 @@ When I was little, instead of doing normal kid things, I would read piles upon p
     &lt;/figcaption&gt;
     &lt;/figure&gt; 
   
-  &lt;/div&gt;&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </content>
     </item>
