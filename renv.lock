@@ -366,6 +366,11 @@
       "Repository": "CRAN",
       "Hash": "8b331e659e67d757db0fcc28e689c501"
     },
+    "here": {
+      "Package": "here",
+      "Version": "1.0.1",
+      "Source": "Repository"
+    },
     "highr": {
       "Package": "highr",
       "Version": "0.10",
@@ -666,6 +671,11 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "75a01be060d800ceb14e32c666cacac9"
+    },
+    "rprojroot": {
+      "Package": "rprojroot",
+      "Version": "2.0.3",
+      "Source": "Repository"
     },
     "rsample": {
       "Package": "rsample",
