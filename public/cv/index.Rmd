@@ -23,7 +23,7 @@ require(vitae)
 
 ## About me
 
-In my postdoctoral research, I use behavioral, modeling, and fMRI research methods to characterize how people experience positive, negative, and mixed affect.
+In my postdoctoral research, I use behavioral, modeling, and fMRI research methods to characterize how perceptual input contributes to affective experience.
 
 In my PhD research, I used behavioral and fMRI research methods to investigate how people perceive and categorize various social (others' facial age and gender) and emotional (elicited experiences) stimuli.
 
@@ -54,6 +54,7 @@ tribble(
 ```{r}
 tribble(
   ~Year, ~Award, ~Desc,
+  "2023", "[Diversity travel award](https://socialaffectiveneuro.org/wp-content/uploads/2023/05/SANS-Conference-2023_Program_FINAL.pdf)", "Social and Affective Neuroscience Society",
   "2022-26", "[FIRST NIH IRACDA postdoctoral fellowship](https://med.emory.edu/education/postdoctoral-training/first/index.html)", "Emory School of Medicine",
   "2019", "Honorable mention", "[NSF GRFP](https://nsfgrfp.org)",
   "June 2015", "Firestone Medal for Excellence in Undergraduate Research", "Stanford Vice Provost for Undergraduate Education",
@@ -118,7 +119,8 @@ bibliography_entries("publications.bib") # %>%
 ```{r}
 tribble(
   ~Year, ~Talk, ~Conference,
-  "June 2022", "Remote brain bingo: Running group games on Zoom", "Psych One Conference",
+  "April 2023", "Shallow neural networks for collision detection predict arousal-related differences in subjective experience", "Social and Affective Neuroscience Society Annual Meeting",
+  "June 2022, Jan 2023", "Remote brain bingo: Running group games on Zoom", "Psych One Conference & TIP Coast-To-Coast Conference",
   "Nov 2021", "[Video guest (science)](https://youtu.be/VTvJOb2hJ6k)", "Wired 5 Levels: Memory",
   "Sept 2021", "[Interview subject (teaching)](https://explaineverything.com/psychology-whiteboard-video-lessons-with-monica-thieu/)", "Explain Everything",
   "July 2020", "[Podcast guest (science)](https://www.marketplace.org/shows/this-is-uncomfortable-reema-khrais/money-makes-me-sick/)", "This is Uncomfortable by Marketplace",

@@ -5,7 +5,7 @@
     <link>/tags/pandoc/</link>
     <description>Recent content in pandoc on Monica Thieu</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Mon, 10 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/pandoc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting up this website</title>
@@ -13,7 +13,7 @@
       <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>/posts/2020-08-10-setting-up-this-website/</guid>
-      <description>Setting up a blogdown repository Blogdown-ing with a different Hugo theme  Overriding one or two layouts of a git submodule theme Making a new homepage template  Understanding Hugo’s expected structure  Adding pages to the menu bar  Hooking it into the interwebs  Setting public as the GitHub Pages root directory Re-pointing my old Squarespace domain name  Pointing Squarespace DNS to GitHub Pages URL Get GitHub Pages URL to use new domain   Adding a photo gallery into the theme Fixing code syntax highlighting  Prism.</description>
+      <description>Setting up a blogdown repository Blogdown-ing with a different Hugo theme Overriding one or two layouts of a git submodule theme Making a new homepage template Understanding Hugo’s expected structure Adding pages to the menu bar Hooking it into the interwebs Setting public as the GitHub Pages root directory Re-pointing my old Squarespace domain name Pointing Squarespace DNS to GitHub Pages URL Get GitHub Pages URL to use new domain Adding a photo gallery into the theme Fixing code syntax highlighting Prism.</description>
       <content>
 &lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 

@@ -5,7 +5,7 @@
     <link>/tags/tutorial/</link>
     <description>Recent content in tutorial on Monica Thieu</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Thu, 29 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Practice ggplot2 aesthetics with learnr</title>
@@ -38,7 +38,7 @@ I made these interactive worksheets for the Columbia Dept of Psychology’s Summ
       <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
       
       <guid>/posts/2021-05-28-intro-psych-brain-bingo/</guid>
-      <description>1 What’s the activity 2 Why this activity 3 Materials 4 What I did: Step by step methods  4.1 Choose key terms 4.2 Prepare bingo cards 4.3 Prepare bingo calls 4.4 Prepare computer for streaming  4.4.1 Streaming destination: configure YouTube Live 4.4.2 Streaming source: configure StreamLabs app 4.4.3 Connecting the source to the destination  4.5 Run the activity  4.5.1 Prep students 4.5.2 Start the stream!</description>
+      <description>1 What’s the activity 2 Why this activity 3 Materials 4 What I did: Step by step methods 4.1 Choose key terms 4.2 Prepare bingo cards 4.3 Prepare bingo calls 4.4 Prepare computer for streaming 4.4.1 Streaming destination: configure YouTube Live 4.4.2 Streaming source: configure StreamLabs app 4.4.3 Connecting the source to the destination 4.5 Run the activity 4.5.1 Prep students 4.5.2 Start the stream! This post will show you my motivation and methods for designing and running a game of Zoom bingo, but for basic neuroanatomy!</description>
       <content>
 &lt;script src=&#34;/posts/2021-05-28-intro-psych-brain-bingo/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
@@ -153,7 +153,7 @@ I made these interactive worksheets for the Columbia Dept of Psychology’s Summ
       <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>/posts/2020-08-15-prepare-teach-r-lesson/</guid>
-      <description>1 Notes for readers 2 Why this talk? 3 Objectives 4 Lesson construction using backward design  4.1 What is backward design? 4.2 Define outcomes 4.3 Define evidence of learning  4.3.1 Formative assessment: more smaller tests 4.3.2 Tidy formative assessments 4.3.3 Multiple choice check-ins scale pretty well  4.4 Build lesson  5 Deliver the lesson 6 In summary   1 Notes for readers This blog post contains a written version of my speaker notes for my 20-minute 2020 NYC R conference talk.</description>
+      <description>1 Notes for readers 2 Why this talk? 3 Objectives 4 Lesson construction using backward design 4.1 What is backward design? 4.2 Define outcomes 4.3 Define evidence of learning 4.3.1 Formative assessment: more smaller tests 4.3.2 Tidy formative assessments 4.3.3 Multiple choice check-ins scale pretty well 4.4 Build lesson 5 Deliver the lesson 6 In summary 1 Notes for readers This blog post contains a written version of my speaker notes for my 20-minute 2020 NYC R conference talk.</description>
       <content>
 &lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
@@ -459,7 +459,7 @@ I made these interactive worksheets for the Columbia Dept of Psychology’s Summ
       <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>/posts/2020-04-08-tidy-multilevel/</guid>
-      <description>1 Learning goals 2 Notes for instructors 3 Lesson body  3.1 A brief intro to multilevel structure: It’s everywhere! 3.2 Introducing the data 3.3 Reading in the data 3.4 Inspecting the data  3.4.1 Quick graphs 3.4.2 Basic summary statistics  3.5 Nesting the data  3.5.1 Intro to nest(), unnest(), and tibble list-columns  3.6 Going vectorize crazy  3.6.1 Vectorizing: it’s like a for loop, but not 3.</description>
+      <description>1 Learning goals 2 Notes for instructors 3 Lesson body 3.1 A brief intro to multilevel structure: It’s everywhere! 3.2 Introducing the data 3.3 Reading in the data 3.4 Inspecting the data 3.4.1 Quick graphs 3.4.2 Basic summary statistics 3.5 Nesting the data 3.5.1 Intro to nest(), unnest(), and tibble list-columns 3.6 Going vectorize crazy 3.6.1 Vectorizing: it’s like a for loop, but not 3.6.2 Tidy vectorizing 3.6.3 A caveat: When not to vectorize 3.</description>
       <content>
 &lt;script src=&#34;/posts/2020-04-08-tidy-multilevel/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
