@@ -6,7 +6,7 @@ author: " "
 
 # Where I'm at.
 
-I'm currently a [FIRST](https://med.emory.edu/education/postdoctoral-training/first/index.html)-funded postdoctoral fellow working in Dr. Phil Kragel's [ECCO Lab](https://www.ecco-lab.org) at Emory University. In my research, I plan to incorporate deep learning models along with behavior and neuroimaging to investigate how people experience _mixed_ emotions. In my teaching, I plan to develop courses on the foundations of those computational techniques for junior behavioral scientists. At any given moment, I'm probably drinking from a very large cup of tea.
+I'm currently a [FIRST](https://med.emory.edu/education/postdoctoral-training/first/index.html)-funded postdoctoral fellow working in Dr. Phil Kragel's [ECCO Lab](https://www.ecco-lab.org) at Emory University. In my research, I apply deep learning models to behavior and neuroimaging to investigate how people experience emotions from the things they see. In my teaching, I develop courses on the foundations of those computational techniques for junior behavioral scientists. At any given moment, I'm probably drinking from a very large cup of tea.
 
 **Previously:**
 
