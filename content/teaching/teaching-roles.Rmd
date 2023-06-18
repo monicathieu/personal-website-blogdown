@@ -11,6 +11,29 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Instructor of record
+
+## The Science of Psychology: Explorations and Applications
+
+- Term: summer 2022
+
+### Course details
+
+- Intro-level undergraduate class, satisfies core science requirement for non-majors
+- 12 students, with learning teams of 4 students each
+
+### Instructional responsibilities
+
+- Updated curriculum
+  - Defined learning objectives
+  - Evaluated and selected readings
+  - Edited lesson plans, pre-class quizzes, and assignment prompts
+  - Created and edited teaching materials: slides, activity materials
+- Lectured and led discussions
+- Graded writing assignments
+  - Detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics
+- Held weekly office hours
+
 # Curriculum developer and co-instructor
 
 ## The Science of Psychology: Explorations and Applications
@@ -20,7 +43,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Course details
 
-- Intro-level undergraduate class, satisfies core science requirement for non-majors
+- As above
 - Approximately 30 students, with learning teams of approximately 4 students each
 
 ### Instructional responsibilities

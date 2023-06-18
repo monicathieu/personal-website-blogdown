@@ -97,49 +97,87 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/teaching/teaching-roles/</guid>
-      <description> Curriculum developer and co-instructor The Science of Psychology: Explorations and Applications Psychology department coding bootcamp Section leader Research Methods in Psychology Bootcamp instructor Foundations for Research Computing coding bootcamp Teaching assistant Intro to Programming in R Science of Psychology Curriculum developer and co-instructor The Science of Psychology: Explorations and Applications Term: spring 2021 Lead instructor: Caroline Marvin Course details Intro-level undergraduate class, satisfies core science requirement for non-majors Approximately 30 students, with learning teams of approximately 4 students each Instructional responsibilities Developed curriculum, in conjunction with lead instructor Defined learning objectives Evaluated and selected readings Wrote lesson plans, pre-class quizzes, and assignment prompts Created teaching materials: slides, activity materials, mini-lecture videos Guest lecturing (approximately 1/4 of instructional modules) Graded writing assignments Detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics Held weekly office hours Psychology department coding bootcamp Terms: spring 2018, fall 2018, fall 2019, fall 2020, fall 2021 Course details Unofficial open-enrollment workshop for psychology students at the undergrad level and above 5-20 students per session, depending on the semester Instructional responsibilities Curriculum development Drafted lessons for 2 half-day sessions Peer-reviewed 1 session lesson drafted by another co-instructor Lecture: Live-code lectured some or all of the lessons I prepared (depending on the semester) Section leader Research Methods in Psychology Terms: fall 2018, fall 2019 Lead instructor: Katherine Fox-Glassman Course details Upper-level undergraduate class, required for the psychology major Approximately 70 students in the entire class, with lab sections of approximately 15 students Instructional responsibilities Updated course materials Wrote 2 new R lesson plans and 2 new associated problem sets Updated and annotated existing lesson plan outlines for each lab class Created slide decks for each lab class Taught lab section Graded assignments Exam short-answer questions (for all students) Methods problem sets in R (for students in my section) Science writing assignments and projects (for students in my section) Individual and group presentations (for students in my section) Held weekly office hours Wrote short-answer exam questions Bootcamp instructor Foundations for Research Computing coding bootcamp Terms: fall 2019, spring 2020, winter 2022 Coordinator: Patrick Smyth Course details Open-enrollment workshop hosted by Columbia Libraries for graduate students and postdocs across the university 30 students per session (in-person), 50 students per session (online) Associated with The Carpentries Instructional responsibilities Delivered live-code lecture sessions introducing students to basic file navigation commands in Unix shell (1 3-hour session per workshop) Teaching assistant Intro to Programming in R Terms: spring 2019, spring 2020, fall 2021 Lead instructor: Jared Lander Course details Master’s level half-semester elective course in the business school Lecture class with 40-70 students depending on the term Instructional responsibilities Updated course materials Revised existing problem sets to align objectives with lecture content Re-implemented problem sets using learnr for students to complete exercises online Graded and gave written feedback on R problem sets Held weekly office hours Supported students’ work over email Science of Psychology Term: fall 2017 Lead instructor: Kathleen Taylor Course details Intro-level undergraduate class, satisfies core science requirement for non-majors Approximately 100 students Instructional responsibilities Graded exam essays Wrote multiple-choice and essay exam questions Held weekly office hours Delivered guest lecture on memory </description>
+      <description> Instructor of record The Science of Psychology: Explorations and Applications Curriculum developer and co-instructor The Science of Psychology: Explorations and Applications Psychology department coding bootcamp Section leader Research Methods in Psychology Bootcamp instructor Foundations for Research Computing coding bootcamp Teaching assistant Intro to Programming in R Science of Psychology Instructor of record The Science of Psychology: Explorations and Applications Term: summer 2022 Course details Intro-level undergraduate class, satisfies core science requirement for non-majors 12 students, with learning teams of 4 students each Instructional responsibilities Updated curriculum Defined learning objectives Evaluated and selected readings Edited lesson plans, pre-class quizzes, and assignment prompts Created and edited teaching materials: slides, activity materials Lectured and led discussions Graded writing assignments Detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics Held weekly office hours Curriculum developer and co-instructor The Science of Psychology: Explorations and Applications Term: spring 2021 Lead instructor: Caroline Marvin Course details As above Approximately 30 students, with learning teams of approximately 4 students each Instructional responsibilities Developed curriculum, in conjunction with lead instructor Defined learning objectives Evaluated and selected readings Wrote lesson plans, pre-class quizzes, and assignment prompts Created teaching materials: slides, activity materials, mini-lecture videos Guest lecturing (approximately 1/4 of instructional modules) Graded writing assignments Detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics Held weekly office hours Psychology department coding bootcamp Terms: spring 2018, fall 2018, fall 2019, fall 2020, fall 2021 Course details Unofficial open-enrollment workshop for psychology students at the undergrad level and above 5-20 students per session, depending on the semester Instructional responsibilities Curriculum development Drafted lessons for 2 half-day sessions Peer-reviewed 1 session lesson drafted by another co-instructor Lecture: Live-code lectured some or all of the lessons I prepared (depending on the semester) Section leader Research Methods in Psychology Terms: fall 2018, fall 2019 Lead instructor: Katherine Fox-Glassman Course details Upper-level undergraduate class, required for the psychology major Approximately 70 students in the entire class, with lab sections of approximately 15 students Instructional responsibilities Updated course materials Wrote 2 new R lesson plans and 2 new associated problem sets Updated and annotated existing lesson plan outlines for each lab class Created slide decks for each lab class Taught lab section Graded assignments Exam short-answer questions (for all students) Methods problem sets in R (for students in my section) Science writing assignments and projects (for students in my section) Individual and group presentations (for students in my section) Held weekly office hours Wrote short-answer exam questions Bootcamp instructor Foundations for Research Computing coding bootcamp Terms: fall 2019, spring 2020, winter 2022 Coordinator: Patrick Smyth Course details Open-enrollment workshop hosted by Columbia Libraries for graduate students and postdocs across the university 30 students per session (in-person), 50 students per session (online) Associated with The Carpentries Instructional responsibilities Delivered live-code lecture sessions introducing students to basic file navigation commands in Unix shell (1 3-hour session per workshop) Teaching assistant Intro to Programming in R Terms: spring 2019, spring 2020, fall 2021 Lead instructor: Jared Lander Course details Master’s level half-semester elective course in the business school Lecture class with 40-70 students depending on the term Instructional responsibilities Updated course materials Revised existing problem sets to align objectives with lecture content Re-implemented problem sets using learnr for students to complete exercises online Graded and gave written feedback on R problem sets Held weekly office hours Supported students’ work over email Science of Psychology Term: fall 2017 Lead instructor: Kathleen Taylor Course details Intro-level undergraduate class, satisfies core science requirement for non-majors Approximately 100 students Instructional responsibilities Graded exam essays Wrote multiple-choice and essay exam questions Held weekly office hours Delivered guest lecture on memory </description>
       <content>
 &lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#curriculum-developer-and-co-instructor&#34;&gt;Curriculum developer and co-instructor&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#instructor-of-record&#34; id=&#34;toc-instructor-of-record&#34;&gt;Instructor of record&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#the-science-of-psychology-explorations-and-applications&#34;&gt;The Science of Psychology: Explorations and Applications&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#psychology-department-coding-bootcamp&#34;&gt;Psychology department coding bootcamp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-science-of-psychology-explorations-and-applications&#34; id=&#34;toc-the-science-of-psychology-explorations-and-applications&#34;&gt;The Science of Psychology: Explorations and Applications&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#section-leader&#34;&gt;Section leader&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#curriculum-developer-and-co-instructor&#34; id=&#34;toc-curriculum-developer-and-co-instructor&#34;&gt;Curriculum developer and co-instructor&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#research-methods-in-psychology&#34;&gt;Research Methods in Psychology&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-science-of-psychology-explorations-and-applications-1&#34; id=&#34;toc-the-science-of-psychology-explorations-and-applications-1&#34;&gt;The Science of Psychology: Explorations and Applications&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#psychology-department-coding-bootcamp&#34; id=&#34;toc-psychology-department-coding-bootcamp&#34;&gt;Psychology department coding bootcamp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#bootcamp-instructor&#34;&gt;Bootcamp instructor&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#section-leader&#34; id=&#34;toc-section-leader&#34;&gt;Section leader&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#foundations-for-research-computing-coding-bootcamp&#34;&gt;Foundations for Research Computing coding bootcamp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#research-methods-in-psychology&#34; id=&#34;toc-research-methods-in-psychology&#34;&gt;Research Methods in Psychology&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#teaching-assistant&#34;&gt;Teaching assistant&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#bootcamp-instructor&#34; id=&#34;toc-bootcamp-instructor&#34;&gt;Bootcamp instructor&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#intro-to-programming-in-r&#34;&gt;Intro to Programming in R&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#science-of-psychology&#34;&gt;Science of Psychology&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#foundations-for-research-computing-coding-bootcamp&#34; id=&#34;toc-foundations-for-research-computing-coding-bootcamp&#34;&gt;Foundations for Research Computing coding bootcamp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#teaching-assistant&#34; id=&#34;toc-teaching-assistant&#34;&gt;Teaching assistant&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#intro-to-programming-in-r&#34; id=&#34;toc-intro-to-programming-in-r&#34;&gt;Intro to Programming in R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#science-of-psychology&#34; id=&#34;toc-science-of-psychology&#34;&gt;Science of Psychology&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;curriculum-developer-and-co-instructor&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Curriculum developer and co-instructor&lt;/h1&gt;
+&lt;div id=&#34;instructor-of-record&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Instructor of record&lt;/h1&gt;
 &lt;div id=&#34;the-science-of-psychology-explorations-and-applications&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;The Science of Psychology: Explorations and Applications&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Term: spring 2021&lt;/li&gt;
-&lt;li&gt;Lead instructor: &lt;a href=&#34;mailto:cbm2118@columbia.edu&#34;&gt;Caroline Marvin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Term: summer 2022&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div id=&#34;course-details&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Course details&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Intro-level undergraduate class, satisfies core science requirement for non-majors&lt;/li&gt;
-&lt;li&gt;Approximately 30 students, with learning teams of approximately 4 students each&lt;/li&gt;
+&lt;li&gt;12 students, with learning teams of 4 students each&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;instructional-responsibilities&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Updated curriculum
+&lt;ul&gt;
+&lt;li&gt;Defined learning objectives&lt;/li&gt;
+&lt;li&gt;Evaluated and selected readings&lt;/li&gt;
+&lt;li&gt;Edited lesson plans, pre-class quizzes, and assignment prompts&lt;/li&gt;
+&lt;li&gt;Created and edited teaching materials: slides, activity materials&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Lectured and led discussions&lt;/li&gt;
+&lt;li&gt;Graded writing assignments
+&lt;ul&gt;
+&lt;li&gt;Detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Held weekly office hours&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;curriculum-developer-and-co-instructor&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Curriculum developer and co-instructor&lt;/h1&gt;
+&lt;div id=&#34;the-science-of-psychology-explorations-and-applications-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The Science of Psychology: Explorations and Applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Term: spring 2021&lt;/li&gt;
+&lt;li&gt;Lead instructor: &lt;a href=&#34;mailto:cbm2118@columbia.edu&#34;&gt;Caroline Marvin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;course-details-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Course details&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;As above&lt;/li&gt;
+&lt;li&gt;Approximately 30 students, with learning teams of approximately 4 students each&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;instructional-responsibilities-1&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Developed curriculum, in conjunction with lead instructor
@@ -164,14 +202,14 @@
 &lt;ul&gt;
 &lt;li&gt;Terms: spring 2018, fall 2018, fall 2019, fall 2020, fall 2021&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div id=&#34;course-details-1&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;course-details-2&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Course details&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Unofficial open-enrollment workshop for psychology students at the undergrad level and above&lt;/li&gt;
 &lt;li&gt;5-20 students per session, depending on the semester&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;instructional-responsibilities-1&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;instructional-responsibilities-2&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Curriculum development
@@ -193,14 +231,14 @@
 &lt;li&gt;Terms: fall 2018, fall 2019&lt;/li&gt;
 &lt;li&gt;Lead instructor: &lt;a href=&#34;mailto:kjt2111@columbia.edu&#34;&gt;Katherine Fox-Glassman&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div id=&#34;course-details-2&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;course-details-3&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Course details&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Upper-level undergraduate class, required for the psychology major&lt;/li&gt;
 &lt;li&gt;Approximately 70 students in the entire class, with lab sections of approximately 15 students&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;instructional-responsibilities-2&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;instructional-responsibilities-3&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated course materials
@@ -232,7 +270,7 @@
 &lt;li&gt;Terms: fall 2019, spring 2020, winter 2022&lt;/li&gt;
 &lt;li&gt;Coordinator: &lt;a href=&#34;mailto:website@pbsmyth.com&#34;&gt;Patrick Smyth&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div id=&#34;course-details-3&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;course-details-4&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Course details&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Open-enrollment workshop hosted by Columbia Libraries for graduate students and postdocs across the university&lt;/li&gt;
@@ -240,7 +278,7 @@
 &lt;li&gt;Associated with The Carpentries&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;instructional-responsibilities-3&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;instructional-responsibilities-4&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Delivered live-code lecture sessions introducing students to basic file navigation commands in Unix shell (1 3-hour session per workshop)&lt;/li&gt;
@@ -257,14 +295,14 @@
 &lt;li&gt;Terms: spring 2019, spring 2020, fall 2021&lt;/li&gt;
 &lt;li&gt;Lead instructor: &lt;a href=&#34;mailto:jaredlander@caa.columbia.edu&#34;&gt;Jared Lander&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div id=&#34;course-details-4&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;course-details-5&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Course details&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Master’s level half-semester elective course in the business school&lt;/li&gt;
 &lt;li&gt;Lecture class with 40-70 students depending on the term&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;instructional-responsibilities-4&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;instructional-responsibilities-5&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated course materials
@@ -285,14 +323,14 @@
 &lt;li&gt;Term: fall 2017&lt;/li&gt;
 &lt;li&gt;Lead instructor: &lt;a href=&#34;mailto:ktaylor@barnard.edu&#34;&gt;Kathleen Taylor&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div id=&#34;course-details-5&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;course-details-6&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Course details&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Intro-level undergraduate class, satisfies core science requirement for non-majors&lt;/li&gt;
 &lt;li&gt;Approximately 100 students&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;instructional-responsibilities-5&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;instructional-responsibilities-6&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Graded exam essays&lt;/li&gt;
