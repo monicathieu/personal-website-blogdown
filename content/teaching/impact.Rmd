@@ -19,6 +19,8 @@ Comments are organized into three themes: my skills in breaking down complex top
 
 ## Clear handling of complex topics
 
+> Professor Thieu knows her stuff! You can tell she really knows the subject matter, and can answer questions in a relatable modern way. _(Science of Psychology: Explorations & Applications, Summer 2022)_
+>
 > I was very impressed how [she was] able to keep an eye on the chat, walk through the material, and switch to focusing on areas students were struggling, and in an absolutely relaxed way, which given that the material was new to people, was the perfect approach for a positive learning environment. _(Supervisor comment, Foundations for Research Computing bootcamp, Winter 2022)_
 >
 > Overall, Monica’s pacing was superb. She explained every step in great detail without lingering too long on any one point. Because she explained everything she typed, it was very easy not only to understand how the results were attained, but also why each step was chosen over any other option. Such clear explanations help students retain the information and, hopefully, make similar connections for themselves in their future projects. _(Teaching observation, Wrangling Multilevel Data in the Tidyverse coding workshop, Spring 2022)_
@@ -35,6 +37,8 @@ Comments are organized into three themes: my skills in breaking down complex top
 
 ## Energy and enthusiasm
 
+> She was very engaging and promoted an open/welcoming environment where everyone felt safe to participate. _(Science of Psychology: Explorations & Applications, Summer 2022)_
+>
 > Monica kept my enthusiasm up by validating how I felt about programming environments while also conveying information in a way that encouraged asking questions and problem-solving. _(Foundations for Research Computing bootcamp, Winter 2022)_
 >
 > Monica was a very clear speaker, and she had a very uplifting and upbeat energy. _(Science of Psychology: Explorations & Applications, Spring 2021)_

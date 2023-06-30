@@ -149,11 +149,12 @@ bibliography_entries("posters.bib") %>%
 ```{r}
 tribble(
   ~ Position, ~ Year, ~ Course, ~ Where,
+  "Instructor", "Su2023", "Data Science Lab Module", "[Spelman College WiSTEM](https://www.spelman.edu/academics/research-programs/wistem)",
   "Instructor of record", "Su2022", "PSYC 1021: Science of Psychology: Explorations & Applications", "Columbia Dept of Psychology",
   "Assistant curriculum developer & TA", "Sp2022", "PSYC 2821: Cognition in Context: Mental Health & Well-being", "Columbia Dept of Psychology",
   "Assistant curriculum developer, TA, & guest lecturer", "Sp2021", "PSYC 1021: Science of Psychology: Explorations & Applications", "Columbia Dept of Psychology",
   "Guest lecturer", "Fa2019", "[Intro to Psychology](https://www.outlier.org/products/intro-to-psychology)", "Outlier.org",
-  "[Carpentries](https://carpentries.org/)-certified instructor", "Fa2019-", "Introductory coding bootcamps", "[Columbia Foundations for Research Computing](https://rcfoundations.research.columbia.edu/)",
+  "[Carpentries](https://carpentries.org/)-certified instructor", "Fa2019-Sp2022", "Introductory coding bootcamps", "[Columbia Foundations for Research Computing](https://rcfoundations.research.columbia.edu/)",
   "TA & guest lecturer", "Sp2019, Sp2020, Fa2021", "B8144: Intro to Programming in R", "Columbia Business School",
   "TA & section leader", "Fa2018, Fa2019", "PSYC 1490: Research Methods", "Columbia Dept of Psychology",
   "Curriculum developer & instructor", "Sp2018-Fa2021", "[Intro to Programming for Social Scientists](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/workshop/)", "Columbia Dept of Psychology",
