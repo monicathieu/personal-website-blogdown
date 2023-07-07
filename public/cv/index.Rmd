@@ -35,6 +35,18 @@ In my teaching, I particularly enjoy working with learners in introductory-level
   * Data management tools: **Intermediate** in REDCap
   * Coding: **Advanced** in R; **proficient** in Python, JavaScript, Stan, Matlab, shell
 
+## Employment
+
+```{r}
+tribble(
+  ~ Position, ~ Year, ~ Institution, ~ Where, ~ Why,
+  "Postdoctoral fellow", "August 2022 -", "Emory University", "Atlanta, GA, USA", c("Project: Subcortical pathways of looming and threat", "Supervisor: Dr. Philip Kragel"),
+  "Lab manager & research coordinator", "June 2015 - July 2017", "Stanford University", "Palo Alto, CA, USA", c("Project: Healthy aging and memory", "Supervisor: Dr. Anthony Wagner")
+) %>% 
+  # flipped Where and Institution to get the institution to be bolded
+  detailed_entries(Position, Year, Where, Institution, Why)
+```
+
 ## Education
 
 ```{r}
@@ -43,7 +55,6 @@ tribble(
   "PhD in Psychology", "2022", "Columbia University", "New York, NY, USA", c("Dissertation: 'Exploring perception and categorization of social and affective stimuli'", "Advisor: Dr. Kevin Ochsner", "Sep 2017 - May 2022"),
   "BA with honors in Psychology", "2015", "Stanford University", "Palo Alto, CA, USA", c("Honors thesis: 'Chronic media multitasking and distraction: Neural substrates and mnemonic consequences'", "Advisors: Dr. Melina  Uncapher, Dr. Anthony Wagner")
 ) %>% 
-  # flipped Where and Institution to get the institution to be bolded
   detailed_entries(Degree, Year, Where, Institution, Why)
 ```
 
