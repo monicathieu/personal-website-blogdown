@@ -170,6 +170,11 @@
       "Repository": "CRAN",
       "Hash": "f20c47fd52fae58b4e377c37bb8c335b"
     },
+    "commonmark": {
+      "Package": "commonmark",
+      "Version": "1.9.0",
+      "Source": "Repository"
+    },
     "conflicted": {
       "Package": "conflicted",
       "Version": "1.2.0",
@@ -485,6 +490,11 @@
       "Repository": "CRAN",
       "Hash": "7ce2733a9826b3aeb1775d56fd305472"
     },
+    "markdown": {
+      "Package": "markdown",
+      "Version": "1.8",
+      "Source": "Repository"
+    },
     "memoise": {
       "Package": "memoise",
       "Version": "2.0.1",
@@ -662,10 +672,10 @@
     },
     "rmarkdown": {
       "Package": "rmarkdown",
-      "Version": "2.22",
+      "Version": "2.25",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "75a01be060d800ceb14e32c666cacac9"
+      "Hash": "d65e35823c817f09f4de424fcdfa812a"
     },
     "rsample": {
       "Package": "rsample",
