@@ -104,8 +104,9 @@ tribble(
 ```{r}
 tribble(
   ~Year, ~Award, ~Desc,
+  "Aug 2023 - present", "Trivia expert", "Master Minds (Game Show Network)",
   "Mar 2019", "Second place runner-up (team)", "Jeopardy! All-Star Games",
-  "May 2016", "Contestant", "500 Questions",
+  "May 2016", "Contestant", "500 Questions (ABC)",
   "Feb 2013", "Quarterfinalist", "Jeopardy! Tournament of Champions",
   "Feb 2012", "First place winner", "Jeopardy! College Championship",
   "Winter 2013", "Excellence Award", "Stanford Introductory Seminars",
