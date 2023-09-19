@@ -95,10 +95,8 @@
     },
     "blogdown": {
       "Package": "blogdown",
-      "Version": "1.17",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "7199f26829699f1ff2c8919d501ab033"
+      "Version": "1.18",
+      "Source": "Repository"
     },
     "bookdown": {
       "Package": "bookdown",
