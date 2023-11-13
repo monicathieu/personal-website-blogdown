@@ -52,7 +52,7 @@ tribble(
 ```{r}
 tribble(
   ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
-  "PhD in Psychology", "2022", "Columbia University", "New York, NY, USA", c("Dissertation: 'Exploring perception and categorization of social and affective stimuli'", "Advisor: Dr. Kevin Ochsner", "Sep 2017 - May 2022"),
+  "PhD in Psychology", "2022", "Columbia University", "New York, NY, USA", c("Dissertation: ['Exploring perception and categorization of social and affective stimuli'](https://academiccommons.columbia.edu/doi/10.7916/zjfd-fq65)", "Advisor: Dr. Kevin Ochsner", "Sep 2017 - May 2022"),
   "BA with honors in Psychology", "2015", "Stanford University", "Palo Alto, CA, USA", c("Honors thesis: 'Chronic media multitasking and distraction: Neural substrates and mnemonic consequences'", "Advisors: Dr. Melina  Uncapher, Dr. Anthony Wagner")
 ) %>% 
   detailed_entries(Degree, Year, Where, Institution, Why)
