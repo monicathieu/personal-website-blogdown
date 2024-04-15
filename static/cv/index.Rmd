@@ -104,6 +104,7 @@ tribble(
 ```{r}
 tribble(
   ~Year, ~Award, ~Desc,
+  "Mar 2024", "Quarterfinalist", "Jeopardy! Invitational Tournament",
   "Aug 2023 - present", "Trivia expert", "Master Minds (Game Show Network)",
   "Mar 2019", "Second place runner-up (team)", "Jeopardy! All-Star Games",
   "May 2016", "Contestant", "500 Questions (ABC)",
@@ -131,6 +132,9 @@ bibliography_entries("publications.bib") # %>%
 ```{r}
 tribble(
   ~Year, ~Talk, ~Conference,
+  "Feb 2024", "[Radio/podcast guest (science)](https://www.sciencefriday.com/segments/jeopardy-winner-memory-recall/)", "Science Friday",
+  "Feb 2024", "[Radio guest (science)](https://www.npr.org/2024/02/18/1232301993/a-new-study-finds-the-memory-systems-that-give-trivia-champions-an-edge)", "Weekend Edition Sunday by NPR",
+  "Feb 2024", "[News interview subject (science)](https://www.scientificamerican.com/article/jeopardy-winner-reveals-entwined-memory-systems-make-a-trivia-champion/)", "Scientific American",
   "April 2023", "Shallow neural networks for collision detection predict arousal-related differences in subjective experience", "Social and Affective Neuroscience Society Annual Meeting",
   "June 2022, Jan 2023", "Remote brain bingo: Running group games on Zoom", "Psych One Conference & TIP Coast-To-Coast Conference",
   "Nov 2021", "[Video guest (science)](https://youtu.be/VTvJOb2hJ6k)", "Wired 5 Levels: Memory",
@@ -148,7 +152,6 @@ tribble(
   )
 ```
 
-
 ## Conference posters
 
 ```{r}
@@ -161,6 +164,7 @@ bibliography_entries("posters.bib") %>%
 ```{r}
 tribble(
   ~ Position, ~ Year, ~ Course, ~ Where,
+  "Instructor of record", "Sp2024", "PSY 417: Statistics II in Psychology", "Spelman College Dept of Psychology",
   "Instructor", "Su2023", "Data Science Lab Module", "[Spelman College WiSTEM](https://www.spelman.edu/academics/research-programs/wistem)",
   "Instructor of record", "Su2022", "PSYC 1021: Science of Psychology: Explorations & Applications", "Columbia Dept of Psychology",
   "Assistant curriculum developer & TA", "Sp2022", "PSYC 2821: Cognition in Context: Mental Health & Well-being", "Columbia Dept of Psychology",
