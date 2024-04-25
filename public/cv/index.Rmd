@@ -127,23 +127,19 @@ bibliography_entries("publications.bib") # %>%
   # arrange(desc(issued))
 ```
 
-## Talks, workshops, and media
+## Presentations
+
+### Talks and workshops
 
 ```{r}
 tribble(
   ~Year, ~Talk, ~Conference,
-  "Feb 2024", "[Radio/podcast guest (science)](https://www.sciencefriday.com/segments/jeopardy-winner-memory-recall/)", "Science Friday",
-  "Feb 2024", "[Radio guest (science)](https://www.npr.org/2024/02/18/1232301993/a-new-study-finds-the-memory-systems-that-give-trivia-champions-an-edge)", "Weekend Edition Sunday by NPR",
-  "Feb 2024", "[News interview subject (science)](https://www.scientificamerican.com/article/jeopardy-winner-reveals-entwined-memory-systems-make-a-trivia-champion/)", "Scientific American",
+  "March 2024", "Advanced Data Visualization with ggplot2", "Emory Graduate Students in Psychology and Neuroscience workshop",
   "April 2023", "Shallow neural networks for collision detection predict arousal-related differences in subjective experience", "Social and Affective Neuroscience Society Annual Meeting",
   "June 2022, Jan 2023", "Remote brain bingo: Running group games on Zoom", "Psych One Conference & TIP Coast-To-Coast Conference",
-  "Nov 2021", "[Video guest (science)](https://youtu.be/VTvJOb2hJ6k)", "Wired 5 Levels: Memory",
-  "Sept 2021", "[Interview subject (teaching)](https://explaineverything.com/psychology-whiteboard-video-lessons-with-monica-thieu/)", "Explain Everything",
-  "July 2020", "[Podcast guest (science)](https://www.marketplace.org/shows/this-is-uncomfortable-reema-khrais/money-makes-me-sick/)", "This is Uncomfortable by Marketplace",
   "July 2020", "How to Prepare and Teach an R Lesson", "[NYC R Conference](https://rstats.ai/nyr/#speakers)",
   "Nov 2020", "Exploring the NYPD Civilian Complaint Database", "Columbia Foundations for Research Computing workshop",
   "Apr 2020", "Wrangling Multilevel Data in the Tidyverse", "Columbia Foundations for Research Computing workshop",
-  "July 2019", "[Podcast guest (trivia, statistics)](https://www.npr.org/transcripts/722198188)", "Planet Money by NPR"
 ) %>% 
   brief_entries(
     Talk,
@@ -152,11 +148,31 @@ tribble(
   )
 ```
 
-## Conference posters
+### Conference posters
 
 ```{r}
 bibliography_entries("posters.bib") %>% 
   arrange(desc(issued))
+```
+
+### Popular media
+
+```{r}
+tribble(
+  ~Year, ~Title, ~Publication,
+  "Feb 2024", "[Radio/podcast guest (science)](https://www.sciencefriday.com/segments/jeopardy-winner-memory-recall/)", "Science Friday",
+  "Feb 2024", "[Radio guest (science)](https://www.npr.org/2024/02/18/1232301993/a-new-study-finds-the-memory-systems-that-give-trivia-champions-an-edge)", "Weekend Edition Sunday by NPR",
+  "Feb 2024", "[News interview subject (science)](https://www.scientificamerican.com/article/jeopardy-winner-reveals-entwined-memory-systems-make-a-trivia-champion/)", "Scientific American",
+  "Nov 2021", "[Video guest (science)](https://youtu.be/VTvJOb2hJ6k)", "Wired 5 Levels: Memory",
+  "Sept 2021", "[Interview subject (teaching)](https://explaineverything.com/psychology-whiteboard-video-lessons-with-monica-thieu/)", "Explain Everything",
+  "July 2020", "[Podcast guest (science)](https://www.marketplace.org/shows/this-is-uncomfortable-reema-khrais/money-makes-me-sick/)", "This is Uncomfortable by Marketplace",
+  "July 2019", "[Podcast guest (trivia, statistics)](https://www.npr.org/transcripts/722198188)", "Planet Money by NPR"
+) %>% 
+  brief_entries(
+    Title,
+    Year, 
+    Publication
+  )
 ```
 
 ## Teaching experience
@@ -190,6 +206,17 @@ tribble(
   "Lauren Wilkins", "2020-22", "Columbia University", "Undergraduate research assistant & honors thesis student", "Class of 1939 Summer Research Fellowship, summer 2020"
 ) %>% 
   detailed_entries(Position, Year, Where, Name, Awards)
+```
+
+## Service
+
+```{r}
+tribble(
+  ~ Position, ~ Year, ~ Org, ~ Where, ~ Details,
+  "Treasurer", "2023 - present", "Emory Postdoctoral Association", "Emory University", "",
+  "Peer reviewer", " ", " ", "ad hoc", "Cerebral Cortex, Neuropsychologia"
+) %>% 
+  detailed_entries(Org, Year, Where, Position, Details)
 ```
 
 
