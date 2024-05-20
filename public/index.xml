@@ -2543,7 +2543,7 @@ avo_coefplot +
       <guid>/contact/</guid>
       <description>Email For professional (academic or consulting) and media inquiries you can reach me at mthieu -at- emory -dot- edu.
 Unfortunately I cannot respond to fan mail, but I appreciate the thought!
-Twitter I used to post about stats/science on occasion @monica_too_, but I have stepped away from Twitter since it was taken private. :(</description>
+Tipping (if you found my posts useful) I put coding tips and tutorials on my blog for free so that they can reach anyone who might find them useful! These blog posts do take a non-negligible amount of time to write.</description>
       <content>
 &lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
@@ -2552,6 +2552,12 @@ Twitter I used to post about stats/science on occasion @monica_too_, but I have 
 &lt;h1&gt;Email&lt;/h1&gt;
 &lt;p&gt;For professional (academic or consulting) and media inquiries you can reach me at &lt;a href=&#34;mailto:mthieu@emory.edu&#34;&gt;mthieu -at- emory -dot- edu&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Unfortunately I cannot respond to fan mail, but I appreciate the thought!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tipping-if-you-found-my-posts-useful&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Tipping (if you found my posts useful)&lt;/h1&gt;
+&lt;p&gt;I put coding tips and tutorials on my blog for free so that they can reach anyone who might find them useful! These blog posts do take a non-negligible amount of time to write. If my work has helped you in any way, I will happily accept a small tip if you have the financial resources.&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;
+&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;Support Me on Ko-fi&#39;, &#39;#f06f52&#39;, &#39;A0A5YCE59&#39;);kofiwidget2.draw();&lt;/script&gt;
 &lt;/div&gt;
 &lt;div id=&#34;twitter&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Twitter&lt;/h1&gt;
