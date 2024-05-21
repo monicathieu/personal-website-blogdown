@@ -6,11 +6,11 @@
     <description>Recent content in R on Monica Thieu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to install and switch between multiple R versions on a Mac</title>
       <link>/posts/2024-05-21-multiple-r-versions/</link>
-      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate>
       
       <guid>/posts/2024-05-21-multiple-r-versions/</guid>
       <description>It’s pretty easy on Linux, actually It’s also pretty easy on Windows Meanwhile, for Macs… Make your Mac “forget” that R is already installed Install the new version of R as usual Switch the active version Accessing R packages Every time I start a new analysis project, I like to try to start it on the newest available version of R so I can benefit from all those nice updates.</description>

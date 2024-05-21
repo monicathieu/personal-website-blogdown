@@ -6,7 +6,27 @@
     <description>Recent content in Tags on Monica Thieu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hacks</title>
+      <link>/tags/hacks/</link>
+      <pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/hacks/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>conda</title>
       <link>/tags/conda/</link>
@@ -18,31 +38,11 @@
     </item>
     
     <item>
-      <title>hacks</title>
-      <link>/tags/hacks/</link>
-      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/hacks/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
       <title>python</title>
       <link>/tags/python/</link>
       <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
       
       <guid>/tags/python/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>/tags/r/</link>
-      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/r/</guid>
       <description></description>
       <content></content>
     </item>

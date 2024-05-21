@@ -1,6 +1,6 @@
 ---
 title: "How to install and switch between multiple R versions on a Mac"
-date: 2024-05-20
+date: 2024-05-21
 description: "It's really quite smooth... once you have it set up."
 tags: ["hacks", "r"]
 output:

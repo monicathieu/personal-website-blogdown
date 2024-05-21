@@ -6,7 +6,7 @@
     <description>Recent content in A gentlewoman and a scholar? on Monica Thieu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Teaching statement</title>
       <link>/teaching/teaching-statement/</link>
@@ -462,85 +462,9 @@ My overarching goal in designing this syllabus was to lower barriers to student 
     </item>
     
     <item>
-      <title>Export your conda envs --from-history !</title>
-      <link>/posts/2024-05-20-conda-env-export-from-history/</link>
-      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/2024-05-20-conda-env-export-from-history/</guid>
-      <description>I’m alive! Today’s tip: Export your conda environments –from-history The scenario The problem The solution PS: Refine environment.yml by hand I’m alive! Hi everyone! It’s been 3 years since I’ve put up a blog post…
-But I’m trying to get back into the practice of documenting tips/tricks/hacks I’ve assembled in the process of managing my research computing, so that you don’t have to struggle like I did!
-Right now, I’m currently cleaning up the analysis code repository associated with my first published postdoctoral research project.</description>
-      <content>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#im-alive&#34; id=&#34;toc-im-alive&#34;&gt;I’m alive!&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#todays-tip-export-your-conda-environments-from-history&#34; id=&#34;toc-todays-tip-export-your-conda-environments-from-history&#34;&gt;Today’s tip: Export your conda environments –from-history&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#the-scenario&#34; id=&#34;toc-the-scenario&#34;&gt;The scenario&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#the-problem&#34; id=&#34;toc-the-problem&#34;&gt;The problem&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#the-solution&#34; id=&#34;toc-the-solution&#34;&gt;The solution&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#ps-refine-environment.yml-by-hand&#34; id=&#34;toc-ps-refine-environment.yml-by-hand&#34;&gt;PS: Refine environment.yml by hand&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;im-alive&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;I’m alive!&lt;/h2&gt;
-&lt;p&gt;Hi everyone! It’s been 3 years since I’ve put up a blog post…&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWN5OWl5eDk1bXd3Y2N2azAxbHg3cjFhdTNqY3JocjdvbnpidXBsbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/7xZAu81T70Uuc/giphy.gif&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
-&lt;p&gt;But I’m trying to get back into the practice of documenting tips/tricks/hacks I’ve assembled in the process of managing my research computing, so that you don’t have to struggle like I did!&lt;/p&gt;
-&lt;p&gt;Right now, I’m currently cleaning up the &lt;a href=&#34;https://github.com/ecco-laboratory/flynet-looming&#34;&gt;analysis code repository&lt;/a&gt; associated with my first published postdoctoral research project. Accordingly, I’m hoping to put up several little #hacks blog posts up to document various roadblocks/bypasses I’m encountering as I attempt to make the analysis code end-to-end reproducible for another user.&lt;/p&gt;
-&lt;p&gt;I’ve used &lt;em&gt;so&lt;/em&gt; many other scientists’/programmers’ helpful blog posts in setting up the pipeline, so I hope I can pay it forward!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;todays-tip-export-your-conda-environments-from-history&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Today’s tip: Export your conda environments –from-history&lt;/h2&gt;
-&lt;div id=&#34;the-scenario&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;The scenario&lt;/h3&gt;
-&lt;p&gt;If you use conda to manage Python package environments associated with specific analysis project folders (and you should!), you’ll know that you can export a &lt;code&gt;environment.yml&lt;/code&gt; config file that records all of the packages installed in your environment using the following terminal command:&lt;/p&gt;
-&lt;pre class=&#34;language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;conda env export &amp;gt; environment.yml&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;where &lt;code&gt;conda env export&lt;/code&gt; will generate the config information associated with your active environment, and &lt;code&gt;&amp;gt; environment.yml&lt;/code&gt; captures the text output and saves it in said file.&lt;/p&gt;
-&lt;p&gt;Then, another user (or you, but in a different folder) can recreate your package environment by saving a copy of &lt;code&gt;environment.yml&lt;/code&gt; into that new project folder and running the following in a terminal:&lt;/p&gt;
-&lt;pre class=&#34;language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;conda env create -f environment.yml&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;the-problem&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;The problem&lt;/h3&gt;
-&lt;p&gt;In a perfect world, this goes off with no hitches!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;HOWEVER,&lt;/strong&gt; if the exported environment is from a machine running a different OS than the OS on which you are creating the new environment, you are likely to run into problems if you follow these instructions as written. (I encountered this use case because I do my main work on our lab’s Linux computing cluster, but I prefer to generate ggplot figures on my local MacBook, and so I keep GitHub-tracked copies of the repository on the lab server and on my laptop.)&lt;/p&gt;
-&lt;p&gt;This is because the default behavior of &lt;code&gt;conda env export&lt;/code&gt; is to export &lt;em&gt;all installed packages&lt;/em&gt; to the config record, &lt;em&gt;including OS-specific dependencies.&lt;/em&gt; If you attempt to &lt;code&gt;conda env create&lt;/code&gt; from, say, a Mac-generated environment.yml file on a Linux machine (as I did), you will get errors that some Mac-specific packages aren’t available to install, and the environment creation will fail.&lt;/p&gt;
-&lt;p&gt;You might be thinking, “But wait! None of the Python packages I explicitly installed in my environment are OS-specific. &lt;code&gt;numpy&lt;/code&gt;/&lt;code&gt;pandas&lt;/code&gt;/&lt;code&gt;matplotlib&lt;/code&gt;/&lt;code&gt;pytorch&lt;/code&gt;/what have you are all supposed to work on any operating system!”&lt;/p&gt;
-&lt;p&gt;That is true, because the OS-specific dependencies are being hidden from you! If you just run, say, &lt;code&gt;conda install pandas&lt;/code&gt;, you can install the same pandas version on Windows, Mac, or Linux, but pandas’ underlying dependency packages (that will be installed along with the package you asked for) might differ from OS to OS.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;the-solution&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;The solution&lt;/h3&gt;
-&lt;p&gt;You can add the &lt;code&gt;--from-history&lt;/code&gt; flag to your &lt;code&gt;conda env export&lt;/code&gt; call to export a lighter-weight version of the config info to environment.yml.&lt;/p&gt;
-&lt;pre class=&#34;language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;conda env export --from-history &amp;gt; environment.yml&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Instead of writing out your package environment with all of the nitty-gritty OS-specific package info, the &lt;code&gt;--from-history&lt;/code&gt; flag tells &lt;code&gt;conda env export&lt;/code&gt; to record only the packages that were &lt;em&gt;explicitly&lt;/em&gt; installed using &lt;code&gt;conda install&lt;/code&gt;. Thus, environment.yml will record the endpoint packages you told conda to install, but not the (OS-specific) package dependencies that come along for the ride.&lt;/p&gt;
-&lt;p&gt;This is covered briefly in the &lt;a href=&#34;https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#exporting-an-environment-file-across-platforms&#34;&gt;conda docs,&lt;/a&gt; but it’s really easy to miss if you’re not specifically looking for it–hence this blog post.&lt;/p&gt;
-&lt;p&gt;Now, when you port that environment.yml onto another machine running a different operating system, you should be able to recreate the environment without running into cross-OS errors!&lt;/p&gt;
-&lt;p&gt;(Obviously, you might still get a different error. /shrug but it won’t be this one, hopefully.)&lt;/p&gt;
-&lt;p&gt;Happy environment creating!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ps-refine-environment.yml-by-hand&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;PS: Refine environment.yml by hand&lt;/h3&gt;
-&lt;p&gt;Another behavior associated with the &lt;code&gt;--from-history&lt;/code&gt; flag is that it only records the package versions (or lack thereof) that you explicitly specified upon install. For example, if you specifically called, like:&lt;/p&gt;
-&lt;pre class=&#34;language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;conda install pytorch=1.12.1&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;to install that specific version of PyTorch, then your environment.yml file will record &lt;code&gt;pytorch=1.12.1&lt;/code&gt; accordingly, but if you only called:&lt;/p&gt;
-&lt;pre class=&#34;language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;conda install pytorch&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;then your environment.yml file will only record &lt;code&gt;pytorch&lt;/code&gt; without a specific version associated.&lt;/p&gt;
-&lt;p&gt;One of the purposes of recording package environments &lt;em&gt;is&lt;/em&gt; to specify package versions, just in case a package update introduces a feature change that causes code not to reproduce as written. By default, &lt;code&gt;conda env export&lt;/code&gt; &lt;em&gt;does&lt;/em&gt; include package version information, which we want, but it includes it alongside OS-specific information which we don’t want.&lt;/p&gt;
-&lt;p&gt;If you want to add back in package version information, but it wasn’t originally caught/logged when you ran &lt;code&gt;conda env export --from-history&lt;/code&gt;, you can &lt;a href=&#34;https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually&#34;&gt;manually edit the environment.yml&lt;/a&gt; and add in package version info or specific conda channel info that will be used when someone else &lt;code&gt;conda env create&lt;/code&gt;s an environment from your file.&lt;/p&gt;
-&lt;p&gt;(Please remember that if you later run &lt;code&gt;conda env export --from-history &amp;gt; environment.yml&lt;/code&gt; again, conda will overwrite any of your hand edits to the previous environment.yml unless you specify a different path for the new environment.yml to be overwritten! And then, yes, you will need to manually re-add in your package version/channel specs. I really hate this, but it only takes a few seconds as long as you remember to do it.)&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-    </item>
-    
-    <item>
       <title>How to install and switch between multiple R versions on a Mac</title>
       <link>/posts/2024-05-21-multiple-r-versions/</link>
-      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate>
       
       <guid>/posts/2024-05-21-multiple-r-versions/</guid>
       <description>It’s pretty easy on Linux, actually It’s also pretty easy on Windows Meanwhile, for Macs… Make your Mac “forget” that R is already installed Install the new version of R as usual Switch the active version Accessing R packages Every time I start a new analysis project, I like to try to start it on the newest available version of R so I can benefit from all those nice updates.</description>
@@ -625,6 +549,82 @@ Right now, I’m currently cleaning up the analysis code repository associated w
 &lt;div id=&#34;accessing-r-packages&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Accessing R packages&lt;/h3&gt;
 &lt;p&gt;Each R version has a separate store for packages. (This makes total sense.) Once you’ve switched versions, how do you get the packages you need for the R version you’re working on? I &lt;strong&gt;strongly recommend&lt;/strong&gt; using the &lt;a href=&#34;https://rstudio.github.io/renv/articles/renv.html&#34;&gt;&lt;code&gt;renv&lt;/code&gt;&lt;/a&gt; package for managing R package environments. While renv does not handle R version switching for you (hence this blog post), its system for managing package stores already smoothly handles packages for different R versions. You can use renv as usual and you should notice no differences as long as you switch to the correct R version before opening your R project. (Conveniently, renv will throw a warning upon startup if the version of R detected is different than the version recorded in the lockfile. If you forget to switch R versions, you can close RStudio, switch the R version, and reopen it.)&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Export your conda envs --from-history !</title>
+      <link>/posts/2024-05-20-conda-env-export-from-history/</link>
+      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2024-05-20-conda-env-export-from-history/</guid>
+      <description>I’m alive! Today’s tip: Export your conda environments –from-history The scenario The problem The solution PS: Refine environment.yml by hand I’m alive! Hi everyone! It’s been 3 years since I’ve put up a blog post…
+But I’m trying to get back into the practice of documenting tips/tricks/hacks I’ve assembled in the process of managing my research computing, so that you don’t have to struggle like I did!
+Right now, I’m currently cleaning up the analysis code repository associated with my first published postdoctoral research project.</description>
+      <content>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#im-alive&#34; id=&#34;toc-im-alive&#34;&gt;I’m alive!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#todays-tip-export-your-conda-environments-from-history&#34; id=&#34;toc-todays-tip-export-your-conda-environments-from-history&#34;&gt;Today’s tip: Export your conda environments –from-history&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#the-scenario&#34; id=&#34;toc-the-scenario&#34;&gt;The scenario&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-problem&#34; id=&#34;toc-the-problem&#34;&gt;The problem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-solution&#34; id=&#34;toc-the-solution&#34;&gt;The solution&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ps-refine-environment.yml-by-hand&#34; id=&#34;toc-ps-refine-environment.yml-by-hand&#34;&gt;PS: Refine environment.yml by hand&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;im-alive&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;I’m alive!&lt;/h2&gt;
+&lt;p&gt;Hi everyone! It’s been 3 years since I’ve put up a blog post…&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWN5OWl5eDk1bXd3Y2N2azAxbHg3cjFhdTNqY3JocjdvbnpidXBsbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/7xZAu81T70Uuc/giphy.gif&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;But I’m trying to get back into the practice of documenting tips/tricks/hacks I’ve assembled in the process of managing my research computing, so that you don’t have to struggle like I did!&lt;/p&gt;
+&lt;p&gt;Right now, I’m currently cleaning up the &lt;a href=&#34;https://github.com/ecco-laboratory/flynet-looming&#34;&gt;analysis code repository&lt;/a&gt; associated with my first published postdoctoral research project. Accordingly, I’m hoping to put up several little #hacks blog posts up to document various roadblocks/bypasses I’m encountering as I attempt to make the analysis code end-to-end reproducible for another user.&lt;/p&gt;
+&lt;p&gt;I’ve used &lt;em&gt;so&lt;/em&gt; many other scientists’/programmers’ helpful blog posts in setting up the pipeline, so I hope I can pay it forward!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;todays-tip-export-your-conda-environments-from-history&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Today’s tip: Export your conda environments –from-history&lt;/h2&gt;
+&lt;div id=&#34;the-scenario&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;The scenario&lt;/h3&gt;
+&lt;p&gt;If you use conda to manage Python package environments associated with specific analysis project folders (and you should!), you’ll know that you can export a &lt;code&gt;environment.yml&lt;/code&gt; config file that records all of the packages installed in your environment using the following terminal command:&lt;/p&gt;
+&lt;pre class=&#34;language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;conda env export &amp;gt; environment.yml&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;where &lt;code&gt;conda env export&lt;/code&gt; will generate the config information associated with your active environment, and &lt;code&gt;&amp;gt; environment.yml&lt;/code&gt; captures the text output and saves it in said file.&lt;/p&gt;
+&lt;p&gt;Then, another user (or you, but in a different folder) can recreate your package environment by saving a copy of &lt;code&gt;environment.yml&lt;/code&gt; into that new project folder and running the following in a terminal:&lt;/p&gt;
+&lt;pre class=&#34;language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;conda env create -f environment.yml&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-problem&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;The problem&lt;/h3&gt;
+&lt;p&gt;In a perfect world, this goes off with no hitches!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;HOWEVER,&lt;/strong&gt; if the exported environment is from a machine running a different OS than the OS on which you are creating the new environment, you are likely to run into problems if you follow these instructions as written. (I encountered this use case because I do my main work on our lab’s Linux computing cluster, but I prefer to generate ggplot figures on my local MacBook, and so I keep GitHub-tracked copies of the repository on the lab server and on my laptop.)&lt;/p&gt;
+&lt;p&gt;This is because the default behavior of &lt;code&gt;conda env export&lt;/code&gt; is to export &lt;em&gt;all installed packages&lt;/em&gt; to the config record, &lt;em&gt;including OS-specific dependencies.&lt;/em&gt; If you attempt to &lt;code&gt;conda env create&lt;/code&gt; from, say, a Mac-generated environment.yml file on a Linux machine (as I did), you will get errors that some Mac-specific packages aren’t available to install, and the environment creation will fail.&lt;/p&gt;
+&lt;p&gt;You might be thinking, “But wait! None of the Python packages I explicitly installed in my environment are OS-specific. &lt;code&gt;numpy&lt;/code&gt;/&lt;code&gt;pandas&lt;/code&gt;/&lt;code&gt;matplotlib&lt;/code&gt;/&lt;code&gt;pytorch&lt;/code&gt;/what have you are all supposed to work on any operating system!”&lt;/p&gt;
+&lt;p&gt;That is true, because the OS-specific dependencies are being hidden from you! If you just run, say, &lt;code&gt;conda install pandas&lt;/code&gt;, you can install the same pandas version on Windows, Mac, or Linux, but pandas’ underlying dependency packages (that will be installed along with the package you asked for) might differ from OS to OS.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-solution&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;The solution&lt;/h3&gt;
+&lt;p&gt;You can add the &lt;code&gt;--from-history&lt;/code&gt; flag to your &lt;code&gt;conda env export&lt;/code&gt; call to export a lighter-weight version of the config info to environment.yml.&lt;/p&gt;
+&lt;pre class=&#34;language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;conda env export --from-history &amp;gt; environment.yml&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Instead of writing out your package environment with all of the nitty-gritty OS-specific package info, the &lt;code&gt;--from-history&lt;/code&gt; flag tells &lt;code&gt;conda env export&lt;/code&gt; to record only the packages that were &lt;em&gt;explicitly&lt;/em&gt; installed using &lt;code&gt;conda install&lt;/code&gt;. Thus, environment.yml will record the endpoint packages you told conda to install, but not the (OS-specific) package dependencies that come along for the ride.&lt;/p&gt;
+&lt;p&gt;This is covered briefly in the &lt;a href=&#34;https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#exporting-an-environment-file-across-platforms&#34;&gt;conda docs,&lt;/a&gt; but it’s really easy to miss if you’re not specifically looking for it–hence this blog post.&lt;/p&gt;
+&lt;p&gt;Now, when you port that environment.yml onto another machine running a different operating system, you should be able to recreate the environment without running into cross-OS errors!&lt;/p&gt;
+&lt;p&gt;(Obviously, you might still get a different error. /shrug but it won’t be this one, hopefully.)&lt;/p&gt;
+&lt;p&gt;Happy environment creating!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ps-refine-environment.yml-by-hand&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;PS: Refine environment.yml by hand&lt;/h3&gt;
+&lt;p&gt;Another behavior associated with the &lt;code&gt;--from-history&lt;/code&gt; flag is that it only records the package versions (or lack thereof) that you explicitly specified upon install. For example, if you specifically called, like:&lt;/p&gt;
+&lt;pre class=&#34;language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;conda install pytorch=1.12.1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;to install that specific version of PyTorch, then your environment.yml file will record &lt;code&gt;pytorch=1.12.1&lt;/code&gt; accordingly, but if you only called:&lt;/p&gt;
+&lt;pre class=&#34;language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;conda install pytorch&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;then your environment.yml file will only record &lt;code&gt;pytorch&lt;/code&gt; without a specific version associated.&lt;/p&gt;
+&lt;p&gt;One of the purposes of recording package environments &lt;em&gt;is&lt;/em&gt; to specify package versions, just in case a package update introduces a feature change that causes code not to reproduce as written. By default, &lt;code&gt;conda env export&lt;/code&gt; &lt;em&gt;does&lt;/em&gt; include package version information, which we want, but it includes it alongside OS-specific information which we don’t want.&lt;/p&gt;
+&lt;p&gt;If you want to add back in package version information, but it wasn’t originally caught/logged when you ran &lt;code&gt;conda env export --from-history&lt;/code&gt;, you can &lt;a href=&#34;https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually&#34;&gt;manually edit the environment.yml&lt;/a&gt; and add in package version info or specific conda channel info that will be used when someone else &lt;code&gt;conda env create&lt;/code&gt;s an environment from your file.&lt;/p&gt;
+&lt;p&gt;(Please remember that if you later run &lt;code&gt;conda env export --from-history &amp;gt; environment.yml&lt;/code&gt; again, conda will overwrite any of your hand edits to the previous environment.yml unless you specify a different path for the new environment.yml to be overwritten! And then, yes, you will need to manually re-add in your package version/channel specs. I really hate this, but it only takes a few seconds as long as you remember to do it.)&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
