@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>How to install and switch between multiple R versions on a Mac :: Monica Thieu</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="It&#39;s really quite smooth... once you have it set up." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="/posts/2024-05-21-multiple-r-versions/" />
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+  <link rel="stylesheet" href="/assets/red.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="/img/favicon/red.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to install and switch between multiple R versions on a Mac">
+<meta property="og:description" content="It&#39;s really quite smooth... once you have it set up." />
+<meta property="og:url" content="/posts/2024-05-21-multiple-r-versions/" />
+<meta property="og:site_name" content="Monica Thieu" />
+
+  
+    <meta property="og:image" content="/img/favicon/red.png">
+  
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2024-05-20 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="red">
+
+
+<div class="container headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Monica Thieu
+  </div>
+</a>
+
+    </div>
+    
+      <div class="menu-trigger">menu</div>
+    
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About me</a></li>
+        
+      
+        
+          <li><a href="/posts">Blog posts</a></li>
+        
+      
+        
+          <li><a href="/research">Research</a></li>
+        
+      
+        
+          <li><a href="/teaching">Teaching</a></li>
+        
+      
+      
+        <ul class="menu__sub-inner">
+          <li class="menu__sub-inner-more-trigger">Show more ▾</li>
+
+          <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="/game-shows">Game shows</a></li>
+              
+            
+              
+                <li><a href="/contact">Contact me</a></li>
+              
+            
+          </ul>
+        </ul>
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About me</a></li>
+      
+    
+      
+        <li><a href="/posts">Blog posts</a></li>
+      
+    
+      
+        <li><a href="/research">Research</a></li>
+      
+    
+      
+        <li><a href="/teaching">Teaching</a></li>
+      
+    
+      
+        <li><a href="/game-shows">Game shows</a></li>
+      
+    
+      
+        <li><a href="/contact">Contact me</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="/posts/2024-05-21-multiple-r-versions/">How to install and switch between multiple R versions on a Mac</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2024-05-20 
+      </span>
+    
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="/tags/hacks/">hacks</a>&nbsp;
+    
+    #<a href="/tags/r/">r</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  
+
+  <div class="post-content"><div>
+        
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#its-pretty-easy-on-linux-actually" id="toc-its-pretty-easy-on-linux-actually">It’s pretty easy on Linux, actually</a></li>
+<li><a href="#its-also-pretty-easy-on-windows" id="toc-its-also-pretty-easy-on-windows">It’s also pretty easy on Windows</a></li>
+<li><a href="#meanwhile-for-macs" id="toc-meanwhile-for-macs">Meanwhile, for Macs…</a>
+<ul>
+<li><a href="#make-your-mac-forget-that-r-is-already-installed" id="toc-make-your-mac-forget-that-r-is-already-installed">Make your Mac “forget” that R is already installed</a></li>
+<li><a href="#install-the-new-version-of-r-as-usual" id="toc-install-the-new-version-of-r-as-usual">Install the new version of R as usual</a></li>
+<li><a href="#switch-the-active-version" id="toc-switch-the-active-version">Switch the <em>active</em> version</a></li>
+<li><a href="#accessing-r-packages" id="toc-accessing-r-packages">Accessing R packages</a></li>
+</ul></li>
+</ul>
+</div>
+
+<p>Every time I start a new analysis project, I like to try to start it on the newest available version of R so I can benefit from all those nice updates. (Additionally, some packages update their minimum compatible R version so not only do I get the newest version of R, I also get it to play most nicely with the newest version of packages!)</p>
+<p>However, R’s default installation behavior when you use a .pkg installer on Mac is to <em>uninstall all other installed versions of R.</em> Which is quite bad for reproducibility! If my analysis code pipelines are basically independent from one another, I ought to be able to have multiple versions of R installed at the same time and associate different versions of R with different project folders.</p>
+<p>Turns out, the framework (or the Framework… you’ll see) is already there! With a few additional steps, you too can become the master of versions. (And then you’ll have no excuse for starting your new R projects using that old, dusty R version…)</p>
+<blockquote>
+<p><strong>Conda is better because it already lets you install a different python version for each environment!</strong> It definitely does. Conda does this by installing a separate copy of the Python source code (and indeed all packages) in each environment. Python’s code base isn’t massive, so thankfully this doesn’t take up crazy amounts of storage. However, you can see that there are pros and cons to maintaining a machine-wide copy of software (as base R does) and prioritizing storage efficiency vs. multiple local copies and prioritizing flexibility (as conda does).</p>
+</blockquote>
+<div id="its-pretty-easy-on-linux-actually" class="section level2">
+<h2>It’s pretty easy on Linux, actually</h2>
+<p>If you’re running on <strong>Linux,</strong> the <a href="https://docs.posit.co/resources/install-r/#optional-install-multiple-versions-of-r">default R installer behavior</a> is to install R without uninstalling existing versions. How nice! As such, you should be able to install whichever additional versions you want without following any special instructions. Then follow the Linux section of <a href="https://support.posit.co/hc/en-us/articles/200486138-Changing-R-versions-for-the-RStudio-Desktop-IDE">these official Posit instructions</a> to change which version RStudio attempts to open.</p>
+</div>
+<div id="its-also-pretty-easy-on-windows" class="section level2">
+<h2>It’s also pretty easy on Windows</h2>
+<p>If you’re running on <strong>Windows,</strong> <a href="https://forum.posit.co/t/install-multiple-r-versions-os-windows-10-and-use-them-to-cover-specific-reasons-inside-rstudiodesktop/36271">old forum posts</a> suggest that the default R installer behavior is also to install R without uninstalling existing versions. (Why does it only do it for Mac, then…?) According to the official Posit instructions linked above, you can hold down the Ctrl key when clicking the RStudio icon and a dialog box will appear asking you to choose which version of R to open RStudio with.</p>
+</div>
+<div id="meanwhile-for-macs" class="section level2">
+<h2>Meanwhile, for Macs…</h2>
+<p>Below, see the steps for maintaining and switching between simultaneously installed versions of R on a <strong>Mac.</strong></p>
+<p>These instructions were inspired by <a href="https://jacobrprice.github.io/2019/09/19/Installing-multiple-parallel-R-versions.html">Jacob Price’s blog post</a>, but updated given R/Mac OS changes over time.</p>
+<div id="make-your-mac-forget-that-r-is-already-installed" class="section level3">
+<h3>Make your Mac “forget” that R is already installed</h3>
+<p>As I mentioned before, the evil Mac .pkg installer for R will by default uninstall any other installed versions of R before installing the new one. It does this by checking through the Mac’s list of installed application packages and removing all folders listed as being installed with R.</p>
+<p>However, when the installer installs the files, it actually by default installs R into a <strong>MAJOR.MINOR</strong> version-specific subfolder of the R install folder. That means that, for example, R 4.3.2 is installed into a folder for R 4.3. R 4.4.0 would get installed into a folder for R 4.4, which does not require overwriting R 4.3.2.</p>
+<blockquote>
+<p><strong>Note:</strong> You cannot have multiple simultaneous versions of R with the same major and minor version but different patch numbers. For example, R 4.3.2 and R 4.0.0 simultaneously are okay, but R 4.3.2 and R 4.3.3 will overwrite each other’s files.</p>
+</blockquote>
+<p>Thus, the only thing you need to do to trick your Mac into not deleting other R versions is <em>to remove those R application files from the list of installed packages, without actually deleting the application files themselves.</em></p>
+<p>This way, when the new R installer runs, it doesn’t think there is any old version of R to uninstall.</p>
+<p>First, in a terminal, use the <code>pkgutil</code> command to list all of your Mac’s “known” app packages associated with R.</p>
+<pre class="language-bash"><code class="language-bash">pkgutil --pkgs=&#39;org.?-project*&#39;</code></pre>
+<pre><code>## org.R-project.arm64.R.GUI.pkg
+## org.r-project.arm64.tcltk
+## org.R-project.arm64.R.fw.pkg
+## org.r-project.arm64.texinfo</code></pre>
+<p>The <code>--pkgs</code> flag can take a regex string as shown above. This regex will find all packages that start with <code>org.r-project</code> <em>or</em> <code>org.R-project</code>. Yeah, the capital/lowercase R thing is annoying. Be careful!</p>
+<p>You’ll probably get the same package list as I did, but defer to what shows up on your own terminal (for example, if you’re running an Intel mac instead of an Apple chip Mac.)</p>
+<p>Each of these files pertains to a different component of R’s underlying application package source, including the GUI, the source code, and associated LaTeX info. Now, once for each of the file names you see, run, for example:</p>
+<pre class="language-bash"><code class="language-bash">sudo pkgutil --forget org.R-project.arm64.R.GUI.pkg</code></pre>
+<p>You need to do this once for each of the files that are listed when you run <code>pkgutil --pkgs='org.?-project*'</code>. You can make sure you’ve gotten them all by checking that no packages show up when you run that command.</p>
+<p>Now, your Mac <em>thinks</em> R is no longer installed. But when you run:</p>
+<pre class="language-bash"><code class="language-bash">ls -lh --color /Library/Frameworks/R.framework/Versions</code></pre>
+<pre><code>## total 0
+## drwxrwxr-x  6 root    admin   192B Nov  2  2023 [34m4.0[39;49m[0m
+## drwxrwxr-x  6 root    admin   192B Jul 31  2023 [34m4.2-arm64[39;49m[0m
+## drwxrwxr-x  7 root    admin   224B May 20 13:06 [34m4.3-arm64[39;49m[0m
+## drwxrwxr-x  6 root    admin   192B May 20 13:08 [34m4.4-arm64[39;49m[0m
+## lrwxr-xr-x  1 mthieu  admin    50B May 20 13:14 [35mCurrent[39;49m[0m -&gt; /Library/Frameworks/R.framework/Versions/4.3-arm64</code></pre>
+<p>You should see that the folder for your R install is still there!</p>
+<p>You can <em>also</em> see when you <code>ls -l</code> the content of <code>/Library/Frameworks/R.framework/Versions</code> that the “Current” folder, which is what RStudio calls by default, is merely symlinked to a specific R version, with multiple installed at the same time. If you change which R version “Current” points to, you could change which version RStudio runs with!</p>
+</div>
+<div id="install-the-new-version-of-r-as-usual" class="section level3">
+<h3>Install the new version of R as usual</h3>
+<p>Now that you’ve made your Mac forget that R was ever there, you can run the new .pkg R installer and install freely.</p>
+<p>(If you’re paying attention on the second screen of the .pkg installer, you will notice that it gives you <a href="https://cran.rstudio.org/doc/manuals/R-admin.html#Uninstalling-under-macOS">instructions</a> about how to “forget” the old R install if you want to stop the force-uninstall behavior. However, they don’t tell you every single pkgutil-listed package you need to <code>pkgutil --forget</code>.)</p>
+</div>
+<div id="switch-the-active-version" class="section level3">
+<h3>Switch the <em>active</em> version</h3>
+<p>I prefer the <a href="https://rud.is/rswitch/guide/">RSwitch</a> menu bar GUI utility for switching my active R version.</p>
+<p>If you want to be hardcore and do it without installing any extra software, <a href="https://support.posit.co/hc/en-us/articles/200486138-Changing-R-versions-for-the-RStudio-Desktop-IDE">the official Posit instructions</a> also tell you that you can manually symlink the “Current” folder to the R version you want to use. For example, this will set me up to use R 4.3:</p>
+<pre class="language-bash"><code class="language-bash">ln -s /Library/Frameworks/R.framework/Versions/Current /Library/Frameworks/R.framework/4.3-arm64</code></pre>
+<p>However, the Posit instructions also mention that you can use RSwitch, so no need to be a hero 😜</p>
+</div>
+<div id="accessing-r-packages" class="section level3">
+<h3>Accessing R packages</h3>
+<p>Each R version has a separate store for packages. (This makes total sense.) Once you’ve switched versions, how do you get the packages you need for the R version you’re working on? I <strong>strongly recommend</strong> using the <a href="https://rstudio.github.io/renv/articles/renv.html"><code>renv</code></a> package for managing R package environments. While renv does not handle R version switching for you (hence this blog post), its system for managing package stores already smoothly handles packages for different R versions. You can use renv as usual and you should notice no differences as long as you switch to the correct R version before opening your R project. (Conveniently, renv will throw a warning upon startup if the version of R detected is different than the version recorded in the lockfile. If you forget to switch R versions, you can close RStudio, switch the R version, and reopen it.)</p>
+</div>
+</div>
+
+      </div></div>
+
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="/posts/2024-05-20-conda-env-export-from-history/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Export your conda envs --from-history !</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="/posts/2021-07-29-cu-sipps-ggplot-aes/">
+                <span class="button__text">Practice ggplot2 aesthetics with learnr</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+
+
+
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2024 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#ff6266', 'A0A5YCE59');kofiwidget2.draw();</script>
+
+
+  
+</div>
+
+</body>
+</html>
