@@ -84,6 +84,99 @@ Right now, I’m currently cleaning up the analysis code repository associated w
     </item>
     
     <item>
+      <title>How to install and switch between multiple R versions on a Mac</title>
+      <link>/posts/2024-05-21-multiple-r-versions/</link>
+      <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2024-05-21-multiple-r-versions/</guid>
+      <description>It’s pretty easy on Linux, actually It’s also pretty easy on Windows Meanwhile, for Macs… Make your Mac “forget” that R is already installed Install the new version of R as usual Switch the active version Accessing R packages Every time I start a new analysis project, I like to try to start it on the newest available version of R so I can benefit from all those nice updates.</description>
+      <content>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#its-pretty-easy-on-linux-actually&#34; id=&#34;toc-its-pretty-easy-on-linux-actually&#34;&gt;It’s pretty easy on Linux, actually&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#its-also-pretty-easy-on-windows&#34; id=&#34;toc-its-also-pretty-easy-on-windows&#34;&gt;It’s also pretty easy on Windows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#meanwhile-for-macs&#34; id=&#34;toc-meanwhile-for-macs&#34;&gt;Meanwhile, for Macs…&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#make-your-mac-forget-that-r-is-already-installed&#34; id=&#34;toc-make-your-mac-forget-that-r-is-already-installed&#34;&gt;Make your Mac “forget” that R is already installed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#install-the-new-version-of-r-as-usual&#34; id=&#34;toc-install-the-new-version-of-r-as-usual&#34;&gt;Install the new version of R as usual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#switch-the-active-version&#34; id=&#34;toc-switch-the-active-version&#34;&gt;Switch the &lt;em&gt;active&lt;/em&gt; version&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#accessing-r-packages&#34; id=&#34;toc-accessing-r-packages&#34;&gt;Accessing R packages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Every time I start a new analysis project, I like to try to start it on the newest available version of R so I can benefit from all those nice updates. (Additionally, some packages update their minimum compatible R version so not only do I get the newest version of R, I also get it to play most nicely with the newest version of packages!)&lt;/p&gt;
+&lt;p&gt;However, R’s default installation behavior when you use a .pkg installer on Mac is to &lt;em&gt;uninstall all other installed versions of R.&lt;/em&gt; Which is quite bad for reproducibility! If my analysis code pipelines are basically independent from one another, I ought to be able to have multiple versions of R installed at the same time and associate different versions of R with different project folders.&lt;/p&gt;
+&lt;p&gt;Turns out, the framework (or the Framework… you’ll see) is already there! With a few additional steps, you too can become the master of versions. (And then you’ll have no excuse for starting your new R projects using that old, dusty R version…)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Conda is better because it already lets you install a different python version for each environment!&lt;/strong&gt; It definitely does. Conda does this by installing a separate copy of the Python source code (and indeed all packages) in each environment. Python’s code base isn’t massive, so thankfully this doesn’t take up crazy amounts of storage. However, you can see that there are pros and cons to maintaining a machine-wide copy of software (as base R does) and prioritizing storage efficiency vs. multiple local copies and prioritizing flexibility (as conda does).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div id=&#34;its-pretty-easy-on-linux-actually&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;It’s pretty easy on Linux, actually&lt;/h2&gt;
+&lt;p&gt;If you’re running on &lt;strong&gt;Linux,&lt;/strong&gt; the &lt;a href=&#34;https://docs.posit.co/resources/install-r/#optional-install-multiple-versions-of-r&#34;&gt;default R installer behavior&lt;/a&gt; is to install R without uninstalling existing versions. How nice! As such, you should be able to install whichever additional versions you want without following any special instructions. Then follow the Linux section of &lt;a href=&#34;https://support.posit.co/hc/en-us/articles/200486138-Changing-R-versions-for-the-RStudio-Desktop-IDE&#34;&gt;these official Posit instructions&lt;/a&gt; to change which version RStudio attempts to open.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;its-also-pretty-easy-on-windows&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;It’s also pretty easy on Windows&lt;/h2&gt;
+&lt;p&gt;If you’re running on &lt;strong&gt;Windows,&lt;/strong&gt; &lt;a href=&#34;https://forum.posit.co/t/install-multiple-r-versions-os-windows-10-and-use-them-to-cover-specific-reasons-inside-rstudiodesktop/36271&#34;&gt;old forum posts&lt;/a&gt; suggest that the default R installer behavior is also to install R without uninstalling existing versions. (Why does it only do it for Mac, then…?) According to the official Posit instructions linked above, you can hold down the Ctrl key when clicking the RStudio icon and a dialog box will appear asking you to choose which version of R to open RStudio with.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;meanwhile-for-macs&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Meanwhile, for Macs…&lt;/h2&gt;
+&lt;p&gt;Below, see the steps for maintaining and switching between simultaneously installed versions of R on a &lt;strong&gt;Mac.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;These instructions were inspired by &lt;a href=&#34;https://jacobrprice.github.io/2019/09/19/Installing-multiple-parallel-R-versions.html&#34;&gt;Jacob Price’s blog post&lt;/a&gt;, but updated given R/Mac OS changes over time.&lt;/p&gt;
+&lt;div id=&#34;make-your-mac-forget-that-r-is-already-installed&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Make your Mac “forget” that R is already installed&lt;/h3&gt;
+&lt;p&gt;As I mentioned before, the evil Mac .pkg installer for R will by default uninstall any other installed versions of R before installing the new one. It does this by checking through the Mac’s list of installed application packages and removing all folders listed as being installed with R.&lt;/p&gt;
+&lt;p&gt;However, when the installer installs the files, it actually by default installs R into a &lt;strong&gt;MAJOR.MINOR&lt;/strong&gt; version-specific subfolder of the R install folder. That means that, for example, R 4.3.2 is installed into a folder for R 4.3. R 4.4.0 would get installed into a folder for R 4.4, which does not require overwriting R 4.3.2.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You cannot have multiple simultaneous versions of R with the same major and minor version but different patch numbers. For example, R 4.3.2 and R 4.0.0 simultaneously are okay, but R 4.3.2 and R 4.3.3 will overwrite each other’s files.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Thus, the only thing you need to do to trick your Mac into not deleting other R versions is &lt;em&gt;to remove those R application files from the list of installed packages, without actually deleting the application files themselves.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This way, when the new R installer runs, it doesn’t think there is any old version of R to uninstall.&lt;/p&gt;
+&lt;p&gt;First, in a terminal, use the &lt;code&gt;pkgutil&lt;/code&gt; command to list all of your Mac’s “known” app packages associated with R.&lt;/p&gt;
+&lt;pre class=&#34;language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;pkgutil --pkgs=&amp;#39;org.?-project*&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## org.R-project.arm64.R.GUI.pkg
+## org.r-project.arm64.tcltk
+## org.R-project.arm64.R.fw.pkg
+## org.r-project.arm64.texinfo&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;--pkgs&lt;/code&gt; flag can take a regex string as shown above. This regex will find all packages that start with &lt;code&gt;org.r-project&lt;/code&gt; &lt;em&gt;or&lt;/em&gt; &lt;code&gt;org.R-project&lt;/code&gt;. Yeah, the capital/lowercase R thing is annoying. Be careful!&lt;/p&gt;
+&lt;p&gt;You’ll probably get the same package list as I did, but defer to what shows up on your own terminal (for example, if you’re running an Intel mac instead of an Apple chip Mac.)&lt;/p&gt;
+&lt;p&gt;Each of these files pertains to a different component of R’s underlying application package source, including the GUI, the source code, and associated LaTeX info. Now, once for each of the file names you see, run, for example:&lt;/p&gt;
+&lt;pre class=&#34;language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo pkgutil --forget org.R-project.arm64.R.GUI.pkg&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You need to do this once for each of the files that are listed when you run &lt;code&gt;pkgutil --pkgs=&#39;org.?-project*&#39;&lt;/code&gt;. You can make sure you’ve gotten them all by checking that no packages show up when you run that command.&lt;/p&gt;
+&lt;p&gt;Now, your Mac &lt;em&gt;thinks&lt;/em&gt; R is no longer installed. But when you run:&lt;/p&gt;
+&lt;pre class=&#34;language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;ls -lh --color /Library/Frameworks/R.framework/Versions&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## total 0
+## drwxrwxr-x  6 root    admin   192B Nov  2  2023 [34m4.0[39;49m[0m
+## drwxrwxr-x  6 root    admin   192B Jul 31  2023 [34m4.2-arm64[39;49m[0m
+## drwxrwxr-x  7 root    admin   224B May 20 13:06 [34m4.3-arm64[39;49m[0m
+## drwxrwxr-x  6 root    admin   192B May 20 13:08 [34m4.4-arm64[39;49m[0m
+## lrwxr-xr-x  1 mthieu  admin    50B May 20 13:14 [35mCurrent[39;49m[0m -&amp;gt; /Library/Frameworks/R.framework/Versions/4.3-arm64&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You should see that the folder for your R install is still there!&lt;/p&gt;
+&lt;p&gt;You can &lt;em&gt;also&lt;/em&gt; see when you &lt;code&gt;ls -l&lt;/code&gt; the content of &lt;code&gt;/Library/Frameworks/R.framework/Versions&lt;/code&gt; that the “Current” folder, which is what RStudio calls by default, is merely symlinked to a specific R version, with multiple installed at the same time. If you change which R version “Current” points to, you could change which version RStudio runs with!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;install-the-new-version-of-r-as-usual&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Install the new version of R as usual&lt;/h3&gt;
+&lt;p&gt;Now that you’ve made your Mac forget that R was ever there, you can run the new .pkg R installer and install freely.&lt;/p&gt;
+&lt;p&gt;(If you’re paying attention on the second screen of the .pkg installer, you will notice that it gives you &lt;a href=&#34;https://cran.rstudio.org/doc/manuals/R-admin.html#Uninstalling-under-macOS&#34;&gt;instructions&lt;/a&gt; about how to “forget” the old R install if you want to stop the force-uninstall behavior. However, they don’t tell you every single pkgutil-listed package you need to &lt;code&gt;pkgutil --forget&lt;/code&gt;.)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;switch-the-active-version&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Switch the &lt;em&gt;active&lt;/em&gt; version&lt;/h3&gt;
+&lt;p&gt;I prefer the &lt;a href=&#34;https://rud.is/rswitch/guide/&#34;&gt;RSwitch&lt;/a&gt; menu bar GUI utility for switching my active R version.&lt;/p&gt;
+&lt;p&gt;If you want to be hardcore and do it without installing any extra software, &lt;a href=&#34;https://support.posit.co/hc/en-us/articles/200486138-Changing-R-versions-for-the-RStudio-Desktop-IDE&#34;&gt;the official Posit instructions&lt;/a&gt; also tell you that you can manually symlink the “Current” folder to the R version you want to use. For example, this will set me up to use R 4.3:&lt;/p&gt;
+&lt;pre class=&#34;language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;ln -s /Library/Frameworks/R.framework/Versions/Current /Library/Frameworks/R.framework/4.3-arm64&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;However, the Posit instructions also mention that you can use RSwitch, so no need to be a hero 😜&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;accessing-r-packages&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Accessing R packages&lt;/h3&gt;
+&lt;p&gt;Each R version has a separate store for packages. (This makes total sense.) Once you’ve switched versions, how do you get the packages you need for the R version you’re working on? I &lt;strong&gt;strongly recommend&lt;/strong&gt; using the &lt;a href=&#34;https://rstudio.github.io/renv/articles/renv.html&#34;&gt;&lt;code&gt;renv&lt;/code&gt;&lt;/a&gt; package for managing R package environments. While renv does not handle R version switching for you (hence this blog post), its system for managing package stores already smoothly handles packages for different R versions. You can use renv as usual and you should notice no differences as long as you switch to the correct R version before opening your R project. (Conveniently, renv will throw a warning upon startup if the version of R detected is different than the version recorded in the lockfile. If you forget to switch R versions, you can close RStudio, switch the R version, and reopen it.)&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    </item>
+    
+    <item>
       <title>Setting up this website</title>
       <link>/posts/2020-08-10-setting-up-this-website/</link>
       <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
