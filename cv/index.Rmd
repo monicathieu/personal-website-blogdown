@@ -27,13 +27,13 @@ In my postdoctoral research, I use behavioral, modeling, and fMRI research metho
 
 In my PhD research, I used behavioral and fMRI research methods to investigate how people perceive and categorize various social (others' facial age and gender) and emotional (elicited experiences) stimuli.
 
-In my teaching, I particularly enjoy working with learners in introductory-level courses in content (introductory psychology) and in methods (coding for behavioral sciences).
+In my teaching, I particularly enjoy working with introductory-level learners in content (introductory psychology) and in methods (coding for behavioral sciences).
 
 * Method competencies:
-  * Functional neuroimaging: **Intermediate** in nipype, SPM, FSL, **proficient** in fmriprep
+  * Functional neuroimaging: **Intermediate** in nipype, SPM, FSL; **proficient** in fmriprep
   * Behavioral tasks: **Advanced** in Gorilla and Qualtrics; **proficient** in PsychoPy
   * Data management tools: **Intermediate** in REDCap
-  * Coding: **Advanced** in R; **proficient** in Python, JavaScript, Stan, Matlab, shell
+  * Coding: **Advanced** in R; **intermediate** in Python; **proficient** in JavaScript, Stan, Matlab, shell
 
 ## Employment
 
@@ -214,7 +214,7 @@ tribble(
 tribble(
   ~ Position, ~ Year, ~ Org, ~ Where, ~ Details,
   "Treasurer", "2023 - present", "Emory Postdoctoral Association", "Emory University", "",
-  "Peer reviewer", " ", " ", "ad hoc", "Cerebral Cortex, Neuropsychologia"
+  "Peer reviewer", " ", " ", "ad hoc", "Cerebral Cortex; Neuropsychologia; Social, Cognitive, & Affective Neuroscience"
 ) %>% 
   detailed_entries(Org, Year, Where, Position, Details)
 ```
