@@ -79,12 +79,14 @@ ls -lh /Library/Frameworks/R.framework/Versions&lt;/code&gt;&lt;/pre&gt;
 ## drwxrwxr-x  6 root    admin   192B May 20 13:08 4.4-arm64
 ## lrwxr-xr-x  1 mthieu  admin    50B May 20 13:14 Current -&amp;gt; /Library/Frameworks/R.framework/Versions/4.3-arm64&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You should see that the folder for your existing R install is still there!&lt;/p&gt;
-&lt;p&gt;You can &lt;em&gt;also&lt;/em&gt; see when you &lt;code&gt;ls -l&lt;/code&gt; the content of &lt;code&gt;/Library/Frameworks/R.framework/Versions&lt;/code&gt; that the “Current” folder, which is what RStudio calls by default, is merely symlinked to a specific R version, with multiple installed at the same time. If you change which R version “Current” points to, you could change which version RStudio runs with!&lt;/p&gt;
+&lt;p&gt;You can &lt;em&gt;also&lt;/em&gt; see when you &lt;code&gt;ls -l&lt;/code&gt; the content of &lt;code&gt;/Library/Frameworks/R.framework/Versions&lt;/code&gt; that the “Current” folder, which is what RStudio calls by default, is merely &lt;em&gt;symlinked&lt;/em&gt; to a specific R version (see that arrow pointing to one of the version-specific R folders), as opposed to there being only one “Current” folder that is fully overwritten every time you install R. If you change which R version “Current” points to, you could change which version RStudio runs with!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;install-the-new-version-of-r-as-usual&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Install the new version of R as usual&lt;/h3&gt;
 &lt;p&gt;Now that you’ve made your Mac forget that R was ever there, you can run the new .pkg R installer and install freely.&lt;/p&gt;
-&lt;p&gt;(If you’re paying attention on the second screen of the .pkg installer, you will notice that it gives you &lt;a href=&#34;https://cran.rstudio.org/doc/manuals/R-admin.html#Uninstalling-under-macOS&#34;&gt;instructions&lt;/a&gt; about how to “forget” the old R install if you want to stop the force-uninstall behavior. However, they don’t tell you every single pkgutil-listed package you need to &lt;code&gt;pkgutil --forget&lt;/code&gt;.)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you’re paying attention on the second screen of the .pkg installer, you will notice that it gives you &lt;a href=&#34;https://cran.rstudio.org/doc/manuals/R-admin.html#Uninstalling-under-macOS&#34;&gt;instructions&lt;/a&gt; about how to “forget” the old R install if you want to stop the force-uninstall behavior. However, they don’t tell you every single pkgutil-listed package you need to &lt;code&gt;pkgutil --forget&lt;/code&gt;. If you don’t forget all of the R-associated packages, the installer will overwrite &lt;em&gt;some&lt;/em&gt; of the existing R application files, which renders the previous R version “incomplete” and unusable. That’s why you do need to check for every possible R-related package file using &lt;code&gt;pkgutil --pkgs&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div id=&#34;switch-the-active-version&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Switch the &lt;em&gt;active&lt;/em&gt; version&lt;/h3&gt;
