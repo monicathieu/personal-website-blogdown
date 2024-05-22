@@ -50,7 +50,7 @@ pkgutil --pkgs='org.?-project*'
 
 The `--pkgs` flag can take a regex string as shown above. This regex will find all packages that start with `org.r-project` _or_ `org.R-project`. Yeah, the capital/lowercase R thing is annoying. Be careful!
 
-You'll probably get the same package list as I did, but defer to what shows up on your own terminal (for example, if you're running an Intel mac instead of an Apple chip Mac.)
+You'll probably get the same package list as I did, but defer to what shows up on your own terminal (for example, if you're running an Intel Mac instead of an Apple chip Mac.)
 
 Each of these files pertains to a different component of R's underlying application package source, including the GUI, the source code, and associated LaTeX info. Now, once for each of the file names you see, run, for example:
 
@@ -63,29 +63,32 @@ You need to do this once for each of the files that are listed when you run `pkg
 Now, your Mac _thinks_ R is no longer installed. But when you run:
 
 ```{bash}
-ls -lh --color /Library/Frameworks/R.framework/Versions
+# These are the R versions that I have installed
+ls -lh /Library/Frameworks/R.framework/Versions
 ```
-You should see that the folder for your R install is still there!
 
-You can _also_ see when you `ls -l` the content of `/Library/Frameworks/R.framework/Versions` that the "Current" folder, which is what RStudio calls by default, is merely symlinked to a specific R version, with multiple installed at the same time. If you change which R version "Current" points to, you could change which version RStudio runs with!
+You should see that the folder for your existing R install is still there!
+
+You can _also_ see when you `ls -l` the content of `/Library/Frameworks/R.framework/Versions` that the "Current" folder, which is what RStudio calls by default, is merely _symlinked_ to a specific R version (see that arrow pointing to one of the version-specific R folders), as opposed to there being only one "Current" folder that is fully overwritten every time you install R. If you change which R version "Current" points to, you could change which version RStudio runs with!
 
 ### Install the new version of R as usual
 
 Now that you've made your Mac forget that R was ever there, you can run the new .pkg R installer and install freely.
 
-(If you're paying attention on the second screen of the .pkg installer, you will notice that it gives you [instructions](https://cran.rstudio.org/doc/manuals/R-admin.html#Uninstalling-under-macOS) about how to "forget" the old R install if you want to stop the force-uninstall behavior. However, they don't tell you every single pkgutil-listed package you need to `pkgutil --forget`.)
+> If you're paying attention on the second screen of the .pkg installer, you will notice that it gives you [instructions](https://cran.rstudio.org/doc/manuals/R-admin.html#Uninstalling-under-macOS) about how to "forget" the old R install if you want to stop the force-uninstall behavior. However, they don't tell you every single pkgutil-listed package you need to `pkgutil --forget`. If you don't forget all of the R-associated packages, the installer will overwrite _some_ of the existing R application files, which renders the previous R version "incomplete" and unusable. That's why you do need to check for every possible R-related package file using `pkgutil --pkgs`.
 
 ### Switch the _active_ version
 
 I prefer the [RSwitch](https://rud.is/rswitch/guide/) menu bar GUI utility for switching my active R version.
 
-If you want to be hardcore and do it without installing any extra software, [the official Posit instructions](https://support.posit.co/hc/en-us/articles/200486138-Changing-R-versions-for-the-RStudio-Desktop-IDE) also tell you that you can manually symlink the "Current" folder to the R version you want to use. For example, this will set me up to use R 4.3:
+If you want to be hardcore and do it without installing any extra software, [the official Posit instructions](https://support.posit.co/hc/en-us/articles/200486138-Changing-R-versions-for-the-RStudio-Desktop-IDE) also tell you that you can manually [symlink](https://ss64.com/mac/ln.html) the "Current" folder to the R version you want to use. For example, this will set me up to use R 4.3:
 
 ```bash
-ln -s /Library/Frameworks/R.framework/Versions/Current /Library/Frameworks/R.framework/4.3-arm64
+# remember, ln syntax puts source first, then link destination
+ln -s /Library/Frameworks/R.framework/Versions/4.3-arm64 /Library/Frameworks/R.framework/Versions/Current
 ```
 
-However, the Posit instructions also mention that you can use RSwitch, so no need to be a hero 😜
+However, the Posit instructions also mention that you can use RSwitch, so no need to be a hero and use command line to switch every time 😜
 
 ### Accessing R packages
 

@@ -519,19 +519,20 @@ My overarching goal in designing this syllabus was to lower barriers to student 
 ## org.R-project.arm64.R.fw.pkg
 ## org.r-project.arm64.texinfo&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The &lt;code&gt;--pkgs&lt;/code&gt; flag can take a regex string as shown above. This regex will find all packages that start with &lt;code&gt;org.r-project&lt;/code&gt; &lt;em&gt;or&lt;/em&gt; &lt;code&gt;org.R-project&lt;/code&gt;. Yeah, the capital/lowercase R thing is annoying. Be careful!&lt;/p&gt;
-&lt;p&gt;You’ll probably get the same package list as I did, but defer to what shows up on your own terminal (for example, if you’re running an Intel mac instead of an Apple chip Mac.)&lt;/p&gt;
+&lt;p&gt;You’ll probably get the same package list as I did, but defer to what shows up on your own terminal (for example, if you’re running an Intel Mac instead of an Apple chip Mac.)&lt;/p&gt;
 &lt;p&gt;Each of these files pertains to a different component of R’s underlying application package source, including the GUI, the source code, and associated LaTeX info. Now, once for each of the file names you see, run, for example:&lt;/p&gt;
 &lt;pre class=&#34;language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo pkgutil --forget org.R-project.arm64.R.GUI.pkg&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You need to do this once for each of the files that are listed when you run &lt;code&gt;pkgutil --pkgs=&#39;org.?-project*&#39;&lt;/code&gt;. You can make sure you’ve gotten them all by checking that no packages show up when you run that command.&lt;/p&gt;
 &lt;p&gt;Now, your Mac &lt;em&gt;thinks&lt;/em&gt; R is no longer installed. But when you run:&lt;/p&gt;
-&lt;pre class=&#34;language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;ls -lh --color /Library/Frameworks/R.framework/Versions&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;# These are the R versions that I have installed
+ls -lh /Library/Frameworks/R.framework/Versions&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## total 0
-## drwxrwxr-x  6 root    admin   192B Nov  2  2023 [34m4.0[39;49m[0m
-## drwxrwxr-x  6 root    admin   192B Jul 31  2023 [34m4.2-arm64[39;49m[0m
-## drwxrwxr-x  7 root    admin   224B May 20 13:06 [34m4.3-arm64[39;49m[0m
-## drwxrwxr-x  6 root    admin   192B May 20 13:08 [34m4.4-arm64[39;49m[0m
-## lrwxr-xr-x  1 mthieu  admin    50B May 20 13:14 [35mCurrent[39;49m[0m -&amp;gt; /Library/Frameworks/R.framework/Versions/4.3-arm64&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;You should see that the folder for your R install is still there!&lt;/p&gt;
+## drwxrwxr-x  6 root    admin   192B Nov  2  2023 4.0
+## drwxrwxr-x  6 root    admin   192B Jul 31  2023 4.2-arm64
+## drwxrwxr-x  7 root    admin   224B May 20 13:06 4.3-arm64
+## drwxrwxr-x  6 root    admin   192B May 20 13:08 4.4-arm64
+## lrwxr-xr-x  1 mthieu  admin    50B May 20 13:14 Current -&amp;gt; /Library/Frameworks/R.framework/Versions/4.3-arm64&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You should see that the folder for your existing R install is still there!&lt;/p&gt;
 &lt;p&gt;You can &lt;em&gt;also&lt;/em&gt; see when you &lt;code&gt;ls -l&lt;/code&gt; the content of &lt;code&gt;/Library/Frameworks/R.framework/Versions&lt;/code&gt; that the “Current” folder, which is what RStudio calls by default, is merely symlinked to a specific R version, with multiple installed at the same time. If you change which R version “Current” points to, you could change which version RStudio runs with!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;install-the-new-version-of-r-as-usual&#34; class=&#34;section level3&#34;&gt;
@@ -542,9 +543,10 @@ My overarching goal in designing this syllabus was to lower barriers to student 
 &lt;div id=&#34;switch-the-active-version&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Switch the &lt;em&gt;active&lt;/em&gt; version&lt;/h3&gt;
 &lt;p&gt;I prefer the &lt;a href=&#34;https://rud.is/rswitch/guide/&#34;&gt;RSwitch&lt;/a&gt; menu bar GUI utility for switching my active R version.&lt;/p&gt;
-&lt;p&gt;If you want to be hardcore and do it without installing any extra software, &lt;a href=&#34;https://support.posit.co/hc/en-us/articles/200486138-Changing-R-versions-for-the-RStudio-Desktop-IDE&#34;&gt;the official Posit instructions&lt;/a&gt; also tell you that you can manually symlink the “Current” folder to the R version you want to use. For example, this will set me up to use R 4.3:&lt;/p&gt;
-&lt;pre class=&#34;language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;ln -s /Library/Frameworks/R.framework/Versions/Current /Library/Frameworks/R.framework/4.3-arm64&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;However, the Posit instructions also mention that you can use RSwitch, so no need to be a hero 😜&lt;/p&gt;
+&lt;p&gt;If you want to be hardcore and do it without installing any extra software, &lt;a href=&#34;https://support.posit.co/hc/en-us/articles/200486138-Changing-R-versions-for-the-RStudio-Desktop-IDE&#34;&gt;the official Posit instructions&lt;/a&gt; also tell you that you can manually &lt;a href=&#34;https://ss64.com/mac/ln.html&#34;&gt;symlink&lt;/a&gt; the “Current” folder to the R version you want to use. For example, this will set me up to use R 4.3:&lt;/p&gt;
+&lt;pre class=&#34;language-bash&#34;&gt;&lt;code class=&#34;language-bash&#34;&gt;# remember, ln syntax puts source first, then link destination
+ln -s /Library/Frameworks/R.framework/Versions/4.3-arm64 /Library/Frameworks/R.framework/Versions/Current&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;However, the Posit instructions also mention that you can use RSwitch, so no need to be a hero and use command line to switch every time 😜&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;accessing-r-packages&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Accessing R packages&lt;/h3&gt;
