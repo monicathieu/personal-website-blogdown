@@ -17,6 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - Institution: Spelman College
 - Term: spring 2024
+- Supervisor contact: [Jimmeka Guillory Wright](mailto:jguillo1@spelman.edu)
 
 ### Course details
 
