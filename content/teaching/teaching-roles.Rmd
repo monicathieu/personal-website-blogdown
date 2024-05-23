@@ -13,6 +13,31 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Instructor of record
 
+## PSY 417 -- Statistics II in Psychology
+
+- Institution: Spelman College
+- Term: spring 2024
+
+### Course details
+
+- Upper-level undergraduate class, satisfies Advanced Measurement requirement for psychology majors
+- Statistics with a regression framework
+- Analysis techniques taught in R/RStudio Cloud
+- 25 students
+
+### Instructional responsibilities
+
+- Wrote curriculum
+  - Defined learning objectives
+  - Evaluated and selected readings
+  - Wrote lesson plans, pre-class reading quizzes, and problem sets
+  - Created teaching materials: slides, activity materials, R notebooks
+- Lectured, live-coded, and supervised activities
+- Graded assignments
+  - Both multiple-choice/short answer assignments and R-based computational assignments
+  - Gave detailed formative feedback on problem sets using single-point-style rubrics
+- Held weekly office hours
+
 ## PSYC 1021 -- The Science of Psychology: Explorations and Applications
 
 - Institution: Columbia University
@@ -32,7 +57,7 @@ knitr::opts_chunk$set(echo = TRUE)
   - Created and edited teaching materials: slides, activity materials
 - Lectured and led discussions
 - Graded writing assignments
-  - Detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics
+  - Gave detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics
 - Held weekly office hours
 
 ---
@@ -82,7 +107,7 @@ knitr::opts_chunk$set(echo = TRUE)
   - Created teaching materials: slides, activity materials, mini-lecture videos
 - Guest lecturing (approximately 1/4 of instructional modules)
 - Graded writing assignments
-  - Detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics
+  - Gave detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics
 - Held weekly office hours
 
 ---
