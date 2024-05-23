@@ -12,16 +12,16 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/teaching/teaching-statement/</guid>
-      <description>As a graduate teacher-scholar, my teaching development has been intertwined with my development as a researcher. In particular, I have learned about the ways in which effective research and teaching do not come from “eureka” moments of intellectual brilliance, but, instead, depend on thoughtful planning and structures that support success from the bottom up. Just as rigorous study design and statistical analysis are necessary to answer a research question, positive early experiences and supportive course structures are necessary for students to enter a discipline and thrive within it.</description>
+      <description>As a teacher-scholar, my teaching development has been intertwined with my development as a researcher. In particular, I have learned about the ways in which effective research and teaching do not come from “eureka” moments of intellectual brilliance, but, instead, depend on thoughtful planning and structures that support success from the bottom up. Just as rigorous study design and statistical analysis are necessary to answer a research question, positive early experiences and supportive course structures are necessary for students to enter a discipline and thrive within it.</description>
       <content>
 &lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;As a graduate teacher-scholar, my teaching development has been intertwined with my development as a researcher. In particular, I have learned about the ways in which effective research and teaching do not come from “eureka” moments of intellectual brilliance, but, instead, depend on thoughtful planning and structures that support success from the bottom up. Just as rigorous study design and statistical analysis are necessary to answer a research question, positive early experiences and supportive course structures are necessary for students to enter a discipline and thrive within it. I focus on designing and teaching &lt;em&gt;introductory classes,&lt;/em&gt; where I can inspire new students to study psychology and scientific computing. In those classes, I implement &lt;em&gt;accessible course policies&lt;/em&gt; to sustain student success throughout the semester. Finally, I maintain &lt;em&gt;comprehensive course materials&lt;/em&gt; to standardize my pedagogy and share those materials to support my peers’ teaching.&lt;/p&gt;
-&lt;p&gt;I strive to nurture novice scientists’ critical thinking skills in introductory courses. Intro-level instructors have the privilege and responsibility of serving as the welcome committee for students entering a new academic discipline. Psychology in particular can serve as a gateway to STEM for students curious about human behavior, and as a core college STEM experience for students fulfilling breadth requirements. I am committed to balancing the needs of these two groups of students through intro psych classes that are rigorous yet accessible. For example, I collaborated with Dr. Caroline Marvin in developing a new team-based introductory psychology course taught for the first time in Spring 2021, and which I taught as instructor of record after graduation in Summer 2022. I helped select readings, develop lesson plans, and draft assignments, paying special attention to craft learning objectives that were simultaneously appropriate for prospective psychology/neuroscience majors and for general-education students. For instance, I wrote the course objective “Evaluate the accuracy of popular news reports about empirical research and the appropriateness of graphs and other visualizations of data” with an eye towards the fact that all students, irrespective of major, would encounter science and data in the news, and would thus benefit from learning to evaluate such reports. By the end of the class, many of our students reported being inspired to consider a psychology major, while others reflected positively on the skills and content they planned to apply back to their work in other majors.&lt;/p&gt;
-&lt;p&gt;Going beyond content, I build accessibility into my course policies to sustain student success. For example, students juggle work from multiple classes along with demands from outside the classroom. Students making a good-faith effort should not have to choose between well-being and submitting assignments on time if they have to choose between finishing a paper and studying for an exam that are due on the same day, or they get sick, or they encounter any other unexpected obstacle. As a teaching assistant, I have proposed and developed late assignment policies that allow students flexibility in managing their own deadlines, without burdening the teaching team. For example, as TA for Intro to Programming in R in the Columbia Business School in spring 2019, I designed a two-tiered deadline system where each homework assignment had an on-time deadline and a late submission deadline one week later. A student’s first late assignment would be graded equivalent to an on-time submission, and subsequent late submissions would be marked with a small deduction increasing with the number of late submissions (5%, 10%, …). I designed this structure to allow students one penalty-free late submission to take at their convenience, without having to seek approval from the teaching team. At the same time, the late submission deadline allowed me to structure my grading schedule knowing that all submissions for a given assignment would be ready to grade by a set date. Students reported that they appreciated the built-in flexibility–from what they told me, some students used their late submission for illness, some for emergency travel, and some for conflicting assignment deadlines. Further, students entering the course with no programming experience were able to use the two-tiered deadline system for extra time and assistance on assignments to help them stay on top of course concepts. In this way, I was able to leverage course logistics to support student learning, especially for a quantitative course where students might bring insecurity about their own abilities into the classroom.&lt;/p&gt;
-&lt;p&gt;Finally, in order to codify effective teaching practices and make them repeatable across semesters and instructors, I create and refine detailed teaching materials that persist and evolve after my involvement with a course. For example, as a section leader for research methods in the psychology department in fall 2018 and fall 2019, I created new lesson plan documents and homework assignments for a crash course in R taught over the first two labs of the semester. For subsequent labs in the semester, I also expanded existing bullet-pointed lab outlines into full lesson plans and slide decks with detailed instructions, recommended module timing, and pedagogical tips for first-time section leaders. Many of those teaching tips came from discussions in weekly teaching team meetings that I recorded to ensure that we (and subsequent teaching teams) wouldn’t have to reinvent the wheel every semester. Indeed, more recent research methods section leaders have reported that those lesson plans saved them time in lesson prep and supported their success as first-time section leaders.&lt;/p&gt;
-&lt;p&gt;In summary, I work to make the discipline I love interesting and accessible to students through introductory psychology courses, research methods courses, and introductory programming workshops. I design those classes not only to inspire students through content but to set them up for success through supportive course policies. In those courses, I support my own and my peers’ future teaching by creating, maintaining, and documenting teaching materials that save time, keep record of successful teaching strategies, and support future innovation.&lt;/p&gt;
+&lt;p&gt;As a teacher-scholar, my teaching development has been intertwined with my development as a researcher. In particular, I have learned about the ways in which effective research and teaching do not come from “eureka” moments of intellectual brilliance, but, instead, depend on thoughtful planning and structures that support success from the bottom up. Just as rigorous study design and statistical analysis are necessary to answer a research question, positive early experiences and supportive course structures are necessary for students to enter a discipline and thrive within it. I focus on designing and teaching introductory classes, where I can inspire new students to study psychology and scientific computing. In those classes, I implement accessible course policies to sustain student success throughout the semester. Finally, I maintain comprehensive course materials to standardize my pedagogy and share those materials to support my peers’ teaching.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;I strive to nurture novice scientists’ critical thinking skills in introductory courses.&lt;/strong&gt; Intro-level instructors have the privilege and responsibility of serving as the welcome committee for students entering a new academic discipline. Psychology in particular can serve as a gateway to STEM for students curious about human behavior, and as a core college STEM experience for students fulfilling breadth requirements. I am committed to balancing the needs of these two groups of students through intro psych classes that are rigorous yet accessible. For example, I collaborated with Dr. Caroline Marvin in developing a new team-based introductory psychology course (“The Science of Psychology: Explorations &amp;amp; Applications”) taught for the first time in spring 2021. I helped select readings, develop lesson plans, and draft assignments, paying special attention to craft learning objectives and structure assignments in a way that was simultaneously appropriate for prospective psychology/neuroscience majors and for general-education students. For instance, I helped build units around applied “challenges” that grouped psychological concepts based on real-world significance. For example, one unit combined concepts from perception and infant/child development, which are not commonly grouped together in introductory psychology courses or textbooks, in the context of masked in-person vs. remote learning strategies for COVID safety in schools (see Thieu et al., 2022, Journal of College Science Teaching for a summary and reflection of our work). I then taught the course as instructor of record in summer 2022, further refining the course to take advantage of summer course structure. For example, during the class on perception, groups of students broke down the results and figures from papers on emotion recognition from face vs. body, and during the class on development, groups practiced writing a “grant” to extend findings from rodent research on infant-maternal attachment to humans. During the final class of the unit, groups used evidence from pre-class readings and in-class activities to propose a hypothetical elementary school’s COVID policy, arguing for masked in-person, remote, or hybrid learning. I leveraged the longer summer class meetings to allow students to engage more deeply with the material via the activities, all while I was able to assess their learning by observing their group work. By the end of the course, students reflected positively on the skills and content they planned to apply back to their work in other majors.&lt;/p&gt;
+&lt;p&gt;Going beyond content, &lt;strong&gt;I build accessibility into my course policies to sustain student success.&lt;/strong&gt; For example, psychology students entering quantitative courses may come in with little to no experience using scientific computing tools like R to analyze data, but a commitment to learning given sufficient support. Accordingly, an accessible grading structure will scaffold students’ learning by rewarding incremental progress and learning from feedback. As a curriculum developer and instructor, I have designed assignment submission and grading policies that allow students flexibility in managing their own deadlines, without penalizing students who need more practice but ultimately achieve the same learning objectives. For example, as instructor for Stats II in Psychology at Spelman College in spring 2024, I designed a two-stage system where each weekly problem set was eligible for full-credit revisions, with no late or resubmission penalty, if revised within one week of receiving the initial grade and feedback. I designed this structure to incentivize students to engage with my feedback and improve their work to meet learning objectives, without penalizing students for first-round mistakes. At the same time, the revision structure allowed me to grade more rigorously on the first pass and hold students to higher standards, knowing that they would have the opportunity to respond to my feedback for full credit. Finally, the time-limited nature of the problem set revisions encouraged students to stay on top of their work through the course, while protecting me as the instructor from a buildup of revision submissions at the end of the term. Over half of students completed at least one revision and raised their problem set grade, showing that students indeed made use of the system. In this way, I was able to leverage course logistics to support student learning, especially for a quantitative course where students might bring insecurity about their own abilities into the classroom.&lt;/p&gt;
+&lt;p&gt;Finally, in order to codify effective teaching practices and make them repeatable across terms and instructors, &lt;strong&gt;I create and refine detailed teaching materials that persist and evolve after my involvement with a course.&lt;/strong&gt; For example, as a lab instructor for the Spelman College Women in STEM six-week intensive program for incoming first-years in summer 2023, I developed and taught a project-based data science course. Students first completed a crash course in data cleaning and visualization techniques using R, and then each student conducted an independent data science analysis—designing their own research question, sourcing their own publicly available datasets, identifying patterns in their data, and presenting their results. I created all lesson plans and course materials natively in R and managed a course workspace in RStudio Cloud for students to complete exercises and conduct their analyses. The course’s R integration made it easy to format course materials for storage and sharing. For example, on my end, I published the syllabus, course schedule, and lecture notes online as a public website using GitHub and Netlify, both for student reference and to share with other instructors and interested parties. On students’ end, they were able to export their summer work and re-publish their projects in their own GitHub coding portfolios, bringing the technical integration full-circle. In this way, I applied my technical expertise not only to support student learning during a single course but also to create a persistent store for course materials on which my peers and I can build in the future.&lt;/p&gt;
+&lt;p&gt;In summary, I work to make the discipline I love interesting and accessible to students through introductory psychology courses, research methods and statistics courses, and introductory programming workshops. I design those classes not only to inspire students through content but to set them up for success through supportive course policies. In those courses, I support my own and my peers’ future teaching by creating, maintaining, and documenting teaching materials that save time, keep record of successful teaching strategies, and support future innovation.&lt;/p&gt;
 </content>
     </item>
     
@@ -57,35 +57,37 @@
 &lt;div id=&#34;clear-handling-of-complex-topics&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Clear handling of complex topics&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Professor Thieu knows her stuff! You can tell she really knows the subject matter, and can answer questions in a relatable modern way. &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Summer 2022)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;I was very impressed how [she was] able to keep an eye on the chat, walk through the material, and switch to focusing on areas students were struggling, and in an absolutely relaxed way, which given that the material was new to people, was the perfect approach for a positive learning environment. &lt;em&gt;(Supervisor comment, Foundations for Research Computing bootcamp, Winter 2022)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Overall, Monica’s pacing was superb. She explained every step in great detail without lingering too long on any one point. Because she explained everything she typed, it was very easy not only to understand how the results were attained, but also why each step was chosen over any other option. Such clear explanations help students retain the information and, hopefully, make similar connections for themselves in their future projects. &lt;em&gt;(Teaching observation, Wrangling Multilevel Data in the Tidyverse coding workshop, Spring 2022)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Monica’s teaching and discussion leading skills are great. She was very friendly and facilitated really fun and interactive class activities to introduce some of the topics we were discussing and was also great at helping to explain concepts when asked about them in class. &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Spring 2021)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Monica was a great TA: very approachable, clearly walked us through assignment requirements and expectations, taught us to code R in a straightforward and helpful manner, and maintained a positive and enthusiastic attitude throughout. &lt;em&gt;(Research Methods, Fall 2019)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;She also took on the daunting job of teaching non-CompSci students the basics of coding in R, and did it very well. I actually ended up enjoying the coding parts of the lab sections. &lt;em&gt;(Research Methods, Fall 2018)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Monica Thieu is a fantastic instructor, I never felt like I didn’t understand something or couldn’t do an assignment for class because Monica was great at explaining the material and finding new ways of understanding the material. &lt;em&gt;(Research Methods, Fall 2018)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Monica was a wonderful TA. She was very knowledgeable and good at explaining things, and was very available to provide help that was indeed helpful. She was also engaging in terms of leading discussions. &lt;em&gt;(Research Methods, Fall 2018)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Dr Thieu did a very excellent job at making sure we understood the course information without feeling too overwhelmed or confused. &lt;em&gt;(Statistics II in Psychology, Spring 2024, Spelman College)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Professor Thieu knows her stuff! You can tell she really knows the subject matter, and can answer questions in a relatable modern way. &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Summer 2022, Columbia University)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I was very impressed how [she was] able to keep an eye on the chat, walk through the material, and switch to focusing on areas students were struggling, and in an absolutely relaxed way, which given that the material was new to people, was the perfect approach for a positive learning environment. &lt;em&gt;(Supervisor comment, Foundations for Research Computing bootcamp, Winter 2022, Columbia University)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Overall, Monica’s pacing was superb. She explained every step in great detail without lingering too long on any one point. Because she explained everything she typed, it was very easy not only to understand how the results were attained, but also why each step was chosen over any other option. Such clear explanations help students retain the information and, hopefully, make similar connections for themselves in their future projects. &lt;em&gt;(Teaching observation, Wrangling Multilevel Data in the Tidyverse coding workshop, Spring 2022, Columbia University)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Monica’s teaching and discussion leading skills are great. She was very friendly and facilitated really fun and interactive class activities to introduce some of the topics we were discussing and was also great at helping to explain concepts when asked about them in class. &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Spring 2021, Columbia University)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Monica was a great TA: very approachable, clearly walked us through assignment requirements and expectations, taught us to code R in a straightforward and helpful manner, and maintained a positive and enthusiastic attitude throughout. &lt;em&gt;(Research Methods, Fall 2019, Columbia University)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;She also took on the daunting job of teaching non-CompSci students the basics of coding in R, and did it very well. I actually ended up enjoying the coding parts of the lab sections. &lt;em&gt;(Research Methods, Fall 2018, Columbia University)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Monica Thieu is a fantastic instructor, I never felt like I didn’t understand something or couldn’t do an assignment for class because Monica was great at explaining the material and finding new ways of understanding the material. &lt;em&gt;(Research Methods, Fall 2018, Columbia University)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Monica was a wonderful TA. She was very knowledgeable and good at explaining things, and was very available to provide help that was indeed helpful. She was also engaging in terms of leading discussions. &lt;em&gt;(Research Methods, Fall 2018, Columbia University)&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div id=&#34;energy-and-enthusiasm&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Energy and enthusiasm&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;She was very engaging and promoted an open/welcoming environment where everyone felt safe to participate. &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Summer 2022)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Monica kept my enthusiasm up by validating how I felt about programming environments while also conveying information in a way that encouraged asking questions and problem-solving. &lt;em&gt;(Foundations for Research Computing bootcamp, Winter 2022)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Monica was a very clear speaker, and she had a very uplifting and upbeat energy. &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Spring 2021)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;She’s an amazing leader and teacher. She takes charge and I can definitely see her becoming a teacher one day, she just has the natural instincts of one. &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Spring 2021)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Monica is such a fun and knowledgeable TA, I anticipate she will be a great teacher if she chooses to do so. She is very organized and manages to provide prompt feedback on assignments and foster a fun and engaging classroom environment. &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Spring 2021)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Monica is a natural teacher and it’s VERY apparent that she has a passion for research. She’s absolutely fantastic! &lt;em&gt;(Research Methods, Fall 2019)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Monica is the best TA I’ve ever had! She’s easygoing, was super passionate about the topic (which I don’t think is common in a Research Methods TA), and was always well prepared for leading sections. &lt;em&gt;(Research Methods, Fall 2018)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;She was very engaging and promoted an open/welcoming environment where everyone felt safe to participate. &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Summer 2022, Columbia University)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Monica kept my enthusiasm up by validating how I felt about programming environments while also conveying information in a way that encouraged asking questions and problem-solving. &lt;em&gt;(Foundations for Research Computing bootcamp, Winter 2022, Columbia University)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Monica was a very clear speaker, and she had a very uplifting and upbeat energy. &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Spring 2021, Columbia University)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;She’s an amazing leader and teacher. She takes charge and I can definitely see her becoming a teacher one day, she just has the natural instincts of one. &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Spring 2021, Columbia University)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Monica is such a fun and knowledgeable TA, I anticipate she will be a great teacher if she chooses to do so. She is very organized and manages to provide prompt feedback on assignments and foster a fun and engaging classroom environment. &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Spring 2021, Columbia University)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Monica is a natural teacher and it’s VERY apparent that she has a passion for research. She’s absolutely fantastic! &lt;em&gt;(Research Methods, Fall 2019, Columbia University)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Monica is the best TA I’ve ever had! She’s easygoing, was super passionate about the topic (which I don’t think is common in a Research Methods TA), and was always well prepared for leading sections. &lt;em&gt;(Research Methods, Fall 2018, Columbia University)&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;div id=&#34;clear-and-prompt-written-feedback&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Clear and prompt written feedback&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Always helpful and a quick grader as well. Her feedback was also very helpful &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Spring 2021)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Monica’s feedback has always been very informative and helpful in terms of knowing what you might’ve missed/haven’t understood in the assignments. &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Spring 2021)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Her feedback on my assignments was always helpful and clear. &lt;em&gt;(Research Methods, Fall 2019)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;She returned assignments promptly and was fair in her grading, explaining any deductions. &lt;em&gt;(Research Methods, Fall 2018)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The instructor provides really helpful feedback on the problem sets. &lt;em&gt;(Statistics II in Psychology, Spring 2024, Spelman College)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Always helpful and a quick grader as well. Her feedback was also very helpful &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Spring 2021, Columbia University)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Monica’s feedback has always been very informative and helpful in terms of knowing what you might’ve missed/haven’t understood in the assignments. &lt;em&gt;(Science of Psychology: Explorations &amp;amp; Applications, Spring 2021, Columbia University)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Her feedback on my assignments was always helpful and clear. &lt;em&gt;(Research Methods, Fall 2019, Columbia University)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;She returned assignments promptly and was fair in her grading, explaining any deductions. &lt;em&gt;(Research Methods, Fall 2018, Columbia University)&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -98,7 +100,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/teaching/teaching-roles/</guid>
-      <description> Instructor of record PSYC 1021 – The Science of Psychology: Explorations and Applications Instructor (non-credit courses) WiSTEM Data Science Lab Module Curriculum developer and co-instructor PSYC 1021 – The Science of Psychology: Explorations and Applications Psychology department coding bootcamp Section leader PSYC 1490 – Research Methods in Psychology Bootcamp instructor Foundations for Research Computing coding bootcamp Teaching assistant BUSI B8144 – Intro to Programming in R PSYC 1001: Science of Psychology Instructor of record PSYC 1021 – The Science of Psychology: Explorations and Applications Institution: Columbia University Term: summer 2022 Course details Intro-level undergraduate class, satisfies core science requirement for non-majors 12 students, with learning teams of 4 students each Instructional responsibilities Updated curriculum Defined learning objectives Evaluated and selected readings Edited lesson plans, pre-class quizzes, and assignment prompts Created and edited teaching materials: slides, activity materials Lectured and led discussions Graded writing assignments Detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics Held weekly office hours Instructor (non-credit courses) WiSTEM Data Science Lab Module Institution: Spelman College Term: summer 2022 Program directors: Monica Stephens, Tiffany Oliver Course details Offered as part of an application-only 6-week summer bridge accelerator for incoming STEM first-year students Full program includes enrollment in summer math and computer science courses for credit, and science lab courses not for credit (including this course) Students learned basic data manipulation and visualization skills in R and completed independent lab projects Instructional responsibilities Created curriculum Defined learning objectives Created all lesson plans and teaching materials Lectured, supervised lab work, and advised on independent projects Curriculum developer and co-instructor PSYC 1021 – The Science of Psychology: Explorations and Applications Institution: Columbia University Term: spring 2021 Lead instructor: Caroline Marvin Course details As above Approximately 30 students, with learning teams of approximately 4 students each Instructional responsibilities Developed curriculum, in conjunction with lead instructor Defined learning objectives Evaluated and selected readings Wrote lesson plans, pre-class quizzes, and assignment prompts Created teaching materials: slides, activity materials, mini-lecture videos Guest lecturing (approximately 1/4 of instructional modules) Graded writing assignments Detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics Held weekly office hours Psychology department coding bootcamp Institution: Columbia University Terms: spring 2018, fall 2018, fall 2019, fall 2020, fall 2021 Course details Unofficial open-enrollment workshop for psychology students at the undergrad level and above 5-20 students per session, depending on the semester Instructional responsibilities Curriculum development Drafted lessons for 2 half-day sessions Peer-reviewed 1 session lesson drafted by another co-instructor Lecture: Live-code lectured some or all of the lessons I prepared (depending on the semester) Section leader PSYC 1490 – Research Methods in Psychology Institution: Columbia University Terms: fall 2018, fall 2019 Lead instructor: Katherine Fox-Glassman Course details Upper-level undergraduate class, required for the psychology major Approximately 70 students in the entire class, with lab sections of approximately 15 students Instructional responsibilities Updated course materials Wrote 2 new R lesson plans and 2 new associated problem sets Updated and annotated existing lesson plan outlines for each lab class Created slide decks for each lab class Taught lab section Graded assignments Exam short-answer questions (for all students) Methods problem sets in R (for students in my section) Science writing assignments and projects (for students in my section) Individual and group presentations (for students in my section) Held weekly office hours Wrote short-answer exam questions Bootcamp instructor Foundations for Research Computing coding bootcamp Institution: Columbia University Terms: fall 2019, spring 2020, winter 2022 Coordinator: Patrick Smyth Course details Open-enrollment workshop hosted by Columbia Libraries for graduate students and postdocs across the university 30 students per session (in-person), 50 students per session (online) Associated with The Carpentries Instructional responsibilities Delivered live-code lecture sessions introducing students to basic file navigation commands in Unix shell (1 3-hour session per workshop) Teaching assistant BUSI B8144 – Intro to Programming in R Institution: Columbia University Terms: spring 2019, spring 2020, fall 2021 Lead instructor: Jared Lander Course details Master’s level half-semester elective course in the business school Lecture class with 40-70 students depending on the term Instructional responsibilities Updated course materials Revised existing problem sets to align objectives with lecture content Re-implemented problem sets using learnr for students to complete exercises online Graded and gave written feedback on R problem sets Held weekly office hours Supported students’ work over email PSYC 1001: Science of Psychology Institution: Columbia University Term: fall 2017 Lead instructor: Kathleen Taylor Course details Intro-level undergraduate class, satisfies core science requirement for non-majors Approximately 100 students Instructional responsibilities Graded exam essays Wrote multiple-choice and essay exam questions Held weekly office hours Delivered guest lecture on memory </description>
+      <description> Instructor of record PSY 417 – Statistics II in Psychology PSYC 1021 – The Science of Psychology: Explorations and Applications Instructor (non-credit courses) WiSTEM Data Science Lab Module Curriculum developer and co-instructor PSYC 1021 – The Science of Psychology: Explorations and Applications Psychology department coding bootcamp Section leader PSYC 1490 – Research Methods in Psychology Bootcamp instructor Foundations for Research Computing coding bootcamp Teaching assistant BUSI B8144 – Intro to Programming in R PSYC 1001: Science of Psychology Instructor of record PSY 417 – Statistics II in Psychology Institution: Spelman College Term: spring 2024 Course details Upper-level undergraduate class, satisfies Advanced Measurement requirement for psychology majors Statistics with a regression framework Analysis techniques taught in R/RStudio Cloud 25 students Instructional responsibilities Wrote curriculum Defined learning objectives Evaluated and selected readings Wrote lesson plans, pre-class reading quizzes, and problem sets Created teaching materials: slides, activity materials, R notebooks Lectured, live-coded, and supervised activities Graded assignments Both multiple-choice/short answer assignments and R-based computational assignments Gave detailed formative feedback on problem sets using single-point-style rubrics Held weekly office hours PSYC 1021 – The Science of Psychology: Explorations and Applications Institution: Columbia University Term: summer 2022 Course details Intro-level undergraduate class, satisfies core science requirement for non-majors 12 students, with learning teams of 4 students each Instructional responsibilities Updated curriculum Defined learning objectives Evaluated and selected readings Edited lesson plans, pre-class quizzes, and assignment prompts Created and edited teaching materials: slides, activity materials Lectured and led discussions Graded writing assignments Gave detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics Held weekly office hours Instructor (non-credit courses) WiSTEM Data Science Lab Module Institution: Spelman College Term: summer 2022 Program directors: Monica Stephens, Tiffany Oliver Course details Offered as part of an application-only 6-week summer bridge accelerator for incoming STEM first-year students Full program includes enrollment in summer math and computer science courses for credit, and science lab courses not for credit (including this course) Students learned basic data manipulation and visualization skills in R and completed independent lab projects Instructional responsibilities Created curriculum Defined learning objectives Created all lesson plans and teaching materials Lectured, supervised lab work, and advised on independent projects Curriculum developer and co-instructor PSYC 1021 – The Science of Psychology: Explorations and Applications Institution: Columbia University Term: spring 2021 Lead instructor: Caroline Marvin Course details As above Approximately 30 students, with learning teams of approximately 4 students each Instructional responsibilities Developed curriculum, in conjunction with lead instructor Defined learning objectives Evaluated and selected readings Wrote lesson plans, pre-class quizzes, and assignment prompts Created teaching materials: slides, activity materials, mini-lecture videos Guest lecturing (approximately 1/4 of instructional modules) Graded writing assignments Gave detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics Held weekly office hours Psychology department coding bootcamp Institution: Columbia University Terms: spring 2018, fall 2018, fall 2019, fall 2020, fall 2021 Course details Unofficial open-enrollment workshop for psychology students at the undergrad level and above 5-20 students per session, depending on the semester Instructional responsibilities Curriculum development Drafted lessons for 2 half-day sessions Peer-reviewed 1 session lesson drafted by another co-instructor Lecture: Live-code lectured some or all of the lessons I prepared (depending on the semester) Section leader PSYC 1490 – Research Methods in Psychology Institution: Columbia University Terms: fall 2018, fall 2019 Lead instructor: Katherine Fox-Glassman Course details Upper-level undergraduate class, required for the psychology major Approximately 70 students in the entire class, with lab sections of approximately 15 students Instructional responsibilities Updated course materials Wrote 2 new R lesson plans and 2 new associated problem sets Updated and annotated existing lesson plan outlines for each lab class Created slide decks for each lab class Taught lab section Graded assignments Exam short-answer questions (for all students) Methods problem sets in R (for students in my section) Science writing assignments and projects (for students in my section) Individual and group presentations (for students in my section) Held weekly office hours Wrote short-answer exam questions Bootcamp instructor Foundations for Research Computing coding bootcamp Institution: Columbia University Terms: fall 2019, spring 2020, winter 2022 Coordinator: Patrick Smyth Course details Open-enrollment workshop hosted by Columbia Libraries for graduate students and postdocs across the university 30 students per session (in-person), 50 students per session (online) Associated with The Carpentries Instructional responsibilities Delivered live-code lecture sessions introducing students to basic file navigation commands in Unix shell (1 3-hour session per workshop) Teaching assistant BUSI B8144 – Intro to Programming in R Institution: Columbia University Terms: spring 2019, spring 2020, fall 2021 Lead instructor: Jared Lander Course details Master’s level half-semester elective course in the business school Lecture class with 40-70 students depending on the term Instructional responsibilities Updated course materials Revised existing problem sets to align objectives with lecture content Re-implemented problem sets using learnr for students to complete exercises online Graded and gave written feedback on R problem sets Held weekly office hours Supported students’ work over email PSYC 1001: Science of Psychology Institution: Columbia University Term: fall 2017 Lead instructor: Kathleen Taylor Course details Intro-level undergraduate class, satisfies core science requirement for non-majors Approximately 100 students Instructional responsibilities Graded exam essays Wrote multiple-choice and essay exam questions Held weekly office hours Delivered guest lecture on memory </description>
       <content>
 &lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
@@ -106,6 +108,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#instructor-of-record&#34; id=&#34;toc-instructor-of-record&#34;&gt;Instructor of record&lt;/a&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#psy-417-statistics-ii-in-psychology&#34; id=&#34;toc-psy-417-statistics-ii-in-psychology&#34;&gt;PSY 417 – Statistics II in Psychology&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#psyc-1021-the-science-of-psychology-explorations-and-applications&#34; id=&#34;toc-psyc-1021-the-science-of-psychology-explorations-and-applications&#34;&gt;PSYC 1021 – The Science of Psychology: Explorations and Applications&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#instructor-non-credit-courses&#34; id=&#34;toc-instructor-non-credit-courses&#34;&gt;Instructor (non-credit courses)&lt;/a&gt;
@@ -135,20 +138,55 @@
 
 &lt;div id=&#34;instructor-of-record&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Instructor of record&lt;/h1&gt;
+&lt;div id=&#34;psy-417-statistics-ii-in-psychology&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;PSY 417 – Statistics II in Psychology&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Institution: Spelman College&lt;/li&gt;
+&lt;li&gt;Term: spring 2024&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;course-details&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Course details&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Upper-level undergraduate class, satisfies Advanced Measurement requirement for psychology majors&lt;/li&gt;
+&lt;li&gt;Statistics with a regression framework&lt;/li&gt;
+&lt;li&gt;Analysis techniques taught in R/RStudio Cloud&lt;/li&gt;
+&lt;li&gt;25 students&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;instructional-responsibilities&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Wrote curriculum
+&lt;ul&gt;
+&lt;li&gt;Defined learning objectives&lt;/li&gt;
+&lt;li&gt;Evaluated and selected readings&lt;/li&gt;
+&lt;li&gt;Wrote lesson plans, pre-class reading quizzes, and problem sets&lt;/li&gt;
+&lt;li&gt;Created teaching materials: slides, activity materials, R notebooks&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Lectured, live-coded, and supervised activities&lt;/li&gt;
+&lt;li&gt;Graded assignments
+&lt;ul&gt;
+&lt;li&gt;Both multiple-choice/short answer assignments and R-based computational assignments&lt;/li&gt;
+&lt;li&gt;Gave detailed formative feedback on problem sets using single-point-style rubrics&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Held weekly office hours&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;div id=&#34;psyc-1021-the-science-of-psychology-explorations-and-applications&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;PSYC 1021 – The Science of Psychology: Explorations and Applications&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Institution: Columbia University&lt;/li&gt;
 &lt;li&gt;Term: summer 2022&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div id=&#34;course-details&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;course-details-1&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Course details&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Intro-level undergraduate class, satisfies core science requirement for non-majors&lt;/li&gt;
 &lt;li&gt;12 students, with learning teams of 4 students each&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;instructional-responsibilities&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;instructional-responsibilities-1&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated curriculum
@@ -161,7 +199,7 @@
 &lt;li&gt;Lectured and led discussions&lt;/li&gt;
 &lt;li&gt;Graded writing assignments
 &lt;ul&gt;
-&lt;li&gt;Detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics&lt;/li&gt;
+&lt;li&gt;Gave detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Held weekly office hours&lt;/li&gt;
 &lt;/ul&gt;
@@ -178,7 +216,7 @@
 &lt;li&gt;Term: summer 2022&lt;/li&gt;
 &lt;li&gt;Program directors: &lt;a href=&#34;mailto:mstephens@spelman.edu&#34;&gt;Monica Stephens&lt;/a&gt;, &lt;a href=&#34;mailto:toliver4@spelman.edu&#34;&gt;Tiffany Oliver&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div id=&#34;course-details-1&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;course-details-2&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Course details&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Offered as part of an application-only &lt;a href=&#34;https://www.spelman.edu/academics/research-programs/wistem&#34;&gt;6-week summer bridge accelerator&lt;/a&gt; for incoming STEM first-year students&lt;/li&gt;
@@ -186,7 +224,7 @@
 &lt;li&gt;Students learned basic data manipulation and visualization skills in R and completed independent lab projects&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;instructional-responsibilities-1&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;instructional-responsibilities-2&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Created curriculum
@@ -209,14 +247,14 @@
 &lt;li&gt;Term: spring 2021&lt;/li&gt;
 &lt;li&gt;Lead instructor: &lt;a href=&#34;mailto:cbm2118@columbia.edu&#34;&gt;Caroline Marvin&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div id=&#34;course-details-2&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;course-details-3&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Course details&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;As &lt;a href=&#34;#instructor-of-record&#34;&gt;above&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Approximately 30 students, with learning teams of approximately 4 students each&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;instructional-responsibilities-2&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;instructional-responsibilities-3&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Developed curriculum, in conjunction with lead instructor
@@ -229,7 +267,7 @@
 &lt;li&gt;Guest lecturing (approximately 1/4 of instructional modules)&lt;/li&gt;
 &lt;li&gt;Graded writing assignments
 &lt;ul&gt;
-&lt;li&gt;Detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics&lt;/li&gt;
+&lt;li&gt;Gave detailed formative feedback on individual and group writing assignments and projects using single-point-style rubrics&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Held weekly office hours&lt;/li&gt;
 &lt;/ul&gt;
@@ -242,14 +280,14 @@
 &lt;li&gt;Institution: Columbia University&lt;/li&gt;
 &lt;li&gt;Terms: spring 2018, fall 2018, fall 2019, fall 2020, fall 2021&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div id=&#34;course-details-3&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;course-details-4&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Course details&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Unofficial open-enrollment workshop for psychology students at the undergrad level and above&lt;/li&gt;
 &lt;li&gt;5-20 students per session, depending on the semester&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;instructional-responsibilities-3&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;instructional-responsibilities-4&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Curriculum development
@@ -272,14 +310,14 @@
 &lt;li&gt;Terms: fall 2018, fall 2019&lt;/li&gt;
 &lt;li&gt;Lead instructor: &lt;a href=&#34;mailto:kjt2111@columbia.edu&#34;&gt;Katherine Fox-Glassman&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div id=&#34;course-details-4&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;course-details-5&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Course details&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Upper-level undergraduate class, required for the psychology major&lt;/li&gt;
 &lt;li&gt;Approximately 70 students in the entire class, with lab sections of approximately 15 students&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;instructional-responsibilities-4&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;instructional-responsibilities-5&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated course materials
@@ -312,7 +350,7 @@
 &lt;li&gt;Terms: fall 2019, spring 2020, winter 2022&lt;/li&gt;
 &lt;li&gt;Coordinator: &lt;a href=&#34;mailto:website@pbsmyth.com&#34;&gt;Patrick Smyth&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div id=&#34;course-details-5&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;course-details-6&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Course details&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Open-enrollment workshop hosted by Columbia Libraries for graduate students and postdocs across the university&lt;/li&gt;
@@ -320,7 +358,7 @@
 &lt;li&gt;Associated with &lt;a href=&#34;https://carpentries.org&#34;&gt;The Carpentries&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;instructional-responsibilities-5&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;instructional-responsibilities-6&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Delivered live-code lecture sessions introducing students to basic file navigation commands in Unix shell (1 3-hour session per workshop)&lt;/li&gt;
@@ -338,14 +376,14 @@
 &lt;li&gt;Terms: spring 2019, spring 2020, fall 2021&lt;/li&gt;
 &lt;li&gt;Lead instructor: &lt;a href=&#34;mailto:jaredlander@caa.columbia.edu&#34;&gt;Jared Lander&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div id=&#34;course-details-6&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;course-details-7&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Course details&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Master’s level half-semester elective course in the business school&lt;/li&gt;
 &lt;li&gt;Lecture class with 40-70 students depending on the term&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;instructional-responsibilities-6&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;instructional-responsibilities-7&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated course materials
@@ -367,14 +405,14 @@
 &lt;li&gt;Term: fall 2017&lt;/li&gt;
 &lt;li&gt;Lead instructor: &lt;a href=&#34;mailto:ktaylor@barnard.edu&#34;&gt;Kathleen Taylor&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div id=&#34;course-details-7&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;course-details-8&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Course details&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Intro-level undergraduate class, satisfies core science requirement for non-majors&lt;/li&gt;
 &lt;li&gt;Approximately 100 students&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;instructional-responsibilities-7&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;instructional-responsibilities-8&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Instructional responsibilities&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Graded exam essays&lt;/li&gt;
