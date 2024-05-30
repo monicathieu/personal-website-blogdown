@@ -161,6 +161,7 @@ tribble(
   "Feb 2024", "[Radio/podcast guest (science)](https://www.sciencefriday.com/segments/jeopardy-winner-memory-recall/)", "Science Friday",
   "Feb 2024", "[Radio guest (science)](https://www.npr.org/2024/02/18/1232301993/a-new-study-finds-the-memory-systems-that-give-trivia-champions-an-edge)", "Weekend Edition Sunday by NPR",
   "Feb 2024", "[News interview subject (science)](https://www.scientificamerican.com/article/jeopardy-winner-reveals-entwined-memory-systems-make-a-trivia-champion/)", "Scientific American",
+  "2021-2022", "Host of [The Psychology PhD podcast](https://psychology.columbia.edu/podcast)", "Columbia Dept of Psychology",
   "Nov 2021", "[Video guest (science)](https://youtu.be/VTvJOb2hJ6k)", "Wired 5 Levels: Memory",
   "Sept 2021", "[Interview subject (teaching)](https://explaineverything.com/psychology-whiteboard-video-lessons-with-monica-thieu/)", "Explain Everything",
   "July 2020", "[Podcast guest (science)](https://www.marketplace.org/shows/this-is-uncomfortable-reema-khrais/money-makes-me-sick/)", "This is Uncomfortable by Marketplace",
