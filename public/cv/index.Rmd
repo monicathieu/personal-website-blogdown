@@ -23,11 +23,9 @@ require(vitae)
 
 ## About me
 
-In my postdoctoral research, I use behavioral, modeling, and fMRI research methods to characterize how perceptual input contributes to affective experience.
+In my research, I use behavioral, modeling, and fMRI research methods to characterize how perceptual input contributes to affective experience.
 
-In my PhD research, I used behavioral and fMRI research methods to investigate how people perceive and categorize various social (others' facial age and gender) and emotional (elicited experiences) stimuli.
-
-In my teaching, I particularly enjoy working with introductory-level learners in content (introductory psychology) and in methods (coding for behavioral sciences).
+In my teaching, I design and practice reflective, evidence-based training for psychological scientists, with a focus on technical training in statistics and scientific computing.
 
 * Method competencies:
   * Functional neuroimaging: **Intermediate** in nipype, SPM, FSL; **proficient** in fmriprep
@@ -86,7 +84,7 @@ tribble(
 ```{r}
 tribble(
   ~Year, ~Award, ~Desc,
-  "Spring 2022", "Teaching Development Program Advanced Track completion", "Columbia Center for Teaching and Learning",
+  "Spring 2022", "[Teaching Development Program Advanced Track certificate](https://tdp.ctl.columbia.edu/about/overview/)", "Columbia Center for Teaching and Learning",
   "Spring 2022", "Presidential Graduate Teaching Award finalist", "Columbia Office of the Provost",
   "Spring 2021", "Grant to Enhance Remote Learning and Teaching", "Columbia Center for the History and Ethics of Public Health",
   "Spring 2020", "[Curricular Innovation Fellow](https://rcfoundations.research.columbia.edu/content/foundations-curriculum-innovation-grant-program)", "Columbia Libraries",
