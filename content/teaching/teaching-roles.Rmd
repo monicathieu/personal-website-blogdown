@@ -18,6 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - Institution: Spelman College
 - Term: spring 2024
 - Supervisor contact: [Jimmeka Guillory Wright](mailto:jguillo1@spelman.edu)
+- [View syllabus](../materials/syllabus_spelman_psy417_sp2024.pdf)
 
 ### Course details
 
@@ -43,6 +44,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - Institution: Columbia University
 - Term: summer 2022
+- [View syllabus](../materials/syllabus_columbia_psyc1021_su2022.pdf)
 
 ### Course details
 
