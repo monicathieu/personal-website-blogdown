@@ -4,7 +4,7 @@ name: Monica
 surname: Thieu
 position: "Postdoctoral scholar"
 address: "Dept of Psychology, Emory University"
-www: monicathieu.com
+www: www.monicathieu.com
 email: "mthieu@emory.edu"
 twitter: monica_too_
 github: monicathieu
