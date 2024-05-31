@@ -158,6 +158,7 @@ bibliography_entries("posters.bib") %>%
 ```{r}
 tribble(
   ~Year, ~Title, ~Publication,
+  "May 2024", "[Radio/podcast guest (trivia, science)](https://www.npr.org/transcripts/1196979444)", "Life Kit by NPR",
   "Feb 2024", "[Radio/podcast guest (science)](https://www.sciencefriday.com/segments/jeopardy-winner-memory-recall/)", "Science Friday",
   "Feb 2024", "[Radio guest (science)](https://www.npr.org/2024/02/18/1232301993/a-new-study-finds-the-memory-systems-that-give-trivia-champions-an-edge)", "Weekend Edition Sunday by NPR",
   "Feb 2024", "[News interview subject (science)](https://www.scientificamerican.com/article/jeopardy-winner-reveals-entwined-memory-systems-make-a-trivia-champion/)", "Scientific American",
