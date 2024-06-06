@@ -181,7 +181,7 @@ tribble(
 tribble(
   ~ Position, ~ Year, ~ Course, ~ Where,
   "Instructor of record", "Sp2024", "PSY 417: Statistics II in Psychology", "Spelman College Dept of Psychology",
-  "Instructor", "Su2023", "Data Science Lab Module", "[Spelman College WiSTEM](https://www.spelman.edu/academics/research-programs/wistem)",
+  "Instructor", "Su2023, Su2024", "Data Science Lab Module", "[Spelman College WiSTEM](https://www.spelman.edu/academics/research-programs/wistem)",
   "Instructor of record", "Su2022", "PSYC 1021: Science of Psychology: Explorations & Applications", "Columbia Dept of Psychology",
   "Assistant curriculum developer & TA", "Sp2022", "PSYC 2821: Cognition in Context: Mental Health & Well-being", "Columbia Dept of Psychology",
   "Assistant curriculum developer, TA, & guest lecturer", "Sp2021", "PSYC 1021: Science of Psychology: Explorations & Applications", "Columbia Dept of Psychology",
