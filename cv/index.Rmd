@@ -25,7 +25,7 @@ require(vitae)
 
 In my research, I use behavioral, modeling, and fMRI research methods to characterize how perceptual input contributes to affective experience.
 
-In my teaching, I design and practice reflective, evidence-based training for psychological scientists, with a focus on technical training in statistics and scientific computing.
+In my teaching, I design and practice reflective, evidence-based, and student-centered training for psychological scientists, with a focus on technical training in statistics and scientific computing.
 
 * Method competencies:
   * Functional neuroimaging: **Intermediate** in nipype, SPM, FSL; **proficient** in fmriprep
