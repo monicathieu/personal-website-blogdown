@@ -1,7 +1,7 @@
 ---
 title: CV
 name: Monica
-surname: Thieu
+surname: Thieu, PhD
 position: "Postdoctoral scholar"
 address: "Dept of Psychology, Emory University"
 www: www.monicathieu.com
@@ -10,6 +10,7 @@ twitter: monica_too_
 github: monicathieu
 date: "`r format(Sys.time(), '%B %Y')`"
 aboutme: "Marie is a Polish and naturalized-French physicist and chemist who conducts pioneering research on radioactivity."
+headcolor: "#00ff00"
 output: 
   vitae::markdowncv:
     theme: davewhipp
@@ -21,7 +22,16 @@ require(tidyverse)
 require(vitae)
 ```
 
-## About me
+## Currently
+
+```{r}
+tribble(
+  ~ Position, ~ Year, ~ Institution, ~ Where, ~ Why,
+  "Postdoctoral fellow", "August 2022 -", "Emory University", "Atlanta, GA, USA", c("Project: Subcortical pathways of looming and threat", "Supervisor: Dr. Philip Kragel")
+) %>% 
+  # in the davewhipp theme, the where (4th) argument gets bolded. weirdly
+  detailed_entries(Institution, Year, Where, Position, Why)
+```
 
 In my research, I use behavioral, modeling, and fMRI research methods to characterize how perceptual input contributes to affective experience.
 
@@ -29,31 +39,30 @@ In my teaching, I design and practice reflective, evidence-based, and student-ce
 
 * Method competencies:
   * Functional neuroimaging: **Intermediate** in nipype, SPM, FSL; **proficient** in fmriprep
-  * Behavioral tasks: **Advanced** in Gorilla and Qualtrics; **proficient** in PsychoPy
+  * Behavioral tasks: **Advanced** in Gorilla, Qualtrics; **intermediate** in PsychoPy
   * Data management tools: **Intermediate** in REDCap
-  * Coding: **Advanced** in R; **intermediate** in Python; **proficient** in JavaScript, Stan, Matlab, shell
-
-## Employment
-
-```{r}
-tribble(
-  ~ Position, ~ Year, ~ Institution, ~ Where, ~ Why,
-  "Postdoctoral fellow", "August 2022 -", "Emory University", "Atlanta, GA, USA", c("Project: Subcortical pathways of looming and threat", "Supervisor: Dr. Philip Kragel"),
-  "Lab manager & research coordinator", "June 2015 - July 2017", "Stanford University", "Palo Alto, CA, USA", c("Project: Healthy aging and memory", "Supervisor: Dr. Anthony Wagner")
-) %>% 
-  # flipped Where and Institution to get the institution to be bolded
-  detailed_entries(Position, Year, Where, Institution, Why)
-```
+  * Coding: **Advanced** in R; **intermediate** in Python, Matlab, shell; **proficient** in JavaScript, Stan
 
 ## Education
 
 ```{r}
 tribble(
-  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Why,
+  ~ Position, ~ Year, ~ Institution, ~ Where, ~ Why,
   "PhD in Psychology", "2022", "Columbia University", "New York, NY, USA", c("Dissertation: ['Exploring perception and categorization of social and affective stimuli'](https://academiccommons.columbia.edu/doi/10.7916/zjfd-fq65)", "Advisor: Dr. Kevin Ochsner", "Sep 2017 - May 2022"),
   "BA with honors in Psychology", "2015", "Stanford University", "Palo Alto, CA, USA", c("Honors thesis: 'Chronic media multitasking and distraction: Neural substrates and mnemonic consequences'", "Advisors: Dr. Melina  Uncapher, Dr. Anthony Wagner")
 ) %>% 
-  detailed_entries(Degree, Year, Where, Institution, Why)
+  detailed_entries(Institution, Year, Where, Position, Why)
+```
+
+## Research experience
+
+```{r}
+tribble(
+  ~ Position, ~ Year, ~ Institution, ~ Where, ~ Why,
+    "Postdoctoral fellow", "August 2022 -", "Emory University", "Atlanta, GA, USA", c("Project: Subcortical pathways of looming and threat", "Supervisor: Dr. Philip Kragel"),
+  "Lab manager & research coordinator", "June 2015 - July 2017", "Stanford University", "Palo Alto, CA, USA", c("Project: Healthy aging and memory", "Supervisor: Dr. Anthony Wagner")
+) %>% 
+  detailed_entries(Institution, Year, Where, Position, Why)
 ```
 
 ## Awards and honors
@@ -63,13 +72,13 @@ tribble(
 ```{r}
 tribble(
   ~Year, ~Award, ~Desc,
-  "2023", "[Diversity travel award](https://socialaffectiveneuro.org/wp-content/uploads/2023/05/SANS-Conference-2023_Program_FINAL.pdf)", "Social and Affective Neuroscience Society",
-  "2022-26", "[FIRST NIH IRACDA postdoctoral fellowship](https://med.emory.edu/education/postdoctoral-training/first/index.html)", "Emory School of Medicine",
+  "2023", "[Diversity travel award](https://socialaffectiveneuro.org/wp-content/uploads/2023/05/SANS-Conference-2023_Program_FINAL.pdf) ($500)", "Social and Affective Neuroscience Society",
+  "2022-26", "[FIRST NIH IRACDA postdoctoral fellowship](https://med.emory.edu/education/postdoctoral-training/first/index.html) (100% salary support for 4 years)", "Emory School of Medicine",
   "2019", "Honorable mention", "[NSF GRFP](https://nsfgrfp.org)",
   "June 2015", "Firestone Medal for Excellence in Undergraduate Research", "Stanford Vice Provost for Undergraduate Education",
-  "Summer 2014", "Undergraduate Summer Research Award grant", "Stanford Bio-X",
+  "Summer 2014", "Undergraduate Summer Research Award grant ($6,000)", "Stanford Bio-X",
   "Summer 2013", "Best Presentation", "Stanford Psych-Summer",	
-  "Summer 2013", "Undergraduate research grant", "Stanford Psych-Summer",
+  "Summer 2013", "Undergraduate research grant ($6,000)", "Stanford Psych-Summer",
   
 ) %>% 
   brief_entries(
@@ -86,7 +95,7 @@ tribble(
   ~Year, ~Award, ~Desc,
   "Spring 2022", "[Teaching Development Program Advanced Track certificate](https://tdp.ctl.columbia.edu/about/overview/)", "Columbia Center for Teaching and Learning",
   "Spring 2022", "Presidential Graduate Teaching Award finalist", "Columbia Office of the Provost",
-  "Spring 2021", "Grant to Enhance Remote Learning and Teaching", "Columbia Center for the History and Ethics of Public Health",
+  "Spring 2021", "[Grant to Enhance Remote Learning and Teaching ($1,500)](https://scienceandsociety.columbia.edu/content/remote-learning-grants-overview)", "Columbia Center for the History and Ethics of Public Health",
   "Spring 2020", "[Curricular Innovation Fellow](https://rcfoundations.research.columbia.edu/content/foundations-curriculum-innovation-grant-program)", "Columbia Libraries",
   "June 2015", "Zimbardo Teaching Prize", "Stanford Psych One",		
 ) %>% 
@@ -134,7 +143,8 @@ tribble(
   ~Year, ~Talk, ~Conference,
   "March 2024", "Advanced Data Visualization with ggplot2", "Emory Graduate Students in Psychology and Neuroscience workshop",
   "April 2023", "Shallow neural networks for collision detection predict arousal-related differences in subjective experience", "Social and Affective Neuroscience Society Annual Meeting",
-  "June 2022, Jan 2023", "Remote brain bingo: Running group games on Zoom", "Psych One Conference & TIP Coast-To-Coast Conference",
+    "Jan 2023", "Remote brain bingo: Running group games on Zoom", "TIP Coast-To-Coast Conference",
+  "June 2022", "Remote brain bingo: Running group games on Zoom", "Psych One Conference",
   "July 2020", "How to Prepare and Teach an R Lesson", "[NYC R Conference](https://rstats.ai/nyr/#speakers)",
   "Nov 2020", "Exploring the NYPD Civilian Complaint Database", "Columbia Foundations for Research Computing workshop",
   "Apr 2020", "Wrangling Multilevel Data in the Tidyverse", "Columbia Foundations for Research Computing workshop",
@@ -153,15 +163,12 @@ bibliography_entries("posters.bib") %>%
   arrange(desc(issued))
 ```
 
-### Popular media
+## Popular media
 
 ```{r}
 tribble(
   ~Year, ~Title, ~Publication,
   "May 2024", "[Radio/podcast guest (trivia, science)](https://www.npr.org/transcripts/1196979444)", "Life Kit by NPR",
-  "Feb 2024", "[Radio/podcast guest (science)](https://www.sciencefriday.com/segments/jeopardy-winner-memory-recall/)", "Science Friday",
-  "Feb 2024", "[Radio guest (science)](https://www.npr.org/2024/02/18/1232301993/a-new-study-finds-the-memory-systems-that-give-trivia-champions-an-edge)", "Weekend Edition Sunday by NPR",
-  "Feb 2024", "[News interview subject (science)](https://www.scientificamerican.com/article/jeopardy-winner-reveals-entwined-memory-systems-make-a-trivia-champion/)", "Scientific American",
   "2021-2022", "Host of [The Psychology PhD podcast](https://psychology.columbia.edu/podcast)", "Columbia Dept of Psychology",
   "Nov 2021", "[Video guest (science)](https://youtu.be/VTvJOb2hJ6k)", "Wired 5 Levels: Memory",
   "Sept 2021", "[Interview subject (teaching)](https://explaineverything.com/psychology-whiteboard-video-lessons-with-monica-thieu/)", "Explain Everything",
@@ -177,22 +184,43 @@ tribble(
 
 ## Teaching experience
 
+### Course instructor
+
 ```{r}
 tribble(
   ~ Position, ~ Year, ~ Course, ~ Where,
   "Instructor of record", "Sp2024", "PSY 417: Statistics II in Psychology", "Spelman College Dept of Psychology",
   "Instructor", "Su2023, Su2024", "Data Science Lab Module", "[Spelman College WiSTEM](https://www.spelman.edu/academics/research-programs/wistem)",
-  "Instructor of record", "Su2022", "PSYC 1021: Science of Psychology: Explorations & Applications", "Columbia Dept of Psychology",
+  "Instructor of record", "Su2022", "PSYC 1021: Science of Psychology: Explorations & Applications", "Columbia Dept of Psychology"
+) %>% 
+  # flipped Where and Institution to get the institution to be bolded
+  detailed_entries(Course, Year, Where, Position)
+```
+
+### Workshop instructor
+
+```{r}
+tribble(
+  ~ Position, ~ Year, ~ Course, ~ Where,
+  "[Carpentries](https://carpentries.org/)-certified instructor", "Fa2019-Sp2022", "Introductory coding bootcamps", "[Columbia Foundations for Research Computing](https://rcfoundations.research.columbia.edu/)",
+  "Curriculum developer & instructor", "Sp2018-Fa2021", "[Intro to Programming for Social Scientists](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/workshop/)", "Columbia Dept of Psychology"
+) %>% 
+  # flipped Where and Institution to get the institution to be bolded
+  detailed_entries(Course, Year, Where, Position)
+```
+
+### Guest lecturer, section leader, & teaching assistant
+
+```{r}
+tribble(
+  ~ Position, ~ Year, ~ Course, ~ Where,
   "Assistant curriculum developer & TA", "Sp2022", "PSYC 2821: Cognition in Context: Mental Health & Well-being", "Columbia Dept of Psychology",
   "Assistant curriculum developer, TA, & guest lecturer", "Sp2021", "PSYC 1021: Science of Psychology: Explorations & Applications", "Columbia Dept of Psychology",
   "Guest lecturer", "Fa2019", "[Intro to Psychology](https://www.outlier.org/products/intro-to-psychology)", "Outlier.org",
-  "[Carpentries](https://carpentries.org/)-certified instructor", "Fa2019-Sp2022", "Introductory coding bootcamps", "[Columbia Foundations for Research Computing](https://rcfoundations.research.columbia.edu/)",
-  "TA & guest lecturer", "Sp2019, Sp2020, Fa2021", "B8144: Intro to Programming in R", "Columbia Business School",
+  "TA & guest lecturer", "Sp2019-Fa2021", "B8144: Intro to Programming in R", "Columbia Business School",
   "TA & section leader", "Fa2018, Fa2019", "PSYC 1490: Research Methods", "Columbia Dept of Psychology",
-  "Curriculum developer & instructor", "Sp2018-Fa2021", "[Intro to Programming for Social Scientists](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/workshop/)", "Columbia Dept of Psychology",
   "TA & guest lecturer", "Fa2017", "PSYC 1001: Science of Psychology", "Columbia Dept of Psychology",
-  "Teaching fellow", "Fa2014-Sp2015", "Psych One", "Stanford Dept of Psychology",
-  "Instructor", "Su2011, Su2012", "7th and 8th grade physics", "Breakthrough Fort Worth"
+  "Teaching fellow", "Fa2014-Sp2015", "Psych One", "Stanford Dept of Psychology"
 ) %>% 
   # flipped Where and Institution to get the institution to be bolded
   detailed_entries(Course, Year, Where, Position)
