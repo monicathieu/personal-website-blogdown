@@ -27,7 +27,7 @@ require(vitae)
 ```{r}
 tribble(
   ~ Position, ~ Year, ~ Institution, ~ Where, ~ Why,
-  "Postdoctoral fellow", "August 2022 -", "Emory University", "Atlanta, GA, USA", c("Project: Subcortical pathways of looming and threat", "Supervisor: Dr. Philip Kragel")
+  "Postdoctoral fellow", "August 2022 -", "Emory University", "Atlanta, GA, USA", c("Project: Subcortical pathways of looming and threat", "Supervisor: Dr. Philip Kragel", "Funding: [FIRST NIH IRACDA postdoctoral fellowship](https://med.emory.edu/education/postdoctoral-training/first/index.html)")
 ) %>% 
   # in the davewhipp theme, the where (4th) argument gets bolded. weirdly
   detailed_entries(Institution, Year, Where, Position, Why)
@@ -163,25 +163,6 @@ bibliography_entries("posters.bib") %>%
   arrange(desc(issued))
 ```
 
-## Popular media
-
-```{r}
-tribble(
-  ~Year, ~Title, ~Publication,
-  "May 2024", "[Radio/podcast guest (trivia, science)](https://www.npr.org/transcripts/1196979444)", "Life Kit by NPR",
-  "2021-2022", "Host of [The Psychology PhD podcast](https://psychology.columbia.edu/podcast)", "Columbia Dept of Psychology",
-  "Nov 2021", "[Video guest (science)](https://youtu.be/VTvJOb2hJ6k)", "Wired 5 Levels: Memory",
-  "Sept 2021", "[Interview subject (teaching)](https://explaineverything.com/psychology-whiteboard-video-lessons-with-monica-thieu/)", "Explain Everything",
-  "July 2020", "[Podcast guest (science)](https://www.marketplace.org/shows/this-is-uncomfortable-reema-khrais/money-makes-me-sick/)", "This is Uncomfortable by Marketplace",
-  "July 2019", "[Podcast guest (trivia, statistics)](https://www.npr.org/transcripts/722198188)", "Planet Money by NPR"
-) %>% 
-  brief_entries(
-    Title,
-    Year, 
-    Publication
-  )
-```
-
 ## Teaching experience
 
 ### Course instructor
@@ -224,6 +205,25 @@ tribble(
 ) %>% 
   # flipped Where and Institution to get the institution to be bolded
   detailed_entries(Course, Year, Where, Position)
+```
+
+## Popular media
+
+```{r}
+tribble(
+  ~Year, ~Title, ~Publication,
+  "May 2024", "[Radio/podcast guest (trivia, science)](https://www.npr.org/transcripts/1196979444)", "Life Kit by NPR",
+  "2021-2022", "Host of [The Psychology PhD podcast](https://psychology.columbia.edu/podcast)", "Columbia Dept of Psychology",
+  "Nov 2021", "[Video guest (science)](https://youtu.be/VTvJOb2hJ6k)", "Wired 5 Levels: Memory",
+  "Sept 2021", "[Interview subject (teaching)](https://explaineverything.com/psychology-whiteboard-video-lessons-with-monica-thieu/)", "Explain Everything",
+  "July 2020", "[Podcast guest (science)](https://www.marketplace.org/shows/this-is-uncomfortable-reema-khrais/money-makes-me-sick/)", "This is Uncomfortable by Marketplace",
+  "July 2019", "[Podcast guest (trivia, statistics)](https://www.npr.org/transcripts/722198188)", "Planet Money by NPR"
+) %>% 
+  brief_entries(
+    Title,
+    Year, 
+    Publication
+  )
 ```
 
 ## Mentoring
