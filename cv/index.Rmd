@@ -242,7 +242,7 @@ tribble(
 tribble(
   ~ Position, ~ Year, ~ Org, ~ Where, ~ Details,
   "Treasurer", "2023 - present", "Emory Postdoctoral Association", "Emory University", "",
-  "Peer reviewer", " ", " ", "ad hoc", "Cerebral Cortex; Neuropsychologia; Social, Cognitive, & Affective Neuroscience"
+  "Peer reviewer", " ", " ", "ad hoc", "Cerebral Cortex; Neuropsychologia; Social, Cognitive, & Affective Neuroscience; Humanities & Social Sciences Communications"
 ) %>% 
   detailed_entries(Org, Year, Where, Position, Details)
 ```
