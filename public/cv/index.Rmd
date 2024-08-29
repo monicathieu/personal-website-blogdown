@@ -22,17 +22,6 @@ require(tidyverse)
 require(vitae)
 ```
 
-## Currently
-
-```{r}
-tribble(
-  ~ Position, ~ Year, ~ Institution, ~ Where, ~ Why,
-  "Postdoctoral fellow", "August 2022 -", "Emory University", "Atlanta, GA, USA", c("Project: Subcortical pathways of looming and threat", "Supervisor: Dr. Philip Kragel", "Funding: [FIRST NIH IRACDA postdoctoral fellowship](https://med.emory.edu/education/postdoctoral-training/first/index.html)")
-) %>% 
-  # in the davewhipp theme, the where (4th) argument gets bolded. weirdly
-  detailed_entries(Institution, Year, Where, Position, Why)
-```
-
 In my research, I use behavioral, modeling, and fMRI research methods to characterize how perceptual input contributes to affective experience.
 
 In my teaching, I design and practice reflective, evidence-based, and student-centered training for psychological scientists, with a focus on technical training in statistics and scientific computing.
@@ -41,17 +30,18 @@ In my teaching, I design and practice reflective, evidence-based, and student-ce
   * Functional neuroimaging: **Intermediate** in nipype, SPM, FSL; **proficient** in fmriprep
   * Behavioral tasks: **Advanced** in Gorilla, Qualtrics; **intermediate** in PsychoPy
   * Data management tools: **Intermediate** in REDCap
-  * Coding: **Advanced** in R; **intermediate** in Python, Matlab, shell; **proficient** in JavaScript, Stan
+  * Coding: **Advanced** in R, Python; **intermediate** in Matlab, shell; **proficient** in JavaScript, Stan
 
 ## Education
 
 ```{r}
 tribble(
-  ~ Position, ~ Year, ~ Institution, ~ Where, ~ Why,
-  "PhD in Psychology", "2022", "Columbia University", "New York, NY, USA", c("Dissertation: ['Exploring perception and categorization of social and affective stimuli'](https://academiccommons.columbia.edu/doi/10.7916/zjfd-fq65)", "Advisor: Dr. Kevin Ochsner", "Sep 2017 - May 2022"),
-  "BA with honors in Psychology", "2015", "Stanford University", "Palo Alto, CA, USA", c("Honors thesis: 'Chronic media multitasking and distraction: Neural substrates and mnemonic consequences'", "Advisors: Dr. Melina  Uncapher, Dr. Anthony Wagner")
+  ~ Position, ~ Year, ~ Institution, ~ Where,
+  "PhD in Psychology", "2022", "Columbia University", "New York, NY, USA",
+  "BA with honors in Psychology", "2015", "Stanford University", "Palo Alto, CA, USA"
 ) %>% 
-  detailed_entries(Institution, Year, Where, Position, Why)
+  # in the davewhipp theme, the where (4th) argument gets bolded. weirdly
+  detailed_entries(Institution, Year, Where, Position)
 ```
 
 ## Research experience
@@ -59,10 +49,64 @@ tribble(
 ```{r}
 tribble(
   ~ Position, ~ Year, ~ Institution, ~ Where, ~ Why,
-    "Postdoctoral fellow", "August 2022 -", "Emory University", "Atlanta, GA, USA", c("Project: Subcortical pathways of looming and threat", "Supervisor: Dr. Philip Kragel"),
-  "Lab manager & research coordinator", "June 2015 - July 2017", "Stanford University", "Palo Alto, CA, USA", c("Project: Healthy aging and memory", "Supervisor: Dr. Anthony Wagner")
+    "Postdoctoral fellow", "August 2022 -", "Emory University", "Atlanta, GA, USA", c("Project: Subcortical pathways of looming and threat", "Supervisor: Dr. Philip Kragel", "Funding: [FIRST NIH IRACDA postdoctoral fellowship](https://med.emory.edu/education/postdoctoral-training/first/index.html) (100% salary support for 3 years)"),
+  "Graduate research assistant", "Sept 2017 - May 2022", "Columbia University", "New York, NY, USA", c("Dissertation: ['Exploring perception and categorization of social and affective stimuli'](https://academiccommons.columbia.edu/doi/10.7916/zjfd-fq65)", "Advisor: Dr. Kevin Ochsner"),
+  "Lab manager & research coordinator", "June 2015 - July 2017", "Stanford University", "Palo Alto, CA, USA", c("Project: Healthy aging and memory", "Supervisor: Dr. Anthony Wagner"),
+  "Undergraduate research assistant", "Jan 2013 - June 2015", "Stanford University", "Palo Alto, CA, USA", c("Honors thesis: 'Chronic media multitasking and distraction: Neural substrates and mnemonic consequences'", "Advisors: Dr. Melina  Uncapher, Dr. Anthony Wagner")
 ) %>% 
   detailed_entries(Institution, Year, Where, Position, Why)
+```
+
+## Publications
+
+```{r}
+bibliography_entries("publications.bib") # %>% 
+# appears not to work when there are null date papers...?
+  # arrange(desc(issued))
+```
+
+## Teaching experience
+
+### Course instructor
+
+```{r}
+tribble(
+  ~ Position, ~ Year, ~ Course, ~ Where,
+  "Instructor of record", "Sp2024", "PSY 417: Statistics II in Psychology", "Spelman College Dept of Psychology",
+  "Instructor", "Su2023, Su2024", "Data Science Lab Module", "[Spelman College WiSTEM](https://www.spelman.edu/academics/research-programs/wistem)",
+  "Instructor of record", "Su2022", "PSYC 1021: Science of Psychology: Explorations & Applications", "Columbia Dept of Psychology"
+) %>% 
+  # flipped Where and Institution to get the institution to be bolded
+  detailed_entries(Course, Year, Where, Position)
+```
+
+### Workshop instructor
+
+```{r}
+tribble(
+  ~ Position, ~ Year, ~ Course, ~ Where,
+  "[Carpentries](https://carpentries.org/)-certified instructor", "Fa2019-Sp2022", "Introductory coding bootcamps", "[Columbia Foundations for Research Computing](https://rcfoundations.research.columbia.edu/)",
+  "Curriculum developer & instructor", "Sp2018-Fa2021", "[Intro to Programming for Social Scientists](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/workshop/)", "Columbia Dept of Psychology"
+) %>% 
+  # flipped Where and Institution to get the institution to be bolded
+  detailed_entries(Course, Year, Where, Position)
+```
+
+### Guest lecturer, section leader, & teaching assistant
+
+```{r}
+tribble(
+  ~ Position, ~ Year, ~ Course, ~ Where,
+  "Assistant curriculum developer & TA", "Sp2022", "PSYC 2821: Cognition in Context: Mental Health & Well-being", "Columbia Dept of Psychology",
+  "Assistant curriculum developer, TA, & guest lecturer", "Sp2021", "PSYC 1021: Science of Psychology: Explorations & Applications", "Columbia Dept of Psychology",
+  "Guest lecturer", "Fa2019", "[Intro to Psychology](https://www.outlier.org/products/intro-to-psychology)", "Outlier.org",
+  "TA & guest lecturer", "Sp2019-Fa2021", "B8144: Intro to Programming in R", "Columbia Business School",
+  "TA & section leader", "Fa2018, Fa2019", "PSYC 1490: Research Methods", "Columbia Dept of Psychology",
+  "TA & guest lecturer", "Fa2017", "PSYC 1001: Science of Psychology", "Columbia Dept of Psychology",
+  "Teaching fellow", "Fa2014-Sp2015", "Psych One", "Stanford Dept of Psychology"
+) %>% 
+  # flipped Where and Institution to get the institution to be bolded
+  detailed_entries(Course, Year, Where, Position)
 ```
 
 ## Awards and honors
@@ -73,7 +117,7 @@ tribble(
 tribble(
   ~Year, ~Award, ~Desc,
   "2023", "[Diversity travel award](https://socialaffectiveneuro.org/wp-content/uploads/2023/05/SANS-Conference-2023_Program_FINAL.pdf) ($500)", "Social and Affective Neuroscience Society",
-  "2022-26", "[FIRST NIH IRACDA postdoctoral fellowship](https://med.emory.edu/education/postdoctoral-training/first/index.html) (100% salary support for 4 years)", "Emory School of Medicine",
+  "2022-26", "[FIRST NIH IRACDA postdoctoral fellowship](https://med.emory.edu/education/postdoctoral-training/first/index.html)", "Emory School of Medicine",
   "2019", "Honorable mention", "[NSF GRFP](https://nsfgrfp.org)",
   "June 2015", "Firestone Medal for Excellence in Undergraduate Research", "Stanford Vice Provost for Undergraduate Education",
   "Summer 2014", "Undergraduate Summer Research Award grant ($6,000)", "Stanford Bio-X",
@@ -126,14 +170,6 @@ tribble(
   )
 ```
 
-## Publications
-
-```{r}
-bibliography_entries("publications.bib") # %>% 
-# appears not to work when there are null date papers...?
-  # arrange(desc(issued))
-```
-
 ## Presentations
 
 ### Talks and workshops
@@ -161,50 +197,6 @@ tribble(
 ```{r}
 bibliography_entries("posters.bib") %>% 
   arrange(desc(issued))
-```
-
-## Teaching experience
-
-### Course instructor
-
-```{r}
-tribble(
-  ~ Position, ~ Year, ~ Course, ~ Where,
-  "Instructor of record", "Sp2024", "PSY 417: Statistics II in Psychology", "Spelman College Dept of Psychology",
-  "Instructor", "Su2023, Su2024", "Data Science Lab Module", "[Spelman College WiSTEM](https://www.spelman.edu/academics/research-programs/wistem)",
-  "Instructor of record", "Su2022", "PSYC 1021: Science of Psychology: Explorations & Applications", "Columbia Dept of Psychology"
-) %>% 
-  # flipped Where and Institution to get the institution to be bolded
-  detailed_entries(Course, Year, Where, Position)
-```
-
-### Workshop instructor
-
-```{r}
-tribble(
-  ~ Position, ~ Year, ~ Course, ~ Where,
-  "[Carpentries](https://carpentries.org/)-certified instructor", "Fa2019-Sp2022", "Introductory coding bootcamps", "[Columbia Foundations for Research Computing](https://rcfoundations.research.columbia.edu/)",
-  "Curriculum developer & instructor", "Sp2018-Fa2021", "[Intro to Programming for Social Scientists](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/workshop/)", "Columbia Dept of Psychology"
-) %>% 
-  # flipped Where and Institution to get the institution to be bolded
-  detailed_entries(Course, Year, Where, Position)
-```
-
-### Guest lecturer, section leader, & teaching assistant
-
-```{r}
-tribble(
-  ~ Position, ~ Year, ~ Course, ~ Where,
-  "Assistant curriculum developer & TA", "Sp2022", "PSYC 2821: Cognition in Context: Mental Health & Well-being", "Columbia Dept of Psychology",
-  "Assistant curriculum developer, TA, & guest lecturer", "Sp2021", "PSYC 1021: Science of Psychology: Explorations & Applications", "Columbia Dept of Psychology",
-  "Guest lecturer", "Fa2019", "[Intro to Psychology](https://www.outlier.org/products/intro-to-psychology)", "Outlier.org",
-  "TA & guest lecturer", "Sp2019-Fa2021", "B8144: Intro to Programming in R", "Columbia Business School",
-  "TA & section leader", "Fa2018, Fa2019", "PSYC 1490: Research Methods", "Columbia Dept of Psychology",
-  "TA & guest lecturer", "Fa2017", "PSYC 1001: Science of Psychology", "Columbia Dept of Psychology",
-  "Teaching fellow", "Fa2014-Sp2015", "Psych One", "Stanford Dept of Psychology"
-) %>% 
-  # flipped Where and Institution to get the institution to be bolded
-  detailed_entries(Course, Year, Where, Position)
 ```
 
 ## Popular media
@@ -241,7 +233,9 @@ tribble(
 ```{r}
 tribble(
   ~ Position, ~ Year, ~ Org, ~ Where, ~ Details,
-  "Treasurer", "2023 - present", "Emory Postdoctoral Association", "Emory University", "",
+  "Chair", "2024 - present", "Emory Postdoctoral Association", "Emory University", "",
+  "Treasurer", "2023 - 2024", "Emory Postdoctoral Association", "Emory University", "",
+  "Moderator & judge", "2023, 2024", "Research Day", "Spelman College", "",
   "Peer reviewer", " ", " ", "ad hoc", "Cerebral Cortex; Neuropsychologia; Social, Cognitive, & Affective Neuroscience; Humanities & Social Sciences Communications"
 ) %>% 
   detailed_entries(Org, Year, Where, Position, Details)
