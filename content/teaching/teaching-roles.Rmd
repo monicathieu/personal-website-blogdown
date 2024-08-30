@@ -70,7 +70,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## WiSTEM Data Science Lab Module
 
 - Institution: Spelman College
-- Term: summer 2022
+- Terms: summer 2023, summer 2024
 - Program directors: [Monica Stephens](mailto:mstephens@spelman.edu), [Tiffany Oliver](mailto:toliver4@spelman.edu)
 
 ### Course details
