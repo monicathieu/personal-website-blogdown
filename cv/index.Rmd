@@ -234,6 +234,7 @@ tribble(
 tribble(
   ~ Position, ~ Year, ~ Org, ~ Where, ~ Details,
   "Chair", "2024 - present", "Emory Postdoctoral Association", "Emory University", "",
+  "Executive Committee member", "2024 - present", "FIRST IRACDA program", "Emory University", "",
   "Treasurer", "2023 - 2024", "Emory Postdoctoral Association", "Emory University", "",
   "Moderator & judge", "2023, 2024", "Research Day", "Spelman College", "",
   "Peer reviewer", " ", " ", "ad hoc", "Cerebral Cortex; Neuropsychologia; Social, Cognitive, & Affective Neuroscience; Humanities & Social Sciences Communications"
