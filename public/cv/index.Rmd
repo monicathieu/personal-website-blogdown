@@ -49,7 +49,7 @@ tribble(
 ```{r}
 tribble(
   ~ Position, ~ Year, ~ Institution, ~ Where, ~ Why,
-    "Postdoctoral fellow", "August 2022 -", "Emory University", "Atlanta, GA, USA", c("Project: Subcortical pathways of looming and threat", "Supervisor: Dr. Philip Kragel", "Funding: [FIRST NIH IRACDA postdoctoral fellowship](https://med.emory.edu/education/postdoctoral-training/first/index.html) (100% salary support for 3 years)"),
+    "Postdoctoral fellow", "Aug 2022 - present", "Emory University", "Atlanta, GA, USA", c("Project: Subcortical pathways of looming and threat", "Supervisor: Dr. Philip Kragel", "Funding: [FIRST NIH IRACDA postdoctoral fellowship](https://med.emory.edu/education/postdoctoral-training/first/index.html) (100% salary support for 3 years)"),
   "Graduate research assistant", "Sept 2017 - May 2022", "Columbia University", "New York, NY, USA", c("Dissertation: ['Exploring perception and categorization of social and affective stimuli'](https://academiccommons.columbia.edu/doi/10.7916/zjfd-fq65)", "Advisor: Dr. Kevin Ochsner"),
   "Lab manager & research coordinator", "June 2015 - July 2017", "Stanford University", "Palo Alto, CA, USA", c("Project: Healthy aging and memory", "Supervisor: Dr. Anthony Wagner"),
   "Undergraduate research assistant", "Jan 2013 - June 2015", "Stanford University", "Palo Alto, CA, USA", c("Honors thesis: 'Chronic media multitasking and distraction: Neural substrates and mnemonic consequences'", "Advisors: Dr. Melina  Uncapher, Dr. Anthony Wagner")
@@ -85,8 +85,8 @@ tribble(
 ```{r}
 tribble(
   ~ Position, ~ Year, ~ Course, ~ Where,
-  "[Carpentries](https://carpentries.org/)-certified instructor", "Fa2019-Sp2022", "Introductory coding bootcamps", "[Columbia Foundations for Research Computing](https://rcfoundations.research.columbia.edu/)",
-  "Curriculum developer & instructor", "Sp2018-Fa2021", "[Intro to Programming for Social Scientists](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/workshop/)", "Columbia Dept of Psychology"
+  "[Carpentries](https://carpentries.org/)-certified instructor", "Fa2019 - Sp2022", "Introductory coding bootcamps", "[Columbia Foundations for Research Computing](https://rcfoundations.research.columbia.edu/)",
+  "Curriculum developer & instructor", "Sp2018 - Fa2021", "[Intro to Programming for Social Scientists](https://cu-psych-computing.github.io/cu-psych-comp-tutorial/workshop/)", "Columbia Dept of Psychology"
 ) %>% 
   # flipped Where and Institution to get the institution to be bolded
   detailed_entries(Course, Year, Where, Position)
@@ -100,10 +100,10 @@ tribble(
   "Assistant curriculum developer & TA", "Sp2022", "PSYC 2821: Cognition in Context: Mental Health & Well-being", "Columbia Dept of Psychology",
   "Assistant curriculum developer, TA, & guest lecturer", "Sp2021", "PSYC 1021: Science of Psychology: Explorations & Applications", "Columbia Dept of Psychology",
   "Guest lecturer", "Fa2019", "[Intro to Psychology](https://www.outlier.org/products/intro-to-psychology)", "Outlier.org",
-  "TA & guest lecturer", "Sp2019-Fa2021", "B8144: Intro to Programming in R", "Columbia Business School",
+  "TA & guest lecturer", "Sp2019 - Fa2021", "B8144: Intro to Programming in R", "Columbia Business School",
   "TA & section leader", "Fa2018, Fa2019", "PSYC 1490: Research Methods", "Columbia Dept of Psychology",
   "TA & guest lecturer", "Fa2017", "PSYC 1001: Science of Psychology", "Columbia Dept of Psychology",
-  "Teaching fellow", "Fa2014-Sp2015", "Psych One", "Stanford Dept of Psychology"
+  "Teaching fellow", "Fa2014 - Sp2015", "Psych One", "Stanford Dept of Psychology"
 ) %>% 
   # flipped Where and Institution to get the institution to be bolded
   detailed_entries(Course, Year, Where, Position)
@@ -205,7 +205,7 @@ bibliography_entries("posters.bib") %>%
 tribble(
   ~Year, ~Title, ~Publication,
   "May 2024", "[Radio/podcast guest (trivia, science)](https://www.npr.org/transcripts/1196979444)", "Life Kit by NPR",
-  "2021-2022", "Host of [The Psychology PhD podcast](https://psychology.columbia.edu/podcast)", "Columbia Dept of Psychology",
+  "2021 - 2022", "Host of [The Psychology PhD podcast](https://psychology.columbia.edu/podcast)", "Columbia Dept of Psychology",
   "Nov 2021", "[Video guest (science)](https://youtu.be/VTvJOb2hJ6k)", "Wired 5 Levels: Memory",
   "Sept 2021", "[Interview subject (teaching)](https://explaineverything.com/psychology-whiteboard-video-lessons-with-monica-thieu/)", "Explain Everything",
   "July 2020", "[Podcast guest (science)](https://www.marketplace.org/shows/this-is-uncomfortable-reema-khrais/money-makes-me-sick/)", "This is Uncomfortable by Marketplace",
@@ -223,7 +223,7 @@ tribble(
 ```{r}
 tribble(
   ~ Name, ~ Year, ~ Where, ~ Position, ~ Awards,
-  "Lauren Wilkins", "2020-22", "Columbia University", "Undergraduate research assistant & honors thesis student", "Class of 1939 Summer Research Fellowship, summer 2020"
+  "Lauren Wilkins", "2020 - 2022", "Columbia University", "Undergraduate research assistant & honors thesis student", "Class of 1939 Summer Research Fellowship, summer 2020"
 ) %>% 
   detailed_entries(Position, Year, Where, Name, Awards)
 ```
@@ -233,6 +233,7 @@ tribble(
 ```{r}
 tribble(
   ~ Position, ~ Year, ~ Org, ~ Where, ~ Details,
+  "Senator & executive committee member", "2024 - present", "University Senate", "Emory University", "",
   "Chair", "2024 - present", "Emory Postdoctoral Association", "Emory University", "",
   "Executive Committee member", "2024 - present", "FIRST IRACDA program", "Emory University", "",
   "Treasurer", "2023 - 2024", "Emory Postdoctoral Association", "Emory University", "",
