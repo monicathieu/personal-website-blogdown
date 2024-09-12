@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-Collected below are a series of free-form testimonials about my teaching effectiveness. For my official teaching assistantships, I have excerpted comments about various aspects of my teaching from official TA-specific teaching evaluations (original documents available upon request). I note that for my coding boot camp instructorships, students were not prompted to give instructor-specific feedback, so I have fewer student comments from those teaching experiences, but I have included a few testimonials that I do have, where relevant.
+Collected below are a series of free-form testimonials about my teaching effectiveness. For my instructorships of record and teaching assistantships, I have excerpted comments about various aspects of my teaching from official teaching evaluations (original documents available upon request). I note that for my coding boot camp instructorships, students were not prompted to give instructor-specific feedback, so I have fewer student comments from those teaching experiences, but I have included a few testimonials that I do have, where relevant.
 
 Comments are organized into three themes: my skills in breaking down complex topics, my energy in the classroom, and my clear, prompt, and actionable formative written feedback on assignments.
 
