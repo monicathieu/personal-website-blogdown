@@ -870,10 +870,8 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.39",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "8f56e9acb54fb525e66464d57ab58bcb"
+      "Version": "0.43",
+      "Source": "Repository"
     },
     "xml2": {
       "Package": "xml2",
